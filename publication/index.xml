@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Hugo Finite</title>
+    <link>https://github.com/QianqianShan/qianqianshan.github.io/publication/</link>
+    <description>Recent content in Publications on Hugo Finite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2016 Marcus Brinkmann</copyright>
+    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://github.com/QianqianShan/qianqianshan.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>https://github.com/QianqianShan/qianqianshan.github.io/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/QianqianShan/qianqianshan.github.io/publication/clothing-search/</guid>
+      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
+    
+    <item>
+      <title>Margin Note in Arithmetica</title>
+      <link>https://github.com/QianqianShan/qianqianshan.github.io/publication/fermats-last-theorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/QianqianShan/qianqianshan.github.io/publication/fermats-last-theorem/</guid>
+      <description>I have discovered a truly marvellous proof of this, which this margin is too narrow to contain:
+There are no positive integers such that $x^n + y^n = z^n$ for $ n&amp;gt;2 $.  </description>
+    </item>
+    
+  </channel>
+</rss>
