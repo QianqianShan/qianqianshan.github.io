@@ -5,12 +5,12 @@
     <title>Migrate to Hugo from Jekyll | Qianqian&#39;s Website</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/foundation.min.css">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/highlight.min.css">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/academicons.min.css">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/fonts.css">
-    <link rel="stylesheet" href="https://github.com/QianqianShan/qianqianshan.github.io/css/finite.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/highlight.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/academicons.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/finite.css">
   </head>
   <body>
     <header>
@@ -21,7 +21,7 @@
 	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
 	    </button>
 	    <div class="title-bar-title site-title">
-	      <a href="https://github.com/QianqianShan/qianqianshan.github.io/">Qianqian&#39;s Website</a>
+	      <a href="">Qianqian&#39;s Website</a>
 	    </div>
 	    <div class="title-bar-right pull-right">
 	      
@@ -34,17 +34,17 @@
 	  
 	    <div class="top-bar" id="site-menu" >	      
 	      <div class="top-bar-title show-for-medium site-title">
-		<a href="https://github.com/QianqianShan/qianqianshan.github.io/">Qianqian&#39;s Website</a>
+		<a href="">Qianqian&#39;s Website</a>
 	      </div>
 	      <div class="top-bar-left">
 		<ul class="menu vertical medium-horizontal">
 		  
 		  
-		  <li><a href="https://github.com/QianqianShan/qianqianshan.github.io/publication/">Publications</a></li>
+		  <li><a href="/publication/">Publications</a></li>
 		  
-		  <li><a href="https://github.com/QianqianShan/qianqianshan.github.io/post/">Blog</a></li>
+		  <li><a href="/post/">Blog</a></li>
 		  
-		  <li><a href="https://github.com/QianqianShan/qianqianshan.github.io/#contact">Contact</a></li>
+		  <li><a href="/#contact">Contact</a></li>
 		  
 		</ul>
 	      </div>
@@ -97,7 +97,7 @@ With Jekyll, something that looked like</p>
 
 <h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
 
-<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="https://github.com/QianqianShan/qianqianshan.github.io/overview/configuration/">Hugo configuration documentation</a> for details.</p>
+<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
 
 <h2 id="set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></h2>
 
@@ -123,13 +123,13 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
 
 <h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
 
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="https://github.com/QianqianShan/qianqianshan.github.io/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
 
 <p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
 
 <h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
 
-<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="https://github.com/QianqianShan/qianqianshan.github.io/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
+<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
 
 <h3 id="implementation">Implementation</h3>
 
@@ -246,13 +246,13 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 
       <meta itemprop="wordCount" content="813">
       <meta itemprop="datePublished" content="2014-03-10">
-      <meta itemprop="url" content="https://github.com/QianqianShan/qianqianshan.github.io/post/migrate-from-jekyll/">
+      <meta itemprop="url" content="/post/migrate-from-jekyll/">
     </article>
 
     <ul class="pagination" role="navigation" aria-label="Pagination">
       
       
-      <li class="arrow" aria-disabled="true"><a href="https://github.com/QianqianShan/qianqianshan.github.io/post/hugoisforlovers/"><em>Next<span class="show-for-sr"> page</span></em>: Getting Started with Hugo&nbsp;&raquo;</a></li>
+      <li class="arrow" aria-disabled="true"><a href="/post/hugoisforlovers/"><em>Next<span class="show-for-sr"> page</span></em>: Getting Started with Hugo&nbsp;&raquo;</a></li>
       
     </ul>
 
@@ -275,13 +275,13 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
     <div class="endofpage">
     </div>
 
-    <script src="https://github.com/QianqianShan/qianqianshan.github.io/js/jquery.js"></script>
-    <script src="https://github.com/QianqianShan/qianqianshan.github.io/js/what-input.js"></script>
-    <script src="https://github.com/QianqianShan/qianqianshan.github.io/js/foundation.min.js"></script>
-    <script src="https://github.com/QianqianShan/qianqianshan.github.io/js/finite.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/what-input.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/finite.js"></script>
 
     
-    <script src="https://github.com/QianqianShan/qianqianshan.github.io/js/highlight.pack.js"></script>
+    <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
     
