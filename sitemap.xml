@@ -74,12 +74,6 @@
   </url>
   
   <url>
-    <loc>https://github.com/QianqianShan/qianqianshan.github.io/</loc>
-    <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/QianqianShan/qianqianshan.github.io/publication/fermats-last-theorem/</loc>
   </url>
   
@@ -92,6 +86,12 @@
   <url>
     <loc>https://github.com/QianqianShan/qianqianshan.github.io/publication/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/QianqianShan/qianqianshan.github.io/</loc>
+    <lastmod>2016-04-20T10:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
