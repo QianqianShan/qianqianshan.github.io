@@ -314,6 +314,8 @@ p    {color: red;}
 <pre class="html"><code>&lt;html&gt;
 &lt;head&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/html/styles.css&quot;&gt;
+
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -347,6 +349,64 @@ p {
     border: 1px solid powderblue;
     padding: 30px;
 }</code></pre>
+<div id="id-and-class-attribute" class="section level3">
+<h3><code>id</code> and <code>class</code> attribute</h3>
+<ul>
+<li>An <code>id</code> attribute to the element can be used to define a specific style for <em>one special element</em>.</li>
+</ul>
+<pre class="html"><code>&lt;p id=&quot;p01&quot;&gt;I am different&lt;/p&gt;
+
+#p01 {
+    color: blue;
+}</code></pre>
+<ul>
+<li>A <code>class</code> attribute to the element can be used to define a style for <em>special types of elements</em>.</li>
+</ul>
+<pre class="html"><code>&lt;p class=&quot;error&quot;&gt;I am different&lt;/p&gt;
+p.error {
+    color: red;
+}</code></pre>
+</div>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p>A link does not have to be text. It can be an image or any other HTML element. The syntax is,</p>
+<pre class="html"><code>&lt;a href=&quot;url&quot;&gt;link text&lt;/a&gt;</code></pre>
+<p>Link color * <strong>Local links</strong>: A local link (link to the same web site) is specified with a relative URL (without <a href="https://www" class="uri">https://www</a>….). For example,</p>
+<pre class="html"><code>&lt;a href=&quot;html_images.asp&quot;&gt;HTML Images&lt;/a&gt;</code></pre>
+<ul>
+<li><strong>Link colors</strong> can be defined in <code>&lt;style&gt;</code> in a CSS file,</li>
+</ul>
+<pre class="html"><code>&lt;!--
+An unvisited link is underlined and blue
+A visited link is underlined and purple
+An active link is underlined and red --&gt;
+
+&lt;style&gt;
+a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+&lt;/style&gt;</code></pre>
 </div>
 </div>
 
