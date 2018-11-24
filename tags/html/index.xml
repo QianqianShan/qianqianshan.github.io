@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Qianqian Shan</title>
-    <link>https://github.com/QianqianShan/qianqianshan.github.io/tags/html/</link>
+    <link>https://qianqianshan.github.io/tags/html/</link>
     <description>Recent content in Html on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
     <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://github.com/QianqianShan/qianqianshan.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://qianqianshan.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTML Basics</title>
-      <link>https://github.com/QianqianShan/qianqianshan.github.io/post/htmlbasics/</link>
+      <link>https://qianqianshan.github.io/post/htmlbasics/</link>
       <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/QianqianShan/qianqianshan.github.io/post/htmlbasics/</guid>
+      <guid>https://qianqianshan.github.io/post/htmlbasics/</guid>
       <description>The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp.
 Contents 1.Introduction
 Introduction HTML stands for Hyper Text Markup Language.
