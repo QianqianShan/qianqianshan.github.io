@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on Qianqian Shan</title>
+    <link>/tags/html/</link>
+    <description>Recent content in Html on Qianqian Shan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
+    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML Basics</title>
+      <link>/post/htmlbasics/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/htmlbasics/</guid>
+      <description>The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp.
+Contents 1.Introduction
+Introduction HTML stands for Hyper Text Markup Language.
+Basics &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  &amp;lt;p&amp;gt; : paragraph
+&amp;lt;a href=&amp;quot;http://www.w3school.com.cn&amp;quot;&amp;gt;This is a link&amp;lt;/a&amp;gt; : link
+&amp;lt;img src=&amp;quot;w3schools.jpg&amp;quot; alt=&amp;quot;W3Schools.com&amp;quot; width=&amp;quot;104&amp;quot; height=&amp;quot;142&amp;quot;&amp;gt; : image with source name in src , alternative text in alt
+&amp;lt;button&amp;gt;Click me&amp;lt;/button&amp;gt; : button
+Lists are defined with the &amp;lt;ul&amp;gt; (unordered/bullet list) or the &amp;lt;ol&amp;gt; (ordered/numbered list) tag, followed by &amp;lt;li&amp;gt; tags (list items)</description>
+    </item>
+    
+  </channel>
+</rss>

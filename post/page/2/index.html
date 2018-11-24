@@ -38,9 +38,9 @@
 		<ul class="menu vertical medium-horizontal">
 		  
 		  
-		  <li><a href="/publication/">Publications</a></li>
+		  <li><a href="/publication">Publications</a></li>
 		  
-		  <li><a href="/post/">Blog</a></li>
+		  <li><a href="/post">Blog</a></li>
 		  
 		  <li><a href="/#contact">Contact</a></li>
 		  
@@ -60,8 +60,7 @@
       
 <div class="row">
   <div class="column small-12 medium-10 medium-offset-1 end large-offset-0 large-3 large-push-9">
-    <em>This is a blog for the hugo finite theme.  It only contains example
-  posts.</em>
+    <em>Qianqian's Blog</em>
 <div class="hide-for-large">
   <hr />
 </div>
@@ -71,53 +70,19 @@
   <div class="column small-12 medium-10 medium-offset-1 end large-offset-0 large-8 large-pull-3">
     
     
-    <h2><a href="/post/hugoisforlovers/">Getting Started with Hugo</a></h2>
+    <h2><a href="/post/migrate-from-jekyll/"></a></h2>
 <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2014-04-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2 April 2014</time>
-  </span>
-  
-  
-  
-  <span class="post-tags">
-    <span class="nowrap"><i class="fa fa-tags"></i>
-    
-    <a class="post-tag" href="tags/go">go</a>,</span> 
-    
-    <a class="post-tag" href="tags/golang">golang</a>, 
-    
-    <a class="post-tag" href="tags/hugo">hugo</a>, 
-    
-    <a class="post-tag" href="tags/development">development</a>
-    
-  </span>
-  
-  
-</div>
-
-
-Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
-<p class="text-right"><a href="/post/hugoisforlovers/">Read More…</a></p>
-	
-
-    
-    <h2><a href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></h2>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2014-03-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">10 March 2014</time>
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">1 January 0001</time>
   </span>
   
 </div>
 
 
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+date: 2014-03-10 linktitle: Migrating from Jekyll
+title: Migrate to Hugo from Jekyll Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &lt;root&gt;/ ▾ images/ logo.png  should become
-▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.
 <p class="text-right"><a href="/post/migrate-from-jekyll/">Read More…</a></p>
 	
 
@@ -145,7 +110,7 @@ Move static content to static Jekyll has a rule that any directory not starting 
   <hr />
   <div class="row">
     <div class="column small-12 medium-4">
-      <h1>About</h1>
+      <h1 id = "about">About</h1>
       <figure class="full-figure">
 	<img src="/img/portrait.jpg" alt="Portrait of the author">
 	<figcaption>Qianqian Shan: PhD Student in Statistics</figcaption>
@@ -169,10 +134,10 @@ Move static content to static Jekyll has a rule that any directory not starting 
 	
 	<li><i class="fa-li fa fa-github" style="padding-top:3px;"></i><a href="https://github.com/QianqianShan">Qianqian</a> on GitHub</li>
 	
-	<li><i class="fa-li fa fa-linkedin" style="padding-top:3px;"></i><a href="">Qianqian</a> on LinkedIn</li>
+	<li><i class="fa-li fa fa-linkedin" style="padding-top:3px;"></i><a href="https://www.linkedin.com/in/qianqian-shan-10aa8a66">Qianqian</a> on LinkedIn</li>
 	
       </ul>
-      Qianqian Shan<br />
+      Address:<br />
 2406 Snedecor Hall, <br />
 Department of Statistics, <br />
 Iowa State University, <br />
@@ -180,26 +145,9 @@ Ames, IA, USA, 50010 <br />
 
     </div>
     <div class="column small-12 medium-4">
-      <h1>Subscribe</h1>
-      <p>To receive updates, you can subscribe to
-	the <a href="/index.xml"><i class="fa fa-rss-square"></i>&nbsp;RSS feed</a> of all
-	updates to the site in an RSS feed reader.
-      </p>
-      <h1>Search</h1>
-      <a id="searchsite">
-	<form method="get" action="https://duckduckgo.com/">
-	  <label for="search-field" class="show-for-sr">Search with DuckDuckGo</label>
-	  <input type="search" name="q" maxlength="255" placeholder="Search with DuckDuckGo" id="search-field">
-	  <input type="hidden" name="sites" value=""/>
-	  <input type="hidden" name="k7" value="#faf8f8"/>
-	  <input type="hidden" name="kj" value="#b33"/>
-	  <input type="hidden" name="ky" value="#fafafa"/>
-	  <input type="hidden" name="kx" value="b"/>
-	  <input type="hidden" name="ko" value="-1"/>
-	  <input type="hidden" name="k1" value="-1"/>
-	  <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
-	</form>
-      </a> 
+      <h1>Pageviews Heatmap</h1>
+
+
          <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=DT8HUeh2SeZ0uvpHWyu8jXGBQclD6t-mJ1i5NuW5XlU"></script>
 
     </div>
