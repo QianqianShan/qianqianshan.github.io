@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on Qianqian Shan</title>
+    <link>https://qianqianshan.github.io/categories/html/</link>
+    <description>Recent content in Html on Qianqian Shan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
+    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qianqianshan.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML Basics</title>
+      <link>https://qianqianshan.github.io/post/htmlbasics/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/htmlbasics/</guid>
+      <description>Table of contents  Introduction
+ Basics
+ Elements
+ Attributes
+ Headings
+ Paragraph
+ Styles
+ Text Formatting
+ Quotation
+ Comments
+ Text Formatting
+ Colors
+ Styling HTML with CSS
+  Introduction The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp, and the notes could be used for a quick lookup about the usage of the HTML commands. HTML stands for Hyper Text Markup Language.</description>
+    </item>
+    
+  </channel>
+</rss>

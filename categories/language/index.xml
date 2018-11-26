@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Language on Qianqian Shan</title>
+    <link>https://qianqianshan.github.io/categories/language/</link>
+    <description>Recent content in Language on Qianqian Shan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
+    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qianqianshan.github.io/categories/language/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML Basics</title>
+      <link>https://qianqianshan.github.io/post/htmlbasics/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/htmlbasics/</guid>
+      <description>Table of contents  Introduction
+ Basics
+ Elements
+ Attributes
+ Headings
+ Paragraph
+ Styles
+ Text Formatting
+ Quotation
+ Comments
+ Text Formatting
+ Colors
+ Styling HTML with CSS
+  Introduction The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp, and the notes could be used for a quick lookup about the usage of the HTML commands. HTML stands for Hyper Text Markup Language.</description>
+    </item>
+    
+    <item>
+      <title>SQL Basics</title>
+      <link>https://qianqianshan.github.io/post/sql/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/sql/</guid>
+      <description>Basic Concepts Database: A container (usually a file or a set of files) to store organized data.
+Table: A structured list of data of a specific type. Every table in the database has a unique name that identifies it.
+Schema: Information about database and table layout and properties. For example, information that how data is stored in them, what data is stored , how it’s broken up etc.
+Primary Keys: A column(or a set of columns) whose value uniquely identify every row in a table.</description>
+    </item>
+    
+  </channel>
+</rss>
