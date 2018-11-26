@@ -10,5 +10,32 @@
 	<atom:link href="https://qianqianshan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Html</title>
+      <link>https://qianqianshan.github.io/categories/html/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Language</title>
+      <link>https://qianqianshan.github.io/categories/language/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>https://qianqianshan.github.io/categories/sql/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/categories/sql/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
