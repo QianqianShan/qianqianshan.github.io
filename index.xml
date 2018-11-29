@@ -6,10 +6,19 @@
     <description>Recent content on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Circuit Fault Diagnosis Using Simulation and Bayesian Inference</title>
+      <link>https://qianqianshan.github.io/publication/circuit-fault/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/publication/circuit-fault/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HTML Basics</title>
