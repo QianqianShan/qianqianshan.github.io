@@ -117,6 +117,12 @@
 <li><p><a href="#colors">Colors</a></p></li>
 
 <li><p><a href="#styling-html-with-css">Styling HTML with CSS</a></p></li>
+
+<li><p><a href="#links">Links</a></p></li>
+
+<li><p><a href="#images">Images</a></p></li>
+
+<li><p><a href="#tables">Tables</a></p></li>
 </ol>
 
 <h2 id="introduction">Introduction</h2>
@@ -502,16 +508,199 @@ a:active {
 <li><strong>Use image as link</strong></li>
 </ul>
 
+<h2 id="images">Images</h2>
+
+<h3 id="img"><code>&lt;img&gt;</code></h3>
+
+<ul>
+<li><code>&lt;img&gt;</code></li>
+<li><code>&lt;picture&gt;</code></li>
+</ul>
+
+<p>Syntax:</p>
+
+<pre><code class="language-html">&lt;img src=&quot;url&quot;&gt;
+&lt;img src=&quot;/images/html5.gif&quot; alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;
+&lt;img src=&quot;https://www.w3schools.com/images/w3schools_green.jpg&quot; alt=&quot;W3Schools.com&quot;&gt;
+</code></pre>
+
+<p>No closing tag is needed for <code>&lt;img&gt;</code>.</p>
+
+<p>Attributes:</p>
+
+<ul>
+<li><p><code>&lt;alt&gt;</code> provides an alternate text for an image, if the user for some reason cannot view it. It&rsquo;s a required attribute.</p></li>
+
+<li><p><code>&lt;width&gt;</code> and <code>&lt;height&gt;</code> atributes can be used directly to specify the width and height of the image in <strong>pixels</strong>. Or alternatively, use <code>style</code> attribute, for example, <code>style=&quot;width:500px;height:600px;&quot;</code>. The latter is preferred as it prevents styles sheets from changing the size of images.</p></li>
+</ul>
+
+<p>Other uses of images:</p>
+
+<ol>
+<li>Use image as a link:</li>
+</ol>
+
+<pre><code class="language-html">&lt;a href=&quot;default.asp&quot;&gt;
+  &lt;img src=&quot;smiley.gif&quot; alt=&quot;HTML tutorial&quot; style=&quot;width:42px;height:42px;border:0;&quot;&gt;
+&lt;/a&gt;
+</code></pre>
+
+<ol>
+<li>Use floating image with CSS <code>&lt;float&gt;</code> property.</li>
+</ol>
+
+<pre><code class="language-html">&lt;p&gt;&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley face&quot; style=&quot;float:right;width:42px;height:42px;&quot;&gt;
+The image will float to the right of the text.&lt;/p&gt;
+</code></pre>
+
+<ol>
+<li>Define an image map with clickable areas with <code>&lt;map&gt;</code> tag.</li>
+</ol>
+
+<pre><code class="language-html">&lt;img src=&quot;workplace.jpg&quot; alt=&quot;Workplace&quot; usemap=&quot;#workmap&quot;&gt;
+
+&lt;map name=&quot;workmap&quot;&gt;
+  &lt;area shape=&quot;rect&quot; coords=&quot;34,44,270,350&quot; alt=&quot;Computer&quot; href=&quot;computer.htm&quot;&gt;
+  &lt;area shape=&quot;rect&quot; coords=&quot;290,172,333,250&quot; alt=&quot;Phone&quot; href=&quot;phone.htm&quot;&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;337,300,44&quot; alt=&quot;Coffee&quot; href=&quot;coffee.htm&quot;&gt;
+&lt;/map&gt;
+</code></pre>
+
+<ol>
+<li>Use image as background with <code>background-image</code> property in <code>style</code>.</li>
+</ol>
+
+<pre><code class="language-html">&lt;!-- Specify for the body--&gt;
+&lt;body style=&quot;background-image:url('clouds.jpg')&quot;&gt;
+
+&lt;h2&gt;Background Image&lt;/h2&gt;
+
+&lt;/body&gt;
+
+&lt;!-- Specify for the paragraph --&gt;
+&lt;body&gt;
+
+&lt;p style=&quot;background-image:url('clouds.jpg')&quot;&gt;
+...
+&lt;/p&gt;
+
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="picture"><code>&lt;picture&gt;</code></h3>
+
+<p><code>&lt;picture&gt;</code> can be used as an alternative to show different pictures in different devices.</p>
+
+<pre><code class="language-html">&lt;picture&gt;
+  &lt;source media=&quot;(min-width: 650px)&quot; srcset=&quot;img_pink_flowers.jpg&quot;&gt;
+  &lt;source media=&quot;(min-width: 465px)&quot; srcset=&quot;img_white_flower.jpg&quot;&gt;
+  &lt;img src=&quot;img_orange_flowers.jpg&quot; alt=&quot;Flowers&quot; style=&quot;width:auto;&quot;&gt;
+&lt;/picture&gt;
+</code></pre>
+
+<ul>
+<li><p>Show one picture if the browser window (viewport) is a minimum of 650 pixels, and another image if not, but larger than 465 pixels.</p></li>
+
+<li><p>Always specify an <code>&lt;img&gt;</code> element as the last child element of the <picture> element. In case the browser doesn&rsquo;t support <code>&lt;picture&gt;</code>, or if none of the <source> tags matched.</p></li>
+</ul>
+
+<h2 id="tables">Tables</h2>
+
+<p>An HTML table is defined with the <code>&lt;table&gt;</code> tag.</p>
+
+<ul>
+<li><p><code>&lt;tr&gt;</code>: table row</p></li>
+
+<li><p><code>&lt;th&gt;</code>: table header</p></li>
+
+<li><p><code>&lt;td&gt;</code>: table data/cell, are data containers. They can contain all sorts of HTML elements; text, images, lists, other tables, etc.</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;table style=&quot;width:100%&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt; 
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jill&lt;/td&gt;
+    &lt;td&gt;Smith&lt;/td&gt; 
+    &lt;td&gt;50&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Eve&lt;/td&gt;
+    &lt;td&gt;Jackson&lt;/td&gt; 
+    &lt;td&gt;94&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>Frequently used properties:</p>
+
+<pre><code class="language-html">table, th, td {
+    border: 1px solid black;  &lt;!-- Add borders --&gt;
+    border-collapse: collapse; &lt;!--collapse borders for each td --&gt;
+    padding: 15px; &lt;!-- add padding --&gt;
+    text-align: left;  &lt;!--alignment--&gt;
+    border-spacing: 5px; &lt;!--border spacing--&gt;
+}
+</code></pre>
+
+<h3 id="span-many-columns-rows-with-colspan-and-rowspan-atributes">Span many columns/rows with <code>colspan</code> and <code>rowspan</code> atributes</h3>
+
+<pre><code class="language-html">&lt;table style=&quot;width:100%&quot;&gt;
+&lt;caption&gt;Monthly savings&lt;/caption&gt;  &lt;!--&lt;caption&gt; is used to add a caption.--&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name:&lt;/th&gt;
+    &lt;td&gt;Bill Gates&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th rowspan=&quot;2&quot;&gt;Telephone:&lt;/th&gt;
+    &lt;td&gt;55577854&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;55577855&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h3 id="customized-style-with-id-attribute">Customized style with <code>&lt;id&gt;</code> attribute</h3>
+
+<pre><code class="language-html">&lt;table id=&quot;t01&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt; 
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Eve&lt;/td&gt;
+    &lt;td&gt;Jackson&lt;/td&gt; 
+    &lt;td&gt;94&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!--define t01 style--&gt;
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: black;
+}
+
+</code></pre>
+
       </div>
 
-      <meta itemprop="wordCount" content="1241">
+      <meta itemprop="wordCount" content="1677">
       <meta itemprop="datePublished" content="2018-11-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/htmlbasics/">
     </article>
 
     <ul class="pagination" role="navigation" aria-label="Pagination">
-      
-      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/sql/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: SQL Basics</a></li>
       
       
     </ul>
