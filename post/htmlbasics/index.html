@@ -693,9 +693,109 @@ table#t01 th {
 
 </code></pre>
 
+<h2 id="iframes">Iframes</h2>
+
+<p>An iframe is used to display a web page <em>within a web page</em>.</p>
+
+<p>Syntax:</p>
+
+<pre><code class="language-html">&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt; &lt;!--Defines an inline frame --&gt;
+</code></pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li><p><code>height=&quot;200&quot;</code> ,<code>width=&quot;300&quot;</code>, where 200 and 300 are in pixels. Or equivalently, <code>style=&quot;height:200px;width:300px;&quot;</code> in CSS style.</p></li>
+
+<li><p><code>style</code> attribute and  CSS <code>border</code> property to remove border.</p></li>
+
+<li><p><code>style=&quot;border:2px solid red;</code> to change border size, style, color.</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;iframe src=&quot;demo_iframe.htm&quot; height=&quot;200&quot; width=&quot;300&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe src=&quot;demo_iframe.htm&quot; style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe src=&quot;demo_iframe.htm&quot; style=&quot;border:2px solid red;&quot;&gt;&lt;/iframe&gt;
+
+</code></pre>
+
+<h2 id="javascript">Javascript</h2>
+
+<p>Use javascript to make HTML pages more dynamic and interactive.</p>
+
+<p>Syntax:</p>
+
+<pre><code class="language-html">&lt;script&gt;  &lt;!--define a client-side script (JavaScript)--&gt;
+...
+&lt;/script&gt;
+</code></pre>
+
+<p>The <code>&lt;script&gt;</code> element can contain scripting statements, or point to an external script file through the <code>src</code> attribute.</p>
+
+<p>Common uses:</p>
+
+<ul>
+<li><p>image manipulation,</p></li>
+
+<li><p>form validation,</p></li>
+
+<li><p>dynamic changes of content.</p></li>
+</ul>
+
+<ol>
+<li>JavaScript uses the <code>document.getElementById()</code> to select an HTML element.</li>
+</ol>
+
+<p>For example, to write &ldquo;Hello JavaScript!&rdquo; into an HTML element with <code>id=&quot;demo&quot;</code>,</p>
+
+<pre><code class="language-html">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello JavaScript!&quot;;
+&lt;/script&gt; 
+</code></pre>
+
+<ol>
+<li>Use Javascript to change html styles and attributes</li>
+</ol>
+
+<pre><code class="language-html">&lt;!--change styles--&gt;
+document.getElementById(&quot;demo&quot;).style.fontSize = &quot;25px&quot;;
+document.getElementById(&quot;demo&quot;).style.color = &quot;red&quot;;
+document.getElementById(&quot;demo&quot;).style.backgroundColor = &quot;yellow&quot;;
+
+&lt;!--change attributes--&gt;
+document.getElementById(&quot;image&quot;).src = &quot;picture.gif&quot;;
+</code></pre>
+
+<ol>
+<li>Use <code>&lt;noscript&gt;</code> to provide an alternate content for users that have disabled scripts in their browser or have a browser that doesn&rsquo;t support client-side scripts</li>
+</ol>
+
+<pre><code class="language-html">&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello JavaScript!&quot;;
+&lt;/script&gt;
+
+&lt;!--alternative text when javascript is not supported--&gt;
+&lt;noscript&gt;Sorry, your browser does not support JavaScript!&lt;/noscript&gt;
+</code></pre>
+
+<h2 id="filepaths">Filepaths</h2>
+
+<ul>
+<li><p><code>&lt;img src=&quot;picture.jpg&quot;&gt;</code>:    picture.jpg is located in the same folder as the current page.</p></li>
+
+<li><p><code>&lt;img src=&quot;images/picture.jpg&quot;&gt;</code>: picture.jpg is located in the images folder in the current folder.</p></li>
+
+<li><p><code>&lt;img src=&quot;/images/picture.jpg&quot;&gt;</code>:    picture.jpg is located in the images folder at the root of the current web.</p></li>
+
+<li><p><code>&lt;img src=&quot;../picture.jpg&quot;&gt;</code>: picture.jpg is located in the folder one level up from the current folder.</p></li>
+</ul>
+
       </div>
 
-      <meta itemprop="wordCount" content="1677">
+      <meta itemprop="wordCount" content="1949">
       <meta itemprop="datePublished" content="2018-11-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/htmlbasics/">
     </article>
@@ -715,7 +815,7 @@ table#t01 th {
   <hr>
   <div class="row">
    <div class="column small-10 small-centered text-center">
-     <em>Do you like this, or do you have a comment? Then please email me via qshan@iastate.edu.</em>
+     <em>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with Finite theme. Do you like this, or do you have a comment? Then please email me via qshan[at]iastate.edu.</em>
     </div>
   </div>
 </footer>
