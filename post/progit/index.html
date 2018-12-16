@@ -1,0 +1,1116 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning Notes of Pro Git | Qianqian Shan</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/foundation.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/fonts.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+
+
+
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="../../publication">Publications</a></li>
+		  
+		  <li><a href="../../post">Blog</a></li>
+		  
+		  <li><a href="../../#contact">Contact</a></li>
+		  
+		  <li><a href="../../#about">About</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+
+
+
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+    <article class="article" itemscope itemtype="https://schema.org/Article">
+      
+      <h1 itemprop="name">Learning Notes of Pro Git</h1>
+      <div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2018-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">25 September 2018</time>
+  </span>
+  
+  
+  
+  <span class="post-tags">
+    <span class="nowrap"><i class="fa fa-tags"></i>
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/version-control">Version Control</a>,</span> 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/git">Git</a>
+    
+  </span>
+  
+  
+</div>
+
+      <div class="post-body" itemprop="articleBody">
+        <!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style type="text/css">
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto}#page-container{position:absolute;top:0;left:0;margin:0;padding:0;border:0}@media screen{#sidebar.opened+#page-container{left:250px}#page-container{bottom:0;right:0;overflow:auto}.loading-indicator{display:none}.loading-indicator.active{display:block;position:absolute;width:64px;height:64px;top:50%;left:50%;margin-top:-32px;margin-left:-32px}.loading-indicator img{position:absolute;top:0;left:0;bottom:0;right:0}}@media print{@page{margin:0}html{margin:0}body{margin:0;-webkit-print-color-adjust:exact}#sidebar{display:none}#page-container{width:auto;height:auto;overflow:visible;background-color:transparent}.d{display:none}}.pf{position:relative;background-color:white;overflow:hidden;margin:0;border:0}.pc{position:absolute;border:0;padding:0;margin:0;top:0;left:0;width:100%;height:100%;overflow:hidden;display:block;transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0}.pc.opened{display:block}.bf{position:absolute;border:0;margin:0;top:0;bottom:0;width:100%;height:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.bi{position:absolute;border:0;margin:0;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}@media print{.pf{margin:0;box-shadow:none;page-break-after:always;page-break-inside:avoid}@-moz-document url-prefix(){.pf{overflow:visible;border:1px solid #fff}.pc{overflow:visible}}}.c{position:absolute;border:0;padding:0;margin:0;overflow:hidden;display:block}.t{position:absolute;white-space:pre;font-size:1px;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%;unicode-bidi:bidi-override;-moz-font-feature-settings:"liga" 0}.t:after{content:''}.t:before{content:'';display:inline-block}.t span{position:relative;unicode-bidi:bidi-override}._{display:inline-block;color:transparent;z-index:-1}::selection{background:rgba(127,255,255,0.4)}::-moz-selection{background:rgba(127,255,255,0.4)}.pi{display:none}.d{position:absolute;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%}.it{border:0;background-color:rgba(255,255,255,0.0)}.ir:hover{cursor:pointer}</style>
+<style type="text/css">
+/*! 
+ * Fancy styles for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */@keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes swing{0%{transform:rotate(0deg)}10%{transform:rotate(0deg)}90%{transform:rotate(720deg)}100%{transform:rotate(720deg)}}@-webkit-keyframes swing{0%{-webkit-transform:rotate(0deg)}10%{-webkit-transform:rotate(0deg)}90%{-webkit-transform:rotate(720deg)}100%{-webkit-transform:rotate(720deg)}}@media screen{#sidebar{background-color:#2f3236;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMNCA0Wk00IDBMMCA0WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+")}#outline{font-family:Georgia,Times,"Times New Roman",serif;font-size:13px;margin:2em 1em}#outline ul{padding:0}#outline li{list-style-type:none;margin:1em 0}#outline li>ul{margin-left:1em}#outline a,#outline a:visited,#outline a:hover,#outline a:active{line-height:1.2;color:#e8e8e8;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;display:block;overflow:hidden;outline:0}#outline a:hover{color:#0cf}#page-container{background-color:#9e9e9e;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");-webkit-transition:left 500ms;transition:left 500ms}.pf{margin:13px auto;box-shadow:1px 1px 3px 1px #333;border-collapse:separate}.pc.opened{-webkit-animation:fadein 100ms;animation:fadein 100ms}.loading-indicator.active{-webkit-animation:swing 1.5s ease-in-out .01s infinite alternate none;animation:swing 1.5s ease-in-out .01s infinite alternate none}.checked{background:no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goQDSYgDiGofgAAAslJREFUOMvtlM9LFGEYx7/vvOPM6ywuuyPFihWFBUsdNnA6KLIh+QPx4KWExULdHQ/9A9EfUodYmATDYg/iRewQzklFWxcEBcGgEplDkDtI6sw4PzrIbrOuedBb9MALD7zv+3m+z4/3Bf7bZS2bzQIAcrmcMDExcTeXy10DAFVVAQDksgFUVZ1ljD3yfd+0LOuFpmnvVVW9GHhkZAQcxwkNDQ2FSCQyRMgJxnVdy7KstKZpn7nwha6urqqfTqfPBAJAuVymlNLXoigOhfd5nmeiKL5TVTV+lmIKwAOA7u5u6Lped2BsbOwjY6yf4zgQQkAIAcedaPR9H67r3uYBQFEUFItFtLe332lpaVkUBOHK3t5eRtf1DwAwODiIubk5DA8PM8bYW1EU+wEgCIJqsCAIQAiB7/u253k2BQDDMJBKpa4mEon5eDx+UxAESJL0uK2t7XosFlvSdf0QAEmlUnlRFJ9Waho2Qghc1/U9z3uWz+eX+Wr+lL6SZfleEAQIggA8z6OpqSknimIvYyybSCReMsZ6TislhCAIAti2Dc/zejVNWwCAavN8339j27YbTg0AGGM3WltbP4WhlRWq6Q/btrs1TVsYHx+vNgqKoqBUKn2NRqPFxsbGJzzP05puUlpt0ukyOI6z7zjOwNTU1OLo6CgmJyf/gA3DgKIoWF1d/cIY24/FYgOU0pp0z/Ityzo8Pj5OTk9PbwHA+vp6zWghDC+VSiuRSOQgGo32UErJ38CO42wdHR09LBQK3zKZDDY2NupmFmF4R0cHVlZWlmRZ/iVJUn9FeWWcCCE4ODjYtG27Z2Zm5juAOmgdGAB2d3cBADs7O8uSJN2SZfl+WKlpmpumaT6Yn58vn/fs6XmbhmHMNjc3tzDGFI7jYJrm5vb29sDa2trPC/9aiqJUy5pOp4f6+vqeJ5PJBAB0dnZe/t8NBajx/z37Df5OGX8d13xzAAAAAElFTkSuQmCC)}}</style>
+<style type="text/css">
+.ff0{font-family:sans-serif;visibility:hidden;}
+@font-face{font-family:ff1;src:url('data:application/font-woff;base64,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')format("woff");}.ff1{font-family:ff1;line-height:0.902000;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url('data:application/font-woff;base64,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')format("woff");}.ff2{font-family:ff2;line-height:0.725000;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url('data:application/font-woff;base64,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')format("woff");}.ff3{font-family:ff3;line-height:1.001000;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff4;src:url('data:application/font-woff;base64,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')format("woff");}.ff4{font-family:ff4;line-height:0.901000;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff5;src:url('data:application/font-woff;base64,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')format("woff");}.ff5{font-family:ff5;line-height:1.000000;font-style:normal;font-weight:normal;visibility:visible;}
+.m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
+.m1{transform:none;-ms-transform:none;-webkit-transform:none;}
+.v0{vertical-align:0.000000px;}
+.ls0{letter-spacing:0.000000px;}
+.sc_{text-shadow:none;}
+.sc0{text-shadow:-0.015em 0 transparent,0 0.015em transparent,0.015em 0 transparent,0 -0.015em  transparent;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+.sc0{-webkit-text-stroke:0.015em transparent;text-shadow:none;}
+}
+.ws0{word-spacing:0.000000px;}
+._1f{margin-left:-5.394171px;}
+._1{margin-left:-4.150545px;}
+._4{margin-left:-2.148900px;}
+._17{margin-left:-1.003189px;}
+._13{width:1.291162px;}
+._15{width:10.592828px;}
+._14{width:11.607906px;}
+._1e{width:12.632244px;}
+._1c{width:14.327528px;}
+._a{width:15.589581px;}
+._16{width:17.451556px;}
+._5{width:18.707445px;}
+._18{width:19.817096px;}
+._12{width:20.945510px;}
+._1a{width:22.810522px;}
+._c{width:23.910400px;}
+._0{width:24.960300px;}
+._20{width:25.966694px;}
+._21{width:27.414808px;}
+._2{width:28.927500px;}
+._1b{width:30.705939px;}
+._3{width:32.819360px;}
+._b{width:34.144051px;}
+._1d{width:36.263724px;}
+._f{width:40.829099px;}
+._6{width:43.325645px;}
+._e{width:45.716685px;}
+._9{width:47.868621px;}
+._19{width:64.557900px;}
+._d{width:65.992704px;}
+._11{width:77.469300px;}
+._7{width:1083.657637px;}
+._8{width:1214.495346px;}
+._10{width:1217.418890px;}
+.fc0{color:rgb(0,0,0);}
+.fs3{font-size:47.820800px;}
+.fs1{font-size:57.384800px;}
+.fs2{font-size:68.861600px;}
+.fs0{font-size:82.650000px;}
+.y28{bottom:93.426000px;}
+.yb{bottom:93.427000px;}
+.y27{bottom:123.314000px;}
+.y26{bottom:137.760000px;}
+.y41{bottom:145.979000px;}
+.y25{bottom:156.838000px;}
+.y56{bottom:161.164000px;}
+.y24{bottom:171.284000px;}
+.y40{bottom:178.524000px;}
+.y55{bottom:185.573000px;}
+.y23{bottom:190.362000px;}
+.y54{bottom:200.018000px;}
+.y3f{bottom:205.838000px;}
+.y22{bottom:214.072000px;}
+.y53{bottom:214.464000px;}
+.y21{bottom:228.518000px;}
+.y52{bottom:228.910000px;}
+.y3e{bottom:245.647000px;}
+.y20{bottom:252.228000px;}
+.y51{bottom:253.319000px;}
+.y3d{bottom:260.093000px;}
+.y50{bottom:267.764000px;}
+.y3c{bottom:274.539000px;}
+.y1f{bottom:275.938000px;}
+.y4f{bottom:282.210000px;}
+.y4e{bottom:296.656000px;}
+.y3b{bottom:298.947000px;}
+.y1e{bottom:299.649000px;}
+.y1d{bottom:314.094000px;}
+.y4d{bottom:321.064000px;}
+.y3a{bottom:323.356000px;}
+.y1c{bottom:328.540000px;}
+.y1b{bottom:342.986000px;}
+.y39{bottom:347.764000px;}
+.ya{bottom:348.504000px;}
+.y4c{bottom:353.609000px;}
+.y38{bottom:362.210000px;}
+.y1a{bottom:366.696000px;}
+.y4b{bottom:368.055000px;}
+.y9{bottom:379.803000px;}
+.y37{bottom:381.637000px;}
+.y4a{bottom:387.648000px;}
+.y19{bottom:393.495000px;}
+.y36{bottom:396.083000px;}
+.y8{bottom:399.396000px;}
+.y49{bottom:402.094000px;}
+.y35{bottom:410.529000px;}
+.y7{bottom:418.989000px;}
+.y18{bottom:428.054000px;}
+.y34{bottom:429.956000px;}
+.y48{bottom:433.526000px;}
+.y6{bottom:438.583000px;}
+.y33{bottom:454.365000px;}
+.y5{bottom:458.176000px;}
+.y17{bottom:472.413000px;}
+.y47{bottom:478.607000px;}
+.y32{bottom:478.773000px;}
+.y16{bottom:486.859000px;}
+.y4{bottom:489.475000px;}
+.y31{bottom:493.219000px;}
+.y46{bottom:505.921000px;}
+.y15{bottom:516.249000px;}
+.y30{bottom:520.367000px;}
+.y3{bottom:520.907000px;}
+.y14{bottom:539.960000px;}
+.y45{bottom:545.730000px;}
+.y13{bottom:554.405000px;}
+.y2f{bottom:560.176000px;}
+.y2e{bottom:574.622000px;}
+.y12{bottom:578.116000px;}
+.y44{bottom:584.585000px;}
+.y2{bottom:591.891000px;}
+.y2d{bottom:599.030000px;}
+.y43{bottom:599.031000px;}
+.y11{bottom:607.506000px;}
+.y2c{bottom:623.439000px;}
+.y10{bottom:626.739000px;}
+.y1{bottom:627.922000px;}
+.yf{bottom:641.185000px;}
+.y2b{bottom:647.847000px;}
+.y0{bottom:652.829000px;}
+.ye{bottom:655.630000px;}
+.y2a{bottom:662.293000px;}
+.yd{bottom:670.076000px;}
+.y29{bottom:676.739000px;}
+.y42{bottom:681.720000px;}
+.yc{bottom:701.148000px;}
+.h5{height:33.474560px;}
+.h6{height:35.865600px;}
+.h7{height:40.169360px;}
+.h3{height:43.038600px;}
+.h4{height:48.203120px;}
+.h2{height:57.772350px;}
+.h1{height:58.185600px;}
+.h0{height:841.890000px;}
+.w0{width:595.276000px;}
+.x3{left:102.884000px;}
+.x8{left:111.338000px;}
+.x0{left:117.714000px;}
+.x4{left:120.443000px;}
+.x6{left:132.149000px;}
+.x7{left:152.074000px;}
+.x1{left:231.499000px;}
+.x2{left:251.698000px;}
+.x5{left:294.229000px;}
+@media print{
+.v0{vertical-align:0.000000pt;}
+.ls0{letter-spacing:0.000000pt;}
+.ws0{word-spacing:0.000000pt;}
+._1f{margin-left:-7.192228pt;}
+._1{margin-left:-5.534060pt;}
+._4{margin-left:-2.865200pt;}
+._17{margin-left:-1.337585pt;}
+._13{width:1.721549pt;}
+._15{width:14.123771pt;}
+._14{width:15.477209pt;}
+._1e{width:16.842993pt;}
+._1c{width:19.103370pt;}
+._a{width:20.786108pt;}
+._16{width:23.268741pt;}
+._5{width:24.943260pt;}
+._18{width:26.422795pt;}
+._12{width:27.927347pt;}
+._1a{width:30.414029pt;}
+._c{width:31.880533pt;}
+._0{width:33.280400pt;}
+._20{width:34.622259pt;}
+._21{width:36.553077pt;}
+._2{width:38.570000pt;}
+._1b{width:40.941252pt;}
+._3{width:43.759147pt;}
+._b{width:45.525402pt;}
+._1d{width:48.351631pt;}
+._f{width:54.438798pt;}
+._6{width:57.767526pt;}
+._e{width:60.955580pt;}
+._9{width:63.824828pt;}
+._19{width:86.077200pt;}
+._d{width:87.990272pt;}
+._11{width:103.292400pt;}
+._7{width:1444.876849pt;}
+._8{width:1619.327127pt;}
+._10{width:1623.225187pt;}
+.fs3{font-size:63.761067pt;}
+.fs1{font-size:76.513067pt;}
+.fs2{font-size:91.815467pt;}
+.fs0{font-size:110.200000pt;}
+.y28{bottom:124.568000pt;}
+.yb{bottom:124.569333pt;}
+.y27{bottom:164.418667pt;}
+.y26{bottom:183.680000pt;}
+.y41{bottom:194.638667pt;}
+.y25{bottom:209.117333pt;}
+.y56{bottom:214.885333pt;}
+.y24{bottom:228.378667pt;}
+.y40{bottom:238.032000pt;}
+.y55{bottom:247.430667pt;}
+.y23{bottom:253.816000pt;}
+.y54{bottom:266.690667pt;}
+.y3f{bottom:274.450667pt;}
+.y22{bottom:285.429333pt;}
+.y53{bottom:285.952000pt;}
+.y21{bottom:304.690667pt;}
+.y52{bottom:305.213333pt;}
+.y3e{bottom:327.529333pt;}
+.y20{bottom:336.304000pt;}
+.y51{bottom:337.758667pt;}
+.y3d{bottom:346.790667pt;}
+.y50{bottom:357.018667pt;}
+.y3c{bottom:366.052000pt;}
+.y1f{bottom:367.917333pt;}
+.y4f{bottom:376.280000pt;}
+.y4e{bottom:395.541333pt;}
+.y3b{bottom:398.596000pt;}
+.y1e{bottom:399.532000pt;}
+.y1d{bottom:418.792000pt;}
+.y4d{bottom:428.085333pt;}
+.y3a{bottom:431.141333pt;}
+.y1c{bottom:438.053333pt;}
+.y1b{bottom:457.314667pt;}
+.y39{bottom:463.685333pt;}
+.ya{bottom:464.672000pt;}
+.y4c{bottom:471.478667pt;}
+.y38{bottom:482.946667pt;}
+.y1a{bottom:488.928000pt;}
+.y4b{bottom:490.740000pt;}
+.y9{bottom:506.404000pt;}
+.y37{bottom:508.849333pt;}
+.y4a{bottom:516.864000pt;}
+.y19{bottom:524.660000pt;}
+.y36{bottom:528.110667pt;}
+.y8{bottom:532.528000pt;}
+.y49{bottom:536.125333pt;}
+.y35{bottom:547.372000pt;}
+.y7{bottom:558.652000pt;}
+.y18{bottom:570.738667pt;}
+.y34{bottom:573.274667pt;}
+.y48{bottom:578.034667pt;}
+.y6{bottom:584.777333pt;}
+.y33{bottom:605.820000pt;}
+.y5{bottom:610.901333pt;}
+.y17{bottom:629.884000pt;}
+.y47{bottom:638.142667pt;}
+.y32{bottom:638.364000pt;}
+.y16{bottom:649.145333pt;}
+.y4{bottom:652.633333pt;}
+.y31{bottom:657.625333pt;}
+.y46{bottom:674.561333pt;}
+.y15{bottom:688.332000pt;}
+.y30{bottom:693.822667pt;}
+.y3{bottom:694.542667pt;}
+.y14{bottom:719.946667pt;}
+.y45{bottom:727.640000pt;}
+.y13{bottom:739.206667pt;}
+.y2f{bottom:746.901333pt;}
+.y2e{bottom:766.162667pt;}
+.y12{bottom:770.821333pt;}
+.y44{bottom:779.446667pt;}
+.y2{bottom:789.188000pt;}
+.y2d{bottom:798.706667pt;}
+.y43{bottom:798.708000pt;}
+.y11{bottom:810.008000pt;}
+.y2c{bottom:831.252000pt;}
+.y10{bottom:835.652000pt;}
+.y1{bottom:837.229333pt;}
+.yf{bottom:854.913333pt;}
+.y2b{bottom:863.796000pt;}
+.y0{bottom:870.438667pt;}
+.ye{bottom:874.173333pt;}
+.y2a{bottom:883.057333pt;}
+.yd{bottom:893.434667pt;}
+.y29{bottom:902.318667pt;}
+.y42{bottom:908.960000pt;}
+.yc{bottom:934.864000pt;}
+.h5{height:44.632747pt;}
+.h6{height:47.820800pt;}
+.h7{height:53.559147pt;}
+.h3{height:57.384800pt;}
+.h4{height:64.270827pt;}
+.h2{height:77.029800pt;}
+.h1{height:77.580800pt;}
+.h0{height:1122.520000pt;}
+.w0{width:793.701333pt;}
+.x3{left:137.178667pt;}
+.x8{left:148.450667pt;}
+.x0{left:156.952000pt;}
+.x4{left:160.590667pt;}
+.x6{left:176.198667pt;}
+.x7{left:202.765333pt;}
+.x1{left:308.665333pt;}
+.x2{left:335.597333pt;}
+.x5{left:392.305333pt;}
+}
+</style>
+<script>
+/* Copyright 2012 Mozilla Foundation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* globals VBArray, PDFJS */
+
+'use strict';
+
+// Initializing PDFJS global object here, it case if we need to change/disable
+// some PDF.js features, e.g. range requests
+if (typeof PDFJS === 'undefined') {
+  (typeof window !== 'undefined' ? window : this).PDFJS = {};
+}
+
+// Checking if the typed arrays are supported
+// Support: iOS<6.0 (subarray), IE<10, Android<4.0
+(function checkTypedArrayCompatibility() {
+  if (typeof Uint8Array !== 'undefined') {
+    // Support: iOS<6.0
+    if (typeof Uint8Array.prototype.subarray === 'undefined') {
+        Uint8Array.prototype.subarray = function subarray(start, end) {
+          return new Uint8Array(this.slice(start, end));
+        };
+        Float32Array.prototype.subarray = function subarray(start, end) {
+          return new Float32Array(this.slice(start, end));
+        };
+    }
+
+    // Support: Android<4.1
+    if (typeof Float64Array === 'undefined') {
+      window.Float64Array = Float32Array;
+    }
+    return;
+  }
+
+  function subarray(start, end) {
+    return new TypedArray(this.slice(start, end));
+  }
+
+  function setArrayOffset(array, offset) {
+    if (arguments.length < 2) {
+      offset = 0;
+    }
+    for (var i = 0, n = array.length; i < n; ++i, ++offset) {
+      this[offset] = array[i] & 0xFF;
+    }
+  }
+
+  function TypedArray(arg1) {
+    var result, i, n;
+    if (typeof arg1 === 'number') {
+      result = [];
+      for (i = 0; i < arg1; ++i) {
+        result[i] = 0;
+      }
+    } else if ('slice' in arg1) {
+      result = arg1.slice(0);
+    } else {
+      result = [];
+      for (i = 0, n = arg1.length; i < n; ++i) {
+        result[i] = arg1[i];
+      }
+    }
+
+    result.subarray = subarray;
+    result.buffer = result;
+    result.byteLength = result.length;
+    result.set = setArrayOffset;
+
+    if (typeof arg1 === 'object' && arg1.buffer) {
+      result.buffer = arg1.buffer;
+    }
+    return result;
+  }
+
+  window.Uint8Array = TypedArray;
+  window.Int8Array = TypedArray;
+
+  // we don't need support for set, byteLength for 32-bit array
+  // so we can use the TypedArray as well
+  window.Uint32Array = TypedArray;
+  window.Int32Array = TypedArray;
+  window.Uint16Array = TypedArray;
+  window.Float32Array = TypedArray;
+  window.Float64Array = TypedArray;
+})();
+
+// URL = URL || webkitURL
+// Support: Safari<7, Android 4.2+
+(function normalizeURLObject() {
+  if (!window.URL) {
+    window.URL = window.webkitURL;
+  }
+})();
+
+// Object.defineProperty()?
+// Support: Android<4.0, Safari<5.1
+(function checkObjectDefinePropertyCompatibility() {
+  if (typeof Object.defineProperty !== 'undefined') {
+    var definePropertyPossible = true;
+    try {
+      // some browsers (e.g. safari) cannot use defineProperty() on DOM objects
+      // and thus the native version is not sufficient
+      Object.defineProperty(new Image(), 'id', { value: 'test' });
+      // ... another test for android gb browser for non-DOM objects
+      var Test = function Test() {};
+      Test.prototype = { get id() { } };
+      Object.defineProperty(new Test(), 'id',
+        { value: '', configurable: true, enumerable: true, writable: false });
+    } catch (e) {
+      definePropertyPossible = false;
+    }
+    if (definePropertyPossible) {
+      return;
+    }
+  }
+
+  Object.defineProperty = function objectDefineProperty(obj, name, def) {
+    delete obj[name];
+    if ('get' in def) {
+      obj.__defineGetter__(name, def['get']);
+    }
+    if ('set' in def) {
+      obj.__defineSetter__(name, def['set']);
+    }
+    if ('value' in def) {
+      obj.__defineSetter__(name, function objectDefinePropertySetter(value) {
+        this.__defineGetter__(name, function objectDefinePropertyGetter() {
+          return value;
+        });
+        return value;
+      });
+      obj[name] = def.value;
+    }
+  };
+})();
+
+
+// No XMLHttpRequest#response?
+// Support: IE<11, Android <4.0
+(function checkXMLHttpRequestResponseCompatibility() {
+  var xhrPrototype = XMLHttpRequest.prototype;
+  var xhr = new XMLHttpRequest();
+  if (!('overrideMimeType' in xhr)) {
+    // IE10 might have response, but not overrideMimeType
+    // Support: IE10
+    Object.defineProperty(xhrPrototype, 'overrideMimeType', {
+      value: function xmlHttpRequestOverrideMimeType(mimeType) {}
+    });
+  }
+  if ('responseType' in xhr) {
+    return;
+  }
+
+  // The worker will be using XHR, so we can save time and disable worker.
+  PDFJS.disableWorker = true;
+
+  Object.defineProperty(xhrPrototype, 'responseType', {
+    get: function xmlHttpRequestGetResponseType() {
+      return this._responseType || 'text';
+    },
+    set: function xmlHttpRequestSetResponseType(value) {
+      if (value === 'text' || value === 'arraybuffer') {
+        this._responseType = value;
+        if (value === 'arraybuffer' &&
+            typeof this.overrideMimeType === 'function') {
+          this.overrideMimeType('text/plain; charset=x-user-defined');
+        }
+      }
+    }
+  });
+
+  // Support: IE9
+  if (typeof VBArray !== 'undefined') {
+    Object.defineProperty(xhrPrototype, 'response', {
+      get: function xmlHttpRequestResponseGet() {
+        if (this.responseType === 'arraybuffer') {
+          return new Uint8Array(new VBArray(this.responseBody).toArray());
+        } else {
+          return this.responseText;
+        }
+      }
+    });
+    return;
+  }
+
+  Object.defineProperty(xhrPrototype, 'response', {
+    get: function xmlHttpRequestResponseGet() {
+      if (this.responseType !== 'arraybuffer') {
+        return this.responseText;
+      }
+      var text = this.responseText;
+      var i, n = text.length;
+      var result = new Uint8Array(n);
+      for (i = 0; i < n; ++i) {
+        result[i] = text.charCodeAt(i) & 0xFF;
+      }
+      return result.buffer;
+    }
+  });
+})();
+
+// window.btoa (base64 encode function) ?
+// Support: IE<10
+(function checkWindowBtoaCompatibility() {
+  if ('btoa' in window) {
+    return;
+  }
+
+  var digits =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+  window.btoa = function windowBtoa(chars) {
+    var buffer = '';
+    var i, n;
+    for (i = 0, n = chars.length; i < n; i += 3) {
+      var b1 = chars.charCodeAt(i) & 0xFF;
+      var b2 = chars.charCodeAt(i + 1) & 0xFF;
+      var b3 = chars.charCodeAt(i + 2) & 0xFF;
+      var d1 = b1 >> 2, d2 = ((b1 & 3) << 4) | (b2 >> 4);
+      var d3 = i + 1 < n ? ((b2 & 0xF) << 2) | (b3 >> 6) : 64;
+      var d4 = i + 2 < n ? (b3 & 0x3F) : 64;
+      buffer += (digits.charAt(d1) + digits.charAt(d2) +
+                 digits.charAt(d3) + digits.charAt(d4));
+    }
+    return buffer;
+  };
+})();
+
+// window.atob (base64 encode function)?
+// Support: IE<10
+(function checkWindowAtobCompatibility() {
+  if ('atob' in window) {
+    return;
+  }
+
+  // https://github.com/davidchambers/Base64.js
+  var digits =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+  window.atob = function (input) {
+    input = input.replace(/=+$/, '');
+    if (input.length % 4 === 1) {
+      throw new Error('bad atob input');
+    }
+    for (
+      // initialize result and counters
+      var bc = 0, bs, buffer, idx = 0, output = '';
+      // get next character
+      buffer = input.charAt(idx++);
+      // character found in table?
+      // initialize bit storage and add its ascii value
+      ~buffer && (bs = bc % 4 ? bs * 64 + buffer : buffer,
+        // and if not first of each 4 characters,
+        // convert the first 8 bits to one ascii character
+        bc++ % 4) ? output += String.fromCharCode(255 & bs >> (-2 * bc & 6)) : 0
+    ) {
+      // try to find character in table (0-63, not found => -1)
+      buffer = digits.indexOf(buffer);
+    }
+    return output;
+  };
+})();
+
+// Function.prototype.bind?
+// Support: Android<4.0, iOS<6.0
+(function checkFunctionPrototypeBindCompatibility() {
+  if (typeof Function.prototype.bind !== 'undefined') {
+    return;
+  }
+
+  Function.prototype.bind = function functionPrototypeBind(obj) {
+    var fn = this, headArgs = Array.prototype.slice.call(arguments, 1);
+    var bound = function functionPrototypeBindBound() {
+      var args = headArgs.concat(Array.prototype.slice.call(arguments));
+      return fn.apply(obj, args);
+    };
+    return bound;
+  };
+})();
+
+// HTMLElement dataset property
+// Support: IE<11, Safari<5.1, Android<4.0
+(function checkDatasetProperty() {
+  var div = document.createElement('div');
+  if ('dataset' in div) {
+    return; // dataset property exists
+  }
+
+  Object.defineProperty(HTMLElement.prototype, 'dataset', {
+    get: function() {
+      if (this._dataset) {
+        return this._dataset;
+      }
+
+      var dataset = {};
+      for (var j = 0, jj = this.attributes.length; j < jj; j++) {
+        var attribute = this.attributes[j];
+        if (attribute.name.substring(0, 5) !== 'data-') {
+          continue;
+        }
+        var key = attribute.name.substring(5).replace(/\-([a-z])/g,
+          function(all, ch) {
+            return ch.toUpperCase();
+          });
+        dataset[key] = attribute.value;
+      }
+
+      Object.defineProperty(this, '_dataset', {
+        value: dataset,
+        writable: false,
+        enumerable: false
+      });
+      return dataset;
+    },
+    enumerable: true
+  });
+})();
+
+// HTMLElement classList property
+// Support: IE<10, Android<4.0, iOS<5.0
+(function checkClassListProperty() {
+  var div = document.createElement('div');
+  if ('classList' in div) {
+    return; // classList property exists
+  }
+
+  function changeList(element, itemName, add, remove) {
+    var s = element.className || '';
+    var list = s.split(/\s+/g);
+    if (list[0] === '') {
+      list.shift();
+    }
+    var index = list.indexOf(itemName);
+    if (index < 0 && add) {
+      list.push(itemName);
+    }
+    if (index >= 0 && remove) {
+      list.splice(index, 1);
+    }
+    element.className = list.join(' ');
+    return (index >= 0);
+  }
+
+  var classListPrototype = {
+    add: function(name) {
+      changeList(this.element, name, true, false);
+    },
+    contains: function(name) {
+      return changeList(this.element, name, false, false);
+    },
+    remove: function(name) {
+      changeList(this.element, name, false, true);
+    },
+    toggle: function(name) {
+      changeList(this.element, name, true, true);
+    }
+  };
+
+  Object.defineProperty(HTMLElement.prototype, 'classList', {
+    get: function() {
+      if (this._classList) {
+        return this._classList;
+      }
+
+      var classList = Object.create(classListPrototype, {
+        element: {
+          value: this,
+          writable: false,
+          enumerable: true
+        }
+      });
+      Object.defineProperty(this, '_classList', {
+        value: classList,
+        writable: false,
+        enumerable: false
+      });
+      return classList;
+    },
+    enumerable: true
+  });
+})();
+
+// Check console compatibility
+// In older IE versions the console object is not available
+// unless console is open.
+// Support: IE<10
+(function checkConsoleCompatibility() {
+  if (!('console' in window)) {
+    window.console = {
+      log: function() {},
+      error: function() {},
+      warn: function() {}
+    };
+  } else if (!('bind' in console.log)) {
+    // native functions in IE9 might not have bind
+    console.log = (function(fn) {
+      return function(msg) { return fn(msg); };
+    })(console.log);
+    console.error = (function(fn) {
+      return function(msg) { return fn(msg); };
+    })(console.error);
+    console.warn = (function(fn) {
+      return function(msg) { return fn(msg); };
+    })(console.warn);
+  }
+})();
+
+// Check onclick compatibility in Opera
+// Support: Opera<15
+(function checkOnClickCompatibility() {
+  // workaround for reported Opera bug DSK-354448:
+  // onclick fires on disabled buttons with opaque content
+  function ignoreIfTargetDisabled(event) {
+    if (isDisabled(event.target)) {
+      event.stopPropagation();
+    }
+  }
+  function isDisabled(node) {
+    return node.disabled || (node.parentNode && isDisabled(node.parentNode));
+  }
+  if (navigator.userAgent.indexOf('Opera') !== -1) {
+    // use browser detection since we cannot feature-check this bug
+    document.addEventListener('click', ignoreIfTargetDisabled, true);
+  }
+})();
+
+// Checks if possible to use URL.createObjectURL()
+// Support: IE
+(function checkOnBlobSupport() {
+  // sometimes IE loosing the data created with createObjectURL(), see #3977
+  if (navigator.userAgent.indexOf('Trident') >= 0) {
+    PDFJS.disableCreateObjectURL = true;
+  }
+})();
+
+// Checks if navigator.language is supported
+(function checkNavigatorLanguage() {
+  if ('language' in navigator) {
+    return;
+  }
+  PDFJS.locale = navigator.userLanguage || 'en-US';
+})();
+
+(function checkRangeRequests() {
+  // Safari has issues with cached range requests see:
+  // https://github.com/mozilla/pdf.js/issues/3260
+  // Last tested with version 6.0.4.
+  // Support: Safari 6.0+
+  var isSafari = Object.prototype.toString.call(
+                  window.HTMLElement).indexOf('Constructor') > 0;
+
+  // Older versions of Android (pre 3.0) has issues with range requests, see:
+  // https://github.com/mozilla/pdf.js/issues/3381.
+  // Make sure that we only match webkit-based Android browsers,
+  // since Firefox/Fennec works as expected.
+  // Support: Android<3.0
+  var regex = /Android\s[0-2][^\d]/;
+  var isOldAndroid = regex.test(navigator.userAgent);
+
+  // Range requests are broken in Chrome 39 and 40, https://crbug.com/442318
+  var isChromeWithRangeBug = /Chrome\/(39|40)\./.test(navigator.userAgent);
+
+  if (isSafari || isOldAndroid || isChromeWithRangeBug) {
+    PDFJS.disableRange = true;
+    PDFJS.disableStream = true;
+  }
+})();
+
+// Check if the browser supports manipulation of the history.
+// Support: IE<10, Android<4.2
+(function checkHistoryManipulation() {
+  // Android 2.x has so buggy pushState support that it was removed in
+  // Android 3.0 and restored as late as in Android 4.2.
+  // Support: Android 2.x
+  if (!history.pushState || navigator.userAgent.indexOf('Android 2.') >= 0) {
+    PDFJS.disableHistory = true;
+  }
+})();
+
+// Support: IE<11, Chrome<21, Android<4.4, Safari<6
+(function checkSetPresenceInImageData() {
+  // IE < 11 will use window.CanvasPixelArray which lacks set function.
+  if (window.CanvasPixelArray) {
+    if (typeof window.CanvasPixelArray.prototype.set !== 'function') {
+      window.CanvasPixelArray.prototype.set = function(arr) {
+        for (var i = 0, ii = this.length; i < ii; i++) {
+          this[i] = arr[i];
+        }
+      };
+    }
+  } else {
+    // Old Chrome and Android use an inaccessible CanvasPixelArray prototype.
+    // Because we cannot feature detect it, we rely on user agent parsing.
+    var polyfill = false, versionMatch;
+    if (navigator.userAgent.indexOf('Chrom') >= 0) {
+      versionMatch = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+      // Chrome < 21 lacks the set function.
+      polyfill = versionMatch && parseInt(versionMatch[2]) < 21;
+    } else if (navigator.userAgent.indexOf('Android') >= 0) {
+      // Android < 4.4 lacks the set function.
+      // Android >= 4.4 will contain Chrome in the user agent,
+      // thus pass the Chrome check above and not reach this block.
+      polyfill = /Android\s[0-4][^\d]/g.test(navigator.userAgent);
+    } else if (navigator.userAgent.indexOf('Safari') >= 0) {
+      versionMatch = navigator.userAgent.
+        match(/Version\/([0-9]+)\.([0-9]+)\.([0-9]+) Safari\//);
+      // Safari < 6 lacks the set function.
+      polyfill = versionMatch && parseInt(versionMatch[1]) < 6;
+    }
+
+    if (polyfill) {
+      var contextPrototype = window.CanvasRenderingContext2D.prototype;
+      var createImageData = contextPrototype.createImageData;
+      contextPrototype.createImageData = function(w, h) {
+        var imageData = createImageData.call(this, w, h);
+        imageData.data.set = function(arr) {
+          for (var i = 0, ii = this.length; i < ii; i++) {
+            this[i] = arr[i];
+          }
+        };
+        return imageData;
+      };
+      // this closure will be kept referenced, so clear its vars
+      contextPrototype = null;
+    }
+  }
+})();
+
+// Support: IE<10, Android<4.0, iOS
+(function checkRequestAnimationFrame() {
+  function fakeRequestAnimationFrame(callback) {
+    window.setTimeout(callback, 20);
+  }
+
+  var isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+  if (isIOS) {
+    // requestAnimationFrame on iOS is broken, replacing with fake one.
+    window.requestAnimationFrame = fakeRequestAnimationFrame;
+    return;
+  }
+  if ('requestAnimationFrame' in window) {
+    return;
+  }
+  window.requestAnimationFrame =
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    fakeRequestAnimationFrame;
+})();
+
+(function checkCanvasSizeLimitation() {
+  var isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+  var isAndroid = /Android/g.test(navigator.userAgent);
+  if (isIOS || isAndroid) {
+    // 5MP
+    PDFJS.maxCanvasPixels = 5242880;
+  }
+})();
+
+// Disable fullscreen support for certain problematic configurations.
+// Support: IE11+ (when embedded).
+(function checkFullscreenSupport() {
+  var isEmbeddedIE = (navigator.userAgent.indexOf('Trident') >= 0 &&
+                      window.parent !== window);
+  if (isEmbeddedIE) {
+    PDFJS.disableFullscreen = true;
+  }
+})();
+
+// Provides document.currentScript support
+// Support: IE, Chrome<29.
+(function checkCurrentScript() {
+  if ('currentScript' in document) {
+    return;
+  }
+  Object.defineProperty(document, 'currentScript', {
+    get: function () {
+      var scripts = document.getElementsByTagName('script');
+      return scripts[scripts.length - 1];
+    },
+    enumerable: true,
+    configurable: true
+  });
+})();
+</script>
+<script>
+(function(){/*
+ pdf2htmlEX.js: Core UI functions for pdf2htmlEX 
+ Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> and other contributors 
+ https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE 
+*/
+var pdf2htmlEX=window.pdf2htmlEX=window.pdf2htmlEX||{},CSS_CLASS_NAMES={page_frame:"pf",page_content_box:"pc",page_data:"pi",background_image:"bi",link:"l",input_radio:"ir",__dummy__:"no comma"},DEFAULT_CONFIG={container_id:"page-container",sidebar_id:"sidebar",outline_id:"outline",loading_indicator_cls:"loading-indicator",preload_pages:3,render_timeout:100,scale_step:0.9,key_handler:!0,hashchange_handler:!0,view_history_handler:!0,__dummy__:"no comma"},EPS=1E-6;
+function invert(a){var b=a[0]*a[3]-a[1]*a[2];return[a[3]/b,-a[1]/b,-a[2]/b,a[0]/b,(a[2]*a[5]-a[3]*a[4])/b,(a[1]*a[4]-a[0]*a[5])/b]}function transform(a,b){return[a[0]*b[0]+a[2]*b[1]+a[4],a[1]*b[0]+a[3]*b[1]+a[5]]}function get_page_number(a){return parseInt(a.getAttribute("data-page-no"),16)}function disable_dragstart(a){for(var b=0,c=a.length;b<c;++b)a[b].addEventListener("dragstart",function(){return!1},!1)}
+function clone_and_extend_objs(a){for(var b={},c=0,e=arguments.length;c<e;++c){var h=arguments[c],d;for(d in h)h.hasOwnProperty(d)&&(b[d]=h[d])}return b}
+function Page(a){if(a){this.shown=this.loaded=!1;this.page=a;this.num=get_page_number(a);this.original_height=a.clientHeight;this.original_width=a.clientWidth;var b=a.getElementsByClassName(CSS_CLASS_NAMES.page_content_box)[0];b&&(this.content_box=b,this.original_scale=this.cur_scale=this.original_height/b.clientHeight,this.page_data=JSON.parse(a.getElementsByClassName(CSS_CLASS_NAMES.page_data)[0].getAttribute("data-data")),this.ctm=this.page_data.ctm,this.ictm=invert(this.ctm),this.loaded=!0)}}
+Page.prototype={hide:function(){this.loaded&&this.shown&&(this.content_box.classList.remove("opened"),this.shown=!1)},show:function(){this.loaded&&!this.shown&&(this.content_box.classList.add("opened"),this.shown=!0)},rescale:function(a){this.cur_scale=0===a?this.original_scale:a;this.loaded&&(a=this.content_box.style,a.msTransform=a.webkitTransform=a.transform="scale("+this.cur_scale.toFixed(3)+")");a=this.page.style;a.height=this.original_height*this.cur_scale+"px";a.width=this.original_width*this.cur_scale+
+"px"},view_position:function(){var a=this.page,b=a.parentNode;return[b.scrollLeft-a.offsetLeft-a.clientLeft,b.scrollTop-a.offsetTop-a.clientTop]},height:function(){return this.page.clientHeight},width:function(){return this.page.clientWidth}};function Viewer(a){this.config=clone_and_extend_objs(DEFAULT_CONFIG,0<arguments.length?a:{});this.pages_loading=[];this.init_before_loading_content();var b=this;document.addEventListener("DOMContentLoaded",function(){b.init_after_loading_content()},!1)}
+Viewer.prototype={scale:1,cur_page_idx:0,first_page_idx:0,init_before_loading_content:function(){this.pre_hide_pages()},initialize_radio_button:function(){for(var a=document.getElementsByClassName(CSS_CLASS_NAMES.input_radio),b=0;b<a.length;b++)a[b].addEventListener("click",function(){this.classList.toggle("checked")})},init_after_loading_content:function(){this.sidebar=document.getElementById(this.config.sidebar_id);this.outline=document.getElementById(this.config.outline_id);this.container=document.getElementById(this.config.container_id);
+this.loading_indicator=document.getElementsByClassName(this.config.loading_indicator_cls)[0];for(var a=!0,b=this.outline.childNodes,c=0,e=b.length;c<e;++c)if("ul"===b[c].nodeName.toLowerCase()){a=!1;break}a||this.sidebar.classList.add("opened");this.find_pages();if(0!=this.pages.length){disable_dragstart(document.getElementsByClassName(CSS_CLASS_NAMES.background_image));this.config.key_handler&&this.register_key_handler();var h=this;this.config.hashchange_handler&&window.addEventListener("hashchange",
+function(a){h.navigate_to_dest(document.location.hash.substring(1))},!1);this.config.view_history_handler&&window.addEventListener("popstate",function(a){a.state&&h.navigate_to_dest(a.state)},!1);this.container.addEventListener("scroll",function(){h.update_page_idx();h.schedule_render(!0)},!1);[this.container,this.outline].forEach(function(a){a.addEventListener("click",h.link_handler.bind(h),!1)});this.initialize_radio_button();this.render()}},find_pages:function(){for(var a=[],b={},c=this.container.childNodes,
+e=0,h=c.length;e<h;++e){var d=c[e];d.nodeType===Node.ELEMENT_NODE&&d.classList.contains(CSS_CLASS_NAMES.page_frame)&&(d=new Page(d),a.push(d),b[d.num]=a.length-1)}this.pages=a;this.page_map=b},load_page:function(a,b,c){var e=this.pages;if(!(a>=e.length)&&(e=e[a],!e.loaded&&!this.pages_loading[a])){var e=e.page,h=e.getAttribute("data-page-url");if(h){this.pages_loading[a]=!0;var d=e.getElementsByClassName(this.config.loading_indicator_cls)[0];"undefined"===typeof d&&(d=this.loading_indicator.cloneNode(!0),
+d.classList.add("active"),e.appendChild(d));var f=this,g=new XMLHttpRequest;g.open("GET",h,!0);g.onload=function(){if(200===g.status||0===g.status){var b=document.createElement("div");b.innerHTML=g.responseText;for(var d=null,b=b.childNodes,e=0,h=b.length;e<h;++e){var p=b[e];if(p.nodeType===Node.ELEMENT_NODE&&p.classList.contains(CSS_CLASS_NAMES.page_frame)){d=p;break}}b=f.pages[a];f.container.replaceChild(d,b.page);b=new Page(d);f.pages[a]=b;b.hide();b.rescale(f.scale);disable_dragstart(d.getElementsByClassName(CSS_CLASS_NAMES.background_image));
+f.schedule_render(!1);c&&c(b)}delete f.pages_loading[a]};g.send(null)}void 0===b&&(b=this.config.preload_pages);0<--b&&(f=this,setTimeout(function(){f.load_page(a+1,b)},0))}},pre_hide_pages:function(){var a="@media screen{."+CSS_CLASS_NAMES.page_content_box+"{display:none;}}",b=document.createElement("style");b.styleSheet?b.styleSheet.cssText=a:b.appendChild(document.createTextNode(a));document.head.appendChild(b)},render:function(){for(var a=this.container,b=a.scrollTop,c=a.clientHeight,a=b-c,b=
+b+c+c,c=this.pages,e=0,h=c.length;e<h;++e){var d=c[e],f=d.page,g=f.offsetTop+f.clientTop,f=g+f.clientHeight;g<=b&&f>=a?d.loaded?d.show():this.load_page(e):d.hide()}},update_page_idx:function(){var a=this.pages,b=a.length;if(!(2>b)){for(var c=this.container,e=c.scrollTop,c=e+c.clientHeight,h=-1,d=b,f=d-h;1<f;){var g=h+Math.floor(f/2),f=a[g].page;f.offsetTop+f.clientTop+f.clientHeight>=e?d=g:h=g;f=d-h}this.first_page_idx=d;for(var g=h=this.cur_page_idx,k=0;d<b;++d){var f=a[d].page,l=f.offsetTop+f.clientTop,
+f=f.clientHeight;if(l>c)break;f=(Math.min(c,l+f)-Math.max(e,l))/f;if(d===h&&Math.abs(f-1)<=EPS){g=h;break}f>k&&(k=f,g=d)}this.cur_page_idx=g}},schedule_render:function(a){if(void 0!==this.render_timer){if(!a)return;clearTimeout(this.render_timer)}var b=this;this.render_timer=setTimeout(function(){delete b.render_timer;b.render()},this.config.render_timeout)},register_key_handler:function(){var a=this;window.addEventListener("DOMMouseScroll",function(b){if(b.ctrlKey){b.preventDefault();var c=a.container,
+e=c.getBoundingClientRect(),c=[b.clientX-e.left-c.clientLeft,b.clientY-e.top-c.clientTop];a.rescale(Math.pow(a.config.scale_step,b.detail),!0,c)}},!1);window.addEventListener("keydown",function(b){var c=!1,e=b.ctrlKey||b.metaKey,h=b.altKey;switch(b.keyCode){case 61:case 107:case 187:e&&(a.rescale(1/a.config.scale_step,!0),c=!0);break;case 173:case 109:case 189:e&&(a.rescale(a.config.scale_step,!0),c=!0);break;case 48:e&&(a.rescale(0,!1),c=!0);break;case 33:h?a.scroll_to(a.cur_page_idx-1):a.container.scrollTop-=
+a.container.clientHeight;c=!0;break;case 34:h?a.scroll_to(a.cur_page_idx+1):a.container.scrollTop+=a.container.clientHeight;c=!0;break;case 35:a.container.scrollTop=a.container.scrollHeight;c=!0;break;case 36:a.container.scrollTop=0,c=!0}c&&b.preventDefault()},!1)},rescale:function(a,b,c){var e=this.scale;this.scale=a=0===a?1:b?e*a:a;c||(c=[0,0]);b=this.container;c[0]+=b.scrollLeft;c[1]+=b.scrollTop;for(var h=this.pages,d=h.length,f=this.first_page_idx;f<d;++f){var g=h[f].page;if(g.offsetTop+g.clientTop>=
+c[1])break}g=f-1;0>g&&(g=0);var g=h[g].page,k=g.clientWidth,f=g.clientHeight,l=g.offsetLeft+g.clientLeft,m=c[0]-l;0>m?m=0:m>k&&(m=k);k=g.offsetTop+g.clientTop;c=c[1]-k;0>c?c=0:c>f&&(c=f);for(f=0;f<d;++f)h[f].rescale(a);b.scrollLeft+=m/e*a+g.offsetLeft+g.clientLeft-m-l;b.scrollTop+=c/e*a+g.offsetTop+g.clientTop-c-k;this.schedule_render(!0)},fit_width:function(){var a=this.cur_page_idx;this.rescale(this.container.clientWidth/this.pages[a].width(),!0);this.scroll_to(a)},fit_height:function(){var a=this.cur_page_idx;
+this.rescale(this.container.clientHeight/this.pages[a].height(),!0);this.scroll_to(a)},get_containing_page:function(a){for(;a;){if(a.nodeType===Node.ELEMENT_NODE&&a.classList.contains(CSS_CLASS_NAMES.page_frame)){a=get_page_number(a);var b=this.page_map;return a in b?this.pages[b[a]]:null}a=a.parentNode}return null},link_handler:function(a){var b=a.target,c=b.getAttribute("data-dest-detail");if(c){if(this.config.view_history_handler)try{var e=this.get_current_view_hash();window.history.replaceState(e,
+"","#"+e);window.history.pushState(c,"","#"+c)}catch(h){}this.navigate_to_dest(c,this.get_containing_page(b));a.preventDefault()}},navigate_to_dest:function(a,b){try{var c=JSON.parse(a)}catch(e){return}if(c instanceof Array){var h=c[0],d=this.page_map;if(h in d){for(var f=d[h],h=this.pages[f],d=2,g=c.length;d<g;++d){var k=c[d];if(!(null===k||"number"===typeof k))return}for(;6>c.length;)c.push(null);var g=b||this.pages[this.cur_page_idx],d=g.view_position(),d=transform(g.ictm,[d[0],g.height()-d[1]]),
+g=this.scale,l=[0,0],m=!0,k=!1,n=this.scale;switch(c[1]){case "XYZ":l=[null===c[2]?d[0]:c[2]*n,null===c[3]?d[1]:c[3]*n];g=c[4];if(null===g||0===g)g=this.scale;k=!0;break;case "Fit":case "FitB":l=[0,0];k=!0;break;case "FitH":case "FitBH":l=[0,null===c[2]?d[1]:c[2]*n];k=!0;break;case "FitV":case "FitBV":l=[null===c[2]?d[0]:c[2]*n,0];k=!0;break;case "FitR":l=[c[2]*n,c[5]*n],m=!1,k=!0}if(k){this.rescale(g,!1);var p=this,c=function(a){l=transform(a.ctm,l);m&&(l[1]=a.height()-l[1]);p.scroll_to(f,l)};h.loaded?
+c(h):(this.load_page(f,void 0,c),this.scroll_to(f))}}}},scroll_to:function(a,b){var c=this.pages;if(!(0>a||a>=c.length)){c=c[a].view_position();void 0===b&&(b=[0,0]);var e=this.container;e.scrollLeft+=b[0]-c[0];e.scrollTop+=b[1]-c[1]}},get_current_view_hash:function(){var a=[],b=this.pages[this.cur_page_idx];a.push(b.num);a.push("XYZ");var c=b.view_position(),c=transform(b.ictm,[c[0],b.height()-c[1]]);a.push(c[0]/this.scale);a.push(c[1]/this.scale);a.push(this.scale);return JSON.stringify(a)}};
+pdf2htmlEX.Viewer=Viewer;})();
+</script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+<ul><li><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,713.103,null]'>Getting Started</a></li><li><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,451.769,null]'>Git Basics</a><ul><li><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,416.215,null]'>Basic Commands</a></li><li><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",102.884,541.123,null]'>Commands with Remotes</a></li><li><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",102.884,228.918,null]'>Tagging</a></li><li><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",102.884,526.013,null]'>Aliases</a></li></ul></li><li><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",102.884,457.602,null]'>Branching</a></li></ul></div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><div class="t m0 x0 h1 y0 ff1 fs0 fc0 sc0 ls0 ws0">Notes<span class="_ _0"> </span>on<span class="_ _0"> </span><span class="ff2">Pr<span class="_ _1"></span>o<span class="_ _2"> </span>Git<span class="_ _3"> </span><span class="ff1">written<span class="_ _0"> </span>b<span class="_ _4"></span>y<span class="_ _0"> </span>Scott<span class="_ _0"> </span>Chacon</span></span></div><div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">and<span class="_ _0"> </span>Ben<span class="_ _0"> </span>Straub</div><div class="t m0 x2 h3 y2 ff3 fs1 fc0 sc0 ls0 ws0">Qianqian<span class="_ _5"> </span>Shan</div><div class="t m0 x3 h4 y3 ff4 fs2 fc0 sc0 ls0 ws0">Con<span class="_ _4"></span>ten<span class="_ _4"></span>ts</div><div class="t m0 x3 h5 y4 ff4 fs3 fc0 sc0 ls0 ws0">1<span class="_ _6"> </span>Getting<span class="_ _5"> </span>Started<span class="_ _7"> </span>2</div><div class="t m0 x3 h5 y5 ff4 fs3 fc0 sc0 ls0 ws0">2<span class="_ _6"> </span>Git<span class="_ _5"> </span>Basics<span class="_ _8"> </span>2</div><div class="t m0 x4 h6 y6 ff3 fs3 fc0 sc0 ls0 ws0">2.1<span class="_ _9"> </span>Basic<span class="_ _a"> </span>Commands<span class="_ _b"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _d"> </span>2</div><div class="t m0 x4 h6 y7 ff3 fs3 fc0 sc0 ls0 ws0">2.2<span class="_ _9"> </span>Commands<span class="_ _a"> </span>with<span class="_ _a"> </span>Remotes<span class="_ _e"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _d"> </span>3</div><div class="t m0 x4 h6 y8 ff3 fs3 fc0 sc0 ls0 ws0">2.3<span class="_ _9"> </span>T<span class="_ _1"></span>agging<span class="_ _f"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _d"> </span>3</div><div class="t m0 x4 h6 y9 ff3 fs3 fc0 sc0 ls0 ws0">2.4<span class="_ _9"> </span>Aliases<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _c"> </span>.<span class="_ _d"> </span>4</div><div class="t m0 x3 h5 ya ff4 fs3 fc0 sc0 ls0 ws0">3<span class="_ _6"> </span>Branc<span class="_ _4"></span>hing<span class="_ _10"> </span>4</div><div class="t m0 x5 h6 yb ff3 fs3 fc0 sc0 ls0 ws0">1</div><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,713.103,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:101.388000px;bottom:485.654000px;width:111.709000px;height:11.619000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,451.769,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:101.388000px;bottom:456.679000px;width:78.996000px;height:9.295000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf2" data-dest-detail='[2,"XYZ",102.884,416.215,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:118.947000px;bottom:437.086000px;width:116.327000px;height:9.295000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",102.884,541.123,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:118.947000px;bottom:417.493000px;width:159.574000px;height:9.295000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",102.884,228.918,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:118.947000px;bottom:395.575000px;width:68.562000px;height:11.487000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",102.884,526.013,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:118.947000px;bottom:378.307000px;width:63.485000px;height:9.294000px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",102.884,457.602,null]'><div class="d m1" style="border-width:1.000000px;border-style:solid;border-color:rgb(255,0,0);position:absolute;left:101.388000px;bottom:344.683000px;width:78.625000px;height:11.619000px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><div class="t m0 x3 h4 yc ff4 fs2 fc0 sc0 ls0 ws0">1<span class="_ _11"> </span>Getting<span class="_ _0"> </span>Started</div><div class="t m0 x3 h6 yd ff3 fs3 fc0 sc0 ls0 ws0">Git<span class="_ _12"> </span>thinks<span class="_ _12"> </span>ab<span class="_ _13"></span>out<span class="_ _12"> </span>its<span class="_ _12"> </span>data<span class="_ _12"> </span>more<span class="_ _12"> </span>lik<span class="_ _4"></span>e<span class="_ _12"> </span>a<span class="_ _12"> </span>set<span class="_ _12"> </span>of<span class="_ _12"> </span>snapshots<span class="_ _12"> </span>of<span class="_ _12"> </span>a<span class="_ _12"> </span>miniature<span class="_ _12"> </span>ﬁle</div><div class="t m0 x3 h6 ye ff3 fs3 fc0 sc0 ls0 ws0">system.<span class="_ _5"> </span>The mec<span class="_ _4"></span>hanism<span class="_ _14"> </span>that<span class="_ _14"> </span>Git<span class="_ _14"> </span>uses<span class="_ _14"> </span>for<span class="_ _14"> </span>c<span class="_ _4"></span>hecksumming<span class="_ _14"> </span>is<span class="_ _14"> </span>SHA-1<span class="_ _15"> </span>hash, a<span class="_ _15"> </span>40-</div><div class="t m0 x3 h6 yf ff3 fs3 fc0 sc0 ls0 ws0">c<span class="_ _4"></span>haracter<span class="_ _16"> </span>string<span class="_ _16"> </span>composed<span class="_ _16"> </span>of<span class="_ _a"> </span>hexadecimal<span class="_ _16"> </span>c<span class="_ _4"></span>haracters.<span class="_ _c"> </span>Git<span class="_ _16"> </span>stores<span class="_ _a"> </span>everything</div><div class="t m0 x3 h6 y10 ff3 fs3 fc0 sc0 ls0 ws0">in<span class="_ _a"> </span>its<span class="_ _a"> </span>database<span class="_ _a"> </span>not<span class="_ _a"> </span>b<span class="_ _4"></span>y<span class="_ _a"> </span>ﬁlename<span class="_ _a"> </span>but<span class="_ _a"> </span>by<span class="_ _a"> </span>the<span class="_ _a"> </span>hash<span class="_ _a"> </span>v<span class="_ _4"></span>alue<span class="_ _a"> </span>of<span class="_ _a"> </span>its<span class="_ _a"> </span>con<span class="_ _4"></span>ten<span class="_ _4"></span>ts.</div><div class="t m0 x3 h6 y11 ff4 fs3 fc0 sc0 ls0 ws0">Three<span class="_ _16"> </span>States<span class="_ _a"> </span><span class="ff3">ﬁles<span class="_ _a"> </span>can<span class="_ _a"> </span>reside<span class="_ _a"> </span>in:</span></div><div class="t m0 x0 h6 y12 ff3 fs3 fc0 sc0 ls0 ws0">1.<span class="_ _c"> </span>modiﬁed<span class="_ _a"> </span>:<span class="_ _12"> </span>changed<span class="_ _a"> </span>the<span class="_ _a"> </span>ﬁle<span class="_ _a"> </span>but<span class="_ _a"> </span>not<span class="_ _a"> </span>committed<span class="_ _a"> </span>y<span class="_ _4"></span>et.</div><div class="t m0 x0 h6 y13 ff3 fs3 fc0 sc0 ls0 ws0">2.<span class="_ _c"> </span>staged:<span class="_ _2"> </span>ha<span class="_ _4"></span>v<span class="_ _17"></span>e<span class="_ _5"> </span>marked<span class="_ _5"> </span>a<span class="_ _12"> </span>modiﬁed<span class="_ _12"> </span>ﬁle<span class="_ _5"> </span>in<span class="_ _18"> </span>its<span class="_ _5"> </span>current<span class="_ _5"> </span>version<span class="_ _5"> </span>to<span class="_ _18"> </span>go<span class="_ _5"> </span>into</div><div class="t m0 x6 h6 y14 ff3 fs3 fc0 sc0 ls0 ws0">commit.</div><div class="t m0 x0 h6 y15 ff3 fs3 fc0 sc0 ls0 ws0">3.<span class="_ _c"> </span>committed:data<span class="_ _a"> </span>is<span class="_ _a"> </span>safely<span class="_ _a"> </span>stored<span class="_ _a"> </span>in<span class="_ _a"> </span>y<span class="_ _4"></span>our<span class="_ _a"> </span>lo<span class="_ _13"></span>cal<span class="_ _a"> </span>database.</div><div class="t m0 x3 h6 y16 ff3 fs3 fc0 sc0 ls0 ws0">Chec<span class="_ _4"></span>k<span class="_ _a"> </span>the<span class="_ _a"> </span>settings<span class="_ _a"> </span>by<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>conﬁg<span class="_ _a"> </span>–list</span>.</div><div class="t m0 x3 h6 y17 ff3 fs3 fc0 sc0 ls0 ws0">Getting<span class="_ _a"> </span>help<span class="_ _a"> </span>b<span class="_ _4"></span>y<span class="_ _16"> </span><span class="ff5">git<span class="_ _a"> </span>help<span class="_ _a"> </span>[verb]<span class="_ _a"> </span></span>or<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>[verb]<span class="_ _a"> </span>–help<span class="_ _a"> </span></span>or<span class="_ _a"> </span><span class="ff5">man<span class="_ _a"> </span>git-[verb]</span>.</div><div class="t m0 x3 h4 y18 ff4 fs2 fc0 sc0 ls0 ws0">2<span class="_ _11"> </span>Git<span class="_ _0"> </span>Basics</div><div class="t m0 x3 h7 y19 ff4 fs1 fc0 sc0 ls0 ws0">2.1<span class="_ _19"> </span>Basic<span class="_ _12"> </span>Commands</div><div class="t m0 x0 h6 y1a ff3 fs3 fc0 sc0 ls0 ws0">1.<span class="_ _c"> </span>Initialize<span class="_ _a"> </span>a<span class="_ _a"> </span>repository<span class="_ _a"> </span>(rep<span class="_ _13"></span>o),<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>init</span>.</div><div class="t m0 x0 h6 y1b ff3 fs3 fc0 sc0 ls0 ws0">2.<span class="_ _c"> </span>Commit<span class="_ _1a"> </span>ﬁles,<span class="_ _0"> </span>ﬁrst<span class="_ _1a"> </span>use<span class="_ _c"> </span><span class="ff5">git<span class="_ _1a"> </span>add<span class="_ _c"> </span>[ﬁle]<span class="_ _1a"> </span></span>to<span class="_ _c"> </span>stage/add<span class="_ _1a"> </span>ﬁles,<span class="_ _0"> </span>then<span class="_ _c"> </span>use<span class="_ _1a"> </span><span class="ff5">git</span></div><div class="t m0 x6 h6 y1c ff5 fs3 fc0 sc0 ls0 ws0">commit<span class="_ _a"> </span><span class="ff3">to<span class="_ _16"> </span>commit.<span class="_ _1a"> </span>Or<span class="_ _16"> </span>use<span class="_ _a"> </span></span>git<span class="_ _16"> </span>commit<span class="_ _a"> </span>-a<span class="_ _16"> </span><span class="ff3">to<span class="_ _a"> </span>do<span class="_ _16"> </span>stage<span class="_ _a"> </span>and<span class="_ _16"> </span>commit<span class="_ _a"> </span>at<span class="_ _16"> </span>a</span></div><div class="t m0 x6 h6 y1d ff3 fs3 fc0 sc0 ls0 ws0">time.<span class="_ _1b"> </span><span class="ff5">git<span class="_ _5"> </span>add<span class="_ _5"> </span>[ﬁle]<span class="_ _5"> </span></span>is<span class="_ _5"> </span>multi-purpose,<span class="_ _18"> </span>it<span class="_ _5"> </span>can<span class="_ _18"> </span>b<span class="_ _13"></span>e<span class="_ _5"> </span>used<span class="_ _5"> </span>to<span class="_ _5"> </span>b<span class="_ _13"></span>egin<span class="_ _5"> </span>tracking</div><div class="t m0 x6 h6 y1e ff3 fs3 fc0 sc0 ls0 ws0">new<span class="_ _a"> </span>ﬁles,<span class="_ _a"> </span>stage<span class="_ _a"> </span>ﬁles,<span class="_ _a"> </span>and<span class="_ _a"> </span>mark<span class="_ _a"> </span>merge-conﬂicted<span class="_ _a"> </span>ﬁles<span class="_ _a"> </span>as<span class="_ _a"> </span>resolv<span class="_ _4"></span>ed.</div><div class="t m0 x0 h6 y1f ff3 fs3 fc0 sc0 ls0 ws0">3.<span class="_ _1a"> </span>Clone<span class="_ _a"> </span>an<span class="_ _a"> </span>existing<span class="_ _a"> </span>rep<span class="_ _13"></span>ository<span class="_ _1"></span>,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>clone<span class="_ _a"> </span>[url]<span class="_ _a"> </span>[optional,<span class="_ _a"> </span>new<span class="_ _16"> </span>repo<span class="_ _a"> </span>name]</span>.</div><div class="t m0 x0 h6 y20 ff3 fs3 fc0 sc0 ls0 ws0">4.<span class="_ _1a"> </span>Check<span class="_ _a"> </span>status<span class="_ _a"> </span>of<span class="_ _a"> </span>the<span class="_ _a"> </span>ﬁles,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>status</span>.</div><div class="t m0 x0 h6 y21 ff3 fs3 fc0 sc0 ls0 ws0">5.<span class="_ _1a"> </span>Ignore<span class="_ _16"> </span>ﬁles,<span class="_ _a"> </span>a<span class="_ _a"> </span>ﬁle<span class="_ _a"> </span>called<span class="_ _16"> </span><span class="ff5">.gitigno<span class="_ _4"></span>re<span class="_ _a"> </span><span class="ff3">in<span class="_ _a"> </span>the<span class="_ _16"> </span>repo.<span class="_ _1a"> </span>Use<span class="_ _a"> </span>regular<span class="_ _a"> </span>expressions</span></span></div><div class="t m0 x6 h6 y22 ff3 fs3 fc0 sc0 ls0 ws0">to<span class="_ _a"> </span>sp<span class="_ _13"></span>ecify<span class="_ _a"> </span>patterns<span class="_ _a"> </span>to<span class="_ _a"> </span>b<span class="_ _13"></span>e<span class="_ _a"> </span>ignored.</div><div class="t m0 x0 h6 y23 ff3 fs3 fc0 sc0 ls0 ws0">6.<span class="_ _1a"> </span>Remov<span class="_ _4"></span>e<span class="_ _a"> </span>ﬁles,</div><div class="t m0 x7 h6 y24 ff3 fs3 fc0 sc0 ls0 ws0">Use<span class="_ _1c"> </span><span class="ff5">git<span class="_ _1c"> </span>rm<span class="_ _1c"> </span>[ﬁle]<span class="_ _1c"> </span></span>to<span class="_ _1c"> </span>remo<span class="_ _4"></span>ve a<span class="_ _1c"> </span>ﬁle<span class="_ _1c"> </span>from<span class="_ _1c"> </span>the<span class="_ _1c"> </span>track<span class="_ _4"></span>ed<span class="_ _1c"> </span>ﬁles,<span class="_ _1c"> </span>and<span class="_ _1c"> </span>remov<span class="_ _4"></span>es</div><div class="t m0 x6 h6 y25 ff3 fs3 fc0 sc0 ls0 ws0">it<span class="_ _a"> </span>from<span class="_ _a"> </span>w<span class="_ _4"></span>orking<span class="_ _a"> </span>directory<span class="_ _4"></span>.</div><div class="t m0 x7 h6 y26 ff3 fs3 fc0 sc0 ls0 ws0">Use<span class="_ _1c"> </span><span class="ff5">git<span class="_ _1c"> </span>rm<span class="_ _a"> </span>–cached<span class="_ _1c"> </span>[ﬁle]<span class="_ _1c"> </span></span>to<span class="_ _a"> </span>k<span class="_ _4"></span>eep<span class="_ _a"> </span>the<span class="_ _1c"> </span>ﬁle<span class="_ _1c"> </span>on<span class="_ _a"> </span>hard<span class="_ _1c"> </span>driv<span class="_ _17"></span>e<span class="_ _1c"> </span>but<span class="_ _1c"> </span>not<span class="_ _a"> </span>ha<span class="_ _4"></span>ve</div><div class="t m0 x6 h6 y27 ff3 fs3 fc0 sc0 ls0 ws0">Git<span class="_ _a"> </span>to<span class="_ _a"> </span>trac<span class="_ _4"></span>k<span class="_ _a"> </span>it<span class="_ _a"> </span>anymore.</div><div class="t m0 x5 h6 y28 ff3 fs3 fc0 sc0 ls0 ws0">2</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><div class="t m0 x0 h6 yc ff3 fs3 fc0 sc0 ls0 ws0">7.<span class="_ _1a"> </span>Mov<span class="_ _4"></span>e<span class="_ _a"> </span>ﬁles,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>mv<span class="_ _a"> </span>[oldﬁle]<span class="_ _a"> </span>[newﬁle]</span>.</div><div class="t m0 x0 h6 y29 ff3 fs3 fc0 sc0 ls0 ws0">8.<span class="_ _1a"> </span>Commit<span class="_ _16"> </span>history<span class="_ _1"></span>,<span class="_ _5"> </span><span class="ff5">git<span class="_ _16"> </span>log</span>,<span class="_ _5"> </span>use<span class="_ _16"> </span><span class="ff5">git<span class="_ _16"> </span>log<span class="_ _16"> </span>-p<span class="_ _16"> </span>-2<span class="_ _16"> </span></span>to<span class="_ _5"> </span>sho<span class="_ _4"></span>w<span class="_ _16"> </span>the<span class="_ _5"> </span>diﬀerence<span class="_ _16"> </span>in<span class="_ _4"></span>tro-</div><div class="t m0 x6 h6 y2a ff3 fs3 fc0 sc0 ls0 ws0">duced<span class="_ _5"> </span>in<span class="_ _5"> </span>eac<span class="_ _4"></span>h<span class="_ _18"> </span>commit,<span class="_ _5"> </span>and<span class="_ _5"> </span>only<span class="_ _5"> </span>output<span class="_ _18"> </span>the<span class="_ _5"> </span>last<span class="_ _5"> </span>t<span class="_ _4"></span>wo<span class="_ _16"> </span>entries.<span class="_ _1b"> </span>Use<span class="_ _16"> </span><span class="ff5">git</span></div><div class="t m0 x6 h6 y2b ff5 fs3 fc0 sc0 ls0 ws0">log<span class="_ _a"> </span>–p<span class="_ _4"></span>retty=oneline<span class="_ _1c"> </span><span class="ff3">to<span class="_ _a"> </span>show<span class="_ _1c"> </span>the<span class="_ _a"> </span>output<span class="_ _a"> </span>in<span class="_ _a"> </span>an<span class="_ _a"> </span>easier<span class="_ _a"> </span>to<span class="_ _a"> </span>read<span class="_ _a"> </span>format.</span></div><div class="t m0 x0 h6 y2c ff3 fs3 fc0 sc0 ls0 ws0">9.<span class="_ _1a"> </span>Undoing<span class="_ _a"> </span>things,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>commit<span class="_ _a"> </span>-amend<span class="_ _a"> </span></span>to<span class="_ _a"> </span>redo<span class="_ _a"> </span>the<span class="_ _a"> </span>commit.</div><div class="t m0 x8 h6 y2d ff3 fs3 fc0 sc0 ls0 ws0">10.<span class="_ _1a"> </span>Unstage<span class="_ _a"> </span>a<span class="_ _a"> </span>staged<span class="_ _a"> </span>ﬁle,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>reset<span class="_ _a"> </span>HEAD<span class="_ _a"> </span>[ﬁle]</span>.</div><div class="t m0 x8 h6 y2e ff3 fs3 fc0 sc0 ls0 ws0">11.<span class="_ _1a"> </span>Unmo<span class="_ _13"></span>dify<span class="_ _12"> </span>a<span class="_ _18"> </span>mo<span class="_ _13"></span>diﬁed<span class="_ _12"> </span>ﬁle,<span class="_ _1a"> </span><span class="ff5">git<span class="_ _5"> </span>checkout<span class="_ _18"> </span>–<span class="_ _18"> </span>[ﬁle]</span>.<span class="_ _1d"> </span>Don’t<span class="_ _18"> </span>use<span class="_ _12"> </span>unless<span class="_ _18"> </span>you</div><div class="t m0 x6 h6 y2f ff3 fs3 fc0 sc0 ls0 ws0">absolutely<span class="_ _a"> </span>kno<span class="_ _4"></span>w<span class="_ _a"> </span>that<span class="_ _a"> </span>you<span class="_ _1c"> </span>wan<span class="_ _4"></span>t<span class="_ _a"> </span>to<span class="_ _a"> </span>discard<span class="_ _a"> </span>the<span class="_ _a"> </span>mo<span class="_ _13"></span>diﬁcations.</div><div class="t m0 x3 h7 y30 ff4 fs1 fc0 sc0 ls0 ws0">2.2<span class="_ _19"> </span>Commands<span class="_ _12"> </span>with<span class="_ _1a"> </span>Remotes</div><div class="t m0 x0 h6 y31 ff3 fs3 fc0 sc0 ls0 ws0">1.<span class="_ _1a"> </span>Clone<span class="_ _a"> </span>a<span class="_ _a"> </span>remote<span class="_ _a"> </span>rep<span class="_ _13"></span>o<span class="_ _a"> </span>b<span class="_ _17"></span>y<span class="_ _a"> </span>using<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>clone<span class="_ _a"> </span>[url/ssh]</span>,<span class="_ _a"> </span>list<span class="_ _a"> </span>the<span class="_ _a"> </span>shortnames<span class="_ _a"> </span>of</div><div class="t m0 x6 h6 y32 ff3 fs3 fc0 sc0 ls0 ws0">eac<span class="_ _4"></span>h<span class="_ _a"> </span>remote<span class="_ _a"> </span>by<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>remote<span class="_ _a"> </span>-v</span>.</div><div class="t m0 x0 h6 y33 ff3 fs3 fc0 sc0 ls0 ws0">2.<span class="_ _1a"> </span>Add<span class="_ _a"> </span>a<span class="_ _a"> </span>shortname<span class="_ _a"> </span>for<span class="_ _a"> </span>a<span class="_ _a"> </span>remote<span class="_ _a"> </span>by<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>remote<span class="_ _a"> </span>add<span class="_ _a"> </span>[sho<span class="_ _4"></span>rtname]<span class="_ _a"> </span>[url/ssh]<span class="ff3">.</span></span></div><div class="t m0 x0 h6 y34 ff3 fs3 fc0 sc0 ls0 ws0">3.<span class="_ _1a"> </span>F<span class="_ _1"></span>etch<span class="_ _1c"> </span>and<span class="_ _a"> </span>pull<span class="_ _a"> </span>from<span class="_ _a"> </span>remotes,</div><div class="t m0 x7 h6 y35 ff3 fs3 fc0 sc0 ls0 ws0">Use <span class="ff5">git<span class="_ _1e"> </span>fetch<span class="_ _1e"> </span>[remote-name]<span class="_ _1e"> </span></span>to fetc<span class="_ _17"></span>h new w<span class="_ _4"></span>ork that has b<span class="_ _13"></span>een pushed</div><div class="t m0 x6 h6 y36 ff3 fs3 fc0 sc0 ls0 ws0">to the serv<span class="_ _4"></span>er (for example, github) , but it doesn’t automatically merge</div><div class="t m0 x6 h6 y37 ff3 fs3 fc0 sc0 ls0 ws0">with<span class="_ _a"> </span>y<span class="_ _4"></span>our<span class="_ _a"> </span>work<span class="_ _1c"> </span>or<span class="_ _a"> </span>mo<span class="_ _13"></span>dify<span class="_ _a"> </span>you<span class="_ _1c"> </span>are<span class="_ _a"> </span>currently<span class="_ _1c"> </span>working<span class="_ _1c"> </span>on.</div><div class="t m0 x7 h6 y38 ff3 fs3 fc0 sc0 ls0 ws0">Use<span class="_ _16"> </span><span class="ff5">git<span class="_ _5"> </span>pull<span class="_ _5"> </span>[remote-name]<span class="_ _5"> </span></span>to<span class="_ _16"> </span>automatically<span class="_ _5"> </span>fetch<span class="_ _16"> </span>and<span class="_ _5"> </span>merge<span class="_ _16"> </span>a<span class="_ _5"> </span>re-</div><div class="t m0 x6 h6 y39 ff3 fs3 fc0 sc0 ls0 ws0">mote<span class="_ _a"> </span>branc<span class="_ _4"></span>h<span class="_ _a"> </span>into<span class="_ _1c"> </span>your<span class="_ _1c"> </span>current<span class="_ _1c"> </span>branch.</div><div class="t m0 x0 h6 y3a ff3 fs3 fc0 sc0 ls0 ws0">4.<span class="_ _1a"> </span>Push<span class="_ _a"> </span>to<span class="_ _a"> </span>the<span class="_ _a"> </span>remotes,<span class="_ _a"> </span>use<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>push<span class="_ _a"> </span>[remote-name]<span class="_ _a"> </span>[branch-name]</span>.</div><div class="t m0 x0 h6 y3b ff3 fs3 fc0 sc0 ls0 ws0">5.<span class="_ _1a"> </span>Insp<span class="_ _13"></span>ect<span class="_ _a"> </span>a<span class="_ _a"> </span>remote,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>remote<span class="_ _a"> </span>show<span class="_ _1c"> </span>[remote-name]</span>.</div><div class="t m0 x0 h6 y3c ff3 fs3 fc0 sc0 ls0 ws0">6.<span class="_ _1a"> </span>Remov<span class="_ _4"></span>e or<span class="_ _1c"> </span>rename<span class="_ _1c"> </span>remotes, use<span class="_ _1c"> </span><span class="ff5">git<span class="_ _1c"> </span>remote<span class="_ _1e"> </span>rename<span class="_ _1c"> </span>[oldname]<span class="_ _1c"> </span>[newname]</span></div><div class="t m0 x6 h6 y3d ff3 fs3 fc0 sc0 ls0 ws0">to<span class="_ _1c"> </span>rename,<span class="_ _1c"> </span>use<span class="_ _a"> </span><span class="ff5">git<span class="_ _1c"> </span>remote<span class="_ _1c"> </span>rm<span class="_ _1c"> </span>[remote-name]<span class="_ _a"> </span></span>to<span class="_ _1c"> </span>remo<span class="_ _4"></span>ve<span class="_ _1c"> </span>a<span class="_ _1c"> </span>lo<span class="_ _13"></span>cal<span class="_ _1c"> </span>mirror<span class="_ _1c"> </span>of</div><div class="t m0 x6 h6 y3e ff3 fs3 fc0 sc0 ls0 ws0">the<span class="_ _a"> </span>remote.</div><div class="t m0 x3 h7 y3f ff4 fs1 fc0 sc0 ls0 ws0">2.3<span class="_ _19"> </span>T<span class="_ _1f"></span>agging</div><div class="t m0 x3 h6 y40 ff3 fs3 fc0 sc0 ls0 ws0">T<span class="_ _1"></span>agging<span class="_ _a"> </span>is<span class="_ _a"> </span>t<span class="_ _17"></span>ypically<span class="_ _a"> </span>used<span class="_ _a"> </span>to<span class="_ _a"> </span>mark<span class="_ _a"> </span>release<span class="_ _a"> </span>p<span class="_ _13"></span>oin<span class="_ _4"></span>ts.</div><div class="t m0 x0 h6 y41 ff3 fs3 fc0 sc0 ls0 ws0">1.<span class="_ _1a"> </span>List<span class="_ _a"> </span>tags,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>tag</span>,<span class="_ _a"> </span>or<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>tag<span class="_ _a"> </span>-l<span class="_ _a"> </span>”[somepattern]”</span>.</div><div class="t m0 x5 h6 y28 ff3 fs3 fc0 sc0 ls0 ws0">3</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf4" class="pf w0 h0" data-page-no="4"><div class="pc pc4 w0 h0"><div class="t m0 x0 h6 yc ff3 fs3 fc0 sc0 ls0 ws0">2.<span class="_ _1a"> </span>Create<span class="_ _a"> </span>tags,</div><div class="t m0 x7 h6 y42 ff3 fs3 fc0 sc0 ls0 ws0">Annotated<span class="_ _1c"> </span>tags<span class="_ _1c"> </span>with<span class="_ _1c"> </span>tagger<span class="_ _1c"> </span>name,<span class="_ _a"> </span>email<span class="_ _1c"> </span>date,<span class="_ _1c"> </span><span class="ff5">git<span class="_ _a"> </span>tag<span class="_ _1c"> </span>-a<span class="_ _1c"> </span>[tagname]</span>.</div><div class="t m0 x7 h6 y2a ff3 fs3 fc0 sc0 ls0 ws0">Ligh<span class="_ _4"></span>tw<span class="_ _4"></span>eight<span class="_ _15"> </span>tag with just<span class="_ _15"> </span>a c<span class="_ _4"></span>hecksum<span class="_ _14"> </span>stored in<span class="_ _15"> </span>the ﬁle and<span class="_ _15"> </span>no other</div><div class="t m0 x6 h6 y2b ff3 fs3 fc0 sc0 ls0 ws0">information,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>tag<span class="_ _a"> </span>[tagname]</span>.</div><div class="t m0 x0 h6 y2c ff3 fs3 fc0 sc0 ls0 ws0">3.<span class="_ _1a"> </span>Show<span class="_ _1c"> </span>tags,<span class="_ _a"> </span><span class="ff5">git<span class="_ _a"> </span>show<span class="_ _1c"> </span>[tagname]</span>.</div><div class="t m0 x0 h6 y43 ff3 fs3 fc0 sc0 ls0 ws0">4.<span class="_ _1a"> </span>T<span class="_ _1"></span>ag<span class="_ _16"> </span>previous<span class="_ _a"> </span>commit,<span class="_ _16"> </span>ﬁrst<span class="_ _a"> </span>ﬁnd<span class="_ _16"> </span>the<span class="_ _a"> </span>commit<span class="_ _16"> </span>c<span class="_ _4"></span>hec<span class="_ _4"></span>ksum<span class="_ _16"> </span>or<span class="_ _a"> </span>part<span class="_ _16"> </span>of<span class="_ _a"> </span>it<span class="_ _16"> </span>b<span class="_ _4"></span>y<span class="_ _1"></span>,</div><div class="t m0 x6 h6 y44 ff5 fs3 fc0 sc0 ls0 ws0">git<span class="_ _a"> </span>log<span class="_ _a"> </span>–p<span class="_ _4"></span>retty==oneline<span class="ff3">,<span class="_ _1c"> </span>then<span class="_ _a"> </span></span>git<span class="_ _a"> </span>tag<span class="_ _a"> </span>-a<span class="_ _a"> </span>[tagname]<span class="_ _a"> </span>[SHA-1<span class="_ _a"> </span>hash]<span class="ff3">.</span></div><div class="t m0 x0 h6 y2f ff3 fs3 fc0 sc0 ls0 ws0">5.<span class="_ _1a"> </span>Push<span class="_ _20"> </span>tags<span class="_ _0"> </span>to<span class="_ _0"> </span>remote,<span class="_ _2"> </span><span class="ff5">git<span class="_ _0"> </span>push<span class="_ _0"> </span>[remote-name]<span class="_ _0"> </span>[tagname]<span class="_ _20"> </span></span>or<span class="_ _0"> </span><span class="ff5">git<span class="_ _0"> </span>push</span></div><div class="t m0 x6 h6 y45 ff5 fs3 fc0 sc0 ls0 ws0">[remote-name]<span class="_ _a"> </span>–tags<span class="_ _a"> </span><span class="ff3">to<span class="_ _a"> </span>push<span class="_ _a"> </span>all<span class="_ _a"> </span>tags.</span></div><div class="t m0 x3 h7 y46 ff4 fs1 fc0 sc0 ls0 ws0">2.4<span class="_ _19"> </span>Aliases</div><div class="t m0 x3 h6 y47 ff3 fs3 fc0 sc0 ls0 ws0">Aliases<span class="_ _a"> </span>can<span class="_ _a"> </span>b<span class="_ _13"></span>e<span class="_ _a"> </span>created<span class="_ _a"> </span>b<span class="_ _4"></span>y<span class="_ _16"> </span><span class="ff5">git<span class="_ _1c"> </span>conﬁg<span class="_ _16"> </span>–global<span class="_ _1c"> </span>alias.[alias]<span class="_ _a"> </span>[command]</span>.</div><div class="t m0 x3 h4 y48 ff4 fs2 fc0 sc0 ls0 ws0">3<span class="_ _11"> </span>Branc<span class="_ _4"></span>hing</div><div class="t m0 x3 h6 y49 ff3 fs3 fc0 sc0 ls0 ws0">A branch in<span class="_ _1c"> </span>Git<span class="_ _1c"> </span>is a<span class="_ _1c"> </span>light<span class="_ _4"></span>w<span class="_ _4"></span>eight mov<span class="_ _1"></span>able<span class="_ _1c"> </span>p<span class="_ _13"></span>ointer to<span class="_ _1c"> </span>one of<span class="_ _1c"> </span>the<span class="_ _1c"> </span>commits.<span class="_ _18"> </span>The</div><div class="t m0 x3 h6 y4a ff3 fs3 fc0 sc0 ls0 ws0">default<span class="_ _a"> </span>branc<span class="_ _4"></span>h<span class="_ _a"> </span>name<span class="_ _a"> </span>in<span class="_ _a"> </span>Git<span class="_ _a"> </span>is<span class="_ _a"> </span>master.</div><div class="t m0 x3 h6 y4b ff3 fs3 fc0 sc0 ls0 ws0">Git<span class="_ _a"> </span>k<span class="_ _17"></span>eeps<span class="_ _a"> </span>a<span class="_ _a"> </span>sp<span class="_ _13"></span>ecial<span class="_ _a"> </span>p<span class="_ _13"></span>oin<span class="_ _17"></span>ter<span class="_ _a"> </span>HEAD,<span class="_ _a"> </span>a<span class="_ _a"> </span>p<span class="_ _13"></span>ointer<span class="_ _1c"> </span>to<span class="_ _a"> </span>the<span class="_ _a"> </span>lo<span class="_ _13"></span>cal<span class="_ _16"> </span>branc<span class="_ _4"></span>h<span class="_ _a"> </span>y<span class="_ _4"></span>ou’re<span class="_ _16"> </span>cur-</div><div class="t m0 x3 h6 y4c ff3 fs3 fc0 sc0 ls0 ws0">ren<span class="_ _4"></span>tly<span class="_ _a"> </span>on.</div><div class="t m0 x0 h6 y4d ff3 fs3 fc0 sc0 ls0 ws0">1.<span class="_ _1a"> </span>Create<span class="_ _a"> </span>branch,<span class="_ _1c"> </span><span class="ff5">git<span class="_ _a"> </span>branch<span class="_ _1c"> </span>[branchname]</span>.</div><div class="t m0 x0 h6 y4e ff3 fs3 fc0 sc0 ls0 ws0">2.<span class="_ _1a"> </span>Switch<span class="_ _15"> </span>branc<span class="_ _4"></span>h, <span class="ff5">git checkout [b<span class="_ _4"></span>ranchname]<span class="ff3">, create<span class="_ _15"> </span>and<span class="_ _14"> </span>switc<span class="_ _17"></span>h<span class="_ _15"> </span>at the<span class="_ _15"> </span>same</span></span></div><div class="t m0 x6 h6 y4f ff3 fs3 fc0 sc0 ls0 ws0">time<span class="_ _16"> </span>by<span class="_ _16"> </span><span class="ff5">git<span class="_ _16"> </span>checkout<span class="_ _16"> </span>-b<span class="_ _16"> </span>[branchname]</span>.<span class="_ _21"> </span>It’s<span class="_ _16"> </span>b<span class="_ _13"></span>est<span class="_ _5"> </span>to<span class="_ _16"> </span>hav<span class="_ _4"></span>e<span class="_ _16"> </span>clean<span class="_ _16"> </span>working</div><div class="t m0 x6 h6 y50 ff3 fs3 fc0 sc0 ls0 ws0">state<span class="_ _16"> </span>when<span class="_ _16"> </span>switc<span class="_ _17"></span>hing<span class="_ _16"> </span>branc<span class="_ _4"></span>hes,<span class="_ _5"> </span>i.e.,<span class="_ _16"> </span>leav<span class="_ _4"></span>e<span class="_ _16"> </span>no<span class="_ _16"> </span>uncommitted<span class="_ _16"> </span>changes<span class="_ _16"> </span>in</div><div class="t m0 x6 h6 y51 ff3 fs3 fc0 sc0 ls0 ws0">w<span class="_ _4"></span>orking<span class="_ _a"> </span>directory<span class="_ _a"> </span>or<span class="_ _a"> </span>staging<span class="_ _a"> </span>area.</div><div class="t m0 x0 h6 y52 ff3 fs3 fc0 sc0 ls0 ws0">3.<span class="_ _1a"> </span>Basic<span class="_ _1c"> </span>merging.<span class="_ _12"> </span>Git<span class="_ _1c"> </span>do<span class="_ _13"></span>es<span class="_ _1c"> </span>a<span class="_ _1c"> </span>simple<span class="_ _1c"> </span>three<span class="_ _1c"> </span>wa<span class="_ _4"></span>y<span class="_ _1c"> </span>merge<span class="_ _1c"> </span>using<span class="_ _1c"> </span>the<span class="_ _a"> </span>t<span class="_ _4"></span>wo snap-</div><div class="t m0 x6 h6 y53 ff3 fs3 fc0 sc0 ls0 ws0">shots<span class="_ _5"> </span>p<span class="_ _13"></span>oin<span class="_ _4"></span>ted<span class="_ _5"> </span>to<span class="_ _5"> </span>by<span class="_ _16"> </span>the<span class="_ _5"> </span>branch<span class="_ _16"> </span>tips<span class="_ _5"> </span>and<span class="_ _5"> </span>the<span class="_ _5"> </span>common<span class="_ _5"> </span>ancestor<span class="_ _5"> </span>of<span class="_ _5"> </span>the</div><div class="t m0 x6 h6 y54 ff3 fs3 fc0 sc0 ls0 ws0">t<span class="_ _4"></span>wo.<span class="_ _5"> </span>First switc<span class="_ _4"></span>h bac<span class="_ _4"></span>k to<span class="_ _14"> </span>the branc<span class="_ _4"></span>h y<span class="_ _4"></span>ou w<span class="_ _4"></span>an<span class="_ _4"></span>t to merge<span class="_ _15"> </span>into<span class="_ _15"> </span>and use <span class="ff5">git</span></div><div class="t m0 x6 h6 y55 ff5 fs3 fc0 sc0 ls0 ws0">merge<span class="_ _a"> </span>[anotherb<span class="_ _4"></span>ranch]<span class="_ _a"> </span><span class="ff3">to<span class="_ _a"> </span>merge<span class="_ _a"> </span></span>anotherbranch<span class="_ _1c"> </span><span class="ff3">into<span class="_ _1c"> </span>the<span class="_ _a"> </span>current<span class="_ _1c"> </span>branch.</span></div><div class="t m0 x0 h6 y56 ff3 fs3 fc0 sc0 ls0 ws0">4.</div><div class="t m0 x5 h6 y28 ff3 fs3 fc0 sc0 ls0 ws0">4</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src="data:image/png;base64,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"/>
+</div>
+</body>
+</html>
+
+      </div>
+
+      <meta itemprop="wordCount" content="1062">
+      <meta itemprop="datePublished" content="2018-09-25">
+      <meta itemprop="url" content="https://qianqianshan.github.io/post/progit/">
+    </article>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/sql-notes/sql-notes/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: SQL Notes</a></li>
+      
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/htmlbasics/"><em>Next<span class="show-for-sr"> page</span></em>: HTML Basics&nbsp;&raquo;</a></li>
+      
+    </ul>
+
+    
+  </div>
+</div>
+
+    </main>
+    
+<footer>
+  <hr>
+  <div class="row">
+   <div class="column small-10 small-centered text-center">
+     <em>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with Finite theme. Do you like this, or do you have a comment? Then please email me via qshan[at]iastate.edu.</em>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="endofpage">
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/what-input.js"></script>
+    <script src="../../js/foundation.min.js"></script>
+    <script src="../../js/finite.js"></script>
+
+    
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    
+  </body>
+</html>

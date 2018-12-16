@@ -123,6 +123,14 @@
 <li><p><a href="#images">Images</a></p></li>
 
 <li><p><a href="#tables">Tables</a></p></li>
+
+<li><p><a href="#iframes">Iframes</a></p></li>
+
+<li><p><a href="#javascript">Javascript</a></p></li>
+
+<li><p><a href="#filepaths">Filepaths</a></p></li>
+
+<li><p><a href="#head">Head</a></p></li>
 </ol>
 
 <h2 id="introduction">Introduction</h2>
@@ -793,15 +801,93 @@ document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello JavaScript!&qu
 <li><p><code>&lt;img src=&quot;../picture.jpg&quot;&gt;</code>: picture.jpg is located in the folder one level up from the current folder.</p></li>
 </ul>
 
+<h1 id="head">Head</h1>
+
+<p><code>&lt;head&gt;</code> element is a container for metadata (for example, title, character set, styles, links, scripts, and other meta information) and is placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag.</p>
+
+<p>Frequently used tags: <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;base&gt;</code>.</p>
+
+<ul>
+<li><p><code>&lt;title&gt;</code>: 1. defines a title in the browser tab; 2. provides a title for the page when it is added to favorites; and 3. displays a title for the page in search engine results.</p></li>
+
+<li><p><code>&lt;style&gt;</code>defines style information for a single HTML page.</p></li>
+
+<li><p><code>&lt;link&gt;</code> links external style sheets.</p></li>
+
+<li><p><code>&lt;meta&gt;</code> element is used to specify which character set is used, page description, keywords, author, and other metadata.</p></li>
+
+<li><p><code>&lt;base&gt;</code> element specifies the base URL and base target for all <strong>relative</strong> URLs in a page.</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  
+    &lt;style&gt;
+    body {background-color: powderblue;}
+    h1 {color: red;}
+    p {color: blue;}
+  &lt;/style&gt;
+  
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;mystyle.css&quot;&gt;
+  
+  
+  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;!--Define character set--&gt;
+  
+  &lt;!--a description of your web page--&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Free Web tutorials&quot;&gt;
+  
+  
+  &lt;!--keywords for search engines--&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;
+  
+  &lt;!--the author of a page--&gt;
+  &lt;meta name=&quot;author&quot; content=&quot;John Doe&quot;&gt;
+  
+  &lt;!--Refresh document every 30 seconds--&gt;
+  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;
+
+  &lt;!--instructions for browser on how to control the page's dimensions and scaling.--&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  
+  &lt;base href=&quot;https://www.w3schools.com/images/&quot; target=&quot;_blank&quot;&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;The content of the body element is displayed in the browser window.&lt;/p&gt;
+&lt;p&gt;The content of the title element is displayed in the browser tab, in favorites and in search engine results.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h1 id="layout">Layout</h1>
+
+<ul>
+<li><code>&lt;header&gt;</code> - Defines a header for a document or a section</li>
+<li><code>&lt;nav&gt;</code> - Defines a container for navigation links</li>
+<li><code>&lt;section&gt;</code> - Defines a section in a document</li>
+<li><code>&lt;article&gt;</code> - Defines an independent self-contained article</li>
+<li><code>&lt;aside&gt;</code> - Defines content aside from the content (like a sidebar)</li>
+<li><code>&lt;footer&gt;</code> - Defines a footer for a document or a section</li>
+<li><code>&lt;details&gt;</code> - Defines additional details</li>
+<li><code>&lt;summary&gt;</code> - Defines a heading for the <details> element</li>
+</ul>
+
       </div>
 
-      <meta itemprop="wordCount" content="1949">
+      <meta itemprop="wordCount" content="2257">
       <meta itemprop="datePublished" content="2018-11-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/htmlbasics/">
     </article>
 
     <ul class="pagination" role="navigation" aria-label="Pagination">
       
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/progit/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Learning Notes of Pro Git</a></li>
+      
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/qianqianshan-cv/"><em>Next<span class="show-for-sr"> page</span></em>: Curriculum Vitae of Qianqian Shan&nbsp;&raquo;</a></li>
       
     </ul>
 

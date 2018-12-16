@@ -1,0 +1,49 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Basic Concepts}}{5}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-3}{Retrieving Data}}{5}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-40002.1}{QQ2-1-4}{Display information}}{5}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-50002.2}{QQ2-1-5}{The \textsf  {SELECT} statement}}{5}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-60002.3}{QQ2-1-6}{Sort Retrieved Data}}{6}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-70003}{QQ2-1-7}{Filter Data}}{6}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-80003.1}{QQ2-1-8}{Using the \textsf  {WHERE} clause}}{6}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-80011}{}{\ignorespaces \textsf  {WHERE} operators}}{table}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-90003.2}{QQ2-1-10}{Using \textsf  {WHERE} with \textsf  {AND, OR, IN, NOT IN}}}{9}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-100003.3}{QQ2-1-11}{Wildcard Filtering}}{9}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-110004}{QQ2-1-12}{Searching Using Regular Expressions}}{9}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-120004.1}{QQ2-1-13}{Basic Character Matching}}{10}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-130004.2}{QQ2-1-14}{Match Ranges and Special Characters}}{10}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-140004.3}{QQ2-1-15}{Matching Character Classes or Multiple Instances}}{10}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-140012}{}{\ignorespaces Character Classes}}{table}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-140023}{}{\ignorespaces Repetition Meta-characters}}{table}\relax 
+\doTocEntry\tocsubsection{4.4}{\csname a:TocLink\endcsname{1}{x1-150004.4}{QQ2-1-18}{Anchors}}{16}\relax 
+\doTocEntry\toclot{4}{\csname a:TocLink\endcsname{1}{x1-150014}{}{\ignorespaces Anchors}}{table}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-160005}{QQ2-1-20}{Data Manipulation and Summarization}}{19}\relax 
+\doTocEntry\tocsubsection{5.1}{\csname a:TocLink\endcsname{1}{x1-170005.1}{QQ2-1-21}{Creating Calculated Fields}}{19}\relax 
+\doTocEntry\tocsubsubsection{5.1.1}{\csname a:TocLink\endcsname{1}{x1-180005.1.1}{QQ2-1-22}{Concatenate Fields}}{19}\relax 
+\doTocEntry\tocsubsection{5.2}{\csname a:TocLink\endcsname{1}{x1-190005.2}{QQ2-1-23}{Using Aliases}}{19}\relax 
+\doTocEntry\tocsubsection{5.3}{\csname a:TocLink\endcsname{1}{x1-200005.3}{QQ2-1-24}{Data Manipulation}}{19}\relax 
+\doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-200015}{}{\ignorespaces Manipulation Functions}}{table}\relax 
+\doTocEntry\tocsubsection{5.4}{\csname a:TocLink\endcsname{1}{x1-210005.4}{QQ2-1-26}{Summarization}}{22}\relax 
+\doTocEntry\toclot{6}{\csname a:TocLink\endcsname{1}{x1-210016}{}{\ignorespaces Aggregation Functions}}{table}\relax 
+\doTocEntry\tocsubsection{5.5}{\csname a:TocLink\endcsname{1}{x1-220005.5}{QQ2-1-28}{Summarization on Grouped Data}}{25}\relax 
+\doTocEntry\toclot{7}{\csname a:TocLink\endcsname{1}{x1-220017}{}{\ignorespaces Clause}}{table}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-230006}{QQ2-1-30}{Subqueries and Joining Tables}}{28}\relax 
+\doTocEntry\tocsubsection{6.1}{\csname a:TocLink\endcsname{1}{x1-240006.1}{QQ2-1-31}{Subquery}}{28}\relax 
+\doTocEntry\tocsubsection{6.2}{\csname a:TocLink\endcsname{1}{x1-250006.2}{QQ2-1-32}{Join Tables}}{28}\relax 
+\doTocEntry\tocsubsection{6.3}{\csname a:TocLink\endcsname{1}{x1-260006.3}{QQ2-1-33}{Combine Queries}}{29}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-270007}{QQ2-1-34}{Full-Text Searching}}{30}\relax 
+\doTocEntry\toclot{8}{\csname a:TocLink\endcsname{1}{x1-270098}{}{\ignorespaces Boolean Operators}}{table}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-280008}{QQ2-1-36}{Inserting/Updating/Deleting Data}}{33}\relax 
+\doTocEntry\tocsubsection{8.1}{\csname a:TocLink\endcsname{1}{x1-290008.1}{QQ2-1-37}{Inserting Data}}{33}\relax 
+\doTocEntry\tocsubsection{8.2}{\csname a:TocLink\endcsname{1}{x1-300008.2}{QQ2-1-38}{Updating and Deleting Tables}}{33}\relax 
+\doTocEntry\tocsection{9}{\csname a:TocLink\endcsname{1}{x1-310009}{QQ2-1-39}{Creating and Manipulating Tables}}{34}\relax 
+\doTocEntry\tocsubsection{9.1}{\csname a:TocLink\endcsname{1}{x1-320009.1}{QQ2-1-40}{Create Table}}{34}\relax 
+\doTocEntry\tocsubsection{9.2}{\csname a:TocLink\endcsname{1}{x1-330009.2}{QQ2-1-41}{Manipulate Table}}{35}\relax 
+\doTocEntry\tocsection{10}{\csname a:TocLink\endcsname{1}{x1-3400010}{QQ2-1-42}{Using Views and Stored Procedures}}{35}\relax 
+\doTocEntry\tocsubsection{10.1}{\csname a:TocLink\endcsname{1}{x1-3500010.1}{QQ2-1-43}{Views}}{36}\relax 
+\doTocEntry\tocsubsection{10.2}{\csname a:TocLink\endcsname{1}{x1-3600010.2}{QQ2-1-44}{Stored Procedures}}{36}\relax 
+\doTocEntry\tocsection{11}{\csname a:TocLink\endcsname{1}{x1-3700011}{QQ2-1-45}{Cursors and Triggers}}{37}\relax 
+\doTocEntry\tocsubsection{11.1}{\csname a:TocLink\endcsname{1}{x1-3800011.1}{QQ2-1-46}{Cursors}}{37}\relax 
+\doTocEntry\tocsubsection{11.2}{\csname a:TocLink\endcsname{1}{x1-3900011.2}{QQ2-1-47}{Triggers}}{38}\relax 
+\par 

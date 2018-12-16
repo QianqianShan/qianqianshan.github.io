@@ -1,0 +1,1312 @@
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage{amssymb} % blackbaord bold 
+\usepackage{amsmath} % for modulo function
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{booktabs}
+\author{Qianqian Shan}
+\title{SQL Notes}
+\date{\vspace{-5ex}}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	%frame=shadowbox,
+	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+}
+
+\lstset{escapechar=none,style=customc}
+
+\lstset{language=SQL}          % Set your language (you can change the language for each code-block optionally)
+\section{Basic Concepts}
+\textbf{Database}: A container (usually a file or a set of files) to store organized data. 
+\\~\\
+\textbf{Table}: A structured list of data of a specific type. Every table in the database has a \emph{unique} name that identifies it. 
+\\~\\
+\textbf{Schema}: Information about database and table layout and properties. For example, information that how data is stored in them, what data is stored , how it's broken up etc. 
+\\~\\
+\textbf{Primary Keys}: A column(or a set of columns) whose value \emph{uniquely} identify every row in a table. \\~\\
+\textbf{Wildcards}: Special characters used to match parts of a value. For example, ``\%'', ``\_''.\\~\\
+\textbf{Foreign Key}: A column in one table that contains the primary key from another table, thus defining the relationships between tables. 
+
+\section{Retrieving Data}
+\subsection{Display information}
+\begin{lstlisting}
+-- Return a list of available databases.
+SHOW DATABASES; 
+
+-- Show a list of tables within a database 
+SHOW TABLES;
+
+-- Show columns from a table 
+SHOW COLUMNS FROM customers;
+
+-- Use describe as a shortcut of show...from...
+DESCRIBE customers;
+
+\end{lstlisting}
+
+\subsection{The \textsf{SELECT} statement} 
+% \texttt{SELECT}
+
+\begin{lstlisting}
+
+SELECT prod_name,prod_id FROM products;
+
+-- Select all columns 
+SELECT * FROM products;
+
+-- Retrieve distinct rows 
+SELECT DISTINCT vend_id FROM products; 
+--DISTINCT applies to all columns, not just the one it precedes.
+
+-- Limit the results by LIMIT 
+SELECT prod_name FROM products LIMIT 5;
+
+
+-- Return five rows starting from row 4.
+SELECT prod_name FROM products LIMIT 4,5;
+
+-- Or alternatively, 
+SELECT prod_name FROM products LIMIT 5 OFFSET 4;
+\end{lstlisting}
+
+\subsection{Sort Retrieved Data}
+1. Sort data by \textsf{ORDER BY}. \\
+\begin{lstlisting}
+SELECT prod_name 
+FROM products 
+ORDER BY prod_name;
+
+-- Sort by multiple columns 
+SELECT prod_id, prod_price 
+FROM products 
+ORDER BY prod_price DESC, prod_id;
+\end{lstlisting} 
+
+%\setlength{\parindent}{0.3em}
+\noindent  % surpress paragraph indentation  
+2. Specify sort direction by \textsf{DESC}, \textsf{ASC} is the default order. \textsf{DESC} applies to the column which directly precedes it. 
+\begin{lstlisting}
+SELECT prod_id, prod_price, prod_name 
+FROM products 
+ORDER BY prod_price DESC;
+
+-- Sort by multiple columns.
+SELECT prod_id, prod_price, prod_name
+ FROM products 
+ORDER BY prod_price DESC, prod_name;
+
+
+-- Use ORDER BY and LIMIT to find extreme values 
+SELECT prod_price 
+FROM products 
+ORDER BY prod_price DESC LIMIT 1;
+
+\end{lstlisting}
+
+
+\section{Filter Data}
+\subsection{Using the \textsf{WHERE} clause}
+Supported operators by \textsf{WHERE}:
+\begin{table}
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Operator & Description\\ 
+		$=$ & Equality \\ 
+		$<>$ & Nonequality \\ 
+		$!=$ & Nonequality \\ 
+		$<$ &  \\ 
+		$<=$ &  \\ 
+		$>$ &  \\ 
+		$>=$ &  \\ 
+		$BETWEEN$ & Between two specified values \\ 
+		\hline
+	\end{tabular}
+    \caption{\textsf{WHERE} operators}
+    \end{table}
+\FloatBarrier
+
+
+\begin{lstlisting}
+-- Check against one single value 
+SELECT prod_name, prod_price 
+FROM products 
+WHERE prod_name = 'fuses';
+
+-- Check against a range of values 
+SELECT prod_name, prod_price 
+FROM products 
+WHERE prod_price BETWEEN 5 AND 10;
+
+
+-- Check for NO value
+SELECT cust_id 
+FROM custormer 
+WHERE cust_email IS NULL;
+\end{lstlisting}
+
+\subsection{Using \textsf{WHERE} with \textsf{AND, OR, IN, NOT IN}}
+
+\begin{lstlisting}
+-- and 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_id = 1000 AND prod_price < 10;
+
+-- or
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_id = 1000 OR prod_price < 10;
+
+-- use parentheses to group if both 'and' and 'or' are used 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE (prod_id = 1000 or prod_id = 1001) AND prod_price < 10;
+
+
+-- IN , NOT IN 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_id IN (1000, 1001)
+ORDER BY prod_name;
+\end{lstlisting}
+\subsection{Wildcard Filtering}
+
+\begin{enumerate}
+\item \textsf{LIKE} operator must be used to instruct SQL that the following serach pattern is to be compared using a wildcard match rather than a straight equality match. 
+
+\item ``\%'' matches any number(0, 1 or more) of occurrences of any character. 
+
+\item ``\_'' matches ONE single character. 
+\end{enumerate}
+\begin{lstlisting}
+-- retrieve any value that starts with jet 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_name LIKE 'jet%'; 
+
+-- retrieve any value that contains jet 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_name LIKE '%jet%'; 
+
+
+-- retrieve any value that starts with s and ends with e 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_name LIKE 's%e'; 
+
+
+-- retrieve any value that has the second to fourth character as 'jet' 
+SELECT prod_id, prod_price, prod_name
+FROM products 
+WHERE prod_name LIKE '_jet'; 
+
+\end{lstlisting} 
+
+\section{Searching Using Regular Expressions}
+\subsection{Basic Character Matching}
+
+\textsf{REGEXP} can be used to match within column values, while \textsf{LIKE} will match the entire column, i.e., if '1000' is only part of the column value, \textsf{LIKE} wouldn't return it while \textsf{REGEXP} will. 
+
+\begin{lstlisting}
+-- Match text '1000'
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '1000'
+ORDER BY prod_name;
+
+-- Use '.' to match any single character 
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '.000'
+ORDER BY prod_name;
+
+-- Perform the 'or' matches by '|'
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '1000|2000|3000'
+ORDER BY prod_name;
+
+
+-- Match one of several specific characters by '[]'
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '[123] Ton'
+ORDER BY prod_name;
+-- pattern 1 Ton, 2 Ton or 3 Ton will be matched, and it's a shorthand of [1|2|3]
+
+
+-- '[]' is needed to tell the or is on 1 2 3 
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '1|2|3 Ton'
+ORDER BY prod_name;
+-- means '1' or '2' or '3 Ton' 
+
+-- Negate the matches of several characters  by '^'
+
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '[^123] Ton'
+ORDER BY prod_name;
+
+\end{lstlisting}
+
+
+\subsection{Match Ranges and Special Characters}
+\begin{enumerate}
+\item '-' can be used to define a range. For example, [1-9], [a-z].
+
+\item To match special characters such as '-' used above, need to be preceded by '\verb|\\|'. For example, need to use '\verb|\\|.' to search for '.'. This process to add \verb|\\| is called \emph{escaping}.
+\end{enumerate}
+
+\begin{lstlisting}
+-- Match range.
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '[1-5] Ton'
+ORDER BY prod_name;
+
+
+-- Match special character. 
+SELECT vend_name 
+FROM vendors 
+WHERE vend_name REGEXP '\\.'
+ORDER BY vend_name;
+\end{lstlisting}
+\FloatBarrier
+
+\subsection{Matching Character Classes or Multiple Instances}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Class & Description\\ 
+		$[:alnum:]$ & Any letter or digit, [a-zA-Z0-9] \\ 
+		$[:alpha:]$ & [a-zA-Z] \\ 
+		$[:blank:]$ & Space or Tab \verb|[\\t]| \\ 
+		$[:digit:]$ & [0-9] \\ 
+		\vdots & \vdots\\
+		\hline
+	\end{tabular}
+	\caption{Character Classes}
+\end{table}
+\FloatBarrier
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Metacharacter & Description\\ 
+		$*$ & 0 or more matches \\ 
+		$+$ & 1 or more  matches\\ 
+		$?$ & 0 or 1 matches \\ 
+		${n}$ & n matches \\ 
+		${n, }$ & No less than n matches \\ 
+		${n, m}$ & n - m matches \\ 
+		\hline
+	\end{tabular}
+	\caption{Repetition Meta-characters}
+\end{table}
+
+\begin{lstlisting}
+-- '\\(' matches '(', 'sticks?' matches both 'stick' and 'sticks' as '?' matches 0 or 1 occurrence of WHATEVER IT FOLLOWS.
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '\\([0-9] sticks?\\)'
+ORDER BY prod_name;
+
+-- Match four consecutive digits 
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '[[:digit:]]{4}'
+ORDER BY prod_name;
+
+
+-- Or equivalently,
+SELECT prod_name 
+FROM products 
+WHERE prod_name REGEXP '[0-9][0-9][0-9][0-9]'
+ORDER BY prod_name;
+\end{lstlisting}
+
+\subsection{Anchors}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Metacharacter & Description\\ 
+		$\verb|^|$ & Start of TEXT \\ 
+		 \$& End of TEXT\\ 
+		$[[:<:]]$ & Start of WORD\\ 
+		$[[:>:]]$ & End of WORD \\ 
+		\hline
+	\end{tabular}
+	\caption{Anchors}
+\end{table}
+
+
+\begin{lstlisting}
+
+-- Match start of a . or any digit
+SELECT prod_name 
+FROM products 
+WHERE prod_name 'REGEXP ^[0-9\\.]'
+ORDER BY prod_name;
+\end{lstlisting}
+
+
+\section{Data Manipulation and Summarization}
+
+\subsection{Creating Calculated Fields}
+
+\subsubsection{Concatenate Fields} 
+\textsf{Concat} function is used to form a single long value by joining values together. For most DBMS, however, '+' or '$||$' are used for concatenation.
+\begin{lstlisting}
+
+-- Concatenate name and country to be a single column
+SELECT Concat(vend_name, '(', vend_country, ')')
+FROM vendors
+ORDER BY vend_name;
+\end{lstlisting}
+
+\subsection{Using Aliases}
+\textsf{AS} is used. 
+\begin{lstlisting}
+-- Assign a name 
+SELECT Concat(vend_name, '(', vend_country, ')') AS vend_title
+FROM vendors
+ORDER BY vend_name;
+
+
+-- Mathmatical calculations such as +, -, *, / are allowed when retriving the data.
+\end{lstlisting}
+
+\subsection{Data Manipulation}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		\textbf{Text Manipulation} & Description\\ 
+		\hline
+		Left() & Returns characters from left of string \\ 
+		Length()& Returns the length of the string\\ 
+		Locate() & Finds a substring within a string\\ 
+		Lower() & Coverts string to lowercase \\ 
+		Upper() & Converts string to uppercase\\
+		LTrim() & Trims white space from left of string\\
+		RTrim() & Trims white space from right of string\\
+		Soundex() & Returns a string's soundex values\\
+		\hline
+		\textbf{Numeric Manipulation Functions} & Description\\
+		\hline
+		Abs() & Absolute value \\
+		Cos() & Cos(x)\\
+		Exp() & Exponential value \\
+		Mod() & Remainder of a division operation \\
+		Pi() & pi\\
+		Rand() & Random number \\
+		Sin() & sin()\\
+		Sqrt() & Square root \\
+		Tan() & tan()\\
+		\hline
+	\end{tabular}
+	\caption{Manipulation Functions}
+\end{table}
+\FloatBarrier
+
+\begin{lstlisting}
+SELECT vend_name, UPPER(vend_name) AS vend_name_upper
+FROM vendors 
+ORDER BY vend_name;
+
+-- Use Soundex to return values which sound similar with Y Lie, for example, Y. Lie
+SELECT vend_name
+FROM vendors 
+WHERE Soundex(vend_name) = Soundex('Y Lie)
+ORDER BY vend_name;
+
+-- It's a good practice to use Date() for dates to avoid confusion, and date needs to have the format yyyy-mm-dd
+SELECT vend_name
+FROM vendors 
+WHERE Date(order_date) = '2005-09-01'
+ORDER BY vend_name;
+
+-- Method 1 to retrieve all orders in one certain month 
+SELECT cust_id, order_num
+FROM orders 
+WHERE Date(order_date) BETWEEN '2005-09-01' AND '2005-09-30';
+
+
+-- Method 2
+SELECT cust_id, order_num
+FROM orders 
+WHERE Year(order_date) = 2005 and Month(order_date) = 9;
+-- NO QUOTES!
+\end{lstlisting}
+
+
+\subsection{Summarization}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Aggregate Functions & Description\\ 
+		\hline
+		AVG() & Average \\ 
+		COUNT() & Number of specified rows\\ 
+		MAX() & Max\\ 
+		MIN() & Min\\ 
+		SUM() & Sum\\ 
+		\hline
+	\end{tabular}
+	\caption{Aggregation Functions}
+\end{table}
+
+
+\begin{lstlisting}
+-- Select all rows 
+SELECT COUNT(*) AS num_cust
+FROM custormers;
+
+
+-- Count specified rows 
+SELECT COUNT(cust_email) AS num_cust
+FROM custormers;
+\end{lstlisting}
+
+\subsection{Summarization on Grouped Data}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|c|} 
+		\hline
+		Clause & Description\\ 
+		\hline
+		GROUP BY & Group specification \\ 
+		HAVING & Group level filtering\\ 
+		WHERE & Row level filtering\\ 
+		\hline
+	\end{tabular}
+	\caption{Clause}
+\end{table}
+\begin{lstlisting}
+-- Calculate the COUNT by vend_id 
+SELECT vend_id, COUNT(*) AS num_prods 
+FROM products
+GROUP BY vend_id;
+
+
+-- Filter groups with HAVING
+SELECT cust_id, COUNT(*) AS orders 
+FROM orders 
+GROUP BY cust_id 
+HAVING COUNT(*) >= 2;
+
+
+-- Note the ORDER BY posistion 
+SELECT cust_id, COUNT(*) AS orders 
+FROM orders 
+GROUP BY cust_id 
+HAVING COUNT(*) >= 2
+ORDER BY cust_id;
+\end{lstlisting}
+
+
+\section{Subqueries and Joining Tables}
+
+\subsection{Subquery}
+Subquery is query that is embedded into other queries. Subqueries are always processed starting with the INNERMOST \textsf{SELECT} statement and working outward. 
+
+Subqueries can also be done using JOINS in next Chapter. 
+
+It can be used to do: 
+\begin{itemize}
+\item filtering
+
+\item calculated fields 
+\end{itemize}
+
+\begin{lstlisting}
+-- Filtering, indentation can be used for easier understanding of the code. 
+SELECT cust_id 
+FROM orders 
+WHERE order_num IN (
+                    SELECT order_num 
+                    FROM orderitems
+                    WHERE prod_id = 'TNT2');
+                    
+-- Calculated field 
+SELECT cust_name, 
+       cust_state,
+       (SELECT COUNT(*) 
+       FROM orders
+       WHERE orders.cust_id = customers.cust_id) AS orders
+FROM customers
+ORDER BY cust_name;                    
+\end{lstlisting}
+
+TIPS: When need to use subqueries, it's safe to do so incrementally in much the same way as SQL processes them. 
+
+
+\subsection{Join Tables}
+Foreign key is used to join tables. 
+
+\begin{itemize}
+\item Join can be created by simply specifying all tables and how they are related using \textsf{WHERE}. 
+
+\item ``INNER JOIN'' and  ``ON'' cane be used together to do the job. 
+
+\item Joining multiple tables can be done by first list all the tables and then define the relationship. 
+
+\item OUTER JOIN: joins including rows that have no associated rows in the related table. ``LEFT OUTER JOIN'' , RIGHT OUTER JOIN'' can be used. 
+
+\item JOINs can be combined with aggregate functions. 
+\end{itemize}
+\begin{lstlisting}
+
+-- Create a join by WHERE 
+SELECT vend_name, prod_name 
+FROM  vendors, products 
+WHERE vendors.vend_id = products.vend_id
+ORDER BY vend_name, prod_name;
+
+
+-- Use ``INNER JOIN'' with ``ON'' to do the same as above 
+SELECT vend_name, prod_name 
+FROM  vendors INNER JOIN products 
+ON vendors.vend_id = products.vend_id
+ORDER BY vend_name, prod_name;
+
+
+-- Join multiple tables 
+SELECT cust_name, cust_contact
+FROM customers, orders, orderitems
+WHERE customers.cust_id = orders.cust_id 
+AND orderitems.order_num = orders.order_num
+AND orderitems.prod_id = 'TNT2';
+
+
+-- OUTER JOIN 
+SELECT customers.cust_id, orders.order_num
+FROM customers LEFT OUTER JOIN orders 
+ON customers.cust_id = orders.cust_id;
+-- Retrieve all customers, even no orders(order_num is NULL) placed.
+-- LEFT OUTER JOIN selects all rows on the left. 
+
+
+-- Aggregate function , inner join 
+SELECT customers.cust_name,
+       customers.cust_id,
+       COUNT(orders.order_num) AS num_ord
+FROM customers INNER JOIN orders
+ON customers.cust_id = orders.cust_id
+GROUP BY customers.cust_id;
+       
+-- Outer join        
+SELECT customers.cust_name,
+customers.cust_id,
+COUNT(orders.order_num) AS num_ord
+FROM customers LEFT OUTER JOIN orders
+ON customers.cust_id = orders.cust_id
+GROUP BY customers.cust_id;
+
+\end{lstlisting}
+
+
+\subsection{Combine Queries}
+Performing multiple queries and return the results as a single query result set is know as \emph{unions} or \emph{compound queries}. 
+\\~\\
+\textbf{Union Rules}: 
+\begin{enumerate}
+	
+\item A UNION must be comprised of two or more SELECT statements, each separated by keyword UNION.
+
+\item Each query in a UNION must contain the same columns, expressions, or aggregate functions. 
+
+\item Column datatypes must be compatible.  
+\end{enumerate}
+
+\textsf{UNION} can eliminate duplicated rows by default. If one wants all occurrences of all matches returned, use \textsf{UNION ALL}. 
+
+\begin{lstlisting}
+--  Use of UNION
+SELECT vend_id, prod_id, prod_price
+FROM products
+WHERE prod_price <= 5
+UNION
+SELETCT vend_id, prod_id, prod_price
+FROM products
+WHERE vend_id IN (1001, 1002);
+
+-- Or equivalently,
+SELECT vend_id, prod_id, prod_price
+FROM products
+WHERE prod_price <= 5 
+OR vend_id IN (1001, 1002);
+
+-- Some duplicated rows will return (if there are any).
+SELECT vend_id, prod_id, prod_price
+FROM products
+WHERE prod_price <= 5
+UNION ALL
+SELETCT vend_id, prod_id, prod_price
+FROM products
+WHERE vend_id IN (1001, 1002);
+
+
+-- Sorted by ORDER BY at the end of the final SELECT
+SELECT vend_id, prod_id, prod_price
+FROM products
+WHERE prod_price <= 5
+UNION
+SELETCT vend_id, prod_id, prod_price
+FROM products
+WHERE vend_id IN (1001, 1002)
+ORDER BY vend_id, prod_price;
+\end{lstlisting}
+
+\section{Full-Text Searching}
+
+\begin{enumerate}
+\item In order to perform full-text searching, the columns to be searched must be indexed and constantly re-indexed as data changes. 
+
+\item \textsf{SELECT} can be used with \textsf{MATCH()} and \textsf{Against()} for searches. 
+
+\item ``WITH QUERY EXPANSION'' can be used within ``Against'' to widen the range of returned full text results. The match is not only based on the original criteria, but also useful words from the selected matched rows. 
+
+\item Boolean mode can be used to specify 1).words to be matched/excluded; 2).ranking hints on which words are more important; 3).etc.
+\end{enumerate}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ |c|l|} 
+		\hline
+		Privilege & Description\\ 
+		\hline
+		$+$ & Word must be included. \\ 
+		\hline
+		$-$ & Word must be excluded. \\ 
+		\hline
+		$>$ & Word must be included and increase ranking value. \\
+		\hline
+		$<$ & Word must be included and decrease ranking value. \\
+		\hline
+		$()$ & Group words into subexpressions. \\  
+		\hline
+		$\sim$ & Negate a word's ranking value. \\  
+		\hline
+		$*$ & Wildcard at end of word. \\ 
+		\hline
+		$" "$ & Define a phrase instead of individual words. \\ 
+
+		\hline
+	\end{tabular}
+	\caption{Boolean Operators}
+\end{table}
+
+
+\begin{lstlisting}
+-- Index the column by FULLTEXT()
+CREATE TABLE productnotes 
+(
+note_id        int        NOT NULL AUTO_INCREMENT,
+prod_id        char(10)   NOT NULL,
+note_date      datetime   NOT NULL,
+note_text      text       NULL,
+PRIMARY KEY(note_id),
+FULLTEXT(note_text)
+) ENGINE = MyISAM;
+
+
+-- full text search 
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('rabbit');
+
+-- or equivalently
+SELECT note_text 
+FROM productnotes
+WHERE note_text LIKE '%rabbit%';
+
+
+-- Query expansion 
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('rabbit' WITH QUERY EXPANSION);
+-- More results with the selected useful words will be returned.
+
+
+-- Boolean mode 
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('heavy -rope*' IN BOOLEAN MODE);
+-- 'heavy' is matched, and excludeany result that contains rope*(any word beginning with 'rope')
+
+-- use of + 
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('+heavy +rope*' IN BOOLEAN MODE);
+
+
+-- Single quote
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('heavy rope' IN BOOLEAN MODE);
+-- Match results that contain at least one of heavy and rope.
+
+
+-- Double quotes 
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('"heavy rope"' IN BOOLEAN MODE);
+-- Match phrase heavy rope instead of two words. 
+
+--
+SELECT note_text 
+FROM productnotes
+WHERE Match(note_text) Against('+safe +(<combination)' IN BOOLEAN MODE);
+-- Match safe and combination, lower the ranking of the latter. 
+\end{lstlisting}
+
+\section{Inserting/Updating/Deleting Data}
+\subsection{Inserting Data}
+
+\begin{enumerate}
+\item \textsf{INSERT INTO\ldots VALUES} syntax is used. 
+
+\item Multiple rows could be inserted at one time, while different \textsf{INSERT} statements separated by semicolon. Also, if column names are identical for different \textsf{INSERT} statements, one need to specify only one time of the column list. 
+
+\item Replace the \textsf{VALUES} part with the normal \textsf{SELECT} statements to insert retrieved data.  
+\end{enumerate}
+
+
+\begin{lstlisting}
+-- Insert a single row 
+INSERT INTO customers(
+  cust_name,
+  cust_address,
+  cust_city,
+  cust_state,
+  cust_email)
+VALUES(
+  'Pep LePew',
+  '100 Main Street',
+  'Los Angles',
+  'CA',
+  NULL);
+-- First specify the column list to be safe, then specify the values to be inserted, NULL allowed given that the column allows NULL or default value is assigned if NULL.
+
+-- Insert multiple rows, column lists need not to be identical 
+INSERT INTO customers(
+cust_name,
+cust_address,
+cust_city,
+cust_state,
+cust_email)
+VALUES(
+'Pep LePew',
+'100 Main Street',
+'Los Angles',
+'CA',
+NULL);
+INSERT INTO customers(
+cust_name,
+cust_address,
+cust_city,
+cust_state,
+cust_email)
+VALUES(
+'Pep LePew',
+'100 Main Street',
+'Los Angles',
+'CA',
+NULL);
+
+
+
+-- If column lists are identical
+INSERT INTO customers(
+cust_name,
+cust_address,
+cust_city,
+cust_state,
+cust_email)
+VALUES(
+'Pep LePew',
+'100 Main Street',
+'Los Angles',
+'CA',
+NULL),
+(
+'Pep LePew',
+'100 Main Street',
+'Los Angles',
+'CA',
+NULL);
+
+
+-- Insert retrieved data,  
+INSERT INTO customers(
+cust_name,
+cust_address,
+cust_city,
+cust_state,
+cust_email)
+SELECT cust_name,
+       cust_address,
+       cust_city,
+       cust_state,
+       cust_email
+FROM custnew;
+
+\end{lstlisting} 
+
+
+\subsection{Updating and Deleting Tables}
+
+\begin{enumerate}
+\item \textsf{UPDATE \ldots SET} syntax is used. Multiple columns can be updated together with a single \textsf{SET} and column = value pair is separated by a comma. 
+
+\item Deleting a certain column can be accomplished by setting the specific column value to NULL. 
+
+\item \textsf{DELETE FROM} syntax is used to delete a entire row, not a specific column. 
+
+\item \textsf{TRUNCATE TABLE} is used to delete all rows from a table. It drops and recreates the table. 
+\end{enumerate}
+
+
+\begin{lstlisting}
+
+-- Update one column 
+UPDATE customers
+SET cust_email = 'sql@test.com'
+WHERE cust_id = 1000;
+
+-- Update multiple columns
+UPDATE customers
+SET cust_name = 'SQL',
+    cust_email = 'sql@test.com'
+WHERE cust_id = 1000;
+
+
+-- Delete a column value 
+UPDATE customers
+SET cust_email = NULL
+WHERE cust_id = 1000;
+
+-- Delete a row 
+DELETE FROM customers 
+WHERE cust_id = 10000;
+
+
+-- Delte the entire rows 
+TRUNCATE TABLE customers;  
+\end{lstlisting}
+
+
+\section{Creating and Manipulating Tables}
+
+\subsection{Create Table}
+\begin{enumerate}
+\item \textsf{CREATE TABLE tablename \ldots} is used to create a table, and name and definition of different columns is separated by a comma. 
+
+\item NULL states of a column is specified at the table definition by ``NULL'' or ``NOT NULL''. 
+
+\item PRIMARY KEY must be unique and defined when creating the table.
+
+\item \textsf{AUTO\_INCREMENT} is used to tell SQL that the column is automatically incremented each time a row is added. Only one column is allowed to be auto-incremented, and it must be indexed(for example, making it a primary key).
+
+\item \textsf{DEFAULT} is used to specify the default values of a column in \textsf{CREATE TABLE}. 
+
+\item \textsf{ENGINE = } is used to specify the internal engine that SQL uses to manage and manipulate data. 
+\end{enumerate}
+
+\begin{lstlisting}
+-- Create a table 
+CREATE TABLE vendors 
+(
+vend_id     int       NOT NULL AUTO_INCREMENT,
+vend_name   char(50)  NOT NULL DEFAULT test,
+vend_city   char(50)  NULL, 
+PRIMARY KEY(vend_id, vend_name)
+) ENGINE = InnoDB;
+\end{lstlisting}
+
+\subsection{Manipulate Table}
+
+\begin{itemize}
+\item Update table definition by \textsf{ALTER TABLE tablename ADD/DROP \ldots}. 
+
+\item Delete table by \textsf{DROP TABLE tablename}.
+
+\item Rename table by \textsf{RENAME TABLE tablename1 TO tablename2}.
+\end{itemize}
+
+\begin{lstlisting}
+-- Update tables : add 
+ALTER TABLE vendors 
+ADD vend_phone CHAR(20);
+
+
+-- Update tables: drop 
+ALTER TABLE vendors 
+DROP COLUMN vend_phone;
+
+-- Define foreign keys 
+ALTER TABLE orderitems 
+ADD CONSTRAINT fk_orderitems_orders
+FOREIGN KEY (order_num) REFERENCES orders (order_num);
+
+-- Drop table 
+DROP TABLE customers;
+
+-- Rename 
+RENAME TABLE customers1 TO customers2,
+             customers3 TO customers4;
+
+\end{lstlisting}
+\section{Using Views and Stored Procedures}
+\subsection{Views}
+Views are virtual tables. It contains queries that dynamically retrieve data when used. 
+
+The common uses are: 
+\begin{enumerate}
+\item Reuse SQL statement. 
+\item Simplify complex SQL operations. 
+\item To expose part of a table instead of complete tables. 
+\item To secure data.
+\item Return data formatted and presented differently from their underlying tables. 
+\end{enumerate}
+
+Views are created using \textsf{CREATE VIEW viewname}, and dropped by \textsf{DROP VIEW viewname}.
+
+\begin{lstlisting}
+-- Simplify complex joins : step 1: create a view 
+CREATE VIEW productcustomers AS 
+SELECT cust_name, cust_contact, prod_id
+FROM custormers, orders, orderitems
+WHERE customers.cust_id = orders.cust_id
+AND   orderitems.order_num = orders.order_num;
+
+-- step2 : retrieve data using view 
+SELECT cust_name, cust_contact
+FROM productcustomers
+WHERE prod_id = 'TNT2';
+
+-- Reformat data 
+CREATE VIEW vendorlocations AS
+SELECT Concat(RTrim(vend_name), '(', RTrim(vend_country), ')')
+AS vend_title
+FROM vendors
+ORDER BY vend_name;
+
+
+SELECT * 
+FROM vendorlocations;
+
+
+-- Filter unwanted data , for example, filter out data without email address
+CREATE VIEW customeremaillist AS 
+SELECT cust_id, cust_name, cust_email
+FROM customers
+WHERE cust_email IS NOT NULL;
+
+SELECT * 
+FROM customeremaillist;
+
+
+-- Use views with calculated fields 
+CREATE VIEW orderitemexpand AS 
+SELECT order_num, 
+       prod_id, 
+       quantity, 
+       item_price,
+       quantity*item_price AS expanded_price
+FROM orderitems;
+
+SELECT * 
+FROM orderitemsexpand
+WHERE order_num = 20005; 
+\end{lstlisting}
+
+
+\subsection{Stored Procedures}
+Stored procedures are collections of one or more SQL statements saved for future use. 
+
+\begin{enumerate}
+\item Stored procedures are executed by \textsf{CALL}. It will not display data by only calling it, need to use \textsf{SELECT} to retrieve data. 
+
+\item Stored procedures are created by \textsf{CREATE PROCEDURE \ldots BEGIN \ldots END}.
+
+
+\item Default SQL delimiter is \verb|;| while the command-line utility also uses it as a delimiter. One can first change the command utility delimiter to something else and change it back later. For example, \verb|DELIMITER // | \ldots \verb| DELIMITER ; |. Any character expcept for \verb|\| can be a delimiter in SQL.
+
+\item Procedure can have parameters. 
+\end{enumerate}
+
+
+\begin{lstlisting}
+-- Create a procedure 
+CREATE PROCEDURE productpricing()
+BEGIN 
+     SELECT Ave(prod_price) AS priceaverage
+     FROM products;
+END;
+
+-- Call the procedure 
+CALL productpricing();
+-- the trailing () is required. 
+
+
+-- Drop 
+DROP PROCEDURE productpricing; 
+-- No trailing. 
+
+-- With parameters 
+CREATE PROCEDURE productpricing(
+        OUT pl DECIMAL(8,2),
+        OUT ph DECIMAL(8,2),
+        OUT pa DECIMAL(8,2)
+        )
+      BEGIN
+         SELECT Min(prod_price) INTO pl
+         FROM products;
+         SELECT Max(prod_price) INTO ph
+         FROM products;
+         SELECT Avg(prod_price) INTO pa
+         FROM products;
+       END;
+-- OUT: specify that this parameter is used to send a value out of stored procedure. Can also use IN to pass values to stored procedure; INOUT to pass parameters to and from stored procedures.
+
+
+-- call the procedure with parameters 
+CALL productpricing(
+                    @pricelow,
+                    @pricehigh.
+                    @priceaverage);      
+
+-- Retrieve data 
+SELECT @priceaverage, @pricelow;
+
+-- Use both IN and OUT 
+CREATE PROCEDURE ordertotal(
+       IN onumber INT 
+       OUT ototal DECIMAL(8,2)
+       )
+    BEGIN
+       SELECT SUM(item_price*quantity) 
+       FROM orderitems
+       WHERE order_num = onumber INTO ototal;
+    END;
+    
+-- Call the procedure 
+CALL ordertotal(20005, @total);
+SELECT @total;
+
+
+-- Example, add tax for total only for specific customers, business rules and intelligent processing will be included. 
+
+-- Name: ordertotal
+-- Parameters: onumber = order number
+--             taxable = 1 taxable, 0 not 
+--             ototal = order total 
+
+CREATE PROCEDURE ordertotal(
+       IN onumber INT 
+       IN taxable BOOLEAN 
+       OUT ototal DECIMAL(8,2)
+       ) COMMENT 'Obtain order total with optional tax'
+BEGIN
+-- Declare variable for total ,local variables
+DECLARE total DECIMAL(8,2);
+-- Tax percentage 
+DECLARE taxrate INT DEFAULT 6;
+
+-- Get order total 
+SELECT SUM(item_price*quantity)
+FROM orderitems
+WHERE order_num = onumber
+INTO total; 
+
+IF taxable THEN SELECT total + (total * taxrate /100) 
+INTO total;
+END IF;
+
+SEELECT total INTO ototal;
+END;
+
+
+-- Call 
+CALL ordertotal(20005, 1, @total);
+SELECT @total;
+
+-- Inspect stored procedures: display the statement used to create a procedure 
+SHOW CREATE PROCEDURE ordertotal;
+
+-- Inspect: a list of ALL stored procedures including details 
+SHOW PROCEDURE STATUS  'ordertotal';
+
+-- Show only specified procedures 
+SHOW PROCEDURE STATUS LIKE 'ordertotal';
+
+\end{lstlisting}
+\section{Cursors and Triggers}
+\subsection{Cursors}
+A cursor is a database query stored on the SQL server. It's not a SELECT statement, but the result set retrieved by that statement.
+
+\begin{enumerate}
+\item A cursor must be declared/defined before it's used.
+\item The cursor must be opened for use. This process retrieves data. 
+\item With cursor populated with data, individual rows can be fetched/retrieved. 
+\item The cursor must be closed when it's done. 
+\end{enumerate} 
+
+
+\begin{lstlisting}
+CREATE PROCEDURE processorders()
+BEGIN 
+-- Declare local variables 
+DECLARE done BOOLEAN DEFAULT 0;
+DECLARE o INT; 
+DECLARE t DECIMAL(8,2);
+
+-- Declare the cursor 
+DECLARE ordernumbers CURSOR 
+FOR 
+SELECT order_num FROM orders;
+
+-- Declare continue handler 
+DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET done = 1;
+
+
+-- Create table to store results if not exists 
+CREATE TABLE IF NOT EXISTS ordertotals
+(order_num INT, total DECIMAL(8,2));
+
+-- Open cursor 
+OPEN ordernumbers;
+
+-- Loop through all rows 
+REPEAT
+
+-- Get order numbers 
+FETCH ordernumbers INTO o;
+
+-- Get the total for this order 
+CALL ordertotal(o, 1, t);
+
+-- Insert order number and order total into the table 
+INSERT INTO ordertotals(order_num, total) 
+VALUES(o, t);
+
+-- End of loop 
+UNTIL done END REPEAT;
+
+-- Close the cursor 
+CLOSE ordernumbers;
+
+END:
+
+
+
+-- Display the results in the table 
+SELECT * 
+FROM ordertotals;
+
+\end{lstlisting}
+\begin{itemize}
+\item CONTINUE HANDLER will be executed when a condition occurs, while SQLSTATE '02000' is a not found condition, so it occurs when REPEAT cannot continue(no more rows to loop). 
+
+\item A table \emph{ordertotals} is created to fetch each order number. 
+\end{itemize}
+
+
+\subsection{Triggers}
+A trigger is a statement(or a group of statements enclosed with BEGIN and END statements) that are automatically executed by SQL in response to any of these statements: 
+\begin{itemize}
+\item DELETE: within DELETE trigger code, can refer to a virtual table named ``OLD'' to access the rows being deleted. 
+
+\item INSERT: within INSERT trigger code, can refer to a virtual table named ``NEW'' to access rows being inserted. 
+
+\item UPDATE: within UPDATE trigger code, can refer to a virtual table named ``OLD'' to access the previous values and ``NEW'' to access the new updated values. 
+
+\end{itemize}
+
+Four piece of information is needed to create a trigger: 
+\begin{enumerate}
+\item Unique trigger name.
+\item The table to which the trigger is to be associated.
+\item The action that the trigger should respond to(the three mentioned above).
+\item When the trigger should be executed. 
+\end{enumerate}
+
+\begin{enumerate}
+\item \textsf{CREATE TRIGGER triggername AFTER/BEFORE \ldots FOR EACH ROW \ldots;} syntax is used. 
+
+\item Drop the trigger by \textsf{DROP TRIGGER triggername;} Triggers can not be updated or overwritten. 
+\end{enumerate}
+
+
+
+\begin{lstlisting}
+
+-- Create trigger 
+CREATE TRIGGER newproduct AFTER INSERT ON products 
+FOR EACH ROW SELECT 'Product added';
+-- Trigger is executed after a successful INSERT, then for each added row, display "Product added". 
+
+-- Drop trigger
+DROP TRIGGER newproduct;
+
+
+-- Use NEW to access the order number being inserted 
+CREATE TRIGGER neworder AFTER INSERT ON orders 
+FOR EACH ROW SELECT NEW.order_num;
+-- Return the new order number after inserted 
+
+
+-- Use OLD to save rows to be deleted into an active table 
+CREATE TRIGGER deleteorder BEFORE DELETE ON orders 
+FOR EACH ROW 
+BEGIN 
+    INSERT INTO archive_orders(order_num, order_date, cust_id)
+    VALUES(OLD.order_num, OLD.order_date, OLD.cust_id);
+END;
+-- Use BEFORE DELTE has advantage that : if for some reason the order could not be archived, the DELETE will be aborted.
+
+
+
+
+-- Use UPDATE 
+CREATE TRIGGER updatevendor BEFORE UPDATE ON vendors
+FOR EACH ROW SET NEW.vend_state = UPPER(NEW.vend_state);
+\end{lstlisting}
+
+This is added for test.
+A second change
+A third change
+\end{document}

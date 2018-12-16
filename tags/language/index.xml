@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Language on Qianqian Shan</title>
+    <link>https://qianqianshan.github.io/tags/language/</link>
+    <description>Recent content in Language on Qianqian Shan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
+    <lastBuildDate>Thu, 17 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qianqianshan.github.io/tags/language/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SQL Notes</title>
+      <link>https://qianqianshan.github.io/post/sql-notes/sql-notes/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/sql-notes/sql-notes/</guid>
+      <description>SQL Notes  Qianqian Shan
+  Contents 1 Basic Concepts 2 Retrieving Data &amp;#x00A0;2.1 Display information &amp;#x00A0;2.2 The SELECT statement &amp;#x00A0;2.3 Sort Retrieved Data 3 Filter Data &amp;#x00A0;3.1 Using the WHERE clause &amp;#x00A0;3.2 Using WHERE with AND, OR, IN, NOT IN &amp;#x00A0;3.3 Wildcard Filtering 4 Searching Using Regular Expressions &amp;#x00A0;4.1 Basic Character Matching &amp;#x00A0;4.2 Match Ranges and Special Characters &amp;#x00A0;4.3 Matching Character Classes or Multiple Instances &amp;#x00A0;4.4 Anchors 5 Data Manipulation and Summarization &amp;#x00A0;5.</description>
+    </item>
+    
+  </channel>
+</rss>
