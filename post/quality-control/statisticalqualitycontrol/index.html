@@ -1,0 +1,600 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes on Statistical Quality Control | Qianqian Shan</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/foundation.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/fonts.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+
+
+
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="../../../publication">Publications</a></li>
+		  
+		  <li><a href="../../../post">Blog</a></li>
+		  
+		  <li><a href="../../../#contact">Contact</a></li>
+		  
+		  <li><a href="../../../#about">About</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+
+
+
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+    <article class="article" itemscope itemtype="https://schema.org/Article">
+      
+      <h1 itemprop="name">Notes on Statistical Quality Control</h1>
+      <div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2018-04-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">25 April 2018</time>
+  </span>
+  
+  
+  
+  <span class="post-tags">
+    <span class="nowrap"><i class="fa fa-tags"></i>
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/reliability">Reliability</a>,</span> 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/process-control">Process Control</a>, 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/quality-control">Quality Control</a>
+    
+  </span>
+  
+  
+</div>
+
+      <div class="post-body" itemprop="articleBody">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Notes on Introduction to Statistical Quality Control by Montgomery</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="StatisticalQualityControl.tex"> 
+<link rel="stylesheet" type="text/css" href="StatisticalQualityControl.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                          
+
+                                                                          
+                                                                          
+
+<h2 class="titleHead"></h2>
+ <div class="author" ><span 
+class="cmr-12x-x-120">Qianqian Shan</span></div><br />
+<div class="date" ></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Quality Improvement in The Modern Business Environment</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.1 <a 
+href="#x1-30001.1" id="QQ2-1-3">The Meaning of Quality and Quality Improvement</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.2 <a 
+href="#x1-40001.2" id="QQ2-1-4">Statistical Methods for Quality Control and Improvement</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-50002" id="QQ2-1-5">The DMAIC Process</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-60003" id="QQ2-1-6">Methods and Philosophy of Statistical Process Control</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.1 <a 
+href="#x1-70003.1" id="QQ2-1-7">Statistical Basis of the Control Chart</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.2 <a 
+href="#x1-80003.2" id="QQ2-1-8">Choice of Control Limits</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.3 <a 
+href="#x1-90003.3" id="QQ2-1-9">Choice of Sample Size and Sampling Frequency</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.4 <a 
+href="#x1-100003.4" id="QQ2-1-10">Sensitizing Rules for Control Charts</a></span>
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-110004" id="QQ2-1-11">Cumulative Sum and Exponentially Weighted Moving Average
+Control Charts</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.1 <a 
+href="#x1-120004.1" id="QQ2-1-12">Cumulative Sum Control Chart</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >4.1.1 <a 
+href="#x1-130004.1.1" id="QQ2-1-13">Basic Principals: The Cusum Control Chart</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >4.1.2 <a 
+href="#x1-140004.1.2" id="QQ2-1-14">The Tabular or Algorithmic Cusum for Monitoring the
+Process Mean</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >4.1.3 <a 
+href="#x1-150004.1.3" id="QQ2-1-15">Improving Cusum Reponsiveness for Large Shifts</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >4.1.4 <a 
+href="#x1-160004.1.4" id="QQ2-1-16">Cusums for Other Sample Statistics</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.2 <a 
+href="#x1-170004.2" id="QQ2-1-17">The Exponentially Weighted Moving Average Control Chart</a></span>
+   </div>
+                                                                          
+
+                                                                          
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Quality Improvement in The Modern Business Environment</h3>
+<!--l. 64--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x1-30001.1"></a>The Meaning of Quality and Quality Improvement</h4>
+<!--l. 66--><p class="noindent" ><span 
+class="cmbx-12">Dimensions of Quality</span>
+<!--l. 69--><p class="indent" >
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-3002x1">Performance (Will the product do the intended job?)
+      </li>
+      <li 
+  class="enumerate" id="x1-3004x2">Reliability (Hwo often does the product fail?)
+      </li>
+      <li 
+  class="enumerate" id="x1-3006x3">Durability (How long the product lasts), the effective service life of the
+      product .
+      </li>
+      <li 
+  class="enumerate" id="x1-3008x4">Serviceability  (How  easy  is  it  to  repair  the  product?)  How  quickly
+      and  economically  a  repair  or  routine  maintenance  activity  can  be
+      accomplished.
+      </li>
+      <li 
+  class="enumerate" id="x1-3010x5">Aesthetics (What does the product look like?) Visual appeal of the
+      product.
+      </li>
+      <li 
+  class="enumerate" id="x1-3012x6">Features  (What  does  the  product  do?),  features  beyond  the  basic
+      performance of competition.
+      </li>
+      <li 
+  class="enumerate" id="x1-3014x7">Perceived  Quality  (What  is  the  reputation  of  the  economy  or  its
+      product?),  the  reputation  is  directly  influenced  by  failures  of  the
+      product that are highly visible to the public or that require product
+      recalls, and by how the customer is treated when a quality related
+      probelm with the product is reported.
+      </li>
+      <li 
+  class="enumerate" id="x1-3016x8">Conformance to Standards (Is the product made exactly as the designer
+      intended?)</li></ol>
+                                                                          
+
+                                                                          
+<!--l. 88--><p class="indent" >   <span 
+class="cmbx-12">Quality </span>is inversely proportional to variability.
+<!--l. 90--><p class="indent" >   <span 
+class="cmbx-12">Quality improvement </span>is the reduction of variability in processes and
+products.
+<!--l. 92--><p class="indent" >   <span 
+class="cmbx-12">Quality Engineering Terminology </span><br 
+class="newline" />Every product possesses a number of elements that jointly describe what the user
+or consumer thinks of as a quality, and these parameters are often called quality
+characteristics or critical-to-quality(CTQ) characteristics with several
+types:
+<!--l. 95--><p class="indent" >
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-3018x1">Physical: length, weight, voltage, viscosity
+      </li>
+      <li 
+  class="enumerate" id="x1-3020x2">Sensory: taste, appearance, color
+      </li>
+      <li 
+  class="enumerate" id="x1-3022x3">Time Orientation: reliability, durability, serviceability</li></ol>
+<!--l. 104--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x1-40001.2"></a>Statistical Methods for Quality Control and Improvement</h4>
+<!--l. 105--><p class="noindent" >Three major areas,
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-4002x1">Statistical process control (SPC), control chart is one of the primary
+      techniques of SPC.
+      </li>
+      <li 
+  class="enumerate" id="x1-4004x2">Design of experiments, a designed experiement is helpful in discovering
+      the key variables influenceing the quality characteristics of interest in
+      the process (by systematically varying the controllable input factors in
+      the process and determining their effects on the output parameters).
+      </li>
+      <li 
+  class="enumerate" id="x1-4006x3">Acceptance sampling, closely connected with inspection and testing of
+      product.</li></ol>
+<!--l. 112--><p class="indent" >   The primary objective of quality engineering efforts is the systematic redution
+of variability in the key quality characteristics of the product.
+                                                                          
+
+                                                                          
+<!--l. 115--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-50002"></a>The DMAIC Process</h3>
+<!--l. 117--><p class="noindent" >DMAIC is a structured problem-soloving precedure widely used in quality and
+process improvement. DMAIC fors an acronym for the five steps, Define, Measure,
+Analyze, Improve and Control.
+<!--l. 119--><p class="indent" >
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-5002x1">Define: A project chapter that contains a description of the project
+      and its scope, the start and anticipated completion dates, an initial
+      description of both primary and secondary metrics that will be used
+      to measure success and how those metrics aligh with business unit and
+      coporate goals, the potential benefits to the customer, the potential
+      benefits to the organization, mielstones that should be accomplished
+      during the project, the team members &#x2026;
+      </li>
+      <li 
+  class="enumerate" id="x1-5004x2">Measure:  evaluate  and  understand  the  current  state  of  process.
+      This  involves  collecting  data  on  measures  of  quality,  cost,  and
+      throughput/cycle time.
+      </li>
+      <li 
+  class="enumerate" id="x1-5006x3">Analyze: use the data from measure step to begin to determine the
+      cause-and-effect relationships in the process and to understand different
+      sources of variability.
+      </li>
+      <li 
+  class="enumerate" id="x1-5008x4">Improve: Creative thinking about the specific changes that can be made
+      in the process and other things that can be done to have the desired
+      impact on process performance. Develop a solution to the problem and
+      to pilot test the solution.
+      <!--l. 128--><p class="noindent" ><span 
+class="cmbx-12">Pilot  test</span>:  a  form  of  confirmation  experiment,  it  evaluates  and
+      documents the solution and confirms the solution attains the project
+      goals.
+      </li>
+      <li 
+  class="enumerate" id="x1-5010x5">Control: complete all remaining work on the project and to hand off
+      the improved process to the process owner along with a process control
+      plan and other necessary procedures to ensure that the gains from the
+      project will be institutionalized.
+      </li></ol>
+                                                                          
+
+                                                                          
+<!--l. 134--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-60003"></a>Methods and Philosophy of Statistical Process Control</h3>
+<!--l. 136--><p class="noindent" >Seven major tools:
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-6002x1">Histogram or stem and leaf plot
+      </li>
+      <li 
+  class="enumerate" id="x1-6004x2">Check sheet
+      </li>
+      <li 
+  class="enumerate" id="x1-6006x3">Pareto chart
+      </li>
+      <li 
+  class="enumerate" id="x1-6008x4">Cause-and-effect diagram
+      </li>
+      <li 
+  class="enumerate" id="x1-6010x5">Defect concentration diagram
+      </li>
+      <li 
+  class="enumerate" id="x1-6012x6">Scatter diagram
+      </li>
+      <li 
+  class="enumerate" id="x1-6014x7">Control chart</li></ol>
+<!--l. 147--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-70003.1"></a>Statistical Basis of the Control Chart</h4>
+<!--l. 149--><p class="noindent" >There is a close connection between control charts and hypothesis testing
+in the sense that the control chart is a test of the hypothesis that the
+process is in a state of statistical control. A point within the control limit is
+equivalent to failing to reject the hypothesis of statistical control, while outside
+the control limit is equivalent to rejecting the hypothesis of statistical
+control.
+<!--l. 152--><p class="indent" >   However, in testing statistical hypotheses, we usually check the validity of
+assumptions, whereas control charts are used to detect departures from an
+assumed state of statistical control.
+<!--l. 155--><p class="indent" >   Hypothesis testing framework is useful in analyzing the performance of a
+control chart such as probability of Type I error of control chart (conclude out of
+control (<span 
+class="cmmi-12">H</span><sub><span 
+class="cmr-8">1</span></sub>) when it&#8217;s really in control) or Type II error (conclude in control (<span 
+class="cmmi-12">H</span><sub><span 
+class="cmr-8">0</span></sub>)
+when it&#8217;s really out of control).
+                                                                          
+
+                                                                          
+<!--l. 158--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-80003.2"></a>Choice of Control Limits</h4>
+<!--l. 159--><p class="noindent" >It&#8217;s standard practice to determine the control limits as a multiple of standard
+deviation of the statistic plotted on the chart. The multiple is usually
+3.
+<!--l. 162--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-90003.3"></a>Choice of Sample Size and Sampling Frequency</h4>
+<!--l. 164--><p class="noindent" >When choosing the sample size, keep in mind the size of the shift that we are
+trying to detect. If the shift is relatively large, then we use smaller sample sizes
+than those that would be employed if the shift of interest were relatively
+small.
+<!--l. 166--><p class="indent" >   Or use average run length(ARL) to evaluate the decisions regarding sample
+size and sampling frequency with,
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="StatisticalQualityControl0x.png" alt="        1-
+ARL   = p,
+" class="math-display" ></center></td></tr></table>
+<!--l. 170--><p class="nopar" >
+where <span 
+class="cmmi-12">p </span>is the probability that any point exceeds the control limits.
+<!--l. 173--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-100003.4"></a>Sensitizing Rules for Control Charts</h4>
+<!--l. 174--><p class="noindent" >Several criteria may be applied to a control chart to determine whethere the
+process is out of control,
+<!--l. 176--><p class="indent" >   standard action signal:
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-10002x1">One or more points outside of the control limits
+                                                                          
+
+                                                                          
+      </li>
+      <li 
+  class="enumerate" id="x1-10004x2">Two of three consecutive points outside the two-sigma warning limits
+      but still inside the control limits
+      </li>
+      <li 
+  class="enumerate" id="x1-10006x3">Four of five consecutive points beyond the one-sigma limits
+      </li>
+      <li 
+  class="enumerate" id="x1-10008x4">A run of eight consecutive points on one side of the center line
+      </li>
+      <li 
+  class="enumerate" id="x1-10010x5">Six points in a row steadily increasing or decreasing
+      </li>
+      <li 
+  class="enumerate" id="x1-10012x6">Fifteen points in a row in zone C (1-sigma from center line)
+      </li>
+      <li 
+  class="enumerate" id="x1-10014x7">Fourteen points in a row alternating up and down
+      </li>
+      <li 
+  class="enumerate" id="x1-10016x8">Eight points in a row on both sides of the center line with none in zone
+      C
+      </li>
+      <li 
+  class="enumerate" id="x1-10018x9">An unusual or nonrandom pattern in the data
+      </li>
+      <li 
+  class="enumerate" id="x1-10020x10">One or more points near a warning or control limit.</li></ol>
+<!--l. 191--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-110004"></a>Cumulative Sum and Exponentially Weighted Moving Average Control
+Charts</h3>
+<!--l. 192--><p class="noindent" >Shewhart control charts are useful in phase I implementation, where the process is
+likely to be out of control and experiencing assignable causes that result in large
+shifts. It&#8217;s also useful in the diagnostics of bringing an unruly process into
+statistical control, because the patterns on these charts often provide guidance
+regarding the nature of the assignable cause.
+<!--l. 194--><p class="indent" >   However, Shewhart control chart relatively <span 
+class="cmti-12">insensitive </span>to small process
+shifts, say, on the order of 1<span 
+class="cmmi-12">.</span>5<span 
+class="cmmi-12">&#x03C3; </span>or less. This potentially makes Shewhart
+control charts less useful in phase II monitoring, where the process tends to
+operate in control, reliable estimates of the process parameters are available
+                                                                          
+
+                                                                          
+and assignable causes do not typically result in large process upsets or
+disturbances.
+<!--l. 196--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-120004.1"></a>Cumulative Sum Control Chart</h4>
+<!--l. 197--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">4.1.1   </span> <a 
+ id="x1-130004.1.1"></a>Basic Principals: The Cusum Control Chart</h5>
+<!--l. 198--><p class="noindent" >The cusum chart directly incorporates all the information in the sequence of
+sample values by plotting the cumulative sums of the deviations of the sample
+values from a target value/
+<!--l. 200--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">4.1.2   </span> <a 
+ id="x1-140004.1.2"></a>The Tabular or Algorithmic Cusum for Monitoring the Process
+Mean</h5>
+<!--l. 201--><p class="noindent" >The tabular cusum works by accumulating derivations from <span 
+class="cmmi-12">&#x03BC;</span><sub><span 
+class="cmr-8">0</span></sub> that are above
+target with on statistic and accumulating derivations from <span 
+class="cmmi-12">&#x03BC;</span><sub><span 
+class="cmr-8">0</span></sub> that are below
+target with another statistic ,
+<!--l. 203--><p class="indent" >   <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="StatisticalQualityControl1x.png" alt="C+i   =  max  [0,xi - (&#x03BC;0 + K ) + C+i-1]
+C -   =  max  [0,(&#x03BC;  - K ) - x +  C-  ]
+  i                0         i    i-1
+" class="math-display" ></center>
+</div>
+<!--l. 208--><p class="indent" >   where <span 
+class="cmmi-12">K </span>is called the reference vlaue (allownance or slack value), and it&#8217;s
+often chosen about halfway between the target and the out of control
+value. And starting values <span 
+class="cmmi-12">C</span><sub><span 
+class="cmr-8">0</span></sub><sup><span 
+class="cmr-8">+</span></sup> = <span 
+class="cmmi-12">C</span><sub>
+<span 
+class="cmr-8">0</span></sub><sup><span 
+class="cmsy-8">-</span></sup> = 0. If either <span 
+class="cmmi-12">C</span><sub>
+<span 
+class="cmr-8">0</span></sub><sup><span 
+class="cmr-8">+</span></sup> or <span 
+class="cmmi-12">C</span><sub>
+<span 
+class="cmr-8">0</span></sub><sup><span 
+class="cmsy-8">-</span></sup> exceed
+the decision interval <span 
+class="cmmi-12">H</span>, the process is considered to be out of control.
+                                                                          
+
+                                                                          
+A reasonable value for <span 
+class="cmmi-12">H </span>is five times the process standard deviation
+<span 
+class="cmmi-12">&#x03C3;</span>.
+<!--l. 211--><p class="indent" >   The graphical display for the tabular cusum is called cusum status charts. The
+cusum can be thought of as a weighted average, where weights are stochastic or
+random. It&#8217;s usually recommended that parameters <span 
+class="cmmi-12">K</span>, <span 
+class="cmmi-12">H </span>are selected to provide a
+good average run length performance.
+<!--l. 214--><p class="indent" >   Standardized cusum can be adopted as 1) many cusum charts cna now have
+the same value of k and h , and the choices of these parameters are not scale
+dependent , 2) a standardized cusum lead naturally to a cusum for controlling
+variability.
+<!--l. 218--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">4.1.3   </span> <a 
+ id="x1-150004.1.3"></a>Improving Cusum Reponsiveness for Large Shifts</h5>
+<!--l. 219--><p class="noindent" >Use combined Cusum-Shewhart procedure for on-line control with the Shewhart
+control limit should be located approximately 3.5 standard deviations from the
+center line or target value. An out-of-control signal on either (or both) charts
+constitutes an action signal.
+<!--l. 221--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">4.1.4   </span> <a 
+ id="x1-160004.1.4"></a>Cusums for Other Sample Statistics</h5>
+<!--l. 222--><p class="noindent" >When working with count data and the count rate is very low, it&#8217;s frequently
+more effective to form a cusum using the time between events to detect an
+increase in the count rate. When the number of counts is generated from a
+Poisson distribution, the time between these events will follow an exponential
+distribution.
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="StatisticalQualityControl2x.png" alt="  -                     -
+Ci  = max [0,K  - Ti + Ci-1],
+" class="math-display" ></center></td></tr></table>
+<!--l. 225--><p class="nopar" >
+where <span 
+class="cmmi-12">K </span>is the reference value and <span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">i</span></sub> is the time that has elapsed since that last
+                                                                          
+
+                                                                          
+observed count.
+<!--l. 228--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
+ id="x1-170004.2"></a>The Exponentially Weighted Moving Average Control Chart</h4>
+<!--l. 229--><p class="noindent" >EWMA is a good alternative to the Shewhart chart when we are interested in
+detecting small shifts. The performance is approximately equivalent to that of
+the cumulative sum control chart, and it&#8217;s typically used with individual
+observations.
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="StatisticalQualityControl3x.png" alt="zi = &#x03BB;xi + (1 - &#x03BB; )zi-1,
+" class="math-display" ></center></td></tr></table>
+<!--l. 234--><p class="nopar" >
+where <span 
+class="cmmi-12">&#x03BB; </span><span 
+class="cmsy-10x-x-120">&#x2208; </span>(0<span 
+class="cmmi-12">, </span>1] and the starting value <span 
+class="cmmi-12">z</span><sub><span 
+class="cmr-8">0</span></sub> = <span 
+class="cmmi-12">&#x03BC;</span><sub><span 
+class="cmr-8">0</span></sub> is the process target.
+    
+</body></html> 
+
+                                                                          
+
+
+
+      </div>
+
+      <meta itemprop="wordCount" content="1678">
+      <meta itemprop="datePublished" content="2018-04-25">
+      <meta itemprop="url" content="https://qianqianshan.github.io/post/quality-control/statisticalqualitycontrol/">
+    </article>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/sql-notes/sql-notes/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: SQL Notes</a></li>
+      
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/progit/"><em>Next<span class="show-for-sr"> page</span></em>: Learning Notes of Pro Git&nbsp;&raquo;</a></li>
+      
+    </ul>
+
+    
+  </div>
+</div>
+
+    </main>
+    
+<footer>
+  <hr>
+  <div class="row">
+   <div class="column small-10 small-centered text-center">
+     <em>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with Finite theme. Do you like this, or do you have a comment? Then please email me via qshan[at]iastate.edu.</em>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="endofpage">
+    </div>
+
+    <script src="../../../js/jquery.js"></script>
+    <script src="../../../js/what-input.js"></script>
+    <script src="../../../js/foundation.min.js"></script>
+    <script src="../../../js/finite.js"></script>
+
+    
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    
+  </body>
+</html>

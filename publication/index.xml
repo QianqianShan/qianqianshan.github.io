@@ -6,10 +6,28 @@
     <description>Recent content in Publications on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Tue, 27 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remaining Useful Life of Batteries Based on Neutral Networks</title>
+      <link>https://qianqianshan.github.io/publication/lstm-battery/</link>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/publication/lstm-battery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Degradation Models Under Bayesian Framework</title>
+      <link>https://qianqianshan.github.io/publication/bayesian-pipeline/</link>
+      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/publication/bayesian-pipeline/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Circuit Fault Diagnosis Using Simulation and Bayesian Inference</title>

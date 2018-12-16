@@ -1,0 +1,239 @@
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage{amssymb} % blackbaord bold 
+\usepackage{amsmath} % for modulo function
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{mathrsfs}%花体字母
+\usepackage{amssymb}%花体字母加粗
+%\usepackage{undertilde}
+\usepackage{stackengine}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+%\rhead{ \thesection}
+%\lhead{}
+%\rhead{\fontsize{14}{14}\leftmark}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\fontsize{9}{12} \selectfont \leftmark}
+
+\graphicspath{{Images/}}
+
+\numberwithin{equation}{section}
+
+\newcommand{\ud}{\mathrm{d}} %mathrm d for integration 
+\newcommand{\RN}[1]{
+	\textup{\uppercase\expandafter{\romannumeral#1}}
+}
+\newcommand{\utilde}{\underset{\sim}}
+
+
+\newcommand\tenq[2][1]{%
+	\def\useanchorwidth{T}%
+	\ifnum#1>1%
+	\stackunder[0pt]{\tenq[\numexpr#1-1\relax]{#2}}{\scriptscriptstyle\sim}%
+	\else%
+	\stackunder[1pt]{#2}{\scriptscriptstyle\sim}%
+	\fi%
+}
+
+
+\newcommand{\bftheta}{\boldsymbol{\theta}} %boldface theta 
+\newcommand{\bfbeta}{\boldsymbol{\beta}}
+\newcommand{\bfmu}{\boldsymbol{\mu}}
+\newcommand{\checkbeta}[1]{\check{\beta}_{#1}}
+
+\newcommand{\U}[1]{U_{(#1)}}
+\newcommand{\uu}[1]{u_{(#1)}}
+\newcommand{\order}[2]{#1_{(#2)}}
+
+\author{Qianqian Shan}
+\title{Notes on \emph{Introduction to Statistical Quality Control} by Montgomery}
+\date{\vspace{-5ex}}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Quality Improvement in The Modern Business Environment}
+\subsection{The Meaning of Quality and Quality Improvement}
+
+\textbf{Dimensions of Quality}
+
+
+\begin{enumerate}
+
+\item Performance （(Will the product do the intended job?)
+
+\item Reliability (Hwo often does the product fail?)
+
+\item Durability (How long the product lasts), the effective service life of the product . 
+
+\item Serviceability (How easy is it to repair the product?) How quickly and economically a repair or routine maintenance activity can be accomplished. 
+
+\item Aesthetics (What does the product look like?) Visual appeal of the product. 
+
+\item Features (What does the product do?), features beyond the basic performance of competition. 
+
+\item Perceived Quality (What is the reputation of the economy or its product?), the reputation is directly influenced by failures of the product that are highly visible to the public or that require product recalls, and by how the customer is treated when a quality related probelm with the product is reported. 
+
+\item Conformance to Standards (Is the product made exactly as the designer intended?)
+\end{enumerate}
+
+\textbf{Quality} is inversely proportional to variability. 
+
+\textbf{Quality improvement} is the reduction of variability in processes and products. 
+
+\textbf{Quality Engineering Terminology}
+\\ Every product possesses a number of elements that jointly describe what the user or consumer thinks of as a quality, and these parameters are often called quality characteristics or critical-to-quality(CTQ) characteristics with several types: 
+
+\begin{enumerate}
+\item Physical: length, weight, voltage, viscosity
+
+\item Sensory: taste, appearance, color 
+
+\item Time Orientation: reliability, durability, serviceability
+\end{enumerate}
+
+
+\subsection{Statistical Methods for Quality Control and Improvement}
+Three major areas, 
+\begin{enumerate}
+\item Statistical process control (SPC), control chart is one of the primary techniques of SPC. 
+\item Design of experiments, a designed experiement is helpful in discovering the key variables influenceing the quality characteristics of interest in the process (by systematically varying the controllable input factors in the process and determining their effects on the output parameters).
+\item Acceptance sampling,  closely connected with inspection and testing of product. 
+\end{enumerate}
+
+The primary objective of quality engineering efforts is the systematic redution of variability in the key quality characteristics of the product.
+
+
+\section{The DMAIC Process}
+
+DMAIC is a structured problem-soloving precedure widely used in quality and process improvement.  DMAIC fors an acronym for the five steps, Define, Measure, Analyze, Improve and Control.  
+
+\begin{enumerate}
+\item Define: A project chapter that contains a description of the project and its scope, the start and anticipated completion dates, an initial description of both primary and secondary metrics that will be used to measure success and how those metrics aligh with business unit and coporate goals, the potential benefits to the customer, the potential benefits to the organization, mielstones that should be accomplished during the project, the team members \ldots 
+
+\item Measure: evaluate and understand the current state of process.  This involves collecting data on measures of quality, cost, and throughput/cycle time. 
+
+\item Analyze: use the data from measure step to begin to determine the cause-and-effect relationships in the process and to understand different sources of variability. 
+
+\item Improve: Creative thinking about the specific changes that can be made in the process and other things that can be done to have the desired impact on process performance. Develop a solution to the problem and to pilot test the solution.  
+
+\textbf{Pilot test}: a form of confirmation experiment, it evaluates and documents the solution and confirms the solution attains the project goals. 
+
+\item Control: complete all remaining work on the project and to hand off the improved process to the process owner along with a process control plan and other necessary procedures to ensure that the gains from the project will be institutionalized. 
+
+\end{enumerate}
+
+\section{Methods and Philosophy of Statistical Process Control}
+
+Seven major tools: 
+\begin{enumerate}
+    \item Histogram or stem and leaf plot 
+	\item Check sheet 
+	\item Pareto chart 
+	\item Cause-and-effect diagram  
+	\item Defect concentration diagram 
+	\item Scatter diagram 
+	\item Control chart 	
+\end{enumerate}
+
+\subsection{Statistical Basis of the Control Chart}
+
+There is a close connection between control charts and hypothesis testing in the sense that the control chart is a test of the hypothesis that the process is in a state of statistical control. A point within the control limit is equivalent to failing to reject the hypothesis of statistical control, while outside the control limit is equivalent to rejecting the hypothesis of statistical control. 
+
+
+However, in testing statistical hypotheses, we usually check the validity of assumptions, whereas control charts are used to detect departures from an assumed state of statistical control. 
+
+
+Hypothesis testing framework is useful in analyzing the performance of a control chart such as probability of Type $\RN{1}$ error of control chart (conclude out of control ($H_1$) when it's really in control) or Type $\RN{2}$ error (conclude in control ($H_0$) when it's really out of control).
+
+
+\subsection{Choice of Control Limits}
+It's standard practice to determine the control limits as a multiple of standard deviation of the statistic plotted on the chart. The multiple is usually 3.  
+
+
+\subsection{Choice of Sample Size and Sampling Frequency}
+
+When choosing the sample size, keep in mind the size of the shift that we are trying to detect. If the shift is relatively large, then we use smaller sample sizes than those that would be employed if the shift of interest were relatively small.
+
+Or use average run length(ARL) to evaluate the decisions regarding sample size and sampling frequency with, 
+
+\begin{equation*}
+ARL = \frac{1}{p},
+\end{equation*}
+where $p$ is the probability that any point exceeds the control limits. 
+
+\subsection{Sensitizing Rules for Control Charts}
+Several criteria may be applied to a control chart to determine whethere the process is out of control, 
+
+standard action signal:
+\begin{enumerate}
+\item One or more points outside of the control limits 
+\item Two of three consecutive points outside the two-sigma warning limits but still inside the control limits
+\item Four of five consecutive points beyond the one-sigma limits 
+\item A run of eight consecutive points on one side of the center line
+\item Six points in a row steadily increasing or decreasing
+\item Fifteen points in a row in zone C (1-sigma from center line) 
+\item Fourteen points in a row alternating up and down
+\item Eight points in a row on both sides of the center line with none in zone C 
+\item An unusual or nonrandom pattern in the data 
+\item One or more points near a warning or control limit.
+\end{enumerate}
+
+
+\section{Cumulative Sum and Exponentially Weighted Moving Average Control Charts}
+Shewhart control charts are useful in phase $\RN{1}$ implementation, where the process is likely to be out of control and experiencing assignable causes that result in large shifts. It's also useful in the diagnostics of bringing an unruly process into statistical control, because the patterns on these charts often provide guidance regarding the nature of the assignable cause. 
+
+However, Shewhart control chart relatively \textit{insensitive} to small process shifts, say, on the order of $1.5 \sigma$ or less. This potentially makes Shewhart control charts less useful in phase $\RN{2}$ monitoring, where the process tends to operate in control, reliable estimates of the process parameters are available and assignable causes do not typically result in large process upsets or disturbances.
+
+\subsection{Cumulative Sum Control Chart}
+\subsubsection{Basic Principals: The Cusum Control Chart}
+The cusum chart directly incorporates all the information in the sequence of sample values by plotting the cumulative sums of the deviations of the sample values from a target value/
+
+\subsubsection{The Tabular or Algorithmic Cusum for Monitoring the Process Mean}
+The tabular cusum works by accumulating derivations from $\mu_0$ that are above target with on statistic and accumulating derivations from $\mu_0$ that are below target with another statistic , 
+
+\begin{eqnarray*}
+C_i^{+} &=& max[0, x_i - (\mu_0 + K) + C_{i-1}^+] \\
+C_i^{-} &=& max[0, (\mu_0 - K) - x_i + C_{i-1}^-] \\
+\end{eqnarray*}
+
+where $K$ is called the reference vlaue (allownance or slack value), and it's often chosen about halfway between the target and the out of control value. And starting values $C_0^+ = C_0^- = 0$. If either  $C_0^+$ or  $C_0^-$ exceed the decision interval $H$, the process is considered to be out of control. A reasonable value for $H$ is five times the process standard deviation $\sigma$.
+
+
+The graphical display for the tabular cusum is called cusum status charts.  The cusum can be thought of as a weighted average, where weights are stochastic or random.  It's usually recommended that parameters $K$, $H$ are selected to provide a good average run length performance.
+
+
+Standardized cusum can be adopted as 1) many cusum charts cna now have the same value of k and h , and the choices of these parameters are not scale dependent
+, 2) a standardized cusum lead naturally to a cusum for controlling variability. 
+
+
+\subsubsection{Improving Cusum Reponsiveness for Large Shifts}
+Use combined Cusum-Shewhart procedure for on-line control with the Shewhart control limit should be located approximately 3.5 standard deviations from the center line or target value. An out-of-control signal on either (or both) charts constitutes an action signal. 
+
+\subsubsection{Cusums for Other Sample Statistics}
+When working with count data and the count rate is very low, it's frequently more effective to form a cusum using the time between events to detect an increase in the count rate.  When the number of counts is generated from a Poisson distribution, the time between these events will follow an exponential distribution. 
+\begin{equation*}
+C_i^- = max[0, K - T_i + C_{i-1}^-],
+\end{equation*}
+where $K$ is the reference value and $T_i$ is the time that has elapsed since that last observed count.
+
+\subsection{The Exponentially Weighted Moving Average Control Chart}
+EWMA is a good alternative to the Shewhart chart when we are interested in detecting small shifts. The performance is approximately equivalent to that of the cumulative sum control chart, and it's typically used with individual observations.
+
+
+\begin{equation*}
+z_i = \lambda x_i + (1 - \lambda) z_{i-1}, 
+\end{equation*}  
+where $\lambda \in (0, 1]$ and the starting value $z_0 = \mu_0$ is the process target. 
+
+%EWMA can be viewed as a weighted average of all past and current observations, it's very insensitive to the nomality assumption. And therefore an ideal control chart to use with individual observations.
+\end{document}
+

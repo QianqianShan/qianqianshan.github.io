@@ -1,0 +1,19 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Quality Improvement in The Modern Business Environment}}{4}\relax 
+\doTocEntry\tocsubsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001.1}{QQ2-1-3}{The Meaning of Quality and Quality Improvement}}{4}\relax 
+\doTocEntry\tocsubsection{1.2}{\csname a:TocLink\endcsname{1}{x1-40001.2}{QQ2-1-4}{Statistical Methods for Quality Control and Improvement}}{5}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-50002}{QQ2-1-5}{The DMAIC Process}}{6}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-60003}{QQ2-1-6}{Methods and Philosophy of Statistical Process Control}}{7}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-70003.1}{QQ2-1-7}{Statistical Basis of the Control Chart}}{7}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-80003.2}{QQ2-1-8}{Choice of Control Limits}}{8}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-90003.3}{QQ2-1-9}{Choice of Sample Size and Sampling Frequency}}{8}\relax 
+\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-100003.4}{QQ2-1-10}{Sensitizing Rules for Control Charts}}{8}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-110004}{QQ2-1-11}{Cumulative Sum and Exponentially Weighted Moving Average Control Charts}}{9}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-120004.1}{QQ2-1-12}{Cumulative Sum Control Chart}}{10}\relax 
+\doTocEntry\tocsubsubsection{4.1.1}{\csname a:TocLink\endcsname{1}{x1-130004.1.1}{QQ2-1-13}{Basic Principals: The Cusum Control Chart}}{10}\relax 
+\doTocEntry\tocsubsubsection{4.1.2}{\csname a:TocLink\endcsname{1}{x1-140004.1.2}{QQ2-1-14}{The Tabular or Algorithmic Cusum for Monitoring the Process Mean}}{10}\relax 
+\doTocEntry\tocsubsubsection{4.1.3}{\csname a:TocLink\endcsname{1}{x1-150004.1.3}{QQ2-1-15}{Improving Cusum Reponsiveness for Large Shifts}}{11}\relax 
+\doTocEntry\tocsubsubsection{4.1.4}{\csname a:TocLink\endcsname{1}{x1-160004.1.4}{QQ2-1-16}{Cusums for Other Sample Statistics}}{11}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-170004.2}{QQ2-1-17}{The Exponentially Weighted Moving Average Control Chart}}{12}\relax 
+\par 

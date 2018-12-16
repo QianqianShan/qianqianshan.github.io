@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Process Control on Qianqian Shan</title>
+    <link>https://qianqianshan.github.io/categories/process-control/</link>
+    <description>Recent content in Process Control on Qianqian Shan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qianqianshan.github.io/categories/process-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes on Statistical Quality Control</title>
+      <link>https://qianqianshan.github.io/post/quality-control/statisticalqualitycontrol/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/quality-control/statisticalqualitycontrol/</guid>
+      <description>Notes on Introduction to Statistical Quality Control by Montgomery  Qianqian Shan
+  Contents 1 Quality Improvement in The Modern Business Environment &amp;#x00A0;1.1 The Meaning of Quality and Quality Improvement &amp;#x00A0;1.2 Statistical Methods for Quality Control and Improvement 2 The DMAIC Process 3 Methods and Philosophy of Statistical Process Control &amp;#x00A0;3.1 Statistical Basis of the Control Chart &amp;#x00A0;3.2 Choice of Control Limits &amp;#x00A0;3.3 Choice of Sample Size and Sampling Frequency &amp;#x00A0;3.</description>
+    </item>
+    
+  </channel>
+</rss>
