@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ab Test</title>
+      <link>https://qianqianshan.github.io/tags/ab-test/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/ab-test/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Css</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Cv</title>
       <link>https://qianqianshan.github.io/tags/cv/</link>
-      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/cv/</guid>
       <description></description>
@@ -152,6 +161,15 @@
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Udacity</title>
+      <link>https://qianqianshan.github.io/tags/udacity/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/udacity/</guid>
       <description></description>
     </item>
     
