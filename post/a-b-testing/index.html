@@ -135,7 +135,7 @@
 <li><p>will a change increase repeat customers or referrals for cars selling website/apartment rental website? It takes too long and don&rsquo;t have data.</p></li>
 </ul>
 
-<p>3 - Other complimentary techniques to A/B testing</p>
+<p>3 - Other complimentary techniques to A/B testing:</p>
 
 <ul>
 <li><p><em>Logs</em> of user behaviors can be ised retrospectively or observationally if hypothesis testing can be developed on what&rsquo;s causing changes in behavior.</p></li>
@@ -143,9 +143,7 @@
 <li><p><em>User experience research</em>, <em>focus groups</em>, <em>surveys</em>, <em>human evaluation</em> and so on could give deep and qualitative data.</p></li>
 </ul>
 
-<ol>
-<li>History of A/B testing:</li>
-</ol>
+<p>4 - History of A/B testing:</p>
 
 <ul>
 <li><p>came from field such as agriculture: divide fields into several sections for experiment.</p></li>
@@ -155,16 +153,46 @@
 <li><p>What&rsquo;s different for online A/B testing: more data, lower resolution. The goal is to design an experiment that is robust and reproducible results.</p></li>
 </ul>
 
+<p>5 - A business example:</p>
+
+<ul>
+<li><p>A typical user flow (customer funnel): Homepage visits &ndash;&gt; Explore the site &ndash;&gt; Create account &ndash;&gt; Completes.</p></li>
+
+<li><p>A simple experiment: change the color of a button of an online course website &ldquo;Audacity&rdquo;. Hypothesis: wil changing the button color from orange to pink increase number of users to explore the courses of the website?</p></li>
+
+<li><p><strong>Metric</strong></p>
+
+<ul>
+<li><p>Click through rate (CTR): (# number of clicks) / (# of pageviews).</p></li>
+
+<li><p>Click through probability: (# unique visitors who click) / (# unique visitors to page). (We are interested in whether people are interested in progressing to the second level by clicking the button, so a probability instead of a rate is more proper.)</p></li>
+</ul></li>
+
+<li><p><strong>Review statistics</strong></p>
+
+<ul>
+<li><p>We expect the clickthrough probability follows <em>binomial</em> distribution. Instead of using total number of success (clicks) as the random variable, we use the proportion.</p></li>
+
+<li><p>Use the standard error from the binomial to estimate how variable we expect the overall probability of a clickthrough to be: construct, for example, a 95% confidence interval (if repeat the experiment multiple times, we would expect the intervals we construct around the sample mean to cover the true value 95% of the time).</p></li>
+</ul></li>
+
+<li><p><strong>Analyze results</strong></p>
+
+<ul>
+<li>Hypothesis testing or inference. Null hypothesis could be there is no difference in clickthrough rate. Alternative hypothesis could be one is higher/lower/different then the other.</li>
+</ul></li>
+</ul>
+
       </div>
 
-      <meta itemprop="wordCount" content="238">
+      <meta itemprop="wordCount" content="460">
       <meta itemprop="datePublished" content="2019-01-14">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
 
     <ul class="pagination" role="navigation" aria-label="Pagination">
       
-      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/qianqianshan-cv/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: CURRICULUM VITAE OF QIANQIAN SHAN</a></li>
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/elementsofstatisticallearning/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Notes on Elements of Statistical Learning</a></li>
       
       
     </ul>
