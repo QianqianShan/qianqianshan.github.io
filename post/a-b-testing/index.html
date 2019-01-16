@@ -92,7 +92,9 @@
 <h1 id="table-of-contents">Table of contents</h1>
 
 <ol>
-<li><a href="#overview">Overview</a></li>
+<li><p><a href="#overview">Overview</a></p></li>
+
+<li><p><a href="#policy-and-ethics-for-experiments">Policy and Ethics for Experiments</a></p></li>
 </ol>
 
 <h2 id="overview">Overview</h2>
@@ -124,9 +126,9 @@
 
 <li><p><em>ranking changes</em>;</p></li>
 
-<li><p>change backend loading time</p></li>
+<li><p>change backend loading time;</p></li>
 
-<li><p>test layout of initial page</p></li>
+<li><p>test layout of initial page.</p></li>
 </ul>
 
 <h3 id="2-a-b-testing-cannot-do">2 - A/B testing cannot do</h3>
@@ -183,13 +185,46 @@
 <li><p><strong>Analyze results</strong></p>
 
 <ul>
-<li>Hypothesis testing or inference. Null hypothesis could be there is no difference in clickthrough rate. Alternative hypothesis could be one is higher/lower/different then the other.</li>
+<li><p>Hypothesis testing or inference. Null hypothesis could be there is no difference in clickthrough rate: $H_0:\hat{d}=\hat{p}_e-\hat{p}_c$. Alternative hypothesis could be one is higher/lower/different then the other.</p></li>
+
+<li><p><em>Pooled standard error</em> can be used to give a good comparison of both. Suppose $x_c$ and $x_e$ are number users who click for control and experiment groups, respectively. $N_c$ and $N_e$ are the corresponding totalnumber of users. The pooled probability is then, $\hat{p}_p=\frac{x_c+x_e}{N_c+N_e}$ and pooled standard error is $$s_p=\sqrt{\hat{p}\cdot(1-\hat{p})\cdot(\frac{1}{N_c}+\frac{1}{N_e})}$$.</p></li>
+
+<li><p>$\hat{d}\sim N(0, s_p)$, if $|\hat{d}| &gt; 1.96 \cdot s_p$, reject $H_0$.</p></li>
+
+<li><p>From a business perspective, what change in the clickthrough probability it <em>practically significant</em> (substantive). Whether it&rsquo;s practically significant or not depends on the specific situations.</p></li>
+
+<li><p>When the difference doesn&rsquo;t satisfy standards to be both statistically and practically significant, one could do additional tests to have more confidence to draw a conclusion. However, when there is no enough time to do so, one could communicate with decision makers, others factors such as strategic business issues could be useful as well.</p></li>
+</ul></li>
+
+<li><p><strong>Design experiment</strong></p>
+
+<ul>
+<li><p>The smaller the change that to be detected, the higher confidence interval level to the change, the larger the experiment needed.</p></li>
+
+<li><p>$$\alpha=p(reject \, H_0|H_0 \,is\, true)$$ $$\beta=p(fail\,to\,reject\,H_0|H_1\,is\,true)$$
+$1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta$ while without increasing $\alpha$</em>.</p></li>
 </ul></li>
 </ul>
 
+<h2 id="policy-and-ethics-for-experiments">Policy and Ethics for Experiments</h2>
+
+<p>This less introduces the principals and quesions that you should think about when designing, running and analyzing experiment.</p>
+
+<h3 id="main-principals">Main principals</h3>
+
+<h3 id="risk">Risk</h3>
+
+<h3 id="benefits">Benefits</h3>
+
+<h3 id="alternatives">Alternatives</h3>
+
+<h3 id="data-sensitivity">Data sensitivity</h3>
+
+<h3 id="summary-questions">Summary questions</h3>
+
       </div>
 
-      <meta itemprop="wordCount" content="464">
+      <meta itemprop="wordCount" content="685">
       <meta itemprop="datePublished" content="2019-01-14">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
