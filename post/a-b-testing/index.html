@@ -69,7 +69,7 @@
       <h1 itemprop="name">A/B Testing</h1>
       <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2019-01-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">14 January 2019</time>
+    <time datetime="2019-01-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">16 January 2019</time>
   </span>
   
   
@@ -95,6 +95,8 @@
 <li><p><a href="#overview">Overview</a></p></li>
 
 <li><p><a href="#policy-and-ethics-for-experiments">Policy and Ethics for Experiments</a></p></li>
+
+<li><p><a href="#choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</a></p></li>
 </ol>
 
 <h2 id="overview">Overview</h2>
@@ -212,20 +214,52 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <h3 id="main-principals">Main principals</h3>
 
-<h3 id="risk">Risk</h3>
+<ul>
+<li><p>Risk: what risk is the participant undertaking?</p></li>
 
-<h3 id="benefits">Benefits</h3>
+<li><p>Benefits: what benefits might result from the study?</p></li>
 
-<h3 id="alternatives">Alternatives</h3>
+<li><p>Alternatives: what other choices do participants have?</p></li>
 
-<h3 id="data-sensitivity">Data sensitivity</h3>
+<li><p>Data sensitivity: what dat is being collected, and what is the expectation of privacy and confidentiality?</p></li>
+</ul>
 
-<h3 id="summary-questions">Summary questions</h3>
+<h2 id="choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</h2>
+
+<h3 id="define-metrics">Define <strong>metrics</strong></h3>
+
+<ul>
+<li><p>Think about what you are going to use this metric for before how you decide how to define.</p></li>
+
+<li><p>Different types of metrics, for example, metric can be used for <em>invariant checking</em>, <em>evaluation</em>, for different purposes.</p></li>
+
+<li><p>One can create a composite metric when there are mulitple metrics (an objective function or an OEC, overall evaluation criterion, a weighted function to combined all different metrics). Or work on individual metric separately for more details on how the metrics moves under different situations.</p></li>
+
+<li><p>Examples of choosing metric for tests of the Audacity website, 1). probability of progressing from course list to course page for effects of updating a decription on course list page; 2). click-through-<em>rate</em> for increasing <em>size</em> of a button.</p></li>
+
+<li><p>Difficult metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p></li>
+</ul>
+
+<h3 id="other-techniques">Other techniques</h3>
+
+<ul>
+<li>Surveys, retrospective analysis, focus groups, user experience research &hellip; See <a href="https://s3-us-west-2.amazonaws.com/gae-supplemental-media/additional-techniquespdf/additional_techniques.pdf">instructor&rsquo;s notes</a> for more details.</li>
+</ul>
+
+<h3 id="build-intuition">Build intuition</h3>
+
+<ul>
+<li><p>1). Define what data to be used to compute the metric. Need to filter data to remove robots/scams? 2) How to summarize the metric?</p></li>
+
+<li></li>
+</ul>
+
+<h3 id="characterize">Characterize</h3>
 
       </div>
 
-      <meta itemprop="wordCount" content="685">
-      <meta itemprop="datePublished" content="2019-01-14">
+      <meta itemprop="wordCount" content="903">
+      <meta itemprop="datePublished" content="2019-01-16">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
 
