@@ -69,7 +69,7 @@
       <h1 itemprop="name">A/B Testing</h1>
       <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2019-01-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">16 January 2019</time>
+    <time datetime="2019-01-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">17 January 2019</time>
   </span>
   
   
@@ -251,15 +251,41 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 <ul>
 <li><p>1). Define what data to be used to compute the metric. Need to filter data to remove robots/scams? 2) How to summarize the metric?</p></li>
 
-<li></li>
+<li><p>De-bias the data by filtering external (malicious, fraudulent visits &hellip;) and internal (change only affect the traffic of a subset of users, for example, change may only apply to english versions of website) reasons.</p></li>
+
+<li><p>Make sure that don&rsquo;t introduce bias when filtering. For example, if a metric only uses data from logged-in users, there may be a bias as there may be new users who haven&rsquo;t created an account.</p></li>
+
+<li><p><strong>Slice the data</strong> (for example, by country, language, week &hellip;) to examine that if the data are biased or not. Build the intuition of what to expect.</p></li>
 </ul>
 
 <h3 id="characterize">Characterize</h3>
 
+<ul>
+<li><p>Summary metrics</p>
+
+<ul>
+<li><p>Sums and counts</p></li>
+
+<li><p>Means, medians and percentiles</p></li>
+
+<li><p>Probabilities and rates</p></li>
+
+<li><p>Ratio (can be any number)</p></li>
+</ul></li>
+
+<li><p>Sensitivity and robustness of metrics</p>
+
+<ul>
+<li><p>Run experiments or use experiments that you already have</p></li>
+
+<li><p>Retrospective analysis when no experiments can be run. For example, desegment the data into different categories, analyze and compare.</p></li>
+</ul></li>
+</ul>
+
       </div>
 
-      <meta itemprop="wordCount" content="903">
-      <meta itemprop="datePublished" content="2019-01-16">
+      <meta itemprop="wordCount" content="1049">
+      <meta itemprop="datePublished" content="2019-01-17">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
 
