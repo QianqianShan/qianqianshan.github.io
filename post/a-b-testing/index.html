@@ -280,11 +280,29 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <li><p>Retrospective analysis when no experiments can be run. For example, desegment the data into different categories, analyze and compare.</p></li>
 </ul></li>
+
+<li><p><strong>variability</strong>: to obtain a confidence interval, one needs 1) variance and 2) a distribution.  Analytical results for confidence interval may be easier to be found for some metrics such as mean, probability, counts, however, for metrics such as median, ratio, their distribution and variance could be more complicated to compute, one needs to look at the underlying data to decide a further step.</p></li>
+
+<li><p>Non-parametric methods don&rsquo;t specify assumptions on the distributions and can also be useful. For example, sign test, the test can help to see how likely the change in metric will occur but cannot tell the size of the effect.</p></li>
+
+<li><p>Empirical variability can be an option when the distribution is complicated. A/A tests across the board could be used to estimated the empirical variability of the metircs.  Another option is to run a bigger A/A test and use bootstrap when it&rsquo;s not easy to run a lot tests.</p></li>
+
+<li><p>A/A test can do 1) compare results to what you expect (sanity check); 2) Estimate variance and calculate confidence intervals (with an assumed distribution of the metic); 3) Directly estimate empirical confidence interval without assuming a distribution of the metric (run multiple tests and take percentiles of the metric values).</p></li>
 </ul>
+
+<h2 id="designing-of-experiment">Designing of Experiment</h2>
+
+<h3 id="choose-subject">Choose &ldquo;subject&rdquo;</h3>
+
+<h3 id="choose-population">Choose &ldquo;population&rdquo;</h3>
+
+<h3 id="size">Size</h3>
+
+<h3 id="duration">Duration</h3>
 
       </div>
 
-      <meta itemprop="wordCount" content="1049">
+      <meta itemprop="wordCount" content="1258">
       <meta itemprop="datePublished" content="2019-01-17">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
