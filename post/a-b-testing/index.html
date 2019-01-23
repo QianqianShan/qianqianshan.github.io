@@ -239,7 +239,9 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <li><p>Examples of choosing metric for tests of the Audacity website, 1). probability of progressing from course list to course page for effects of updating a decription on course list page; 2). click-through-<em>rate</em> for increasing <em>size</em> of a button.</p></li>
 
-<li><p>Difficult metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p></li>
+<li><p>Other metrics may include mean, median, quantiles &hellip;</p></li>
+
+<li><p>Difficulty in metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p></li>
 </ul>
 
 <h3 id="other-techniques">Other techniques</h3>
@@ -334,11 +336,35 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <h3 id="size">Size</h3>
 
-<h3 id="duration">Duration</h3>
+<ul>
+<li>The choice of size depends on $\alpha$, $\beta$, practical significance level, unit of diversion, target population&hellip; See <a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2016/December/5845e980_empirical-sizing/empirical-sizing.r">here</a> for the sample code on how to compute the desired size.</li>
+</ul>
+
+<h3 id="duration-and-exposure">Duration and Exposure</h3>
+
+<ul>
+<li><p>Translate idea population size to practical decisions. What&rsquo;s the duration and when to run the experiment?</p></li>
+
+<li><p>There may be weekly/monthly variation in traffic and metric, one may run a mix of weekdays and weekends. For a risky change (for example, changes may have bugs), one may run longer in a smaller population proportion/ less percentage of daily traffic.</p></li>
+
+<li><p>Learning effect: whether a user is adapting to a change or not. The key measure is time, a stateful unit of diversion (eg. cookie or user ID), dosage (how often a user will see this change.</p></li>
+</ul>
+
+<h2 id="analyzing-results">Analyzing Results</h2>
+
+<p>Running A/B tests is an iterative process.</p>
+
+<h3 id="sanity-checks">Sanity checks</h3>
+
+<h3 id="single-metric">Single metric</h3>
+
+<h3 id="multiple-metrics">Multiple metrics</h3>
+
+<h3 id="gotchas">Gotchas</h3>
 
       </div>
 
-      <meta itemprop="wordCount" content="1614">
+      <meta itemprop="wordCount" content="1764">
       <meta itemprop="datePublished" content="2019-01-18">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
