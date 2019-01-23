@@ -69,7 +69,7 @@
       <h1 itemprop="name">A/B Testing</h1>
       <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2019-01-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">18 January 2019</time>
+    <time datetime="2019-01-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">23 January 2019</time>
   </span>
   
   
@@ -99,6 +99,8 @@
 <li><p><a href="#choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</a></p></li>
 
 <li><p><a href="#designing-of-experiment">Designing of Experiment</a></p></li>
+
+<li><p><a href="#analyzing-results">Analyzing Results</a></p></li>
 </ol>
 
 <h2 id="overview">Overview</h2>
@@ -113,11 +115,11 @@
 <li><p>Analyze</p></li>
 </ul>
 
-<h3 id="0-definition-of-a-b-testing">0 - Definition of A/B testing</h3>
+<h4 id="0-definition-of-a-b-testing">0 - Definition of A/B testing</h4>
 
 <p>A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.</p>
 
-<h3 id="1-a-b-testing-can-do">1 - A/B testing can do</h3>
+<h4 id="1-a-b-testing-can-do">1 - A/B testing can do</h4>
 
 <p>A/B testing can do a wide variety of things such as</p>
 
@@ -135,7 +137,7 @@
 <li><p>test layout of initial page.</p></li>
 </ul>
 
-<h3 id="2-a-b-testing-cannot-do">2 - A/B testing cannot do</h3>
+<h4 id="2-a-b-testing-cannot-do">2 - A/B testing cannot do</h4>
 
 <ul>
 <li><p>new experience (change aversion and novelty effects). Two issues of new experience testing: 1). what is the baseline for comparison? 2). How much is needed for users to get adapted to the new experience (plateaued experience);</p></li>
@@ -145,7 +147,7 @@
 <li><p>will a change increase repeat customers or referrals for cars selling website/apartment rental website? It takes too long and don&rsquo;t have data.</p></li>
 </ul>
 
-<h3 id="3-other-complimentary-techniques-to-a-b-testing">3 - Other complimentary techniques to A/B testing</h3>
+<h4 id="3-other-complimentary-techniques-to-a-b-testing">3 - Other complimentary techniques to A/B testing</h4>
 
 <ul>
 <li><p><em>Logs</em> of user behaviors can be ised retrospectively or observationally if hypothesis testing can be developed on what&rsquo;s causing changes in behavior.</p></li>
@@ -153,7 +155,7 @@
 <li><p><em>User experience research</em>, <em>focus groups</em>, <em>surveys</em>, <em>human evaluation</em> and so on could give deep and qualitative data.</p></li>
 </ul>
 
-<h3 id="4-history-of-a-b-testing">4 - History of A/B testing</h3>
+<h4 id="4-history-of-a-b-testing">4 - History of A/B testing</h4>
 
 <ul>
 <li><p>came from field such as agriculture: divide fields into several sections for experiment.</p></li>
@@ -163,7 +165,7 @@
 <li><p>What&rsquo;s different for online A/B testing: more data, lower resolution. The goal is to design an experiment that is robust and reproducible results.</p></li>
 </ul>
 
-<h3 id="5-a-business-example">5 - A business example</h3>
+<h4 id="5-a-business-example">5 - A business example</h4>
 
 <ul>
 <li><p>A typical user flow (customer funnel): Homepage visits &ndash;&gt; Explore the site &ndash;&gt; Create account &ndash;&gt; Completes.</p></li>
@@ -214,7 +216,7 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <p>This less introduces the principals and quesions that you should think about when designing, running and analyzing experiment.</p>
 
-<h3 id="main-principals">Main principals</h3>
+<h4 id="main-principals">Main principals</h4>
 
 <ul>
 <li><p>Risk: what risk is the participant undertaking?</p></li>
@@ -244,13 +246,13 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 <li><p>Difficulty in metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p></li>
 </ul>
 
-<h3 id="other-techniques">Other techniques</h3>
+<h4 id="other-techniques">Other techniques</h4>
 
 <ul>
 <li>Surveys, retrospective analysis, focus groups, user experience research &hellip; See <a href="https://s3-us-west-2.amazonaws.com/gae-supplemental-media/additional-techniquespdf/additional_techniques.pdf">instructor&rsquo;s notes</a> for more details.</li>
 </ul>
 
-<h3 id="build-intuition">Build intuition</h3>
+<h4 id="build-intuition">Build intuition</h4>
 
 <ul>
 <li><p>1). Define what data to be used to compute the metric. Need to filter data to remove robots/scams? 2) How to summarize the metric?</p></li>
@@ -262,7 +264,7 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 <li><p><strong>Slice the data</strong> (for example, by country, language, week &hellip;) to examine that if the data are biased or not. Build the intuition of what to expect.</p></li>
 </ul>
 
-<h3 id="characterize">Characterize</h3>
+<h4 id="characterize">Characterize</h4>
 
 <ul>
 <li><p>Summary metrics</p>
@@ -296,7 +298,7 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <h2 id="designing-of-experiment">Designing of Experiment</h2>
 
-<h3 id="choose-subject">Choose &ldquo;subject&rdquo;</h3>
+<h4 id="choose-subject">Choose &ldquo;subject&rdquo;</h4>
 
 <ul>
 <li>How to assign events to either the control or experiment group. Randomly assign? not suitable for user visible changes as one user may see the change randomly while reloading the page. User ID? one user may have multiple ID. Cookie? Cookie will be different for multiple devices of one user.</li>
@@ -324,7 +326,7 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 <li><p>Variability: unit of analysis (the donominator of the metric if applicable) could be different with unit of diversion. The empirical variability of the metric may then not be consistent with the analytical variance.</p></li>
 </ul>
 
-<h3 id="choose-population">Choose &ldquo;population&rdquo;</h3>
+<h4 id="choose-population">Choose &ldquo;population&rdquo;</h4>
 
 <ul>
 <li><p>Inter- and intra-user experiments: A/B testing is mainly using inter-user experiments (i.e., different people on the A and B side). Intra-user experiments will use the same group of people for both A and B side. To test the reordering of a list, interleaved ranking experiment can be an option. See more details at <a href="http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf">http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf</a>.</p></li>
@@ -334,13 +336,13 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 <li><p>Cohort: users who enter the experiment around the same time within a population. Cohort is harder to analyze as it needs more data with losing users. Cohort is useful when you&rsquo;re looking for <em>user stability</em> (learning effects, user retention, increased user activity or anything that requires users to be established). Cohort can also affect the variability of the metric.</p></li>
 </ul>
 
-<h3 id="size">Size</h3>
+<h4 id="size">Size</h4>
 
 <ul>
 <li>The choice of size depends on $\alpha$, $\beta$, practical significance level, unit of diversion, target population&hellip; See <a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2016/December/5845e980_empirical-sizing/empirical-sizing.r">here</a> for the sample code on how to compute the desired size.</li>
 </ul>
 
-<h3 id="duration-and-exposure">Duration and Exposure</h3>
+<h4 id="duration-and-exposure">Duration and Exposure</h4>
 
 <ul>
 <li><p>Translate idea population size to practical decisions. What&rsquo;s the duration and when to run the experiment?</p></li>
@@ -354,18 +356,18 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <p>Running A/B tests is an iterative process.</p>
 
-<h3 id="sanity-checks">Sanity checks</h3>
+<h4 id="sanity-checks">Sanity checks</h4>
 
-<h3 id="single-metric">Single metric</h3>
+<h4 id="single-metric">Single metric</h4>
 
-<h3 id="multiple-metrics">Multiple metrics</h3>
+<h4 id="multiple-metrics">Multiple metrics</h4>
 
-<h3 id="gotchas">Gotchas</h3>
+<h4 id="gotchas">Gotchas</h4>
 
       </div>
 
-      <meta itemprop="wordCount" content="1764">
-      <meta itemprop="datePublished" content="2019-01-18">
+      <meta itemprop="wordCount" content="1766">
+      <meta itemprop="datePublished" content="2019-01-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
 
