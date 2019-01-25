@@ -358,6 +358,14 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <h4 id="sanity-checks">Sanity checks</h4>
 
+<ul>
+<li><p>Check population sizing metrics based on unit of diversion. For example, if the experiment and control populations are actually comparable, the number of users, cookies, events in the two groups are comparable.</p></li>
+
+<li><p>Check actual invariant metrics that you don&rsquo;t expect a change when you run your experiment and make sure that they don&rsquo;t change.</p></li>
+
+<li><p>How to figure out whether this difference is within expectations?  &ldquo;Each invariant metrics(eg., cookies, users, # of events) is <strong>randomly</strong> assigned to control/experiment group with probability 0.5. &ndash;&gt; Compute confidence interval of probability around 0.5, use the standard deviation $sd = \sqrt{0.5 \cdot 0.5/N_{total}}$. &ndash;&gt; Check the observed fraction of two groups is wihtin the interval or not.&rdquo;</p></li>
+</ul>
+
 <h4 id="single-metric">Single metric</h4>
 
 <h4 id="multiple-metrics">Multiple metrics</h4>
@@ -366,7 +374,7 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
       </div>
 
-      <meta itemprop="wordCount" content="1766">
+      <meta itemprop="wordCount" content="1878">
       <meta itemprop="datePublished" content="2019-01-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
