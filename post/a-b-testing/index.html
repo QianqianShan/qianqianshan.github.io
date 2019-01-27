@@ -363,18 +363,58 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
 
 <li><p>Check actual invariant metrics that you don&rsquo;t expect a change when you run your experiment and make sure that they don&rsquo;t change.</p></li>
 
-<li><p>How to figure out whether this difference is within expectations?  &ldquo;Each invariant metrics(eg., cookies, users, # of events) is <strong>randomly</strong> assigned to control/experiment group with probability 0.5. &ndash;&gt; Compute confidence interval of probability around 0.5, use the standard deviation $sd = \sqrt{0.5 \cdot 0.5/N_{total}}$. &ndash;&gt; Check the observed fraction of two groups is wihtin the interval or not.&rdquo;</p></li>
+<li><p>How to figure out whether this difference is within expectations?  &ldquo;Each invariant metrics(eg., cookies, users, # of events) is <strong>randomly</strong> assigned to control/experiment group with probability 0.5. &mdash;&gt; Compute confidence interval of probability around 0.5, use the standard deviation $sd = \sqrt{(0.5 \cdot 0.5)/N_{total}}$. &mdash;&gt; Check the observed fraction of two groups is wihtin the interval or not.&rdquo;</p></li>
+
+<li><p>Make sure the you pass the sanity check before proceeding. (Debug, retrospective analysis, check pre- and post-period of experiments). Common reasons of failed sanity check include data capture, experiment set-up, infrastructure and so on.</p></li>
 </ul>
 
 <h4 id="single-metric">Single metric</h4>
 
+<ul>
+<li><p>Goal: make a business decision on whether your experiment has favorably impacted your metrics (if there is a statistically significant of the result).</p></li>
+
+<li><p>Analyze the results in more details to make sure that the differences between control and experiment groups are significant (statistical significant, practical significant, significant on sign test for sliced data).</p></li>
+
+<li><p>Simpson&rsquo;s paradox: a phenomenon in probability and statistics, in which a trend appears in several different groups of data but disappears or reverses when these groups are combined. (<a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Wiki</a>). In this case, we should dig deeper to analyze the reason first(experiment set-up, different changes in different subgroups&hellip;)</p></li>
+</ul>
+
 <h4 id="multiple-metrics">Multiple metrics</h4>
 
-<h4 id="gotchas">Gotchas</h4>
+<p>The more things you test, the more likely you are to see significant difference by chance.</p>
+
+<ul>
+<li><p>The significance shouldn&rsquo;t be repeatable if it happens by chance. Repeat the experiment/boostrap analysis/do experiment on slices will reveal more information on if it&rsquo;s happening by chance.</p></li>
+
+<li><p>Multiple comparisons adjust significant levels to accout for how many metrics/different tests involved. See <a href="https://en.wikipedia.org/wiki/Multiple_comparisons_problem">https://en.wikipedia.org/wiki/Multiple_comparisons_problem</a> for more details.</p></li>
+
+<li><p>Solutions to avoid false positive:</p></li>
+
+<li><p>1) use higher confidence interval for each metric $\alpha_{total} = 1 - (1-\alpha)^n$ (assume tests are independent).</p></li>
+
+<li><p>2) Use Bonferroni correction, $\alpha = \alpha_{total}/n$ (simple and no assumptions, but sometimes too conservative).</p></li>
+
+<li><p>3) In practice, it may come down to judegement call, possible based on business strategy.</p></li>
+
+<li><p>4) Control familywise error rate (FWER) $\alpha_{overall}$, the probability that <strong>any</strong> metric shows a false positive.</p></li>
+
+<li><p>5) Control false discovery rate (FDR), $E[\frac{no. \,false \,positive}{no. \,rejections}]$. It only makes sense when having a huge number of metrics.</p></li>
+
+<li><p>More information can be found <a href="https://en.wikipedia.org/wiki/Closed_testing_procedure">https://en.wikipedia.org/wiki/Closed_testing_procedure</a>, <a href="https://en.wikipedia.org/wiki/Boole%27s_inequality">https://en.wikipedia.org/wiki/Boole%27s_inequality</a>, <a href="https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method">https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method</a> and <a href="https://en.wikipedia.org/wiki/False_discovery_rate">https://en.wikipedia.org/wiki/False_discovery_rate</a>.</p></li>
+
+<li><p>Draw a conclusion from analyzing the results. Questions to ask: do you understand the change? do you want to launch the change?</p></li>
+</ul>
+
+<h4 id="gotchas-changes-over-time">Gotchas: changes over time</h4>
+
+<ul>
+<li><p>Ramp-up experimen: start with a small percent of population for changes and ramp up.</p></li>
+
+<li><p>The effect in a smaller percent of population may flatten out as you ramp up the change. For example, seasonal or event-driven impact such as holidays. One strategy is to use a <strong>holdback</strong>: launch the change to everyone except for a small holdback that don&rsquo;t get the changes and continue comparing their behavior to the control.</p></li>
+</ul>
 
       </div>
 
-      <meta itemprop="wordCount" content="1878">
+      <meta itemprop="wordCount" content="2267">
       <meta itemprop="datePublished" content="2019-01-23">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>
@@ -383,6 +423,8 @@ $1-\beta$ is the statistical power. <em>Bigger sample size could increase $\beta
       
       <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/qianqianshan-cv/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Resume OF QIANQIAN SHAN</a></li>
       
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/introduction-to-algorithms/"><em>Next<span class="show-for-sr"> page</span></em>: Introduction to Algorithms&nbsp;&raquo;</a></li>
       
     </ul>
 
