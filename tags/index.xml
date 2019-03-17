@@ -23,18 +23,9 @@
     <item>
       <title>Algorithm</title>
       <link>https://qianqianshan.github.io/tags/algorithm/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>https://qianqianshan.github.io/tags/computer-science/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/computer-science/</guid>
       <description></description>
     </item>
     
@@ -62,6 +53,15 @@
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structure</title>
+      <link>https://qianqianshan.github.io/tags/data-structure/</link>
+      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/data-structure/</guid>
       <description></description>
     </item>
     
@@ -98,6 +98,15 @@
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parallel Computing</title>
+      <link>https://qianqianshan.github.io/tags/parallel-computing/</link>
+      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/parallel-computing/</guid>
       <description></description>
     </item>
     
