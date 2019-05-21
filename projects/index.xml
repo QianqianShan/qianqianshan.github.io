@@ -6,27 +6,37 @@
     <description>Recent content in Projects on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Prediction on Battery Remaining Useful Life Based on Neutral Networks</title>
-      <link>https://qianqianshan.github.io/projects/lstm-battery/</link>
-      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      <title>Recommender Systems</title>
+      <link>https://qianqianshan.github.io/projects/recommender_system/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/projects/lstm-battery/</guid>
+      <guid>https://qianqianshan.github.io/projects/recommender_system/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Degradation Models Under Bayesian Framework</title>
-      <link>https://qianqianshan.github.io/projects/bayesian-pipeline/</link>
-      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
+      <title>Auto-complete based on N-Gram Model in Hadoop</title>
+      <link>https://qianqianshan.github.io/projects/auto_complete/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/projects/bayesian-pipeline/</guid>
-      <description></description>
+      <guid>https://qianqianshan.github.io/projects/auto_complete/</guid>
+      <description>Implementation of Auto-Complete with MapReduce  Overview
+ Visualization
+ Preliminaries
+ N-Gram Model
+ Discussion
+ Run Auto-Complete in Hadoop
+ References
+  Overview Visualization The following pictures show screenshots of the visulization of autocomplte.
+Visualization can be done using the files in autocomplete-visualization.tar:
+ cd /data/www/default in your local machine. wget --no-check-certificate https://github.com/QianqianShan/Auto_Complete/blob/master/autocomplete-visualization.tar, download the visualization files.
+ tar -xvf autocomplete-visualization.tar, unzip the file, and there will be a folder autocomplete.</description>
     </item>
     
     <item>
