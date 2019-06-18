@@ -112,27 +112,227 @@
     </main>
     
     <footer class="whatisthis">
-  <style type="text/css">
+  <style>
+  body {
+    line-height:1.7;  }
+li{
+  margin: 10px 0;
+}
 
-a:link    {
-   
-  text-decoration-style:dotted;
-  } 
-a:visited {
-   
-  text-decoration:  none;
-  } 
-a:hover   {
-   
-  text-decoration:  none;
-  font-weight:      bold;
-  background-color: pink;
-  } 
-a:active  {
-   
-  text-decoration:  none;
-  font-weight:      bold;
-  } 
+#experience {
+    background: #fff;
+    padding-top: 70px;
+    padding-bottom: 60px;  
+    overflow: hidden;
+
+}
+
+#experience a, #experience a:visited  {
+    color: #11ABB0;
+}
+
+#experience a:hover, #experience a:focus {
+    color: #313131;
+}
+
+#experience h1 {
+    font: 28px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#experience h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+}
+
+#experience h3 {
+    font: 25px/30px 'opensans-bold', sans-serif;
+     
+    margin-bottom: 0px;
+
+}
+
+#experience .bv-pic {
+    padding-top: 5px;
+    border-radius: 10%;
+}
+
+#experience .cs-pic {
+    width: 165px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+
+#experience .header-col {
+    padding-top: 9px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+#experience .main-col {
+    padding-top: 9px;
+    padding-right: 10%;
+}
+
+ 
+
+#experience .work {
+     
+    margin-bottom: 0px;
+}
+
+#experience .info {
+    font: 18px/24px 'opensans-semibold-italic', serif;
+    color: #2980b9;  
+    margin-bottom: 7px;
+    margin-top: 3px;
+}
+
+#experience .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#experience ul {
+    list-style-type: disc;
+    color: #34495e;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+#experience ul li {
+    margin-bottom: 5px;
+}
+
+#experience .date {
+    font: 18px/24px 'opensans-semibold-regular', sans-serif;
+     
+}
+
+
+
+ 
+ 
+
+#education {
+         
+    padding-top: 70px;
+    padding-bottom: 72px;
+    overflow: hidden;
+}
+
+#education a, #education a:visited  {
+    color: #11ABB0;
+}
+
+#education a:hover, #education a:focus {
+    color: #f1c40f;      
+}
+
+#education h1 {
+     
+    font: 28px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+#education h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+}
+
+#education h3 {
+    font: 23px/30px 'opensans-bold', sans-serif;
+    color: #e67e22;  
+    margin-bottom: 5px;
+}
+
+#education .header-col {
+    padding-top: 9px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+#education .main-col {
+    padding-top: 9px;
+    padding-right: 10%;
+}
+
+#education .uiuc-pic {
+    width: 190px;
+    height: 190px;
+}
+
+#education .rdfz-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%
+}
+
+.education, .work {
+    margin-bottom: 10px;
+    padding-bottom: 24px;
+     
+}
+
+#education .info {
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #3498db;    
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+#education .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#education ul {
+    list-style-type: disc;
+     
+    padding-left: 18px;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+#education ul li {
+    margin-bottom: 5px;
+     
+}
+
+
+#education ul li span {
+    float: right;
+    font-weight: bold;
+}
+
+
+
+#education .date {
+    font: 15px/24px 'opensans-regular', sans-serif;
+    margin-top: 6px;
+}
+
+
+ 
+
+ 
+
+ 
+
+
+ 
+ 
+#contact .emp {
+    color: #f39c12;
+    font: normal;
+}
+ 
+
+
   </style>
   
   <hr />
@@ -181,8 +381,9 @@ To learn more about me, you may check:
   
  
                
-                
-<div class="row">
+<section id="experience">
+              
+<div class="row experience">
   <h1 id='experience'>Experience</h1>
 
 <div class="row item">
@@ -199,7 +400,7 @@ To learn more about me, you may check:
 </div>
 
 <div class="column small-12 medium-3">
-<a href="https://www.wellsfargo.com/" target="_blank"><img src="../../img/wellsfargo_logo.png" alt="wellsfargo_logo" width="80" height="80" /></a>
+<a href="https://www.wellsfargo.com/about/" target="_blank"><img src="../../img/wellsfargo_logo.png" alt="wellsfargo_logo" width="80" height="80" /></a>
 </div>
                     
 </div>
@@ -226,9 +427,9 @@ To learn more about me, you may check:
                     
 </div>
 </div>
-
-
-<div class="row">
+</section>
+<section id="education">
+<div class="row education">
   <h1 id='education'>Education</h1>
 
 <div class="row item">
@@ -339,7 +540,10 @@ by Tensorflow</a> </li>
                     
 </div>
 </div>
+</section>
 
+
+   <section id="contact">
 
 
     <div class = 'row'>               
@@ -412,10 +616,12 @@ Ames, IA, USA, 50011 <br />
   </tr>
 </form>
 
+</section>
 </div>
 <div align='center'>
   <p> &copy; Copyright 2019 Qianqian Shan<p>
   </div>
+
 </footer>
 
     
