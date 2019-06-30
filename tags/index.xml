@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Auto Encoders</title>
+      <link>https://qianqianshan.github.io/tags/auto-encoders/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/auto-encoders/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collabarative Filtering</title>
+      <link>https://qianqianshan.github.io/tags/collabarative-filtering/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/collabarative-filtering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Css</title>
       <link>https://qianqianshan.github.io/tags/css/</link>
       <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
@@ -53,6 +71,15 @@
       <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/data-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://qianqianshan.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
@@ -89,6 +116,15 @@
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi Armed Bandit</title>
+      <link>https://qianqianshan.github.io/tags/multi-armed-bandit/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/multi-armed-bandit/</guid>
       <description></description>
     </item>
     
@@ -138,11 +174,29 @@
     </item>
     
     <item>
+      <title>Recommender Systems</title>
+      <link>https://qianqianshan.github.io/tags/recommender-systems/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/recommender-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reliability</title>
       <link>https://qianqianshan.github.io/tags/reliability/</link>
       <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/reliability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Restricted Boltzmann Machine</title>
+      <link>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</guid>
       <description></description>
     </item>
     
