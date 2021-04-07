@@ -6,10 +6,30 @@
     <description>Recent content in Ab Test on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/tags/ab-test/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A/B Testing</title>
+      <link>https://qianqianshan.github.io/post/a-b-testing/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/a-b-testing/</guid>
+      <description>Table of contents  Overview
+ Policy and Ethics for Experiments
+ Choosing and Characterizing Metrics
+ Designing of Experiment
+ Analyzing Results
+ Resources
+  Overview  Choose a metric
+ Review statistics
+ Design
+ Analyze
+  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.
+1 - A/B testing can do A/B testing can do a wide variety of things such as</description>
+    </item>
     
     <item>
       <title>Trustworthy Online Controlled Experiments - Metrics</title>
@@ -23,25 +43,6 @@
  Metrics evaluation
  Metrics evolvement
   Introduction Randomized online controlled experiments have been considered as the gold standard for estabilishing causality, which is the key to bridge a new feature we&amp;rsquo;d like to launch and its business impact, especially for the customer-facing websites and applications in the Internet world. Good metrics are the key to track progress toward the final goals and data-driven decisions.</description>
-    </item>
-    
-    <item>
-      <title>A/B Testing</title>
-      <link>https://qianqianshan.github.io/post/a-b-testing/</link>
-      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/post/a-b-testing/</guid>
-      <description>Table of contents  Overview
- Policy and Ethics for Experiments
- Choosing and Characterizing Metrics
- Designing of Experiment
- Analyzing Results
-  Overview  Choose a metric
- Review statistics
- Design
- Analyze
-  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.
-1 - A/B testing can do A/B testing can do a wide variety of things such as</description>
     </item>
     
   </channel>

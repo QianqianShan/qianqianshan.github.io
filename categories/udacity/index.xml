@@ -6,7 +6,7 @@
     <description>Recent content in Udacity on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/categories/udacity/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>A/B Testing</title>
       <link>https://qianqianshan.github.io/post/a-b-testing/</link>
-      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/a-b-testing/</guid>
       <description>Table of contents  Overview
@@ -22,6 +22,7 @@
  Choosing and Characterizing Metrics
  Designing of Experiment
  Analyzing Results
+ Resources
   Overview  Choose a metric
  Review statistics
  Design
