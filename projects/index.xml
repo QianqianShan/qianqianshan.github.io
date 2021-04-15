@@ -6,10 +6,19 @@
     <description>Recent content in Projects on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Exploration</title>
+      <link>https://qianqianshan.github.io/projects/blockchain/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/projects/blockchain/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Seasonal Warranty Prediction Based on Recurrent Event Data</title>

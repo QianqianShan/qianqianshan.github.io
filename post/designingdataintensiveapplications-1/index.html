@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>DDIA - Reliable Scalable and Maintainable Applications | Qianqian Shan</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/foundation.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/fonts.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+
+
+
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="../../projects">Projects</a></li>
+		  
+		  <li><a href="../../post">Blog</a></li>
+		  
+		  <li><a href="../../#contact">Contact</a></li>
+		  
+		  <li><a href="../../#about">About</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+
+
+
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+    <article class="article" itemscope itemtype="https://schema.org/Article">
+      
+      <h1 itemprop="name">DDIA - Reliable Scalable and Maintainable Applications</h1>
+      <div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2021-04-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">14 April 2021</time>
+  </span>
+  
+  
+  
+  <span class="post-tags">
+    <span class="nowrap"><i class="fa fa-tags"></i>
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/ddia">DDIA</a>,</span> 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/system-design">System Design</a>
+    
+  </span>
+  
+  
+</div>
+
+      <div class="post-body" itemprop="articleBody">
+        
+
+<ol>
+<li><p><a href="#overview">Overview</a></p></li>
+
+<li><p><a href="#reliability">Reliability</a></p>
+
+<p>2.1  <a href="#hardware-faults">Hardware Faults</a></p>
+
+<p>2.2  <a href="#software-errors">Software Errors</a></p>
+
+<p>2.3  <a href="#human-errors">Human Errors</a></p></li>
+
+<li><p><a href="#scalability">Scalability</a></p></li>
+
+<li><p><a href="#maintainability">Maintainability</a></p></li>
+</ol>
+
+<h1 id="1-overview">1 Overview</h1>
+
+<p>With more applications are data-intensive (in terms of the amount of data, complexity of data, and the speed at which the data is changing), it is important to figure out which tools and which approaches are the most appropriate for the tasks, and it can be hard to combine tools when a single tool alone is not enough.</p>
+
+<p>We are trying to achieve a <em>reliable</em>, <em>scalable</em>, and <em>maintainable</em> data system when working with a data-intensive application.</p>
+
+<h1 id="2-reliability">2 - Reliability</h1>
+
+<p>Reliability refers that &ldquo;the system should continue to work correctly even in face of adversity (hardware or software faults, human errors)&rdquo;.</p>
+
+<p>It is usually best to design fault-tolerance (or fault resillient) mechanisms that prevent faults from causing failures.</p>
+
+<h2 id="2-1-hardware-faults-a-name-hardware-faults-a">2.1 Hardware Faults <a name="hardware-faults"></a></h2>
+
+<ul>
+<li><p>First response to hardware faults is to add redundancy to the individual hardware components to reduce the failure rate of the system, however, when data volumn and computing demands increase, more machines will be used, and the failure rate of hardwares increases proportionaly.</p></li>
+
+<li><p>There is a move toward systems that can tolerate the loss of entire machines, by using software fault-tolerance technieques in preference or in addition to hardware redundancy.</p></li>
+</ul>
+
+<h2 id="2-2-software-errors-a-name-software-errors-a">2.2 Software Errors <a name="software-errors"></a></h2>
+
+<p>Compared with hardware faults, software errors is more like the systematic error within the system that are harder to anticipate due to the correlation across nodes, thus tend to cause more system failures than hardware faults.</p>
+
+<p>There is quick solution to the systematic faults of software. Small things such as carefully thinking of assumptions, thorough tests can help.</p>
+
+<h2 id="2-3-human-errors-a-name-human-errors-a">2.3 Human Errors <a name="human-errors"></a></h2>
+
+<p>Best practice to reduce human errors:</p>
+
+<ul>
+<li><p>Design system in a way that minimize opportunities of error such as well-designed abstractions, make it easy to do the &lsquo;right&rsquo; thing and discourage the &lsquo;wrong&rsquo; thing.</p></li>
+
+<li><p>Decouple the places where most mistakes are made from places where they can cause failure</p></li>
+
+<li><p>Test thoroughly at all levels from unit tests to whole-system integration tests and manual tests.</p></li>
+
+<li><p>Allow quick and easy recovery from human errors.</p></li>
+
+<li><p>Set up detailed and clear monitoring.</p></li>
+
+<li><p>Implement good management practice and training.</p></li>
+</ul>
+
+<h1 id="3-scalability">3 - Scalability</h1>
+
+<p>Scalability describes a system&rsquo;s ability to cope with increased load.</p>
+
+<ul>
+<li><p>Load is described by <em>load parameters</em> that depends on the architecture of the system.</p></li>
+
+<li><p>With the <em>load parameters</em> description, the performance of the system can be investigated when the load increases.</p></li>
+
+<li><p><em>Percentiles</em> can be used to describe the performance. Others such as a distribution of values that one can measure.</p></li>
+
+<li><p>Approaches to cope with load:</p>
+
+<ol>
+<li>Scaling up: a more powerful machine</li>
+<li>Scaling out: distribute load across multiple smaller machines</li>
+<li>In reality, good architectures usually involve a pragmatic mixture of the above two</li>
+<li>Use <em>elastic</em> system when load is highly unpredictable
+<br /></li>
+</ol></li>
+</ul>
+
+<p>Overall, the architecture of system that operate at large scale is usually highly specific to the application &mdash; no generic, one-size-fits-all scalable architecture.</p>
+
+<h1 id="4-maintainability">4 - Maintainability</h1>
+
+<p>The majority of the cost of software is not in its initial development, but in its ongoing maintenance &mdash; fixing bugs, keeping its systems operational investigating failures, adapting it to new platforms, modifying it for new use cases, repaying technical debt, and adding new features.</p>
+
+<p>Design principles for software systems to minimize pain during maintenance:</p>
+
+<ul>
+<li><p>Operability: makes the routine tasks easy, allowing the operations team to focus efforts on high-value activities.</p></li>
+
+<li><p>Simplicity: make it easy for new engineers to understand the system by removing as much complexity as possible from the system. <em>Abstraction</em> can hide a great deal of implementation detail bebind a clean, simple-to-understand facde, and can be used to remove accidental complexity.</p></li>
+
+<li><p>Evolvability: make changes easy.</p></li>
+</ul>
+
+<p>Except for the above non-functional requirements, other non-functional ones such as security, compliance and functions ones (e.g., what is hould do, such as allowing data to be stored, retrieved, searched, and processed in various ways) are also required to make a useful applicatoin.</p>
+
+      </div>
+
+      <meta itemprop="wordCount" content="642">
+      <meta itemprop="datePublished" content="2021-04-14">
+      <meta itemprop="url" content="https://qianqianshan.github.io/post/designingdataintensiveapplications-1/">
+    </article>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/a-b-testing/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: A/B Testing</a></li>
+      
+      
+    </ul>
+
+    
+  </div>
+</div>
+
+    </main>
+    
+<footer>
+  <hr>
+  <div class="row">
+   <div class="column small-10 small-centered text-center">
+     <em>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with Finite theme. Do you like this, or do you have a comment? Please feel free to email me via <a href="mailto:qianshanshan.am@gmail.com" target="_blank">qianqianshan.am[at]gmail.com.</em>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="endofpage">
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/what-input.js"></script>
+    <script src="../../js/foundation.min.js"></script>
+    <script src="../../js/finite.js"></script>
+
+    
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="https://qianqianshan.github.io/js/MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+    
+  </body>
+</html>

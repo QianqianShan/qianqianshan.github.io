@@ -1,0 +1,681 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>System Design | Qianqian Shan</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/foundation.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/fonts.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+	      
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="../../projects">Projects</a></li>
+		  
+		  <li><a href="../../post">Blog</a></li>
+		  
+		  <li><a href="../../#contact">Contact</a></li>
+		  
+		  <li><a href="../../#about">About</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+		
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12">
+    
+    
+    <h2><a href="../../post/designingdataintensiveapplications-1/">DDIA - Reliable Scalable and Maintainable Applications</a></h2>
+<div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2021-04-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">14 April 2021</time>
+  </span>
+  
+  
+  
+  <span class="post-tags">
+    <span class="nowrap"><i class="fa fa-tags"></i>
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/ddia">DDIA</a>,</span> 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/system-design">System Design</a>
+    
+  </span>
+  
+  
+</div>
+
+
+
+
+      
+    
+    Reading notes of Chapter 1 of Designing Data-Intensive Applications (DDIA).
+<p class="text-right"><a href="../../post/designingdataintensiveapplications-1/">Read more…</a></p>
+	
+
+    
+    <div class="row">
+  <div class="column small-12">
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li><span>Page 1 of 1</span></li>      
+      
+    </ul>    
+    All Posts by <a href="https://qianqianshan.github.io/categories">Category</a> or <a href="https://qianqianshan.github.io/tags">Tags</a>.
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </main>
+    
+    <footer class="whatisthis">
+  <style>
+  body {
+    line-height:1.7;  }
+li{
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#experience {
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 30px;  
+    overflow: hidden;
+
+}
+
+#experience a, #experience a:visited  {
+    color: #11ABB0;
+}
+
+#experience a:hover, #experience a:focus {
+    color: #313131;
+}
+
+#experience h1 {
+    font: 28px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#experience h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+}
+
+#experience h3 {
+    font: 25px/30px 'opensans-bold', sans-serif;
+     
+    margin-bottom: 0px;
+
+}
+
+#experience .bv-pic {
+    padding-top: 5px;
+    border-radius: 10%;
+}
+
+#experience .cs-pic {
+    width: 165px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+
+#experience .header-col {
+    padding-top: 9px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+#experience .main-col {
+    padding-top: 9px;
+    padding-right: 10%;
+}
+
+ 
+
+#experience .work {
+     
+    margin-bottom: 0px;
+}
+
+#experience .info {
+    font: 18px/24px 'opensans-semibold-italic', serif;
+    color: #2980b9;  
+    margin-bottom: 7px;
+    margin-top: 3px;
+}
+
+#experience .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#experience ul {
+    list-style-type: disc;
+    color: #34495e;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+#experience ul li {
+    margin-bottom: 5px;
+}
+
+#experience .date {
+    font: 18px/24px 'opensans-semibold-regular', sans-serif;
+     
+}
+
+
+
+ 
+ 
+
+#education {
+         
+    padding-top: 40px;
+    padding-bottom: 42px;
+    overflow: hidden;
+}
+
+#education a, #education a:visited  {
+    color: #11ABB0;
+}
+
+#education a:hover, #education a:focus {
+    color: #f1c40f;      
+}
+
+#education h1 {
+     
+    font: 28px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+#education h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+}
+
+#education h3 {
+    font: 23px/30px 'opensans-bold', sans-serif;
+    color: #e67e22;  
+    margin-bottom: 5px;
+}
+
+#education .header-col {
+    padding-top: 9px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+#education .main-col {
+    padding-top: 9px;
+    padding-right: 10%;
+}
+
+#education .uiuc-pic {
+    width: 190px;
+    height: 190px;
+}
+
+#education .rdfz-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%
+}
+
+.education, .work {
+    margin-bottom: 10px;
+    padding-bottom: 24px;
+     
+}
+
+#education .info {
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #3498db;    
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+#education .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#education ul {
+    list-style-type: disc;
+     
+    padding-left: 18px;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+#education ul li {
+    margin-bottom: 5px;
+     
+}
+
+
+#education ul li span {
+    float: right;
+    font-weight: bold;
+}
+
+
+
+#education .date {
+    font: 15px/24px 'opensans-regular', sans-serif;
+    margin-top: 6px;
+}
+
+
+ 
+
+ 
+
+ 
+
+
+ 
+ 
+
+ 
+
+
+  </style>
+
+  <hr />
+  <div class="row">
+    <div class="column small-12 medium-3">
+      <h1 id = "about">About</h1>
+      <figure class="full-figure">
+	<img src="../../img/portrait.JPG" alt="Portrait of Qianqian" width="200" height="150">
+	
+      </figure>
+      <br>
+      <p>
+
+<a class="button" href="../../404.html" target="_blank"><i class="fa fa-download"></i> Resume</a>
+</p>
+
+    </div>
+      <div class="column small-12 medium-9">
+
+<p>My name is Qianqian Shan. I obtained my PhD degree in Statistics from Iowa State University in 2019 under the supervision by Dr. Meeker.  <br><br>
+
+
+My research interests include <em style="color:#6699ff;">Statistical Modeling, Data Analysis, Reliability Analysis, Machine Learning, Deep Learning, Deep Reinforcement Learning</em> and so on. I like coding in Python/C/R/Java and am always excited about learning new knowledge and experienced in independent problem-solving and cross-functional teamwork with three years’ industrial internship and full-time experience.
+<br><br>
+For my life outside work,I'm a big fan of Yoga, outdoor running, and (entry level) snowboarding. I also have two cats: a naughty Munchkin boy and a very smart Scottish fold girl. 
+<br><br>
+
+To learn more about me, you may check:
+<ul><i class="fa-li fa 
+
+
+
+
+
+
+fa-file-o
+" style="padding-top:3px;"></i>System Design
+<br />
+<span><a class="button hollow pub-link" href="https://qianqianshan.github.io/categories/system-design/">Abstract</a> 
+
+
+
+
+
+
+</span>
+
+<li> <a href='https://qianqianshan.com/projects/' target='_blank'> https://qianqianshan.com/projects</a> for the projects I have done. </li>
+
+<li> <a href='https://qianqianshan.com/post/' target='_blank'> https://qianqianshan.com/posts</a> for the posts I have written.</li>
+
+<li> Always feel free to reach out via any way listed in <a href='https://qianqianshan.com/#contact'> <em>Contact</em></a> or <a href='https://qianqianshan.com/#message'> <em>leave me a message</em></a>.</li>
+</ul>
+<br><brf>
+
+
+
+
+</div>
+
+
+</div>
+
+
+  
+
+
+<section id="experience">
+
+<div class="row experience">
+  <h1 id='experience'>Experience</h1>
+
+<br>
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520">Amazon</span></h3>
+    <p class="info">Applied Scientist <span>&bull;</span> Seattle, WA <span>&bull;</span> <em class="date"> Jan 2020 - Present</em> </p>
+<ul>
+  <li> Research and implement machine learning and statistical techniques to create scalable and effective models to improve customer experience.
+  </li>
+  <li> Deep data analysis to solve business problems and to identify business opportunities to provide the best experience on Amazon-owned sites.	</li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.amazon.com/" target="_blank"><img src="../../img/amazon_logo.JPG" alt="amazon_logo" width="110" height="110" /></a>
+</div>
+
+</div>
+
+<br>
+
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520">Wells Fargo & Company</span></h3>
+    <p class="info">Quantitative Intern <span>&bull;</span> Charlotte, NC <span>&bull;</span> <em class="date"> May 2019 - August 2019</em> </p>
+<ul>
+  <li>Implemented automated model screening tools in Python to improve modeling efficiency on risk management.
+  </li>
+  <li>Performed stress testing analysis on loan portfolio with statistical and machine learning techniques.	</li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.wellsfargo.com/about/" target="_blank"><img src="../../img/wellsfargo_logo.png" alt="wellsfargo_logo" width="80" height="80" /></a>
+</div>
+
+</div>
+
+
+
+<br>
+
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520">After, Inc </span></h3>
+    <p class="info">R&D Remote Part-Time Intern <span>&bull;</span> Norwalk, CT <span>&bull;</span> <em class="date"> January 2017 - August 2018</em> </p>
+<ul>
+  <li> Built models for warranty prediction on various products from outdoor sporting equipment to vehicles.</li>
+  <li> Developed reproducible production code with detailed documentation for general use on different projects. </li>
+  <li>Provided consultation advice for clients on premium of warranty products, anomaly detection and other insights that would help their business.</li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="http://afterinc.com/" target="_blank"><img src="../../img/after_logo.png" alt="afterinc_log" width="100" height="100" /></a>
+</div>
+
+</div>
+</div>
+</section>
+<section id="education">
+<div class="row education">
+  <h1 id='education'>Education</h1>
+
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520"> Iowa State University</span></h3>
+    <p class="info"> PhD in Statistics <span>&bull;</span> Ames, IA <span>&bull;</span> <em class="date"> August 2015 - December 2019</em> </p>
+<ul>
+  <li> <em style="color:#6699ff;"> Student Travel Award</em> in Quality and Productivity Section, Joint Statistical Meetings, Vancouver, BC, Canada.
+  </li>
+  <li> <em style="color:#6699ff;"> Best Poster Award </em> in Conference on Predictive Inference and Its Applications, Ames, IA, USA.</li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.iastate.edu/" target="_blank"><img src="../../img/isu_logo.png" alt="isu_logo" width="80" height="80" /></a>
+</div>
+
+</div>
+
+
+
+
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520"> Coursera Online Education </span></h3>
+    <p class="info">Motivated Self-Learner <span>&bull;</span> Ames, IA <span>&bull;</span> <em class="date"> January 2013 - Present</em> </p>
+<ul>
+  <li> <a href="https://www.coursera.org/account/accomplishments/specialization/UT9LVNB7QJ6W" style="font-size:90%;" target="_blank">Deep learning specialization by deeplearning.ai</a>:</li>
+  <ul>
+  <li> <a href="https://www.coursera.org/learn/neural-networks-deep-learning" style="font-size:80%;" target="_blank">Neural Networks and Deep Learning (100.00/100.00) </li>
+  <li> <a href="https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning" style="font-size:80%;" target="_blank">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization (100.00/100.00) </li>
+  <li> <a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning" style="font-size:80%;" target="_blank">Structuring Machine Learning Projects (100.00/100.00) </li>
+  <li> <a href="https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning" style="font-size:80%;" target="_blank">Convolutional Neural Networks (100.00/100.00) </li>
+  <li> <a href="https://www.coursera.org/learn/nlp-sequence-models" style="font-size:80%;" target="_blank">Sequence Models (100.00/100.00) </li>
+  </ul>
+
+  <li> <a href="https://www.coursera.org/learn/python?specialization=python" style="font-size:90%;" target="_blank">Programming for Everybody (Getting Started with Python) by University of Michigan (100.00/100.00)
+ </li>
+
+   <li> <a href="https://www.coursera.org/learn/python-data?specialization=python" style="font-size:90%;" target="_blank">Python Data Structures by University of Michigan (100.00/100.00)
+ </li>
+
+   <li> <a href="https://www.coursera.org/learn/python-network-data?specialization=python" style="font-size:90%;" target="_blank">Using Python to Access Web Data by University of Michigan (100.00/100.00)
+ </li>
+
+   <li> <a href="https://www.coursera.org/learn/python-databases?specialization=python" style="font-size:90%;" target="_blank">Using Databases with Python by University of Michigan (100.00/100.00)
+ </li>
+
+   <li> <a href="https://www.coursera.org/learn/r-programming" style="font-size:90%;" target="_blank">R Programming by Johns Hopkins University (99.20/100.00)
+ </li>
+
+   <li> <a href="https://www.coursera.org/learn/data-scientists-tools" style="font-size:90%;" target="_blank">The Data Scientist’s Toolbox by Johns Hopkins University (100.00/100.00)
+ </li>
+
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.coursera.org/" target="_blank"><img src="../../img/coursera_logo.png" alt="coursera_log" width="70" height="70" /></a>
+</div>
+
+</div>
+
+
+<div class="row item">
+
+<div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520"> Udemy Online Education </span></h3>
+    <p class="info">Motivated Self-Learner <span>&bull;</span> Ames, IA <span>&bull;</span> <em class="date"> June 2018 - Present</em> </p>
+    <ul>
+  <li> <a href="https://www.udemy.com/certificate/UC-NC832ORR/" style="font-size:90%;" target="_blank">Data Science: Natural Language Processing (NLP) in Python</a> </li>
+  <li> <a href="https://www.udemy.com/certificate/UC-4CKBA9WK/" style="font-size:90%;" target="_blank">Recommender Systems and Deep Learning in Python</a> </li>
+
+    <li> <a href="https://www.udemy.com/certificate/UC-FWXRKKEM/" style="font-size:90%;" target="_blank">Automate the Boring Stuff with Python Programming</a> </li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.udemy.com/" target="_blank"><img src="../../img/udemy_logo.png" alt="udemy_log" width="70" height="70" /></a>
+</div>
+
+</div>
+
+
+
+
+<div class="row item">
+
+  <div class="column small-12 medium-9">
+
+    <h3><span style="color:#7AC520"> Udacity Online Education </span></h3>
+    <p class="info">Motivated Self-Learner <span>&bull;</span> Ames, IA <span>&bull;</span> <em class="date"> January 2018 - Present</em> </p>
+    <ul>
+  <li> <a href="https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187" style="font-size:90%;" target="_blank">Introduction to TensorFlow for Deep Learning
+by Tensorflow</a> </li>
+
+    <li> <a href="https://www.udacity.com/course/ab-testing--ud257" style="font-size:90%;" target="_blank">A/B Testing by Google</a> </li>
+</ul>
+</div>
+
+<div class="column small-12 medium-3">
+<a href="https://www.udacity.com/" target="_blank"><img src="../../img/udacity_logo.png" alt="udacity_log" width="100" height="120" /></a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+   <section id="contact">
+
+
+    <div class = 'row'>
+    <div class="column small-12 medium-4">
+            
+      <h1 id="contact">Contact</h1>
+      <ul class="fa-ul">
+	
+	<li><i class="fa-li fa fa-envelope" style="padding-top:3px;"></i><a href="mailto:qianqianshan.am@gmail.com" target='_blank'>qianqianshan.am@gmail.com</a></li>
+	
+	<li><i class="fa-li fa fa-github" style="padding-top:3px;"></i><a href="https://github.com/QianqianShan" target='_blank'>Qianqian</a> on Github</li>
+	
+	<li><i class="fa-li fa fa-linkedin" style="padding-top:3px;"></i><a href="https://www.linkedin.com/in/qianqian-shan" target='_blank'>Qianqian</a> on LinkedIn</li>
+	
+	<li><i class="fa-li fa fa-facebook" style="padding-top:3px;"></i><a href="https://www.facebook.com/qianqian.shan.73" target='_blank'>Qianqian</a> on Facebook</li>
+	
+      </ul>
+    </div>
+
+   <div class='column small-12 medium-4'>
+     <br>
+     <br>
+           Address:<br />
+Seattle, WA, USA <br />
+
+
+    </div>
+
+    <div class="column small-12 medium-3">
+
+
+
+
+
+
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=dOKmtSBV_7xlXE0bZyeYcENzeHWjdKSiSaspSZ6JuQs&cl=ffffff&w=a"></script>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class = 'row'>
+<h2 id='message'>Leave a message</h2>
+
+<form action="https://formspree.io/qianqianshan.am@gmail.com" method="POST">
+  <tr>
+  <td valign="top">
+  <label for="name">Name*</label>
+ </td>
+  <input placeholder="Type your name here" type="text" name="Name">
+  <td valign="top">
+  <label for="enail">Email*</label>
+ </td>
+  <input placeholder="Type your email here" type="email" name="_replyto">
+  <td valign="top">
+  <label for="message">Message</label>
+ </td>
+  <textarea name="message"></textarea>
+ <input placeholder="Type your message here" type="hidden" name="_subject" value="Message via https://qianqianshan.com">
+  <input type="submit" style="border:2px solid #cceeff;;color:#000066;background-color:#cceeff;", value="Send">
+  </tr>
+</form>
+
+</section>
+</div>
+<div align='center'>
+  <p> &copy; Copyright 2021 Qianqian Shan<p>
+  </div>
+
+</footer>
+
+    
+    <div class="endofpage">
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/what-input.js"></script>
+    <script src="../../js/foundation.min.js"></script>
+    <script src="../../js/finite.js"></script>
+
+    
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    
+  </body>
+</html>
