@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Qianqian Shan</title>
@@ -53,17 +53,17 @@
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/projects/auto_complete/</guid>
-      <description>Implementation of Auto-Complete with MapReduce  Overview
- Visualization
- Preliminaries
- N-Gram Model
- Discussion
- Run Auto-Complete in Hadoop
- References
+      <description>Implementation of Auto-Complete with MapReduce   Overview
+  Visualization
+  Preliminaries
+  N-Gram Model
+  Discussion
+  Run Auto-Complete in Hadoop
+  References
   Overview Visualization The following pictures show screenshots of the visulization of autocomplte.
 Visualization can be done using the files in autocomplete-visualization.tar:
- cd /data/www/default in your local machine. wget --no-check-certificate https://github.com/QianqianShan/Auto_Complete/blob/master/autocomplete-visualization.tar, download the visualization files.
- tar -xvf autocomplete-visualization.tar, unzip the file, and there will be a folder autocomplete.</description>
+  cd /data/www/default in your local machine.
+  wget --no-check-certificate https://github.com/QianqianShan/Auto_Complete/blob/master/autocomplete-visualization.tar, download the visualization files.</description>
     </item>
     
     <item>

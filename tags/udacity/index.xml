@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Udacity on Qianqian Shan</title>
@@ -17,18 +17,17 @@
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/a-b-testing/</guid>
-      <description>Table of contents  Overview
- Policy and Ethics for Experiments
- Choosing and Characterizing Metrics
- Designing of Experiment
- Analyzing Results
- Resources
-  Overview  Choose a metric
- Review statistics
- Design
- Analyze
-  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.
-1 - A/B testing can do A/B testing can do a wide variety of things such as</description>
+      <description>Table of contents   Overview
+  Policy and Ethics for Experiments
+  Choosing and Characterizing Metrics
+  Designing of Experiment
+  Analyzing Results
+  Resources
+  Overview   Choose a metric
+  Review statistics
+  Design
+  Analyze
+  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.</description>
     </item>
     
   </channel>

@@ -87,144 +87,154 @@
 </div>
 
       <div class="post-body" itemprop="articleBody">
-        
-
-<h1 id="table-of-contents">Table of contents</h1>
-
+        <h1 id="table-of-contents">Table of contents</h1>
 <ol>
-<li><p><a href="#introduction">Introduction</a></p></li>
-
-<li><p><a href="#metrics-taxonomy">Metrics taxonomy </a></p></li>
-
-<li><p><a href="#metrics-formulation">Metrics formulation</a></p></li>
-
-<li><p><a href="#metrics-evaluation">Metrics evaluation</a></p></li>
-
-<li><p><a href="#metrics-evolvement">Metrics evolvement</a></p></li>
+<li>
+<p><a href="#introduction">Introduction</a></p>
+</li>
+<li>
+<p><a href="#metrics-taxonomy">Metrics taxonomy </a></p>
+</li>
+<li>
+<p><a href="#metrics-formulation">Metrics formulation</a></p>
+</li>
+<li>
+<p><a href="#metrics-evaluation">Metrics evaluation</a></p>
+</li>
+<li>
+<p><a href="#metrics-evolvement">Metrics evolvement</a></p>
+</li>
 </ol>
-
 <h1 id="introduction">Introduction</h1>
-
 <p>Randomized online controlled experiments have been considered as the gold standard for estabilishing causality, which is the key to bridge a new feature we&rsquo;d like to launch and its business impact, especially for the customer-facing websites and applications in the Internet world. Good metrics are the key to track progress toward the final goals and data-driven decisions.</p>
-
 <h1 id="metrics-taxonomy">Metrics taxonomy</h1>
-
 <h3 id="goal-metrics">Goal metrics</h3>
-
 <p>Goal metrics are also called as <em>success metrics</em>, or <em>true north metrics</em>, and it is what the organization ultimately cares about. They are usually a single or a small set of metrics that best captures the ultimate success of the project. They may not be easy to move in short term as each initiative may have only a very small impact on the metric, or impacts take a long time to materialize.</p>
-
 <h3 id="driver-metrics">Driver metrics</h3>
-
 <p>Driver metrics are also called <em>sign post metrics</em>, <em>surrogate metrics</em>, or <em>indirect or predictive metrics</em>. Driver metrics should reflect a mental <strong>causal model</strong> of what it takes for the organization to succeed. Useful metrics framework in helping to find what drives success:</p>
-
 <ul>
-<li><p>H - happiness</p></li>
-
-<li><p>E - engagement</p></li>
-
-<li><p>A - adoption</p></li>
-
-<li><p>R - retention</p></li>
-
-<li><p>T - task success</p></li>
+<li>
+<p>H - happiness</p>
+</li>
+<li>
+<p>E - engagement</p>
+</li>
+<li>
+<p>A - adoption</p>
+</li>
+<li>
+<p>R - retention</p>
+</li>
+<li>
+<p>T - task success</p>
+</li>
 </ul>
-
 <p>Driver metrics tend to be shorter-term, faster-moving, and more-sensitive metrics than the above goal metrics.</p>
-
 <h3 id="guardrail-metrics">Guardrail metrics</h3>
-
 <p>Guardrail metrics guard against violated assumptions and come in two types:</p>
-
 <ul>
-<li><p>Metrics that protect the business</p></li>
-
-<li><p>Metrics that assess the trustworthiness and internal validity of experiment results</p></li>
+<li>
+<p>Metrics that protect the business</p>
+</li>
+<li>
+<p>Metrics that assess the trustworthiness and internal validity of experiment results</p>
+</li>
 </ul>
-
 <p>In summary, the goal, driver, and guardrail metrics offer the right amount of granularity and comprehensiveness. There are also other types of metrics:</p>
-
 <ul>
-<li><p>Asset vs. engagement metrics such as total number of Facebook users and user pageviews</p></li>
-
-<li><p>Business vs. operational metrics such as daily active users and queries per second</p></li>
-
-<li><p>Data quality metrics such as data quantiles</p></li>
-
-<li><p>Diagnosis or debug metrics</p></li>
+<li>
+<p>Asset vs. engagement metrics such as total number of Facebook users and user pageviews</p>
+</li>
+<li>
+<p>Business vs. operational metrics such as daily active users and queries per second</p>
+</li>
+<li>
+<p>Data quality metrics such as data quantiles</p>
+</li>
+<li>
+<p>Diagnosis or debug metrics</p>
+</li>
 </ul>
-
 <h1 id="metrics-formulation">Metrics formulation</h1>
-
 <p>Key principles when devloping goal and driver metrics are:</p>
-
 <ol>
 <li>Ensure goal metrics</li>
 </ol>
-
 <ul>
-<li><p>Simple</p></li>
-
-<li><p>Stable</p></li>
+<li>
+<p>Simple</p>
+</li>
+<li>
+<p>Stable</p>
+</li>
 </ul>
-
-<ol>
+<ol start="2">
 <li>Ensure driver metrics</li>
 </ol>
-
 <ul>
-<li><p>Aligned with the goal</p></li>
-
-<li><p>Actionable and relevant</p></li>
-
-<li><p>Sensitive</p></li>
-
-<li><p>Resistant to gaming</p></li>
+<li>
+<p>Aligned with the goal</p>
+</li>
+<li>
+<p>Actionable and relevant</p>
+</li>
+<li>
+<p>Sensitive</p>
+</li>
+<li>
+<p>Resistant to gaming</p>
+</li>
 </ul>
-
 <h1 id="metrics-evaluation">Metrics evaluation</h1>
-
 <p>Most metrics evaluation and validation happen during the formulation phase, but there is work that needs to be done over time continously to determine if they are satisfied with the above principles.</p>
-
 <p>The most challenging part of evaluation is to establish the causal relationship between driver metrics and organizational goal metrics. Some high-level approaches to tackle causal validation include:</p>
-
 <ul>
-<li><p>Use other data sources such as surveys, focus groups, or user experience research if available</p></li>
-
-<li><p>Analyze observational data: even it is difficult to validate a causal relationship with observational data, it could be helpful to help invalidate hypotheses.</p></li>
-
-<li><p>Check whether similar validation is done at other companies</p></li>
-
-<li><p>Conduct an experiment with a primary goal of evaluating metrics</p></li>
-
-<li><p>Use a corpus of historical experiments as &ldquo;golden&rdquo; samples for evaluating new metrics</p></li>
+<li>
+<p>Use other data sources such as surveys, focus groups, or user experience research if available</p>
+</li>
+<li>
+<p>Analyze observational data: even it is difficult to validate a causal relationship with observational data, it could be helpful to help invalidate hypotheses.</p>
+</li>
+<li>
+<p>Check whether similar validation is done at other companies</p>
+</li>
+<li>
+<p>Conduct an experiment with a primary goal of evaluating metrics</p>
+</li>
+<li>
+<p>Use a corpus of historical experiments as &ldquo;golden&rdquo; samples for evaluating new metrics</p>
+</li>
 </ul>
-
 <h1 id="metrics-evolvement">Metrics evolvement</h1>
-
 <p>Metric definitions evolve over time with various reasons such as:</p>
-
 <ul>
-<li><p>The business evolved</p></li>
-
-<li><p>The environment evolved</p></li>
-
-<li><p>Your understanding of the metrics evolved</p></li>
+<li>
+<p>The business evolved</p>
+</li>
+<li>
+<p>The environment evolved</p>
+</li>
+<li>
+<p>Your understanding of the metrics evolved</p>
+</li>
 </ul>
-
-<p>For the relationship between correlatoin and causation:
-1. Correlation doesn&rsquo;t imply causation and it can fool the metrics determination process.</p>
-
+<p>For the relationship between correlatoin and causation:</p>
 <ol>
-<li><p>Relationships observed in historical data cannot be considered structual, or causal. Policy decisions can alter the structure of economic models and the correlations that held historically will no longer hold.</p></li>
-
-<li><p>Finding correlations in historical data does not imply that you can pick a point on a correlational curve by modifying one of the variables and expecting the other to change unless the relationship is proved to be causal.</p></li>
+<li>
+<p>Correlation doesn&rsquo;t imply causation and it can fool the metrics determination process.</p>
+</li>
+<li>
+<p>Relationships observed in historical data cannot be considered structual, or causal. Policy decisions can alter the structure of economic models and the correlations that held historically will no longer hold.</p>
+</li>
+<li>
+<p>Finding correlations in historical data does not imply that you can pick a point on a correlational curve by modifying one of the variables and expecting the other to change unless the relationship is proved to be causal.</p>
+</li>
 </ol>
-
 <p>All the above makes picking proper metrics a challenge.</p>
 
       </div>
 
-      <meta itemprop="wordCount" content="593">
+      <meta itemprop="wordCount" content="592">
       <meta itemprop="datePublished" content="2021-03-28">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/trustworthyonlinecontrolledexperiments-metrics/">
     </article>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Qianqian Shan</title>
@@ -6,24 +6,38 @@
     <description>Recent content in Posts on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>DDIA - Data Models and Query Languages</title>
+      <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</link>
+      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</guid>
+      <description>Overview
+  Relational Model vs Document Model
+  Query Languages for Data 
+  Graph-like Data Models
+  Summary
+  1 Overview Data models are probably the most important part of devloping software for their profound effect on not only how the software is written, but also on how we thinkg about the problem that we are solving. Each layer of the applications is built by one data model on top of another, and each layer hides the complexity of the layers below it by providing a clean data model (abstraction), which allows different groups of people to work together effectively.</description>
+    </item>
+    
+    <item>
       <title>DDIA - Reliable Scalable and Maintainable Applications</title>
       <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</link>
-      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</guid>
       <description>Overview
- Reliability
+  Reliability
 2.1 Hardware Faults
 2.2 Software Errors
 2.3 Human Errors
- Scalability
- Maintainability
+  Scalability
+  Maintainability
   1 Overview With more applications are data-intensive (in terms of the amount of data, complexity of data, and the speed at which the data is changing), it is important to figure out which tools and which approaches are the most appropriate for the tasks, and it can be hard to combine tools when a single tool alone is not enough.</description>
     </item>
     
@@ -33,18 +47,17 @@
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/a-b-testing/</guid>
-      <description>Table of contents  Overview
- Policy and Ethics for Experiments
- Choosing and Characterizing Metrics
- Designing of Experiment
- Analyzing Results
- Resources
-  Overview  Choose a metric
- Review statistics
- Design
- Analyze
-  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.
-1 - A/B testing can do A/B testing can do a wide variety of things such as</description>
+      <description>Table of contents   Overview
+  Policy and Ethics for Experiments
+  Choosing and Characterizing Metrics
+  Designing of Experiment
+  Analyzing Results
+  Resources
+  Overview   Choose a metric
+  Review statistics
+  Design
+  Analyze
+  0 - Definition of A/B testing A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.</description>
     </item>
     
     <item>
@@ -53,11 +66,11 @@
       <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/trustworthyonlinecontrolledexperiments-metrics/</guid>
-      <description>Table of contents  Introduction
- Metrics taxonomy 
- Metrics formulation
- Metrics evaluation
- Metrics evolvement
+      <description>Table of contents   Introduction
+  Metrics taxonomy 
+  Metrics formulation
+  Metrics evaluation
+  Metrics evolvement
   Introduction Randomized online controlled experiments have been considered as the gold standard for estabilishing causality, which is the key to bridge a new feature we&amp;rsquo;d like to launch and its business impact, especially for the customer-facing websites and applications in the Internet world. Good metrics are the key to track progress toward the final goals and data-driven decisions.</description>
     </item>
     
@@ -103,27 +116,27 @@
       <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/htmlbasics/</guid>
-      <description>Table of contents  Introduction
- Basics
- Elements
- Attributes
- Headings
- Paragraph
- Styles
- Text Formatting
- Quotation
- Comments
- Text Formatting
- Colors
- Styling HTML with CSS
- Links
- Images
- Tables
- Iframes
- Javascript
- Filepaths
- Head
-  Introduction The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp, and the notes could be used for a quick lookup about the usage of the HTML commands.</description>
+      <description>Table of contents   Introduction
+  Basics
+  Elements
+  Attributes
+  Headings
+  Paragraph
+  Styles
+  Text Formatting
+  Quotation
+  Comments
+  Text Formatting
+  Colors
+  Styling HTML with CSS
+  Links
+  Images
+  Tables
+  Iframes
+  Javascript
+  Filepaths
+  Head
+  Introduction The notes were taken based on the tutorial from https://www.</description>
     </item>
     
     <item>
