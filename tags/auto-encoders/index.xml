@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Auto-Encoders on Qianqian Shan</title>
+    <title>Auto Encoders on Qianqian Shan</title>
     <link>https://qianqianshan.github.io/tags/auto-encoders/</link>
-    <description>Recent content in Auto-Encoders on Qianqian Shan</description>
+    <description>Recent content in Auto Encoders on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
     <lastBuildDate>Mon, 10 Jun 2019 00:00:00 +0000</lastBuildDate>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Language on Qianqian Shan</title>
@@ -17,27 +17,27 @@
       <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/htmlbasics/</guid>
-      <description>Table of contents   Introduction
-  Basics
-  Elements
-  Attributes
-  Headings
-  Paragraph
-  Styles
-  Text Formatting
-  Quotation
-  Comments
-  Text Formatting
-  Colors
-  Styling HTML with CSS
-  Links
-  Images
-  Tables
-  Iframes
-  Javascript
-  Filepaths
-  Head
-  Introduction The notes were taken based on the tutorial from https://www.</description>
+      <description>Table of contents  Introduction
+ Basics
+ Elements
+ Attributes
+ Headings
+ Paragraph
+ Styles
+ Text Formatting
+ Quotation
+ Comments
+ Text Formatting
+ Colors
+ Styling HTML with CSS
+ Links
+ Images
+ Tables
+ Iframes
+ Javascript
+ Filepaths
+ Head
+  Introduction The notes were taken based on the tutorial from https://www.w3schools.com/html/default.asp, and the notes could be used for a quick lookup about the usage of the HTML commands.</description>
     </item>
     
     <item>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System Design on Qianqian Shan</title>
@@ -6,38 +6,24 @@
     <description>Recent content in System Design on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/categories/system-design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>DDIA - Data Models and Query Languages</title>
-      <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</guid>
-      <description>Overview
-  Relational Model vs Document Model
-  Query Languages for Data 
-  Graph-like Data Models
-  Summary
-  1 Overview Data models are probably the most important part of devloping software for their profound effect on not only how the software is written, but also on how we thinkg about the problem that we are solving. Each layer of the applications is built by one data model on top of another, and each layer hides the complexity of the layers below it by providing a clean data model (abstraction), which allows different groups of people to work together effectively.</description>
-    </item>
-    
-    <item>
       <title>DDIA - Reliable Scalable and Maintainable Applications</title>
       <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</guid>
       <description>Overview
-  Reliability
+ Reliability
 2.1 Hardware Faults
 2.2 Software Errors
 2.3 Human Errors
-  Scalability
-  Maintainability
+ Scalability
+ Maintainability
   1 Overview With more applications are data-intensive (in terms of the amount of data, complexity of data, and the speed at which the data is changing), it is important to figure out which tools and which approaches are the most appropriate for the tasks, and it can be hard to combine tools when a single tool alone is not enough.</description>
     </item>
     

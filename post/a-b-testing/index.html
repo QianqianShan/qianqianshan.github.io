@@ -87,414 +87,360 @@
 </div>
 
       <div class="post-body" itemprop="articleBody">
-        <h1 id="table-of-contents">Table of contents</h1>
+        
+
+<h1 id="table-of-contents">Table of contents</h1>
+
 <ol>
-<li>
-<p><a href="#overview">Overview</a></p>
-</li>
-<li>
-<p><a href="#policy-and-ethics-for-experiments">Policy and Ethics for Experiments</a></p>
-</li>
-<li>
-<p><a href="#choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</a></p>
-</li>
-<li>
-<p><a href="#designing-of-experiment">Designing of Experiment</a></p>
-</li>
-<li>
-<p><a href="#analyzing-results">Analyzing Results</a></p>
-</li>
-<li>
-<p><a href="#resources">Resources</a></p>
-</li>
+<li><p><a href="#overview">Overview</a></p></li>
+
+<li><p><a href="#policy-and-ethics-for-experiments">Policy and Ethics for Experiments</a></p></li>
+
+<li><p><a href="#choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</a></p></li>
+
+<li><p><a href="#designing-of-experiment">Designing of Experiment</a></p></li>
+
+<li><p><a href="#analyzing-results">Analyzing Results</a></p></li>
+
+<li><p><a href="#resources">Resources</a></p></li>
 </ol>
+
 <h2 id="overview">Overview</h2>
+
 <ul>
-<li>
-<p>Choose a metric</p>
-</li>
-<li>
-<p>Review statistics</p>
-</li>
-<li>
-<p>Design</p>
-</li>
-<li>
-<p>Analyze</p>
-</li>
+<li><p>Choose a metric</p></li>
+
+<li><p>Review statistics</p></li>
+
+<li><p>Design</p></li>
+
+<li><p>Analyze</p></li>
 </ul>
-<h4 id="0---definition-of-ab-testing">0 - Definition of A/B testing</h4>
+
+<h4 id="0-definition-of-a-b-testing">0 - Definition of A/B testing</h4>
+
 <p>A general methodology used online when you want to test a new product or a feature using control/experiment sets of users.</p>
-<h4 id="1---ab-testing-can-do">1 - A/B testing can do</h4>
+
+<h4 id="1-a-b-testing-can-do">1 - A/B testing can do</h4>
+
 <p>A/B testing can do a wide variety of things such as</p>
+
 <ul>
-<li>
-<p>new features;</p>
-</li>
-<li>
-<p>additions to UI;</p>
-</li>
-<li>
-<p>different look of website;</p>
-</li>
-<li>
-<p><em>ranking changes</em>;</p>
-</li>
-<li>
-<p>change backend loading time;</p>
-</li>
-<li>
-<p>test layout of initial page.</p>
-</li>
+<li><p>new features;</p></li>
+
+<li><p>additions to UI;</p></li>
+
+<li><p>different look of website;</p></li>
+
+<li><p><em>ranking changes</em>;</p></li>
+
+<li><p>change backend loading time;</p></li>
+
+<li><p>test layout of initial page.</p></li>
 </ul>
-<h4 id="2---ab-testing-cannot-do">2 - A/B testing cannot do</h4>
+
+<h4 id="2-a-b-testing-cannot-do">2 - A/B testing cannot do</h4>
+
 <ul>
-<li>
-<p>new experience (change aversion and novelty effects). Two issues of new experience testing: 1). what is the baseline for comparison? 2). How much is needed for users to get adapted to the new experience (plateaued experience);</p>
-</li>
-<li>
-<p>A/B testing cannot tell you if you&rsquo;re missing something;</p>
-</li>
-<li>
-<p>will a change increase repeat customers or referrals for cars selling website/apartment rental website? It takes too long and don&rsquo;t have data.</p>
-</li>
+<li><p>new experience (change aversion and novelty effects). Two issues of new experience testing: 1). what is the baseline for comparison? 2). How much is needed for users to get adapted to the new experience (plateaued experience);</p></li>
+
+<li><p>A/B testing cannot tell you if you&rsquo;re missing something;</p></li>
+
+<li><p>will a change increase repeat customers or referrals for cars selling website/apartment rental website? It takes too long and don&rsquo;t have data.</p></li>
 </ul>
-<h4 id="3---other-complimentary-techniques-to-ab-testing">3 - Other complimentary techniques to A/B testing</h4>
+
+<h4 id="3-other-complimentary-techniques-to-a-b-testing">3 - Other complimentary techniques to A/B testing</h4>
+
 <ul>
-<li>
-<p><em>Logs</em> of user behaviors can be used retrospectively or observationally if hypothesis testing can be developed on what&rsquo;s causing changes in user behavior.</p>
-</li>
-<li>
-<p><em>User experience research</em>, <em>focus groups</em>, <em>surveys</em>, <em>human evaluation</em> and so on could give deep and qualitative data.</p>
-</li>
+<li><p><em>Logs</em> of user behaviors can be used retrospectively or observationally if hypothesis testing can be developed on what&rsquo;s causing changes in user behavior.</p></li>
+
+<li><p><em>User experience research</em>, <em>focus groups</em>, <em>surveys</em>, <em>human evaluation</em> and so on could give deep and qualitative data.</p></li>
 </ul>
-<h4 id="4---history-of-ab-testing">4 - History of A/B testing</h4>
+
+<h4 id="4-history-of-a-b-testing">4 - History of A/B testing</h4>
+
 <ul>
-<li>
-<p>came from field such as agriculture: divide fields into several sections for experiment.</p>
-</li>
-<li>
-<p>clinical trials in medicine to test.</p>
-</li>
-<li>
-<p>What&rsquo;s different for online A/B testing: more data, lower resolution. The goal is to design an experiment that is robust and reproducible results.</p>
-</li>
-<li>
-<p>online A/B testings usually have more data with lower resolution.</p>
-</li>
+<li><p>came from field such as agriculture: divide fields into several sections for experiment.</p></li>
+
+<li><p>clinical trials in medicine to test.</p></li>
+
+<li><p>What&rsquo;s different for online A/B testing: more data, lower resolution. The goal is to design an experiment that is robust and reproducible results.</p></li>
+
+<li><p>online A/B testings usually have more data with lower resolution.</p></li>
 </ul>
-<h4 id="5---a-business-example">5 - A business example</h4>
+
+<h4 id="5-a-business-example">5 - A business example</h4>
+
 <ul>
-<li>
-<p>A typical user flow (customer funnel): Homepage visits &ndash;&gt; Explore the site &ndash;&gt; Create account &ndash;&gt; Completes.</p>
-</li>
-<li>
-<p>A simple experiment: change the color of a button of an online course website &ldquo;Audacity&rdquo;. Hypothesis: will changing the button color from orange to pink increase number of users to explore the courses of the website?</p>
-</li>
-<li>
-<p><strong>Metric</strong></p>
+<li><p>A typical user flow (customer funnel): Homepage visits &ndash;&gt; Explore the site &ndash;&gt; Create account &ndash;&gt; Completes.</p></li>
+
+<li><p>A simple experiment: change the color of a button of an online course website &ldquo;Audacity&rdquo;. Hypothesis: will changing the button color from orange to pink increase number of users to explore the courses of the website?</p></li>
+
+<li><p><strong>Metric</strong></p>
+
 <ul>
-<li>
-<p>Click through rate (CTR): (# number of clicks) / (# of pageviews), we want to use rate when usability of the site.</p>
-</li>
-<li>
-<p>Click through probability: (# unique visitors who click) / (# unique visitors to page). (We are interested in whether people are interested in progressing to the second level by clicking the button, so a probability instead of a rate is more proper.). We want to use a probability when measuring the total impact.</p>
-</li>
+<li><p>Click through rate (CTR): (# number of clicks) / (# of pageviews), we want to use rate when usability of the site.</p></li>
+
+<li><p>Click through probability: (# unique visitors who click) / (# unique visitors to page). (We are interested in whether people are interested in progressing to the second level by clicking the button, so a probability instead of a rate is more proper.). We want to use a probability when measuring the total impact.</p></li>
+</ul></li>
+
+<li><p><strong>Review statistics</strong></p>
+
+<ul>
+<li>We expect the clickthrough probability follows <em>binomial</em> distribution. Instead of using total number of success (clicks) as the random variable, we use the proportion.
+<br /></li>
+</ul></li>
 </ul>
-</li>
-<li>
-<p><strong>Review statistics</strong></p>
-<ul>
-<li>We expect the clickthrough probability follows <em>binomial</em> distribution. Instead of using total number of success (clicks) as the random variable, we use the proportion.</li>
-</ul>
+
 <p>Binomial distributions have assumptions 1). exactly 2 types of outcomes (success or failure) 2). independent events 3). identical distribution (probability p is the same for all).</p>
+
 <ul>
-<li>Use the standard error from the binomial distribution to estimate how variable we expect the overall probability of a clickthrough to be (If X follows B(n, p) and if n is large and/or p is close to 0.5, then X is approximately N(np, npq)). Construct, for example, a 95% confidence interval (if repeat the experiment multiple times, we would expect the intervals we construct around the sample mean to cover the true value 95% of the time).</li>
-</ul>
-</li>
-<li>
-<p>Choice of two- / one- tailed tests depends on what action you will take based on the results. If you&rsquo;re going to launch the experiment for a statistically significant positive change, and otherwise not, then you don&rsquo;t need to distinguish between a negative result and no result, so a one-tailed test is good enough. If you want to learn the direction of the difference, then a two-tailed test is necessary.</p>
-</li>
-<li>
-<p><strong>Analyze results</strong></p>
+<li><p>Use the standard error from the binomial distribution to estimate how variable we expect the overall probability of a clickthrough to be (If X follows B(n, p) and if n is large and/or p is close to 0.5, then X is approximately N(np, npq)). Construct, for example, a 95% confidence interval (if repeat the experiment multiple times, we would expect the intervals we construct around the sample mean to cover the true value 95% of the time).</p></li>
+
+<li><p>Choice of two- / one- tailed tests depends on what action you will take based on the results. If you&rsquo;re going to launch the experiment for a statistically significant positive change, and otherwise not, then you don&rsquo;t need to distinguish between a negative result and no result, so a one-tailed test is good enough. If you want to learn the direction of the difference, then a two-tailed test is necessary.</p></li>
+
+<li><p><strong>Analyze results</strong></p>
+
 <ul>
-<li>
-<p>Hypothesis testing or inference tests how likely your results are due to chance. Null hypothesis could be there is no difference in clickthrough rate: $H_0:\hat{d}=\hat{p}_e-\hat{p}_c$. Alternative hypothesis could be one is higher/lower/different than the other.</p>
-</li>
-<li>
-<p><em>Pooled standard error</em> can be used to give a good comparison of both. Suppose $x_c$ and $x_e$ are number users who click for control and experiment groups, respectively. $N_c$ and $N_e$ are the corresponding totalnumber of users. The pooled probability is then, $\hat{p}=\frac{x_c+x_e}{N_c+N_e}$ and pooled standard error of $\hat{d}$ is $$s_p=\sqrt{\hat{p}\cdot(1-\hat{p})\cdot(\frac{1}{N_c}+\frac{1}{N_e})}.$$</p>
-</li>
-<li>
-<p>$\hat{d}\sim N(0, s_p)$, if $|\hat{d}| &gt; 1.96 \cdot s_p$, reject $H_0$.</p>
-</li>
-<li>
-<p>From a business perspective, what change in the clickthrough probability it <em>practically significant</em> (substantive). Whether it&rsquo;s practically significant or not depends on the specific situations, for example, the amount of investment needed for the change.</p>
-</li>
-<li>
-<p>When the difference doesn&rsquo;t satisfy standards to be both statistically and practically significant, one could do additional tests to have more confidence to draw a conclusion. However, when there is no enough time to do so, one could communicate with decision makers, others factors such as strategic business issues could be useful as well.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Design experiment</strong></p>
+<li><p>Hypothesis testing or inference tests how likely your results are due to chance. Null hypothesis could be there is no difference in clickthrough rate: $H_0:\hat{d}=\hat{p}_e-\hat{p}_c$. Alternative hypothesis could be one is higher/lower/different than the other.</p></li>
+
+<li><p><em>Pooled standard error</em> can be used to give a good comparison of both. Suppose $x_c$ and $x_e$ are number users who click for control and experiment groups, respectively. $N_c$ and $N_e$ are the corresponding totalnumber of users. The pooled probability is then, $\hat{p}=\frac{x_c+x_e}{N_c+N_e}$ and pooled standard error of $\hat{d}$ is $$s_p=\sqrt{\hat{p}\cdot(1-\hat{p})\cdot(\frac{1}{N_c}+\frac{1}{N_e})}.$$</p></li>
+
+<li><p>$\hat{d}\sim N(0, s_p)$, if $|\hat{d}| &gt; 1.96 \cdot s_p$, reject $H_0$.</p></li>
+
+<li><p>From a business perspective, what change in the clickthrough probability it <em>practically significant</em> (substantive). Whether it&rsquo;s practically significant or not depends on the specific situations, for example, the amount of investment needed for the change.</p></li>
+
+<li><p>When the difference doesn&rsquo;t satisfy standards to be both statistically and practically significant, one could do additional tests to have more confidence to draw a conclusion. However, when there is no enough time to do so, one could communicate with decision makers, others factors such as strategic business issues could be useful as well.</p></li>
+</ul></li>
+
+<li><p><strong>Design experiment</strong></p>
+
 <ul>
-<li>
-<p>The smaller the change that to be detected, the higher confidence interval level to the change, the larger the experiment needed.</p>
-</li>
-<li>
-<p>$$\alpha=p(reject , H_0|H_0 ,is, true)$$ $$\beta=p(fail,to,reject,H_0|H_1,is,true)$$
-$1-\beta$ is the statistical power. <em>Bigger sample size could increase $ 1- \beta$ (power) while without increasing $\alpha$</em>.</p>
-</li>
+<li><p>The smaller the change that to be detected, the higher confidence interval level to the change, the larger the experiment needed.</p></li>
+
+<li><p>$$\alpha=p(reject \, H_0|H_0 \,is\, true)$$ $$\beta=p(fail\,to\,reject\,H_0|H_1\,is\,true)$$
+$1-\beta$ is the statistical power. <em>Bigger sample size could increase $ 1- \beta$ (power) while without increasing $\alpha$</em>.</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h2 id="policy-and-ethics-for-experiments">Policy and Ethics for Experiments</h2>
+
 <p>This lesson introduces the principals and quesions that you should think about when designing, running and analyzing experiment.</p>
+
 <h4 id="main-principals">Main principals</h4>
+
 <ul>
-<li>
-<p>Risk: what risk is the participant undertaking?</p>
-</li>
-<li>
-<p>Benefits: what benefits might result from the study?</p>
-</li>
-<li>
-<p>Alternatives: what other choices do participants have?</p>
-</li>
-<li>
-<p>Data sensitivity: what dat is being collected, and what is the expectation of privacy and confidentiality?</p>
-</li>
+<li><p>Risk: what risk is the participant undertaking?</p></li>
+
+<li><p>Benefits: what benefits might result from the study?</p></li>
+
+<li><p>Alternatives: what other choices do participants have?</p></li>
+
+<li><p>Data sensitivity: what dat is being collected, and what is the expectation of privacy and confidentiality?</p></li>
 </ul>
+
 <h2 id="choosing-and-characterizing-metrics">Choosing and Characterizing Metrics</h2>
+
 <h3 id="define-metrics">Define <strong>metrics</strong></h3>
+
 <ul>
-<li>
-<p>Think about what you are going to use this metric for before how you decide how to define.</p>
-</li>
-<li>
-<p>Different types of metrics, for example, metric can be used for <em>invariant checking</em>, <em>evaluation</em>, for different purposes.</p>
-</li>
-<li>
-<p>One can create a composite metric when there are mulitple metrics (an objective function or an OEC (objective evaluation criterion), a weighted function to combined all different metrics). Or work on individual metric separately for more details on how the metrics moves under different situations.</p>
-</li>
-<li>
-<p>Examples of choosing metric for tests of the Audacity website, 1). probability of progressing from course list to course page for effects of updating a description on course list page; 2). click-through-<em>rate</em> for increasing <em>size</em> of a button to test the easiness to find the button.</p>
-</li>
-<li>
-<p>Other metrics may include mean, median, quantiles &hellip;</p>
-</li>
-<li>
-<p>Difficulty in metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p>
-</li>
+<li><p>Think about what you are going to use this metric for before how you decide how to define.</p></li>
+
+<li><p>Different types of metrics, for example, metric can be used for <em>invariant checking</em>, <em>evaluation</em>, for different purposes.</p></li>
+
+<li><p>One can create a composite metric when there are mulitple metrics (an objective function or an OEC (objective evaluation criterion), a weighted function to combined all different metrics). Or work on individual metric separately for more details on how the metrics moves under different situations.</p></li>
+
+<li><p>Examples of choosing metric for tests of the Audacity website, 1). probability of progressing from course list to course page for effects of updating a description on course list page; 2). click-through-<em>rate</em> for increasing <em>size</em> of a button to test the easiness to find the button.</p></li>
+
+<li><p>Other metrics may include mean, median, quantiles &hellip;</p></li>
+
+<li><p>Difficulty in metrics: 1). don&rsquo;t have access to data; 2). take too long to collect data.</p></li>
 </ul>
+
 <h4 id="other-techniques">Other techniques</h4>
+
 <ul>
 <li>Surveys, retrospective analysis, focus groups, user experience research &hellip; See <a href="https://s3-us-west-2.amazonaws.com/gae-supplemental-media/additional-techniquespdf/additional_techniques.pdf">instructor&rsquo;s notes</a> for more details.</li>
 </ul>
+
 <h4 id="build-intuition-of-metrics">Build intuition of metrics</h4>
+
 <ul>
-<li>
-<p>1). Define what data to be used to compute the metric. Need to filter data to remove robots/scams? (checking trends over time / country/ year of year difference and so on can help to identify if the trends are normal or not) 2) How to summarize the metric? average? median?&hellip;</p>
-</li>
-<li>
-<p>De-bias the data by filtering external (malicious, fraudulent visits &hellip;) and internal (change only affect the traffic of a subset of users, for example, change may only apply to english versions of website) reasons.</p>
-</li>
-<li>
-<p>Make sure that don&rsquo;t introduce bias when filtering. For example, if a metric only uses data from logged-in users, there may be a bias as there may be new users who haven&rsquo;t created an account.</p>
-</li>
-<li>
-<p><strong>Slice the data</strong> (for example, by country, language, week &hellip;) to examine that if the data are biased or not. Build the intuition of what changes to expect.</p>
-</li>
+<li><p>1). Define what data to be used to compute the metric. Need to filter data to remove robots/scams? (checking trends over time / country/ year of year difference and so on can help to identify if the trends are normal or not) 2) How to summarize the metric? average? median?&hellip;</p></li>
+
+<li><p>De-bias the data by filtering external (malicious, fraudulent visits &hellip;) and internal (change only affect the traffic of a subset of users, for example, change may only apply to english versions of website) reasons.</p></li>
+
+<li><p>Make sure that don&rsquo;t introduce bias when filtering. For example, if a metric only uses data from logged-in users, there may be a bias as there may be new users who haven&rsquo;t created an account.</p></li>
+
+<li><p><strong>Slice the data</strong> (for example, by country, language, week &hellip;) to examine that if the data are biased or not. Build the intuition of what changes to expect.</p></li>
 </ul>
+
 <h4 id="characterize">Characterize</h4>
+
 <ul>
-<li>
-<p>Summary metrics (summary of direct measurements such as number of clicks/pageviews)</p>
+<li><p>Summary metrics (summary of direct measurements such as number of clicks/pageviews)</p>
+
 <ul>
-<li>
-<p>Sums and counts (e.g., number of users who visited pages.)</p>
-</li>
-<li>
-<p>Means, medians and percentiles (e.g., mean of age of users who completed a course, median latency of pageload)</p>
-</li>
-<li>
-<p>Probabilities and rates</p>
-</li>
-<li>
-<p>Ratio (can be any number) (e.g., ratio of revnue from clicks to number of all clicks)</p>
-</li>
+<li><p>Sums and counts (e.g., number of users who visited pages.)</p></li>
+
+<li><p>Means, medians and percentiles (e.g., mean of age of users who completed a course, median latency of pageload)</p></li>
+
+<li><p>Probabilities and rates</p></li>
+
+<li><p>Ratio (can be any number) (e.g., ratio of revnue from clicks to number of all clicks)</p></li>
+</ul></li>
+
+<li><p>Sensitivity and robustness of metrics</p></li>
 </ul>
-</li>
-<li>
-<p>Sensitivity and robustness of metrics</p>
-</li>
-</ul>
+
 <p>We want the metric to be sensitive enough to detect the changes, while also be robust.</p>
+
 <ul>
-<li>
-<p>Run experiments or use experiments that you already have to test for the sensitivity and robustness, use A/A test to see if it&rsquo;s too sensitive, look back past experiments that were run earlier.</p>
-</li>
-<li>
-<p>Retrospective analysis when no experiments can be run. For example, when choosing a metric for latency of videos, de-segment the data into different categories (check distribution of latency of each video), analyze and compare different metrics.</p>
-</li>
-<li>
-<p><strong>Variability</strong>: to obtain a confidence interval, one needs 1) variance/standard deviation and 2) a distribution.  Analytical results for confidence interval may be easier to be found for some metrics such as mean, probability, counts, however, for metrics such as median, ratio, their distribution and variance could be more complicated to compute, one needs to look at the underlying data to decide a further step.</p>
-</li>
-<li>
-<p>Non-parametric methods don&rsquo;t specify assumptions on the distributions and can also be useful. For example, <strong>sign test</strong>, the test can help to see how likely the change in metric will occur but cannot tell the size of the effect.</p>
-</li>
-<li>
-<p>Empirical variability can be an option when the distribution is complicated. A/A tests across the board could be used to estimated the empirical variability of the metircs.  Another option is to run a bigger A/A test and use bootstrap when it&rsquo;s not easy to run a lot tests.</p>
-</li>
-<li>
-<p>A/A test can do: 1) Compare results to what you expect (sanity check); 2) Estimate variance and calculate confidence intervals (with an assumed distribution of the metic); 3) Directly estimate empirical confidence interval without assuming a distribution of the metric (run multiple tests and take percentiles of the metric values).</p>
-</li>
+<li><p>Run experiments or use experiments that you already have to test for the sensitivity and robustness, use A/A test to see if it&rsquo;s too sensitive, look back past experiments that were run earlier.</p></li>
+
+<li><p>Retrospective analysis when no experiments can be run. For example, when choosing a metric for latency of videos, de-segment the data into different categories (check distribution of latency of each video), analyze and compare different metrics.</p></li>
+
+<li><p><strong>Variability</strong>: to obtain a confidence interval, one needs 1) variance/standard deviation and 2) a distribution.  Analytical results for confidence interval may be easier to be found for some metrics such as mean, probability, counts, however, for metrics such as median, ratio, their distribution and variance could be more complicated to compute, one needs to look at the underlying data to decide a further step.</p></li>
+
+<li><p>Non-parametric methods don&rsquo;t specify assumptions on the distributions and can also be useful. For example, <strong>sign test</strong>, the test can help to see how likely the change in metric will occur but cannot tell the size of the effect.</p></li>
+
+<li><p>Empirical variability can be an option when the distribution is complicated. A/A tests across the board could be used to estimated the empirical variability of the metircs.  Another option is to run a bigger A/A test and use bootstrap when it&rsquo;s not easy to run a lot tests.</p></li>
+
+<li><p>A/A test can do: 1) Compare results to what you expect (sanity check); 2) Estimate variance and calculate confidence intervals (with an assumed distribution of the metic); 3) Directly estimate empirical confidence interval without assuming a distribution of the metric (run multiple tests and take percentiles of the metric values).</p></li>
 </ul>
+
 <h2 id="designing-of-experiment">Designing of Experiment</h2>
+
 <h4 id="choose-subject">Choose &ldquo;subject&rdquo;</h4>
+
 <ul>
 <li>How to assign events to either the control or experiment group. Randomly assign? not suitable for user visible changes as one user may see the change randomly while reloading the page. User ID? one user may have multiple ID. Cookie? Cookie will be different for multiple devices of one user.</li>
 </ul>
+
 <p>Commonly used unit of diversion:</p>
+
 <p>1- User ID: stable, unchanging, personally identifiably.</p>
+
 <p>2- Anonymous ID (cookie): changes when you switch browers or device, users can clear cookies.</p>
+
 <p>3-  Event: users may not have consistent experience, better used for non-user-visible changes.</p>
+
 <p>Less commonly used unit of diversion:</p>
+
 <p>4-  Device ID: only available for mobile, tied to specific device, unchanged by user, personally identifiable.</p>
+
 <p>5- IP address: changes when location changes.</p>
+
 <ul>
-<li>
-<p>Consistency of diversion: for user visible changes, a cookie or user ID can ensure that a user to have consitent experience and is better when a learning effect of the change of users is of interest. It&rsquo;s probably ok to use event based unit of checking the rankings of the search results, loading time when learning effect is not a concern.</p>
-</li>
-<li>
-<p>Ethical consideration of diversion: informed consent, security and confidentiality questions.</p>
-</li>
-<li>
-<p>Variability: unit of analysis (the donominator of the metric if applicable) could be different with unit of diversion. The empirical variability of the metric may then not be consistent with the analytical variance if the unit of analysis is different with unit of diversion.</p>
-</li>
+<li><p>Consistency of diversion: for user visible changes, a cookie or user ID can ensure that a user to have consitent experience and is better when a learning effect of the change of users is of interest. It&rsquo;s probably ok to use event based unit of checking the rankings of the search results, loading time when learning effect is not a concern.</p></li>
+
+<li><p>Ethical consideration of diversion: informed consent, security and confidentiality questions.</p></li>
+
+<li><p>Variability: unit of analysis (the donominator of the metric if applicable) could be different with unit of diversion. The empirical variability of the metric may then not be consistent with the analytical variance if the unit of analysis is different with unit of diversion.</p></li>
 </ul>
+
 <h4 id="choose-population">Choose &ldquo;population&rdquo;</h4>
+
 <ul>
-<li>
-<p>Inter- and intra-user experiments: A/B testing is mainly using inter-user experiments (i.e., different people on the A and B side). Intra-user experiments will use the same group of people for both A and B side. For example, to test the reordering of a list, interleaved ranking experiment can be an option. See more details at <a href="http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf">http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf</a>.</p>
-</li>
-<li>
-<p>Target population: only run the experiment on the affected traffic. Possible factors include browers, languages, geo location&hellip;</p>
-</li>
-<li>
-<p>Cohort: users who enter the experiment around the same time within a population. Cohort is harder to analyze as it needs more data with losing users. Cohort is useful when you&rsquo;re looking for <em>user stability</em> (learning effects, user retention, increased user activity or anything that requires users to be established). Cohort can also affect the variability of the metric.</p>
-</li>
+<li><p>Inter- and intra-user experiments: A/B testing is mainly using inter-user experiments (i.e., different people on the A and B side). Intra-user experiments will use the same group of people for both A and B side. For example, to test the reordering of a list, interleaved ranking experiment can be an option. See more details at <a href="http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf">http://www.cs.cornell.edu/people/tj/publications/chapelle_etal_12a.pdf</a>.</p></li>
+
+<li><p>Target population: only run the experiment on the affected traffic. Possible factors include browers, languages, geo location&hellip;</p></li>
+
+<li><p>Cohort: users who enter the experiment around the same time within a population. Cohort is harder to analyze as it needs more data with losing users. Cohort is useful when you&rsquo;re looking for <em>user stability</em> (learning effects, user retention, increased user activity or anything that requires users to be established). Cohort can also affect the variability of the metric.</p></li>
 </ul>
+
 <h4 id="size">Size</h4>
+
 <ul>
 <li>The choice of size depends on $\alpha$, $\beta$, practical significance level, unit of diversion, target population&hellip; See <a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2016/December/5845e980_empirical-sizing/empirical-sizing.r">here</a> for the sample code on how to compute the desired size.</li>
 </ul>
+
 <h4 id="duration-and-exposure">Duration and Exposure</h4>
+
 <ul>
-<li>
-<p>Translate idea population size to practical decisions. What&rsquo;s the duration and when to run the experiment?</p>
-</li>
-<li>
-<p>There may be weekly/monthly variation in traffic and metric, one may run a mix of weekdays and weekends. For a risky change (for example, changes may have bugs), one may run longer in a smaller population proportion/ less percentage of daily traffic.</p>
-</li>
-<li>
-<p>Learning effect: whether a user is adapting to a change or not. The key measure is time, a stateful unit of diversion (eg. cookie or user ID), dosage (how often a user will see this change.</p>
-</li>
+<li><p>Translate idea population size to practical decisions. What&rsquo;s the duration and when to run the experiment?</p></li>
+
+<li><p>There may be weekly/monthly variation in traffic and metric, one may run a mix of weekdays and weekends. For a risky change (for example, changes may have bugs), one may run longer in a smaller population proportion/ less percentage of daily traffic.</p></li>
+
+<li><p>Learning effect: whether a user is adapting to a change or not. The key measure is time, a stateful unit of diversion (eg. cookie or user ID), dosage (how often a user will see this change.</p></li>
 </ul>
+
 <h2 id="analyzing-results">Analyzing Results</h2>
+
 <p>Running A/B tests is an iterative process.</p>
+
 <h4 id="sanity-checks">Sanity checks</h4>
+
 <ul>
-<li>
-<p>Check population sizing metrics based on unit of diversion. For example, if the experiment and control populations are actually comparable, the number of users, cookies, events in the two groups are comparable.</p>
-</li>
-<li>
-<p>Check actual invariant metrics that you don&rsquo;t expect a change when you run your experiment and make sure that they don&rsquo;t change.</p>
-</li>
-<li>
-<p>How to figure out whether this difference is within expectations?  &ldquo;Each invariant metrics(eg., cookies, users, # of events) is <strong>randomly</strong> assigned to control/experiment group with probability 0.5. &mdash;&gt; Compute confidence interval of probability around 0.5, use the standard deviation $sd = \sqrt{(0.5 \cdot 0.5)/N_{total}}$. &mdash;&gt; Check the observed fraction of two groups is within the interval or not.&rdquo;</p>
-</li>
-<li>
-<p>Make sure the you pass the sanity check before proceeding. (Debug, retrospective analysis, check pre- and post-period of experiments). Common reasons of failed sanity check include data capture, experiment set-up, infrastructure and so on.</p>
-</li>
+<li><p>Check population sizing metrics based on unit of diversion. For example, if the experiment and control populations are actually comparable, the number of users, cookies, events in the two groups are comparable.</p></li>
+
+<li><p>Check actual invariant metrics that you don&rsquo;t expect a change when you run your experiment and make sure that they don&rsquo;t change.</p></li>
+
+<li><p>How to figure out whether this difference is within expectations?  &ldquo;Each invariant metrics(eg., cookies, users, # of events) is <strong>randomly</strong> assigned to control/experiment group with probability 0.5. &mdash;&gt; Compute confidence interval of probability around 0.5, use the standard deviation $sd = \sqrt{(0.5 \cdot 0.5)/N_{total}}$. &mdash;&gt; Check the observed fraction of two groups is within the interval or not.&rdquo;</p></li>
+
+<li><p>Make sure the you pass the sanity check before proceeding. (Debug, retrospective analysis, check pre- and post-period of experiments). Common reasons of failed sanity check include data capture, experiment set-up, infrastructure and so on.</p></li>
 </ul>
+
 <h4 id="single-metric">Single metric</h4>
+
 <ul>
-<li>
-<p>Goal: make a business decision on whether your experiment has favorably impacted your metrics (if there is a statistically significant of the result).</p>
-</li>
-<li>
-<p>Analyze the results in more details to make sure that the differences between control and experiment groups are significant (statistical significant, practical significant, significant on sign test for sliced data).</p>
-</li>
-<li>
-<p>Simpson&rsquo;s paradox: a phenomenon in probability and statistics, in which a trend appears in several different groups of data but disappears or reverses when these groups are combined. (<a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Wiki</a>). In this case, we should dig deeper to analyze the reason first(experiment set-up, different changes in different subgroups&hellip;)</p>
-</li>
+<li><p>Goal: make a business decision on whether your experiment has favorably impacted your metrics (if there is a statistically significant of the result).</p></li>
+
+<li><p>Analyze the results in more details to make sure that the differences between control and experiment groups are significant (statistical significant, practical significant, significant on sign test for sliced data).</p></li>
+
+<li><p>Simpson&rsquo;s paradox: a phenomenon in probability and statistics, in which a trend appears in several different groups of data but disappears or reverses when these groups are combined. (<a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Wiki</a>). In this case, we should dig deeper to analyze the reason first(experiment set-up, different changes in different subgroups&hellip;)</p></li>
 </ul>
+
 <h4 id="multiple-metrics">Multiple metrics</h4>
+
 <p>The more tests you do at the same time, the more likely you are to see significant difference by chance.</p>
+
 <ul>
-<li>
-<p>The significance shouldn&rsquo;t be repeatable if it happens by chance. Repeat the experiment/boostrap analysis/do experiment on slices will reveal more information on if it&rsquo;s happening by chance.</p>
-</li>
-<li>
-<p>Multiple comparisons adjust significant levels to accout for how many metrics/different tests involved. See <a href="https://en.wikipedia.org/wiki/Multiple_comparisons_problem">https://en.wikipedia.org/wiki/Multiple_comparisons_problem</a> for more details.</p>
-</li>
-<li>
-<p>Solutions to avoid false positive:</p>
-</li>
-<li>
-<ol>
-<li>use higher confidence interval for each metric $\alpha_{total} = 1 - (1-\alpha)^n$ (assume tests are independent).</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>Use Bonferroni correction, $\alpha = \alpha_{total}/n$ (simple and no assumptions, but sometimes too conservative due to possible correlations among tests/metrics).</li>
-</ol>
-</li>
-<li>
-<ol start="3">
-<li>In practice, it may come down to judegement call, possible based on business strategy.</li>
-</ol>
-</li>
-<li>
-<ol start="4">
-<li>Control familywise error rate (FWER) $\alpha_{overall}$, the probability that **any** metric shows a false positive.</li>
-</ol>
-</li>
-<li>
-<ol start="5">
-<li>Control false discovery rate (FDR), $E[\frac{no. ,false ,positive}{no. ,rejections}]$. It only makes sense when having a huge number of metrics.</li>
-</ol>
-</li>
-<li>
-<p>More information can be found <a href="https://en.wikipedia.org/wiki/Closed_testing_procedure">https://en.wikipedia.org/wiki/Closed_testing_procedure</a>, <a href="https://en.wikipedia.org/wiki/Boole%27s_inequality">https://en.wikipedia.org/wiki/Boole%27s_inequality</a>, <a href="https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method">https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method</a> and <a href="https://en.wikipedia.org/wiki/False_discovery_rate">https://en.wikipedia.org/wiki/False_discovery_rate</a>.</p>
-</li>
-<li>
-<p>Draw a conclusion from analyzing the results. Questions to ask: do you understand the change? do you want to launch the change?</p>
-</li>
+<li><p>The significance shouldn&rsquo;t be repeatable if it happens by chance. Repeat the experiment/boostrap analysis/do experiment on slices will reveal more information on if it&rsquo;s happening by chance.</p></li>
+
+<li><p>Multiple comparisons adjust significant levels to accout for how many metrics/different tests involved. See <a href="https://en.wikipedia.org/wiki/Multiple_comparisons_problem">https://en.wikipedia.org/wiki/Multiple_comparisons_problem</a> for more details.</p></li>
+
+<li><p>Solutions to avoid false positive:</p></li>
+
+<li><p>1) use higher confidence interval for each metric $\alpha_{total} = 1 - (1-\alpha)^n$ (assume tests are independent).</p></li>
+
+<li><p>2) Use Bonferroni correction, $\alpha = \alpha_{total}/n$ (simple and no assumptions, but sometimes too conservative due to possible correlations among tests/metrics).</p></li>
+
+<li><p>3) In practice, it may come down to judegement call, possible based on business strategy.</p></li>
+
+<li><p>4) Control familywise error rate (FWER) $\alpha_{overall}$, the probability that <strong>any</strong> metric shows a false positive.</p></li>
+
+<li><p>5) Control false discovery rate (FDR), $E[\frac{no. \,false \,positive}{no. \,rejections}]$. It only makes sense when having a huge number of metrics.</p></li>
+
+<li><p>More information can be found <a href="https://en.wikipedia.org/wiki/Closed_testing_procedure">https://en.wikipedia.org/wiki/Closed_testing_procedure</a>, <a href="https://en.wikipedia.org/wiki/Boole%27s_inequality">https://en.wikipedia.org/wiki/Boole%27s_inequality</a>, <a href="https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method">https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method</a> and <a href="https://en.wikipedia.org/wiki/False_discovery_rate">https://en.wikipedia.org/wiki/False_discovery_rate</a>.</p></li>
+
+<li><p>Draw a conclusion from analyzing the results. Questions to ask: do you understand the change? do you want to launch the change?</p></li>
 </ul>
+
 <h4 id="gotchas-changes-over-time">Gotchas: changes over time</h4>
+
 <ul>
-<li>
-<p>Ramp-up experiment: start with a small percent of population for changes and ramp up.</p>
-</li>
-<li>
-<p>The effect in a smaller percent of population may flatten out as you ramp up the change. For example, seasonal or event-driven impact such as holidays. One strategy is to use a <strong>holdback</strong>: launch the change to everyone except for a small holdback that don&rsquo;t get the changes and continue comparing their behavior to the control.</p>
-</li>
+<li><p>Ramp-up experiment: start with a small percent of population for changes and ramp up.</p></li>
+
+<li><p>The effect in a smaller percent of population may flatten out as you ramp up the change. For example, seasonal or event-driven impact such as holidays. One strategy is to use a <strong>holdback</strong>: launch the change to everyone except for a small holdback that don&rsquo;t get the changes and continue comparing their behavior to the control.</p></li>
 </ul>
+
 <h2 id="resources">Resources</h2>
+
 <ol>
 <li><a href="https://abtestguide.com/calc/">AB test guide</a></li>
 <li><a href="https://www.websiteplanet.com/webtools/abtest-calculator/">AB testing calculator (thanks to Virgy)</a></li>
 </ol>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->Revision history: <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->2021-04-06: Add a/b testing calculator resources at the end <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->2019-08-25: First version <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+<p><sub><sup>Revision history: </sup></sub></p>
+
+<p><sub><sup>2021-04-06: Add a/b testing calculator resources at the end </sup></sub></p>
+
+<p><sub><sup>2019-08-25: First version </sup></sub></p>
 
       </div>
 
-      <meta itemprop="wordCount" content="2621">
+      <meta itemprop="wordCount" content="2626">
       <meta itemprop="datePublished" content="2021-04-06">
       <meta itemprop="url" content="https://qianqianshan.github.io/post/a-b-testing/">
     </article>

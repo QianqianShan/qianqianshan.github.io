@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Qianqian Shan</title>
@@ -6,31 +6,13 @@
     <description>Recent content in Tags on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>DDIA</title>
-      <link>https://qianqianshan.github.io/tags/ddia/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/ddia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>System Design</title>
-      <link>https://qianqianshan.github.io/tags/system-design/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/system-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AB Test</title>
+      <title>Ab Test</title>
       <link>https://qianqianshan.github.io/tags/ab-test/</link>
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
@@ -39,25 +21,16 @@
     </item>
     
     <item>
-      <title>Udacity</title>
-      <link>https://qianqianshan.github.io/tags/udacity/</link>
-      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      <title>Algorithm</title>
+      <link>https://qianqianshan.github.io/tags/algorithm/</link>
+      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/tags/udacity/</guid>
+      <guid>https://qianqianshan.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Online Controlled Experiments</title>
-      <link>https://qianqianshan.github.io/tags/online-controlled-experiments/</link>
-      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/online-controlled-experiments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Auto-Encoders</title>
+      <title>Auto Encoders</title>
       <link>https://qianqianshan.github.io/tags/auto-encoders/</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -75,38 +48,11 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://qianqianshan.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      <title>Css</title>
+      <link>https://qianqianshan.github.io/tags/css/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multi-armed Bandit</title>
-      <link>https://qianqianshan.github.io/tags/multi-armed-bandit/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/multi-armed-bandit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recommender Systems</title>
-      <link>https://qianqianshan.github.io/tags/recommender-systems/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/recommender-systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Restricted Boltzmann Machine</title>
-      <link>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</guid>
+      <guid>https://qianqianshan.github.io/tags/css/</guid>
       <description></description>
     </item>
     
@@ -120,51 +66,6 @@
     </item>
     
     <item>
-      <title>Machine Learning</title>
-      <link>https://qianqianshan.github.io/tags/machine-learning/</link>
-      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Predictive Inference</title>
-      <link>https://qianqianshan.github.io/tags/predictive-inference/</link>
-      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/predictive-inference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistical Learning</title>
-      <link>https://qianqianshan.github.io/tags/statistical-learning/</link>
-      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/statistical-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theory</title>
-      <link>https://qianqianshan.github.io/tags/theory/</link>
-      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/theory/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algorithm</title>
-      <link>https://qianqianshan.github.io/tags/algorithm/</link>
-      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data Structure</title>
       <link>https://qianqianshan.github.io/tags/data-structure/</link>
       <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
@@ -174,56 +75,20 @@
     </item>
     
     <item>
-      <title>Parallel Computing</title>
-      <link>https://qianqianshan.github.io/tags/parallel-computing/</link>
-      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Ddia</title>
+      <link>https://qianqianshan.github.io/tags/ddia/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/tags/parallel-computing/</guid>
+      <guid>https://qianqianshan.github.io/tags/ddia/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Quality</title>
-      <link>https://qianqianshan.github.io/tags/quality/</link>
-      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      <title>Deep Learning</title>
+      <link>https://qianqianshan.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/tags/quality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability</title>
-      <link>https://qianqianshan.github.io/tags/reliability/</link>
-      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/reliability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>https://qianqianshan.github.io/tags/statistics/</link>
-      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS</title>
-      <link>https://qianqianshan.github.io/tags/css/</link>
-      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://qianqianshan.github.io/tags/html/</link>
-      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/html/</guid>
+      <guid>https://qianqianshan.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
@@ -237,29 +102,11 @@
     </item>
     
     <item>
-      <title>Version Control</title>
-      <link>https://qianqianshan.github.io/tags/version-control/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      <title>Html</title>
+      <link>https://qianqianshan.github.io/tags/html/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://qianqianshan.github.io/tags/version-control/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Process Control</title>
-      <link>https://qianqianshan.github.io/tags/process-control/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/process-control/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quality Control</title>
-      <link>https://qianqianshan.github.io/tags/quality-control/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://qianqianshan.github.io/tags/quality-control/</guid>
+      <guid>https://qianqianshan.github.io/tags/html/</guid>
       <description></description>
     </item>
     
@@ -273,11 +120,164 @@
     </item>
     
     <item>
-      <title>SQL</title>
+      <title>Machine Learning</title>
+      <link>https://qianqianshan.github.io/tags/machine-learning/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi Armed Bandit</title>
+      <link>https://qianqianshan.github.io/tags/multi-armed-bandit/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/multi-armed-bandit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Online Controlled Experiments</title>
+      <link>https://qianqianshan.github.io/tags/online-controlled-experiments/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/online-controlled-experiments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parallel Computing</title>
+      <link>https://qianqianshan.github.io/tags/parallel-computing/</link>
+      <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/parallel-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Predictive Inference</title>
+      <link>https://qianqianshan.github.io/tags/predictive-inference/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/predictive-inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Process Control</title>
+      <link>https://qianqianshan.github.io/tags/process-control/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/process-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality</title>
+      <link>https://qianqianshan.github.io/tags/quality/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/quality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality Control</title>
+      <link>https://qianqianshan.github.io/tags/quality-control/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/quality-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recommender Systems</title>
+      <link>https://qianqianshan.github.io/tags/recommender-systems/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/recommender-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability</title>
+      <link>https://qianqianshan.github.io/tags/reliability/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/reliability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Restricted Boltzmann Machine</title>
+      <link>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/restricted-boltzmann-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
       <link>https://qianqianshan.github.io/tags/sql/</link>
       <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistical Learning</title>
+      <link>https://qianqianshan.github.io/tags/statistical-learning/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/statistical-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://qianqianshan.github.io/tags/statistics/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System Design</title>
+      <link>https://qianqianshan.github.io/tags/system-design/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/system-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://qianqianshan.github.io/tags/theory/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Udacity</title>
+      <link>https://qianqianshan.github.io/tags/udacity/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/udacity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Version Control</title>
+      <link>https://qianqianshan.github.io/tags/version-control/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/tags/version-control/</guid>
       <description></description>
     </item>
     
