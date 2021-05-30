@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>DDIA - Data Models and Query Languages | Qianqian Shan</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/foundation.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/fonts.css">
+    <link rel="stylesheet" href="https://qianqianshan.github.io/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+
+
+
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://qianqianshan.github.io/">Qianqian Shan</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="../../projects">Projects</a></li>
+		  
+		  <li><a href="../../post">Blog</a></li>
+		  
+		  <li><a href="../../#contact">Contact</a></li>
+		  
+		  <li><a href="../../#about">About</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+
+
+
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+    <article class="article" itemscope itemtype="https://schema.org/Article">
+      
+      <h1 itemprop="name">DDIA - Data Models and Query Languages</h1>
+      <div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2021-05-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">14 May 2021</time>
+  </span>
+  
+  
+  
+  <span class="post-tags">
+    <span class="nowrap"><i class="fa fa-tags"></i>
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/ddia">DDIA</a>,</span> 
+    
+    <a class="post-tag" href="https://qianqianshan.github.io/tags/system-design">System Design</a>
+    
+  </span>
+  
+  
+</div>
+
+      <div class="post-body" itemprop="articleBody">
+        
+
+<ol>
+<li><p><a href="#overview">Overview</a></p></li>
+
+<li><p><a href="#relational-model-vs-document-model">Relational Model vs Document Model</a></p></li>
+
+<li><p><a href="#query-languages-for-data">Query Languages for Data </a></p></li>
+
+<li><p><a href="#Graph-like-Data-Models">Graph-like Data Models</a></p></li>
+</ol>
+
+<h1 id="1-overview-a-name-overview-a">1 Overview <a name="overview"></a></h1>
+
+<p><strong>Data models</strong> are probably the most important part of devloping software for their profound effect on not only how the software is written, but also on how we thinkg about the problem that we are solving. Each layer of the applications is built by one data model on top of another, and each layer hides the complexity of the layers below it by providing a clean data model (abstraction), which allows different groups of people to work together effectively.d</p>
+
+<p>This article contains</p>
+
+<ul>
+<li><p>Some general-purpose data modesl for data storage and querying. For example, the relational model, the document model, and graph-based data models.</p></li>
+
+<li><p>Different query languages and their use cases</p></li>
+</ul>
+
+<h1 id="2-relational-model-vs-document-model-a-name-relational-model-vs-document-model-a">2 Relational Model vs Document Model <a name="relational-model-vs-document-model"></a></h1>
+
+<table>
+<thead>
+<tr>
+<th>Model Type</th>
+<th>Relational Model</th>
+<th>Document Model</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Description</td>
+<td>Data is organized into relations (e.g., tables in SQL), where each relation is an unordered collection of tuples (e.g., rows in SQL).</td>
+<td>NoSQL (not only SQL) databases provide a broad variety of non-relational datastores (polyglot persistence) alongside the usage of relational databases.</td>
+</tr>
+
+<tr>
+<td>Driving Forces</td>
+<td>Transaction processing and batch processing for business data such as banking transactions, customer invoicing, reporting and so on.</td>
+<td>1. Greater scalability for large datasets and high write throughput.  <br/>   2. Preference for open-source software over commercial database products.<br/> 3. Specialized query operations that are currently not well supported in relational databases. <br/> 4. The restrictiveness of relational schemas and the desire for a more dynamic and expressive data model.</td>
+</tr>
+
+<tr>
+<td>Examples</td>
+<td>SQL</td>
+<td>MongoDB, RethinkDB, CouchDB, Espresso</td>
+</tr>
+
+<tr>
+<td>Advantages</td>
+<td>1. Hide the implementation detail of the internal representation of the data in the database behind a cleaner interface. <br/>  2. Generalize well from its original use case on business data processing. <br/> 3. Better support for joins, many-to-one and many-to-many relationships. <br/></td>
+<td>1. Schema flexibility:  schema-on-read (the structure of data is implicit, and only interpreted when the data is read) is similar to dynamic (runtime) type checking in programming language. When an application wants to change the format of its data, document databases just need to start writing new documents with the new fields, and have code in the application to handle the case when old documents are read. <br/> 2. Better performance due to locality:  there is a performance advantage of storage locality when application needs to access the entire document. The advantage often applies when large parts of the document are needed at the same time. So it is generally recommended to keep documents small and avoid writes that increase the size of a document.3. Closer to data structures used by the application</td>
+</tr>
+
+<tr>
+<td>Disadvantages</td>
+<td>1. Impedance mismatch: if the data is stored in relational tables, a translation layer is required between the objects in the application code and the database model of tables, rows, and columns.</td>
+<td>1. Support for joins is often weak, although joins are not needed for one-to-many structures. <br/> 2. Cannot refer directly to a nested item within a document, for example, one needs to say &ldquo;the second item in the list of positions for user 251&rdquo;.<br/> 3. Data has a tendency of becoming more interconnected as features are added to applications (e.g., add a recommendation feature for each use (document)).</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="convergence-of-relational-and-document-databases">Convergence of relational and document databases</h4>
+
+<ol>
+<li><p>The relational and document databases are becoming more similar over time so applications can use the combination of features that best fits their needs: Most relational databases have supported XML and allow for local modifications and index/query inside the XML documents.  More document databases support relational-like joins in its query languages.</p></li>
+
+<li><p>When representing many-to-one and many-to-many relationships, relational databases and document databases are no fundamental different: the related item is referenced by a unique identifier (foreign key in relational data model, document reference in document model).</p>
+
+<h1 id="3-query-languages-for-data-a-name-query-languages-for-data-a">3 Query Languages for Data <a name="query-languages-for-data"></a></h1></li>
+</ol>
+
+<p>SQL is a declarative lauguage, comared with the imperative queries, it has the following advantages:</p>
+
+<ul>
+<li><p>It is typically more concise and easier to work with than an imperative API</p></li>
+
+<li><p>It has the implemenation details of the database engine, which makes it possible to introduce performance improvements without requiring any changes of queries.</p></li>
+
+<li><p>The fact that SQL is more limited in functionality gives the database more room for automatic optimizations.</p></li>
+
+<li><p>Declarative lanauges have a better chance of getting faster in parallel execution because they only specify the patterns of the results, not the algorithm that is used to determine the results.</p></li>
+</ul>
+
+<h1 id="4-graph-like-data-models-a-name-graph-like-data-models-a">4 Graph-like Data Models <a name="Graph-like-Data-Models"></a></h1>
+
+<p>It becomes natural to use graph for data modeling for the many-to-many relationships. Examples include the scocial graphs, the web graphs or the railroad networks. The graph databases are targeting use cases where anything is potentially related to everything.</p>
+
+<p>Two kinds of objects for a graph are:</p>
+
+<ul>
+<li><p>Vertices: nodes or entities.</p></li>
+
+<li><p>Edges: relations or arcs.</p></li>
+</ul>
+
+<p>The graphs can be used for not only the homogeneous data, but also for data with completely different ypes of objects.</p>
+
+<ul>
+<li><p>Graphs can express things that would be difficult for traditional relational data, for example, different kinds of regional structures in different countries, or varying granularity of data (e.g., current residences is a city, but place of birth is a state).</p></li>
+
+<li><p>Graphs are flexible for evolvability: when new features are added to the application, a graph can easily extended to accomondate changes to the data structures.</p></li>
+</ul>
+
+      </div>
+
+      <meta itemprop="wordCount" content="870">
+      <meta itemprop="datePublished" content="2021-05-14">
+      <meta itemprop="url" content="https://qianqianshan.github.io/post/designingdataintensiveapplications-2/">
+    </article>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li class="arrow" aria-disabled="true"><a href="https://qianqianshan.github.io/post/designingdataintensiveapplications-1/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: DDIA - Reliable Scalable and Maintainable Applications</a></li>
+      
+      
+    </ul>
+
+    
+  </div>
+</div>
+
+    </main>
+    
+<footer>
+  <hr>
+  <div class="row">
+   <div class="column small-10 small-centered text-center">
+     <em>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with Finite theme. Do you like this, or do you have a comment? Please feel free to email me via <a href="mailto:qianshanshan.am@gmail.com" target="_blank">qianqianshan.am[at]gmail.com.</em>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="endofpage">
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/what-input.js"></script>
+    <script src="../../js/foundation.min.js"></script>
+    <script src="../../js/finite.js"></script>
+
+    
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="https://qianqianshan.github.io/js/MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+    
+  </body>
+</html>

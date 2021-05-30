@@ -6,15 +6,28 @@
     <description>Recent content in System Design on Qianqian Shan</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy 2018 Qianqian Shan Powered by Hugo</copyright>
-    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://qianqianshan.github.io/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>DDIA - Data Models and Query Languages</title>
+      <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-2/</guid>
+      <description>Overview
+ Relational Model vs Document Model
+ Query Languages for Data 
+ Graph-like Data Models
+  1 Overview  Data models are probably the most important part of devloping software for their profound effect on not only how the software is written, but also on how we thinkg about the problem that we are solving. Each layer of the applications is built by one data model on top of another, and each layer hides the complexity of the layers below it by providing a clean data model (abstraction), which allows different groups of people to work together effectively.</description>
+    </item>
+    
+    <item>
       <title>DDIA - Reliable Scalable and Maintainable Applications</title>
       <link>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</link>
-      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://qianqianshan.github.io/post/designingdataintensiveapplications-1/</guid>
       <description>Overview
