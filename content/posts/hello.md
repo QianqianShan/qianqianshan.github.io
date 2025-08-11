@@ -3,9 +3,9 @@ title: Hello
 subtitle:
 date: 2025-08-10T23:50:24-07:00
 slug: b12471f
-draft: true
+draft: false
 author:
-  name:
+  name: Qianqian
   link:
   email:
   avatar:
