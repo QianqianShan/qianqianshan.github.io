@@ -5,8 +5,8 @@ title = "MindOrchard"
 theme = "FixIt"
 paginate = 10
 # If you want RSS at the homepage:
-# [outputs]
-#   home = ["HTML", "RSS"]
+[outputs]
+  home = ["HTML", "RSS"]
 
 # ---------- Taxonomies ----------
 [taxonomies]
