@@ -1,0 +1,14 @@
+baseURL = "https://qianqianshan.github.io/"
+languageCode = "en-us"
+title = "MindOrchard"
+theme = "FixIt"
+
+[params]
+  enableSearch = true
+  enableBusuanzi = true
+  enableKaTeX = true
+  enableMermaid = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
