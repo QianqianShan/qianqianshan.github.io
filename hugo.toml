@@ -3,8 +3,12 @@ baseURL = "https://qianqianshan.github.io/"
 languageCode = "en-us"
 title = "MindOrchard"
 theme = "FixIt"
-paginate = 10
-# If you want RSS at the homepage:
+
+# NEW: replace deprecated `paginate` with the new block
+[pagination]
+  pagerSize = 10
+
+# Outputs (HTML + RSS for homepage)
 [outputs]
   home = ["HTML", "RSS"]
 
@@ -13,43 +17,35 @@ paginate = 10
   category = "categories"
   tag = "tags"
 
-# ---------- Theme parameters (FixIt / LoveIt style) ----------
+# ---------- Theme parameters ----------
 [params]
-  # Core features you wanted
-  enableSearch = true        # client-side search (Lunr/Fuse handled by theme)
-  enableBusuanzi = true      # site & per-post view counters
-  enableKaTeX = true         # math formulas
-  enableMermaid = true       # diagrams
+  enableSearch = true
+  enableBusuanzi = true
+  enableKaTeX = true
+  enableMermaid = true
+  defaultTheme = "auto"
+  since = 2025
 
-  # Nice reading extras (optional but useful)
-  defaultTheme = "auto"      # auto/light/dark
-  since = 2025               # shows site age in footer
-  # enablePWA = true         # uncomment if you want PWA later
-
-  # Page-level defaults
+  # CHANGED: TOC must be a table, not `toc = true`
   [params.page]
-    toc = true               # show per-page table of contents
     readingTime = true
-    # displayUpdatedDate = true
+    # Per-page TOC config (FixIt expects a map)
+    [params.page.toc]
+      enable = true
 
-  # Footer Busuanzi locations (theme controls exact placement; this keeps it on)
   [params.footer]
     enable = true
 
 # ---------- Markdown / rendering ----------
 [markup]
-  # Allow raw HTML in Markdown (useful for KaTeX shortcodes, custom blocks)
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  # Nicer code highlighting
   [markup.highlight]
     codeFences = true
     guessSyntax = true
     lineNos = false
     noClasses = false
-
-  # Optional: tweak built-in Hugo TOC levels (theme uses its own too)
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 3
