@@ -15,9 +15,9 @@ license:
 comment: false
 weight: 0
 tags:
-  - hands-on large language models
-categories:
   - LLM
+categories:
+  - hands-on large language models
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false

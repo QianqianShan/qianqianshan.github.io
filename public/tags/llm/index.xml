@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All Posts - MindOrchard</title>
-    <link>http://localhost:1313/posts/</link>
+    <title>LLM - Tag - MindOrchard</title>
+    <link>http://localhost:1313/tags/llm/</link>
     <description>MindOrchard</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Sep 2025 03:27:17 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1 - An Introduction to Large Language Models</title>
       <link>http://localhost:1313/posts/an_introduction_to_large_language_models/</link>
@@ -15,14 +15,6 @@
       <guid>http://localhost:1313/posts/an_introduction_to_large_language_models/</guid>
       <category domain="http://localhost:1313/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>1 - An Introduction to Large Language Models</description>
-    </item>
-    <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/b12471f/</link>
-      <pubDate>Sun, 10 Aug 2025 23:50:24 -0700</pubDate>
-      <guid>http://localhost:1313/posts/b12471f/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>Hello</description>
     </item>
   </channel>
 </rss>
