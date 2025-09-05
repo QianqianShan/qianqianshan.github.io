@@ -6,8 +6,15 @@
     <description>Recent content in Categories on MindOrchard</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 23:50:24 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 03 Sep 2025 03:27:17 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/categories/llm/</link>
+      <pubDate>Wed, 03 Sep 2025 03:27:17 -0700</pubDate>
+      <guid>http://localhost:1313/categories/llm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Draft</title>
       <link>http://localhost:1313/categories/draft/</link>

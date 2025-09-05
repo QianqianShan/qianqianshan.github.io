@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>1 - An Introduction to Large Language Models - MindOrchard</title><meta name="author" content="Qianqian">
+<meta name="description" content=""><meta name="keywords" content='hands-on large language models'>
+  <meta itemprop="name" content="1 - An Introduction to Large Language Models">
+  <meta itemprop="datePublished" content="2025-09-03T03:27:17-07:00">
+  <meta itemprop="dateModified" content="2025-09-03T03:27:17-07:00">
+  <meta itemprop="wordCount" content="808">
+  <meta itemprop="keywords" content="Hands-on Large Language Models"><meta property="og:url" content="http://localhost:1313/posts/an_introduction_to_large_language_models/">
+  <meta property="og:site_name" content="MindOrchard">
+  <meta property="og:title" content="1 - An Introduction to Large Language Models">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-03T03:27:17-07:00">
+    <meta property="article:modified_time" content="2025-09-03T03:27:17-07:00">
+    <meta property="article:tag" content="Hands-on Large Language Models">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1 - An Introduction to Large Language Models">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/an_introduction_to_large_language_models/" title="1 - An Introduction to Large Language Models - MindOrchard" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/b12471f/" title="Hello" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "1 - An Introduction to Large Language Models",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/an_introduction_to_large_language_models\/"
+    },"genre": "posts","keywords": "hands-on large language models","wordcount":  808 ,
+    "url": "http:\/\/localhost:1313\/posts\/an_introduction_to_large_language_models\/","datePublished": "2025-09-03T03:27:17-07:00","dateModified": "2025-09-03T03:27:17-07:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Qianqian"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="MindOrchard"><span class="header-title-text">MindOrchard</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="MindOrchard"><span class="header-title-text">MindOrchard</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>1 - An Introduction to Large Language Models</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Qianqian</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/llm/" class="post-category" title="Category - LLM"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> LLM</a></span></div><div class="post-meta-line"><span title="published on 2025-09-03 03:27:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-09-03">2025-09-03</time></span>&nbsp;<span title="808 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 900 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>4 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-recent-history-of-language-ai">A Recent History of Language AI</a>
+      <ul>
+        <li><a href="#representing-language-as-a-bag-of-words">Representing Language as a Bag-of-Words</a></li>
+        <li><a href="#better-representations-with-dense-vector-embeddings">Better Representations with Dense Vector Embeddings</a></li>
+        <li><a href="#types-of-embeddings">Types of Embeddings</a></li>
+        <li><a href="#encoding-and-decoding-context-with-attention">Encoding and Decoding Context with Attention</a></li>
+        <li><a href="#attention-is-all-you-need">Attention Is All You Need</a></li>
+        <li><a href="#representation-models-encoder-only-models">Representation Models: Encoder-Only Models</a></li>
+        <li><a href="#generative-models-decoder-only-models">Generative Models: Decoder-Only Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-training-paradigm-of-large-language-models">The Training Paradigm of Large Language Models</a></li>
+    <li><a href="#large-language-model-applications-what-makes-them-so-useful">Large Language Model Applications: What Makes Them So Useful?</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="what-is-language-ai"><span>What Is Language AI?</span>
+  <a href="#what-is-language-ai" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Language AI is a subfield of AI that focuses  on developing technologies capable of understanding, processing, and generating human language.</p>
+<h2 class="heading-element" id="a-recent-history-of-language-ai"><span>A Recent History of Language AI</span>
+  <a href="#a-recent-history-of-language-ai" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="representing-language-as-a-bag-of-words"><span>Representing Language as a Bag-of-Words</span>
+  <a href="#representing-language-as-a-bag-of-words" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Steps:</p>
+<ol>
+<li>Tokenization: split up the sentence into individual words or subwords (tokens)</li>
+<li>Create a vocabulary: combine all unique words from each sentence to create the vocabulary that can be used to represent the sentences</li>
+<li>Create a bag-of-words by counting how often a word in each sentence appears</li>
+</ol>
+<p>That is, a bag-of-words model create representations of text in the form of numbers (or vectors), but it <em>ignores the semantic nature or the meaning of the text by considering language as a bag of words</em>.</p>
+<img src="/images/hands-on-LLM/01-5.PNG" alt="Bag-of-words" width="50%" />
+<div style="text-align: left;">Fig. Bag-of-words flow.</div>
+<h3 class="heading-element" id="better-representations-with-dense-vector-embeddings"><span>Better Representations with Dense Vector Embeddings</span>
+  <a href="#better-representations-with-dense-vector-embeddings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><em>word2vec</em> (released in 2013) attempts to capture the meaning of text in embeddings.</p>
+<p>Steps:</p>
+<ol>
+<li>Use neural network with interconnected layers of nodes to process info.</li>
+<li>Assign each word a vector embedding with initialized random values.</li>
+<li>Take pairs of words from the training data, and train model to predict whether they are likely to be neighbors in a sentence.</li>
+<li><em>word2vec</em> learns the relationship between words and distills the info into the embedding.</li>
+<li>Now if two words tend to have the same neighbors, their embeddings will be closer.</li>
+</ol>
+<p>Embeddings attempt to capture meaning by <em>representing the properties of words</em>, for example, &ldquo;baby&rdquo; may score high on the properties &ldquo;newborn&rdquo; and &ldquo;human&rdquo;, and score low in properties &ldquo;fruit&rdquo;. In practice, the properties are often obscure and seldom relate to a single humanly identifiable concept, but makes sense to translate human language to compute language.</p>
+<h3 class="heading-element" id="types-of-embeddings"><span>Types of Embeddings</span>
+  <a href="#types-of-embeddings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Different levels of embeddings indicate different levels of abstractions (word vs sentence).</p>
+<ul>
+<li>word embeddings (e.g., word2vec)</li>
+<li>sentence embeddings</li>
+<li>document embeddings (e.g., bag-of-words)</li>
+</ul>
+<h3 class="heading-element" id="encoding-and-decoding-context-with-attention"><span>Encoding and Decoding Context with Attention</span>
+  <a href="#encoding-and-decoding-context-with-attention" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>How to switch to the dynamic embeddings so the meaning of words is dependent on its <em>context</em>? For example, &ldquo;bank&rdquo; can refer a financial bank, or the bank of a river.</p>
+<p>Method 1: Recurrent neural networks (RNNs) - it models the word sequences as an additional input. It encodes to represent an input sentence, and decodes to generate an output sentence. However, it is difficult to deal with longer sentences with one single embedding to represent the entire input.</p>
+<p>Method 2: Attention feature - To solve the long sentence embedding issue of RNN, attention is added to the <em>decoder step</em>. It selectively determines which words are most important in a given sentence, and allows a model to focus on parts of the input sequence that are relevant. That is, the input of the generation/decoding step is now the (1). context embedding generated by encoder (2). the hidden states of all input words as signal for each input word related to the potential output.</p>
+<p>Drawback: Method 1 + 2 has a sequential nature and prevents parallelization during the training of the model.</p>
+<h3 class="heading-element" id="attention-is-all-you-need"><span>Attention Is All You Need</span>
+  <a href="#attention-is-all-you-need" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>A network architecture called <em>Transformer</em> is</p>
+<ul>
+<li>solely based on the attention mechanism</li>
+<li>removed the recurrent network, which makes it ideal for parallel training</li>
+<li>remains autoregressive - consume each generated word before creating a new word</li>
+</ul>
+<p>Two blocks in the transformer architecture: encoder and decoder</p>
+<ul>
+<li>Common layers: self-attention and feedforward neural network</li>
+<li>Unique layer of decoder: a layer to pay attention to the output of the encoder</li>
+</ul>
+<img src="/images/hands-on-LLM/01-17.PNG" alt="Encoder block" width="50%" />
+<div style="text-align: left;">Fig. Encoder block of transformer.</div>
+<img src="/images/hands-on-LLM/01-19.PNG" alt="Decoder block" width="50%" />
+<div style="text-align: left;">Fig. Decoder block of transformer.</div>
+<h3 class="heading-element" id="representation-models-encoder-only-models"><span>Representation Models: Encoder-Only Models</span>
+  <a href="#representation-models-encoder-only-models" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Bidirectional Encoder Representations (BERT) is an encoder-only architecture that focuses on <em>representing language</em>, and the encoder stacks are training with <em>masked language modeling</em> - masks part of the input for the model to predict, to allow BERT to create better representations of the input.</p>
+<p>Use case:</p>
+<ul>
+<li>Transfer learning: First pretrain (e.g., on entire wikipedia) and then fine-tune it for a specific task (e.g., classification, named entity recognition, clustering, semantic search, etc.)</li>
+<li>Feature extraction machine: BERT-like models generate embeddings at almost every step in their architecture, thus making extracting features possible without the fine-tuning for a specific task.</li>
+</ul>
+<h3 class="heading-element" id="generative-models-decoder-only-models"><span>Generative Models: Decoder-Only Models</span>
+  <a href="#generative-models-decoder-only-models" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Focus on generating text like GPT.</p>
+<h2 class="heading-element" id="the-training-paradigm-of-large-language-models"><span>The Training Paradigm of Large Language Models</span>
+  <a href="#the-training-paradigm-of-large-language-models" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>For tradition machine learning tasks, it usually involves training a model for a specific task (e.g., classification) with one-step process. In contrast, creating LLMs usually consists of two steps:</p>
+<ol>
+<li>
+<p>Language modeling (pretraining): Train on a vast corpus of internet text allowing model to learn grammer, context, and language patterns. The output model is a <em>foundational model</em> or <em>base model</em>.</p>
+</li>
+<li>
+<p>Fine-tuning (post-training): Further train the previous model on a narrower task.</p>
+</li>
+</ol>
+<h2 class="heading-element" id="large-language-model-applications-what-makes-them-so-useful"><span>Large Language Model Applications: What Makes Them So Useful?</span>
+  <a href="#large-language-model-applications-what-makes-them-so-useful" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Common tasks and techniques:</p>
+<ul>
+<li>Detecting review sentiment (supervised learning)</li>
+<li>Developing system to find common topics in ticket issues (unsupervised learning)</li>
+<li>Building a system for retrieval and inspection of relevant documents (e.g., RAG)</li>
+<li>Constructing chatbot with external resources</li>
+<li>Constructing LLM of writing recipes based on fridge food picture (multi-modality)</li>
+<li>Many more&hellip;</li>
+</ul></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-09-03 03:27:17">Updated on 2025-09-03&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="vscode://file//Users/qianqianshan/workspace/MindOrchard/content/posts/01_an_introduction_to_large_language_models.md" title="Open in editor"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">Open in editor</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="http://localhost:1313/posts/an_introduction_to_large_language_models/" data-title="1 - An Introduction to Large Language Models" data-hashtags="hands-on large language models"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/an_introduction_to_large_language_models/" data-hashtag="hands-on large language models"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/an_introduction_to_large_language_models/" data-title="1 - An Introduction to Large Language Models"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hands-on-large-language-models/" class="post-tag" title="Tags - Hands-on Large Language Models">Hands-on Large Language Models</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/b12471f/" class="post-nav-item" rel="prev" title="Hello"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Hello</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250805041424-57ccd470"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.4.0-alpha-20250805041424-57ccd470"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</html>
