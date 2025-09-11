@@ -1,7 +1,7 @@
 ---
 title: 2 - Tokens and Embeddings
 subtitle:
-date: 2025-09-04T03:27:17-07:00
+date: 2025-09-08T03:27:17-07:00
 slug: tokens_and_embeddings
 draft: false
 author:

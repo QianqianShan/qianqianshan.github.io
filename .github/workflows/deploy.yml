@@ -24,12 +24,15 @@ jobs:
           submodules: true
           fetch-depth: 0
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
       - name: Build
         run: hugo --minify
+
+      - name: Add .nojekyll file
+        run: touch public/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
