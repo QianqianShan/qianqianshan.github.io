@@ -6,8 +6,16 @@
     <description>MindOrchard</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Sep 2025 03:27:17 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 04 Sep 2025 03:27:17 -0700</lastBuildDate>
     <atom:link href="https://qianqianshan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2 - Tokens and Embeddings</title>
+      <link>https://qianqianshan.github.io/posts/tokens_and_embeddings/</link>
+      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/tokens_and_embeddings/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>2 - Tokens and Embeddings</description>
+    </item>
     <item>
       <title>1 - An Introduction to Large Language Models</title>
       <link>https://qianqianshan.github.io/posts/an_introduction_to_large_language_models/</link>
