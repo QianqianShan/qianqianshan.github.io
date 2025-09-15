@@ -116,7 +116,7 @@ How to improve and create better models:
 
 ### Improvement on Other Parts of The Transformer Block  
 
-  <img src="/images/hands-on-LLM/03-29-paper.PNG" alt="OriginalTransformerPaperArchitecture" width="50%" />
+  <img src="/images/hands-on-LLM/03-29-paper.png" alt="OriginalTransformerPaperArchitecture" width="50%" />
   <div style="text-align: left;">Fig.The original Transformer model architecture (reference: https://arxiv.org/pdf/1706.03762).</div>
 
 Other than the attention layer and feedforward neural network, the transformer block also has *add and normalize* as seen in the transformer block diagram from the original transformer paper. Improvements were made as follows: 
