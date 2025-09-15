@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Draft - Category - MindOrchard</title>
-    <link>https://qianqianshan.github.io/categories/draft/</link>
-    <description>MindOrchard</description>
+    <title>Draft - Category - Random Steps</title>
+    <link>http://localhost:1313/categories/draft/</link>
+    <description>Random Steps</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:50:24 -0700</lastBuildDate>
-    <atom:link href="https://qianqianshan.github.io/categories/draft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/draft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
-      <link>https://qianqianshan.github.io/posts/b12471f/</link>
+      <link>http://localhost:1313/posts/b12471f/</link>
       <pubDate>Sun, 10 Aug 2025 23:50:24 -0700</pubDate>
-      <guid>https://qianqianshan.github.io/posts/b12471f/</guid>
-      <category domain="https://qianqianshan.github.io/categories/draft/">Draft</category>
+      <guid>http://localhost:1313/posts/b12471f/</guid>
+      <category domain="http://localhost:1313/categories/draft/">Draft</category>
       <description>Hello</description>
     </item>
   </channel>
