@@ -41,17 +41,19 @@ repost:
 
 <!--more-->
 
-Tokens and embeddings are two central concepts of using LLMs. 
+Tokens and embeddings are two central concepts of using LLMs.
 
 ## LLM Tokenization
 ### How Tokenizers Prepare the Inputs to the Language Model
 
-Highlevel overview: 
+Highlevel overview:
 
-Input prompt --> break it into pieces with tokenizer (token IDs) --> pass IDs/embeddings to LLM 
+Input prompt --> break it into pieces with tokenizer (token IDs) --> pass IDs/embeddings to LLM
 
-<img src="/images/hands-on-LLM/02-1.PNG" alt="work-to-embeddings" width="50%" />
-<div style="text-align: left;">Fig.Tokens and embeddings.</div>
+<figure>
+  <img src="/images/hands-on-LLM/02-1.PNG" alt="work-to-embeddings" width="50%" />
+  <figcaption>Fig.Tokens and embeddings.</figcaption>
+</figure>
 
 
 ### How Does the Tokenizer Break Down Text?
@@ -67,7 +69,7 @@ Input prompt --> break it into pieces with tokenizer (token IDs) --> pass IDs/em
 When is the tokenizer used?
 
 * process the *input* text
-* decode the token IDs from the *output* of LLM to words/tokens 
+* decode the token IDs from the *output* of LLM to words/tokens
 
 ### Word Versus Subword Versus Character Versus Byte Tokens
 
@@ -81,55 +83,57 @@ When is the tokenizer used?
 
 ## Token Embeddings
 
-The tokenization convert the language to a sequence of tokens, and the next step is to find the best numerical representation for these tokens, so the model can use them to calculate and model the *patterns* in the text. 
+The tokenization convert the language to a sequence of tokens, and the next step is to find the best numerical representation for these tokens, so the model can use them to calculate and model the *patterns* in the text.
 
 ### A Language Model Holds Embeddings for the Vocabulary of Its Tokenizer
 
-A pre-trained language model is linked with its tokenizer and cannot use a different tokenizer without training. When downloading a pretrained language model, a portion of the model is the embeddings matrix holding the embedding vectors for each token in the tokenizer vocabulary. 
+A pre-trained language model is linked with its tokenizer and cannot use a different tokenizer without training. When downloading a pretrained language model, a portion of the model is the embeddings matrix holding the embedding vectors for each token in the tokenizer vocabulary.
 
 ### Creating Contextualized Word Embeddings with Language Models
 
-To create better token embeddings than the above static ones, language models create *contextualized* word embeddings to represent a word with a *different* token based on its context. 
+To create better token embeddings than the above static ones, language models create *contextualized* word embeddings to represent a word with a *different* token based on its context.
 
-<img src="/images/hands-on-LLM/02-9.PNG" alt="Contextual embeddings" width="50%" />
-<div style="text-align: left;">Fig. Static to contextual embeddings.</div>
+<figure>
+  <img src="/images/hands-on-LLM/02-9.PNG" alt="Contextual embeddings" width="50%" />
+  <figcaption>Fig. Static to contextual embeddings.</figcaption>
+</figure>
 
 ### Text Embeddings (for Sentences and Whole Documents)
 
-A SINGLE vector embeding that represents a a longer text piece (e.g., sentence, documents), and the most common way to produce text embedding vector is average the values of all token embeddings. 
+A SINGLE vector embeding that represents a a longer text piece (e.g., sentence, documents), and the most common way to produce text embedding vector is average the values of all token embeddings.
 
 ### Word Embeddings Beyond LLMs
 
-Embeddings can also be useful in domains other than LLM such as *recommender engines* and *robotics*. 
+Embeddings can also be useful in domains other than LLM such as *recommender engines* and *robotics*.
 
-Next let's learn about how the embeddings are generated from the *Word2Vec* algorithm. 
+Next let's learn about how the embeddings are generated from the *Word2Vec* algorithm.
 
-How? 
+How?
 
 Train a neural network to predict if words commonly apear in the same context or not (i.e., a classification task).
 
-Input: 
+Input:
 
-- The embeddings of the words 
+- The embeddings of the words
 
-Output: 
+Output:
 
 - The updated embeddings of the words, so next time the model is presented with the vectors, they have a better chance of being correct based on the true labels (if they are true neighbors)
 
-Training process: 
+Training process:
 
 Inputs embeddings --> prediction on labels/target value --> update the embeddings
 
-Key considerations: 
+Key considerations:
 
-* `skip-gram`: select neighboring words (e.g., use a sliding window to generate training examples: a central word as one input, and its two neighbor words as second inputs, the model will be trained to classify the neighbors as 1 if it is indeed neighbor otherwise 0) 
-* `negative sampling`: enrich the training dataset with examples of words that are NOT typically neighbors 
-* Other tokenization: how to deal with capitalization, punctuation, and how many tokens in vocabulary 
+* `skip-gram`: select neighboring words (e.g., use a sliding window to generate training examples: a central word as one input, and its two neighbor words as second inputs, the model will be trained to classify the neighbors as 1 if it is indeed neighbor otherwise 0)
+* `negative sampling`: enrich the training dataset with examples of words that are NOT typically neighbors
+* Other tokenization: how to deal with capitalization, punctuation, and how many tokens in vocabulary
 
 ## Embeddings for Recommendation Systems
 
-RecSys is an example domain that the embeddings can be useful. An example process to make it useful here: 
+RecSys is an example domain that the embeddings can be useful. An example process to make it useful here:
 
-1. Data loading: Playlists from radio stations. 
+1. Data loading: Playlists from radio stations.
 2. Word2Vec training (treat easch playlist as a sentence, each song in the playlist as a workd/token)
-3. Use the trained embeddings to find similar songs 
+3. Use the trained embeddings to find similar songs

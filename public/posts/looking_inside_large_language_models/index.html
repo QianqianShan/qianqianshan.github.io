@@ -154,8 +154,10 @@
   <a href="#inside-the-transformer-block" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2>  <img src="/images/hands-on-LLM/03-12.PNG" alt="TransformerBlock" width="50%" />
-  <div style="text-align: left;">Fig.The Transformer block components.</div>
+</h2><figure>
+  <img src="/images/hands-on-LLM/03-12.PNG" alt="TransformerBlock" width="50%" />
+  <figcaption>Fig.The Transformer block components.</figcaption>
+</figure>
 <p>A transformer block has two successive components:</p>
 <ol>
 <li>
@@ -180,8 +182,10 @@
 </ul>
 </li>
 </ol>
+<figure>
   <img src="/images/hands-on-LLM/03-17.PNG" alt="MultipleTimesOfTheAttentionMechanism" width="50%" />
-  <div style="text-align: left;">Fig.Doing attention multiple times in parallel with the relevance scoring and info combination steps.</div>
+  <figcaption>Fig.Doing attention multiple times in parallel with the relevance scoring and info combination steps.</figcaption>
+</figure>
 <ol start="2">
 <li>
 <p>The <em>feedforward</em> layer: the majority of the model processing capacity</p>
@@ -216,19 +220,15 @@
   <a href="#improvement-on-other-parts-of-the-transformer-block" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3>  <img src="/images/hands-on-LLM/03-29-paper.png" alt="OriginalTransformerPaperArchitecture" width="50%" />
-  <div style="text-align: left;">Fig.The original Transformer model architecture (reference: https://arxiv.org/pdf/1706.03762).</div>
+</h3><figure>
+  <img src="/images/hands-on-LLM/03-29-paper.png" alt="OriginalTransformerPaperArchitecture" width="50%" />
+  <figcaption>Fig.The original Transformer model architecture (reference: https://arxiv.org/pdf/1706.03762).</figcaption>
+</figure>
 <p>Other than the attention layer and feedforward neural network, the transformer block also has <em>add and normalize</em> as seen in the transformer block diagram from the original transformer paper. Improvements were made as follows:</p>
 <ul>
-<li>
-<p>Normalization can happen before attention and feedfoward layers to reduce the training time.</p>
-</li>
-<li>
-<p>Can use RMSNorm, a simpler and more effieicnet way than LayerNorm in the original paper.</p>
-</li>
-<li>
-<p>Newer activation function variants such as SwiGLU than the ReLU activation function in the original paper.</p>
-</li>
+<li>Normalization can happen before attention and feedfoward layers to reduce the training time.</li>
+<li>Can use RMSNorm, a simpler and more effieicnet way than LayerNorm in the original paper.</li>
+<li>Newer activation function variants such as SwiGLU than the ReLU activation function in the original paper.</li>
 </ul>
 <h3 class="heading-element" id="positional-embeddings-rope"><span>Positional Embeddings (RoPE)</span>
   <a href="#positional-embeddings-rope" class="heading-mark">
