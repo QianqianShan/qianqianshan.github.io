@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>All Posts - Random Steps</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://qianqianshan.github.io/posts/</link>
     <description>Random Steps</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Sep 2025 03:27:17 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qianqianshan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4 - Text Classification</title>
-      <link>http://localhost:1313/posts/text_classification/</link>
+      <link>https://qianqianshan.github.io/posts/text_classification/</link>
       <pubDate>Wed, 17 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/text_classification/</guid>
-      <category domain="http://localhost:1313/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <guid>https://qianqianshan.github.io/posts/text_classification/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>4 - Text Classification</description>
     </item>
     <item>
       <title>3 - Looking Inside Large Language Models</title>
-      <link>http://localhost:1313/posts/looking_inside_large_language_models/</link>
+      <link>https://qianqianshan.github.io/posts/looking_inside_large_language_models/</link>
       <pubDate>Tue, 09 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/looking_inside_large_language_models/</guid>
-      <category domain="http://localhost:1313/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <guid>https://qianqianshan.github.io/posts/looking_inside_large_language_models/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>3 - Looking Inside Large Language Models</description>
     </item>
     <item>
       <title>2 - Tokens and Embeddings</title>
-      <link>http://localhost:1313/posts/tokens_and_embeddings/</link>
+      <link>https://qianqianshan.github.io/posts/tokens_and_embeddings/</link>
       <pubDate>Mon, 08 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/tokens_and_embeddings/</guid>
-      <category domain="http://localhost:1313/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <guid>https://qianqianshan.github.io/posts/tokens_and_embeddings/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>2 - Tokens and Embeddings</description>
     </item>
     <item>
       <title>1 - An Introduction to Large Language Models</title>
-      <link>http://localhost:1313/posts/an_introduction_to_large_language_models/</link>
+      <link>https://qianqianshan.github.io/posts/an_introduction_to_large_language_models/</link>
       <pubDate>Wed, 03 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/an_introduction_to_large_language_models/</guid>
-      <category domain="http://localhost:1313/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <guid>https://qianqianshan.github.io/posts/an_introduction_to_large_language_models/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>1 - An Introduction to Large Language Models</description>
     </item>
     <item>
       <title>Hello</title>
-      <link>http://localhost:1313/posts/b12471f/</link>
+      <link>https://qianqianshan.github.io/posts/b12471f/</link>
       <pubDate>Sun, 10 Aug 2025 23:50:24 -0700</pubDate>
-      <guid>http://localhost:1313/posts/b12471f/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <guid>https://qianqianshan.github.io/posts/b12471f/</guid>
+      <category domain="https://qianqianshan.github.io/categories/draft/">Draft</category>
       <description>Hello</description>
     </item>
   </channel>
