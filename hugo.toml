@@ -41,6 +41,14 @@ theme = "FixIt"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      # Enable passthrough so the theme can render math via transform.ToMath
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          # block and inline delimiters (match theme defaults)
+          block = [['\\[', '\\]'], ['$$', '$$']]
+          inline = [['\\(', '\\)'], ['$', '$']]
   [markup.highlight]
     codeFences = true
     guessSyntax = true

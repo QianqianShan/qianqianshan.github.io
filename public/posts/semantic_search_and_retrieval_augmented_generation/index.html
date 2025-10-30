@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>Semantic Search and Retrieval-Augmented Generation - Random Steps</title><meta name="author" content="Qianqian">
-<meta name="description" content=""><meta name="keywords" content='hands-on large language models'>
-  <meta itemprop="name" content="Semantic Search and Retrieval-Augmented Generation">
-  <meta itemprop="datePublished" content="2025-09-04T03:27:17-07:00">
-  <meta itemprop="dateModified" content="2025-09-04T03:27:17-07:00">
-  <meta itemprop="wordCount" content="42">
-  <meta itemprop="keywords" content="Hands-on Large Language Models"><meta property="og:url" content="http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/">
+    <title>8 - Semantic Search and Retrieval-Augmented Generation (RAG) - Random Steps</title><meta name="author" content="Qianqian">
+<meta name="description" content=""><meta name="keywords" content='LLM'>
+  <meta itemprop="name" content="8 - Semantic Search and Retrieval-Augmented Generation (RAG)">
+  <meta itemprop="datePublished" content="2025-09-30T03:27:17-07:00">
+  <meta itemprop="dateModified" content="2025-09-30T03:27:17-07:00">
+  <meta itemprop="wordCount" content="1348">
+  <meta itemprop="keywords" content="LLM"><meta property="og:url" content="https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/">
   <meta property="og:site_name" content="Random Steps">
-  <meta property="og:title" content="Semantic Search and Retrieval-Augmented Generation">
+  <meta property="og:title" content="8 - Semantic Search and Retrieval-Augmented Generation (RAG)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-09-04T03:27:17-07:00">
-    <meta property="article:modified_time" content="2025-09-04T03:27:17-07:00">
-    <meta property="article:tag" content="Hands-on Large Language Models">
+    <meta property="article:published_time" content="2025-09-30T03:27:17-07:00">
+    <meta property="article:modified_time" content="2025-09-30T03:27:17-07:00">
+    <meta property="article:tag" content="LLM">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Semantic Search and Retrieval-Augmented Generation">
+  <meta name="twitter:title" content="8 - Semantic Search and Retrieval-Augmented Generation (RAG)">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/" title="Semantic Search and Retrieval-Augmented Generation - Random Steps" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/text_clustering_and_topic_modeling/" title="Text Clustering and Topic Modeling" /><link rel="next" type="text/html" href="http://localhost:1313/posts/prompt_engineering/" title="Prompt Engineering" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/" title="8 - Semantic Search and Retrieval-Augmented Generation (RAG) - Random Steps" /><link rel="prev" type="text/html" href="https://qianqianshan.github.io/posts/advanced_text_generation_techniques_and_tools/" title="7 - Advanced Text Generation Techniques and Tools" /><link rel="next" type="text/html" href="https://qianqianshan.github.io/posts/multimodal_large_language_models/" title="9 - Multimodal Large Language Models" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Semantic Search and Retrieval-Augmented Generation",
+    "headline": "8 - Semantic Search and Retrieval-Augmented Generation (RAG)",
     "inLanguage": "en-us",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http:\/\/localhost:1313\/posts\/semantic_search_and_retrieval_augmented_generation\/"
-    },"genre": "posts","keywords": "hands-on large language models","wordcount":  42 ,
-    "url": "http:\/\/localhost:1313\/posts\/semantic_search_and_retrieval_augmented_generation\/","datePublished": "2025-09-04T03:27:17-07:00","dateModified": "2025-09-04T03:27:17-07:00","publisher": {
+      "@id": "https:\/\/qianqianshan.github.io\/posts\/semantic_search_and_retrieval_augmented_generation\/"
+    },"genre": "posts","keywords": "LLM","wordcount":  1348 ,
+    "url": "https:\/\/qianqianshan.github.io\/posts\/semantic_search_and_retrieval_augmented_generation\/","datePublished": "2025-09-30T03:27:17-07:00","dateModified": "2025-09-30T03:27:17-07:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -77,83 +77,389 @@
 </header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Semantic Search and Retrieval-Augmented Generation</span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>8 - Semantic Search and Retrieval-Augmented Generation (RAG)</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Qianqian</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/llm/" class="post-category" title="Category - LLM"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> LLM</a></span></div><div class="post-meta-line"><span title="published on 2025-09-04 03:27:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-09-04">2025-09-04</time></span>&nbsp;<span title="42 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
-    </div><div class="content" id="content"><h2 class="heading-element" id="overview-of-semantic-search-and-rag"><span>Overview of Semantic Search and RAG</span>
+      Qianqian</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/hands-on-large-language-models/" class="post-category" title="Category - Hands-on Large Language Models"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Hands-on Large Language Models</a></span></div><div class="post-meta-line"><span title="published on 2025-09-30 03:27:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-09-30">2025-09-30</time></span>&nbsp;<span title="1348 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 1400 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>7 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview-of-semantic-search-and-rag">Overview of Semantic Search and RAG</a></li>
+    <li><a href="#semantic-search-with-language-models">Semantic Search with Language Models</a>
+      <ul>
+        <li><a href="#dense-retrieval">Dense Retrieval</a>
+          <ul>
+            <li><a href="#caveats-of-dense-retrieval">Caveats of dense retrieval</a></li>
+            <li><a href="#ways-to-chunk-long-text">Ways to chunk long text</a></li>
+            <li><a href="#nearest-neighbor-search-vs-vector-database">Nearest neighbor search vs vector database</a></li>
+            <li><a href="#fine-tuning-text-embedding-models-for-dense-retrieval">Fine-tuning <em>text</em> embedding models for dense retrieval</a></li>
+          </ul>
+        </li>
+        <li><a href="#reranking">Reranking</a>
+          <ul>
+            <li><a href="#how-reranking-models-work">How reranking models work?</a></li>
+            <li><a href="#retrieval-evaluation-metrics">Retrieval evaluation metrics</a>
+              <ul>
+                <li><a href="#compute-precision-at-each-relevant-rank">Compute Precision at Each Relevant Rank</a></li>
+                <li><a href="#average-precision-ap">Average Precision (AP)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)</a>
+      <ul>
+        <li><a href="#advanced-rag-techniques">Advanced RAG Techniques</a></li>
+        <li><a href="#rag-evaluation">RAG Evaluation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="overview-of-semantic-search-and-rag"><span>Overview of Semantic Search and RAG</span>
   <a href="#overview-of-semantic-search-and-rag" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="semantic-search-with-language-models"><span>Semantic Search with Language Models</span>
+</h2><p>Semantic search enables searching by meaning, and not simply keyword. Three broad categories of models that can help us to better use language models for search (including semantic search) are:</p>
+<ol>
+<li>
+<p>Dense retrieval: Turn the search problem into retrieving the nearest neighbors of the search query by converting both the query and candidate documents into embeddings.</p>
+</li>
+<li>
+<p>Reranking: Score the relevance of a subset of results against the query, and change the results order based on the scores</p>
+</li>
+<li>
+<p>RAG: Text generation systems that incorporate <em>search capabilities</em> to reduce hallucinations, increase factuality, and/or gropund the generation model on a specific dataset.</p>
+</li>
+</ol>
+<figure>
+  <img src="/images/hands-on-LLM/08-02.png" alt="reranker" width="50%" />
+  <figcaption>Fig. Reranker taks a search query and a collection of results, and reorder them by relevance, often leads to vastly improved results.</figcaption>
+</figure>
+<h2 class="heading-element" id="semantic-search-with-language-models"><span>Semantic Search with Language Models</span>
   <a href="#semantic-search-with-language-models" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="dense-retrieval"><span>Dense Retrieval</span>
+</h2><h3 class="heading-element" id="dense-retrieval"><span>Dense Retrieval</span>
   <a href="#dense-retrieval" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="reranking"><span>Reranking</span>
+</h3><p>Dense retrieval relies on the property that search queries will be close to their relavant results in the embeddings space. Typical steps with dense retrieval:</p>
+<ol>
+<li>Embed the query by projecting it into the same space as our text achive</li>
+<li>Find the nearest documents to the query in that space as the returned search results</li>
+</ol>
+<p>Note that we should build a search index for the text achive that we want to make searchable, so they can be retrieved later.</p>
+<h4 class="heading-element" id="caveats-of-dense-retrieval"><span>Caveats of dense retrieval</span>
+  <a href="#caveats-of-dense-retrieval" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><table>
+  <thead>
+      <tr>
+          <th>Caveat</th>
+          <th>Solution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>What happens if the texts don&rsquo;t contain the answer?</td>
+          <td>- Set a threshold level (i.e., max distance for relevance)<br>- Track whether users clicked a result (for feedback)</td>
+      </tr>
+      <tr>
+          <td>What if a user wants an exact match for a specific phrase?</td>
+          <td>Use hybrid search (combine semantic search with keyword search) instead of relying only on dense retrieval</td>
+      </tr>
+      <tr>
+          <td>What if the query is outside the domains the models were trained on?</td>
+          <td>Improve and expand the text archive; consider domain-specific data or models</td>
+      </tr>
+      <tr>
+          <td>What if a query asks for info that appears across many sentences?</td>
+          <td>Tune the chunking strategy (see &ldquo;Ways to chunk long text&rdquo; below)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table: Summary of dense retrieval caveats</p>
+<h4 class="heading-element" id="ways-to-chunk-long-text"><span>Ways to chunk long text</span>
+  <a href="#ways-to-chunk-long-text" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Language models are usually limited in context sizes and we cannot feed very long texts. Also, longer texts may make it harder to find a small piece of info. As a result, we need to chunk the long texts into smaller pieces. There are several ways:</p>
+<ul>
+<li>Use a single vector to represent the whole document - it can satisfy some info needs, but not others. For example, it&rsquo;s hard to search for a specific piece of info contained in an article in this method.</li>
+<li>Multiple vectors per document - It has full coverage of the text and tends to capture individual concepts better with more expressive search index, but more expensive.</li>
+</ul>
+<p>The best way to chunk the long text depends on teh types of texts and queries the system anticipates.</p>
+<h4 class="heading-element" id="nearest-neighbor-search-vs-vector-database"><span>Nearest neighbor search vs vector database</span>
+  <a href="#nearest-neighbor-search-vs-vector-database" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><table>
+  <thead>
+      <tr>
+          <th>Search method</th>
+          <th>Use case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Nearest neighbor</td>
+          <td>The number of vectors is small (e.g., thousands or tens of thousands of vectors)</td>
+      </tr>
+      <tr>
+          <td>Approximate nearest neighbor</td>
+          <td>Millions of vectors (example libraries: Annoy, FAISS)</td>
+      </tr>
+      <tr>
+          <td>Vector databases</td>
+          <td>Millions or more vectors (example DB: Pinecone). Allows adding or deleting vectors without rebuilding the index, and provides filtering and other customization beyond simple vector distances.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table: Summary of search method and use cases.</p>
+<h4 class="heading-element" id="fine-tuning-text-embedding-models-for-dense-retrieval"><span>Fine-tuning <em>text</em> embedding models for dense retrieval</span>
+  <a href="#fine-tuning-text-embedding-models-for-dense-retrieval" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Retrieval needs to be optimized in <strong>text</strong> embeddings instead of just token embeddings to improve the performance of an LLM. This can be done by fine-tuning the LLM models with training data of queries and relavant results.</p>
+<h3 class="heading-element" id="reranking"><span>Reranking</span>
   <a href="#reranking" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="retrieval-evaluation-metrics"><span>Retrieval Evaluation Metrics</span>
+</h3><p>An easier way to incorporate language models in an existing search pipeline is to use it as the final step to <em>change the order of the search results based on relevance to the search query</em>.</p>
+<figure>
+  <img src="/images/hands-on-LLM/08-14.png" alt="reranker as part of the search pipeline" width="50%" />
+  <figcaption>Fig. Reranker as part of the search pipeline to reorder the shortlisted search results by relavnce. .</figcaption>
+</figure>
+<h4 class="heading-element" id="how-reranking-models-work"><span>How reranking models work?</span>
+  <a href="#how-reranking-models-work" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>A popular way is to present the query and each result to an LLM working as a <em>cross-encoder</em>, then output the relevance score of each result, which will be used to determine the new ranking order. See more details in the paper &ldquo;Multi-stage document ranking with BERT&rdquo;.</p>
+<h4 class="heading-element" id="retrieval-evaluation-metrics"><span>Retrieval evaluation metrics</span>
   <a href="#retrieval-evaluation-metrics" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="retrieval-augmented-generation-rag"><span>Retrieval-Augmented Generation (RAG)</span>
+</h4><p>Two commonly used metrics include mean average precision (MAP) and normalized discounted cumulative gain (nDCG). Next we discussed MAP in more details.</p>
+<p>Three major components for evaluating search systems:</p>
+<ol>
+<li>text archive</li>
+<li>a set of queries</li>
+<li>relevance judgements indicating which text archive are relevant for each query</li>
+</ol>
+<p>Calculation steps with a concrete example:</p>
+<p><strong>Step 1. Key Concepts</strong></p>
+<ul>
+<li><strong>Precision</strong> — fraction of retrieved items that are relevant:</li>
+</ul>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Precision</mtext><mo>=</mo><mfrac><mrow><mi mathvariant="normal">#</mi><mtext> relevant retrieved</mtext></mrow><mrow><mi mathvariant="normal">#</mi><mtext> retrieved</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\text{Precision} = \frac{\#\text{ relevant retrieved}}{\#\text{ retrieved}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">Precision</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2519em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">#</span><span class="mord text"><span class="mord"> retrieved</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">#</span><span class="mord text"><span class="mord"> relevant retrieved</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><ul>
+<li><strong>Recall</strong> — fraction of relevant items that are retrieved:</li>
+</ul>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Recall</mtext><mo>=</mo><mfrac><mrow><mi mathvariant="normal">#</mi><mtext> relevant retrieved</mtext></mrow><mrow><mi mathvariant="normal">#</mi><mtext> total relevant</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\text{Recall} = \frac{\#\text{ relevant retrieved}}{\#\text{ total relevant}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Recall</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2519em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">#</span><span class="mord text"><span class="mord"> total relevant</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">#</span><span class="mord text"><span class="mord"> relevant retrieved</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><ul>
+<li>
+<p><strong>Average Precision (AP)</strong> — average of precision values at each rank where a relevant item is retrieved.</p>
+</li>
+<li>
+<p><strong>Mean Average Precision (MAP)</strong> — mean of AP values across multiple queries.</p>
+</li>
+</ul>
+<p><strong>Step 2. Simple Example (Single Query)</strong></p>
+<p>Suppose the system returns 5 documents ranked by confidence:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: right">Rank</th>
+          <th style="text-align: center">Document</th>
+          <th style="text-align: center">Relevant?</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: center">B</td>
+          <td style="text-align: center">❌</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: center">C</td>
+          <td style="text-align: center">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: center">D</td>
+          <td style="text-align: center">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">❌</td>
+      </tr>
+  </tbody>
+</table>
+<p>There are 3 relevant documents total (A, C, D).</p>
+<h5 class="heading-element" id="compute-precision-at-each-relevant-rank"><span>Compute Precision at Each Relevant Rank</span>
+  <a href="#compute-precision-at-each-relevant-rank" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><table>
+  <thead>
+      <tr>
+          <th style="text-align: right">Rank</th>
+          <th style="text-align: center">Relevant?</th>
+          <th style="text-align: right">Precision @ Rank</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: right">1/1 = 1.00</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: center">❌</td>
+          <td style="text-align: right">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: right">2/3 ≈ 0.667</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: right">3/4 = 0.75</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: center">❌</td>
+          <td style="text-align: right">—</td>
+      </tr>
+  </tbody>
+</table>
+<h5 class="heading-element" id="average-precision-ap"><span>Average Precision (AP)</span>
+  <a href="#average-precision-ap" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>Average of the precisions at relevant ranks:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mfrac><mrow><mn>1.00</mn><mo>+</mo><mn>0.667</mn><mo>+</mo><mn>0.75</mn></mrow><mn>3</mn></mfrac><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mn>0.806</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{AP} \;=\; \frac{1.00 + 0.667 + 0.75}{3} \;=\; 0.806
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathrm">AP</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.00</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.667</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.75</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.806</span></span></span></span></span><p><strong>Step 3. Extend to Multiple Queries → MAP</strong></p>
+<p>If we have two queries with APs:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Query</th>
+          <th style="text-align: right">AP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Q1</td>
+          <td style="text-align: right">0.806</td>
+      </tr>
+      <tr>
+          <td>Q2</td>
+          <td style="text-align: right">0.900</td>
+      </tr>
+  </tbody>
+</table>
+<p>Then:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mfrac><mrow><mn>0.806</mn><mo>+</mo><mn>0.900</mn></mrow><mn>2</mn></mfrac><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mn>0.853</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{MAP} \;=\; \frac{0.806 + 0.900}{2} \;=\; 0.853
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathrm">MAP</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.806</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.900</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.853</span></span></span></span></span><p><strong>Step 4. Summary Formula</strong></p>
+<p>For a single query q:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>P</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>⋅</mo><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">l</mi></mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">#</mi><mtext> relevant documents</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\mathrm{AP}(q) \;=\; \frac{\sum_{k=1}^{n} P(k)\cdot \mathrm{rel}(k)}{\#\text{ relevant documents}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">AP</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3744em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.494em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">#</span><span class="mord text"><span class="mord"> relevant documents</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6897em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathrm">rel</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><p>where P(k) is precision at cutoff k and rel(k)=1 if the item at rank k is relevant (else 0).</p>
+<p>Then across Q queries:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mtext>  </mtext><mo>=</mo><mtext>  </mtext><mfrac><mn>1</mn><mi>Q</mi></mfrac><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>Q</mi></munderover><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+\mathrm{MAP} \;=\; \frac{1}{Q}\sum_{q=1}^{Q} \mathrm{AP}(q)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathrm">MAP</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.2787em;vertical-align:-1.4032em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8754em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3471em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4032em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathrm">AP</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mclose">)</span></span></span></span></span><hr>
+<p><strong>Final Intuition</strong></p>
+<ul>
+<li>AP answers: &ldquo;For one query, how well did I rank relevant items?&rdquo;</li>
+<li>MAP answers: &ldquo;On average, how good is my ranking quality across all queries?&rdquo;</li>
+</ul>
+<h2 class="heading-element" id="retrieval-augmented-generation-rag"><span>Retrieval-Augmented Generation (RAG)</span>
   <a href="#retrieval-augmented-generation-rag" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="from-search-to-rag"><span>From Search to RAG</span>
-  <a href="#from-search-to-rag" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="example-grounded-generation-with-an-llm-api"><span>Example: Grounded Generation with an LLM API</span>
-  <a href="#example-grounded-generation-with-an-llm-api" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="example-rag-with-local-models"><span>Example: RAG with Local Models</span>
-  <a href="#example-rag-with-local-models" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="advanced-rag-techniques"><span>Advanced RAG Techniques</span>
+</h2><p>RAG incorporate search capabilities in addition to generation capabilities, and it can reduce the hallucinations and enable more use cases such as &ldquo;chat with my data&rdquo;.</p>
+<h3 class="heading-element" id="advanced-rag-techniques"><span>Advanced RAG Techniques</span>
   <a href="#advanced-rag-techniques" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="rag-evaluation"><span>RAG Evaluation</span>
+</h3><p>Several techniques to improve the performance of RAG system:</p>
+<ul>
+<li>
+<p>Query rewriting: use an LLM to rewrite the query into one that aids the retrieval step in getting the right info (e.g., the search step may struggle if the original query is too verbose or need to refer previous info)</p>
+</li>
+<li>
+<p>Multi-query RAG: search multiple queries if more than one is needed to answer a specific question. For example, with a query &ldquo;compare Nvidia 2020 and 2023 financial results&rdquo;, we may better make two search queries one for the results of 2020, and the other for 2023.</p>
+</li>
+<li>
+<p>Multi-hop RAG: a series of <em>sequential</em> queries to ask more advanced questions such as &ldquo;Who are the largest manufactures in 2023? Do they each make EVs?&rdquo; (First search for largest manufacturer, then search if each one makes EV)</p>
+</li>
+<li>
+<p>Query routing: give the model ability to search multiple data sources based on different intents (e.g., search HR questions in HR info system, and search customer data from CRM systems).</p>
+</li>
+<li>
+<p>Agentic RAG: with more and more complex problems, LLM acts more as an agent to gauge the required info and utilize multiple data sources (as tools).</p>
+</li>
+</ul>
+<h3 class="heading-element" id="rag-evaluation"><span>RAG Evaluation</span>
   <a href="#rag-evaluation" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="summary"><span>Summary</span>
-  <a href="#summary" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2></div><div class="post-footer" id="post-footer">
+</h3><p>Human evaluation or LLM-as-judge can be performed to evaluate the the generative search systems from the following axes:</p>
+<ul>
+<li>Fluency: if the generated text is fluent and cohesive</li>
+<li>Perceived utility: if the generated answer is helpful and informative</li>
+<li>Citation recall: the proportion of generated statements about the external world that are fully supported by their citations (<code>\frac{TP}{TP + FN}</code>)</li>
+<li>Citation precision: the propotion of the generated citations that support their associated statements (<code>\frac{TP}{TP + FP}</code>)</li>
+<li>Faithfullness: if the answer is consistent with the provided context</li>
+<li>Answer relevance: how relevant the answer is to the question</li>
+</ul></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="Updated on 2025-09-04 03:27:17">Updated on 2025-09-04&nbsp;</span>
+        <span title="Updated on 2025-09-30 03:27:17">Updated on 2025-09-30&nbsp;</span>
       </div></div><div class="post-info-line">
-        <div class="post-info-md"><span><a href="vscode://file//Users/qianqianshan/workspace/MindOrchard/content/posts/08_semantic_search_and_retrieval_augmented_generation.md" title="Open in editor"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">Open in editor</a></span></div>
+        <div class="post-info-md"></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/" data-title="Semantic Search and Retrieval-Augmented Generation" data-hashtags="hands-on large language models"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/" data-hashtag="hands-on large language models"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/" data-title="Semantic Search and Retrieval-Augmented Generation"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/" data-title="8 - Semantic Search and Retrieval-Augmented Generation (RAG)" data-hashtags="LLM"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/" data-hashtag="LLM"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/" data-title="8 - Semantic Search and Retrieval-Augmented Generation (RAG)"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hands-on-large-language-models/" class="post-tag" title="Tags - Hands-on Large Language Models">Hands-on Large Language Models</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/llm/" class="post-tag" title="Tags - LLM">LLM</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/text_clustering_and_topic_modeling/" class="post-nav-item" rel="prev" title="Text Clustering and Topic Modeling"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Text Clustering and Topic Modeling</a><a href="/posts/prompt_engineering/" class="post-nav-item" rel="next" title="Prompt Engineering">Prompt Engineering<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/advanced_text_generation_techniques_and_tools/" class="post-nav-item" rel="prev" title="7 - Advanced Text Generation Techniques and Tools"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>7 - Advanced Text Generation Techniques and Tools</a><a href="/posts/multimodal_large_language_models/" class="post-nav-item" rel="next" title="9 - Multimodal Large Language Models">9 - Multimodal Large Language Models<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article>
 
-  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250805041424-57ccd470"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
@@ -162,5 +468,6 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">This website works best with JavaScript enabled.</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.4.0-alpha-20250805041424-57ccd470"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.4.0-alpha-20250805041424-57ccd470"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>

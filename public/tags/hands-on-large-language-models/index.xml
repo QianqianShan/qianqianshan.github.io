@@ -2,75 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hands-on Large Language Models - Tag - Random Steps</title>
-    <link>http://localhost:1313/tags/hands-on-large-language-models/</link>
+    <link>https://qianqianshan.github.io/tags/hands-on-large-language-models/</link>
     <description>Random Steps</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Sep 2025 03:27:17 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hands-on-large-language-models/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Oct 2025 03:27:17 -0700</lastBuildDate>
+    <atom:link href="https://qianqianshan.github.io/tags/hands-on-large-language-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Advanced Text Generation Techniques and Tools</title>
-      <link>http://localhost:1313/posts/advanced_text_generation_techniques_and_tools/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/advanced_text_generation_techniques_and_tools/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Advanced Text Generation Techniques and Tools</description>
-    </item>
-    <item>
-      <title>Creating Text Embedding Models</title>
-      <link>http://localhost:1313/posts/creating_text_embedding_models/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/creating_text_embedding_models/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Creating Text Embedding Models</description>
-    </item>
-    <item>
-      <title>Fine-Tuning Generation Models</title>
-      <link>http://localhost:1313/posts/fine_tuning_generation_models/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/fine_tuning_generation_models/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Fine-Tuning Generation Models</description>
-    </item>
-    <item>
-      <title>Fine-Tuning Representation Models for Classification</title>
-      <link>http://localhost:1313/posts/fine_tuning_representation_models_for_classification/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/fine_tuning_representation_models_for_classification/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Fine-Tuning Representation Models for Classification</description>
-    </item>
-    <item>
-      <title>Multimodal Large Language Models</title>
-      <link>http://localhost:1313/posts/multimodal_large_language_models/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/multimodal_large_language_models/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Multimodal Large Language Models</description>
-    </item>
-    <item>
-      <title>Prompt Engineering</title>
-      <link>http://localhost:1313/posts/prompt_engineering/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/prompt_engineering/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Prompt Engineering</description>
-    </item>
-    <item>
-      <title>Semantic Search and Retrieval-Augmented Generation</title>
-      <link>http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/semantic_search_and_retrieval_augmented_generation/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Semantic Search and Retrieval-Augmented Generation</description>
-    </item>
-    <item>
-      <title>Text Clustering and Topic Modeling</title>
-      <link>http://localhost:1313/posts/text_clustering_and_topic_modeling/</link>
-      <pubDate>Thu, 04 Sep 2025 03:27:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/text_clustering_and_topic_modeling/</guid>
-      <category domain="http://localhost:1313/categories/llm/">LLM</category>
-      <description>Text Clustering and Topic Modeling</description>
+      <title>9 - Multimodal Large Language Models</title>
+      <link>https://qianqianshan.github.io/posts/multimodal_large_language_models/</link>
+      <pubDate>Thu, 02 Oct 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/multimodal_large_language_models/</guid>
+      <category domain="https://qianqianshan.github.io/categories/llm/">LLM</category>
+      <description>9 - Multimodal Large Language Models</description>
     </item>
   </channel>
 </rss>

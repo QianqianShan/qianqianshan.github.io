@@ -6,8 +6,24 @@
     <description>Random Steps</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Sep 2025 03:27:17 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 30 Sep 2025 03:27:17 -0700</lastBuildDate>
     <atom:link href="https://qianqianshan.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8 - Semantic Search and Retrieval-Augmented Generation (RAG)</title>
+      <link>https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/</link>
+      <pubDate>Tue, 30 Sep 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/semantic_search_and_retrieval_augmented_generation/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>8 - Semantic Search and Retrieval-Augmented Generation (RAG)</description>
+    </item>
+    <item>
+      <title>7 - Advanced Text Generation Techniques and Tools</title>
+      <link>https://qianqianshan.github.io/posts/advanced_text_generation_techniques_and_tools/</link>
+      <pubDate>Sat, 27 Sep 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/advanced_text_generation_techniques_and_tools/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>7 - Advanced Text Generation Techniques and Tools</description>
+    </item>
     <item>
       <title>6 - Prompt Engineering</title>
       <link>https://qianqianshan.github.io/posts/prompt_engineering/</link>

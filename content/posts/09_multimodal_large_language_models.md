@@ -1,9 +1,9 @@
 ---
-title: Multimodal Large Language Models
+title: 9 - Multimodal Large Language Models
 subtitle:
-date: 2025-09-04T03:27:17-07:00
+date: 2025-10-02T03:27:17-07:00
 slug: multimodal_large_language_models
-draft: true
+draft: false
 author:
   name: Qianqian
   link:
