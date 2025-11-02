@@ -1,9 +1,9 @@
 ---
-title: Creating Text Embedding Models
+title: 10 - Creating Text Embedding Models
 subtitle:
-date: 2025-09-04T03:27:17-07:00
+date: 2025-10-05T03:27:17-07:00
 slug: creating_text_embedding_models
-draft: true
+draft: false
 author:
   name: Qianqian
   link:
@@ -15,9 +15,9 @@ license:
 comment: false
 weight: 0
 tags:
-  - hands-on large language models
-categories:
   - LLM
+categories:
+  - hands-on large language models
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
@@ -41,18 +41,9 @@ repost:
 
 <!--more-->
 
-# Embedding Models
-# What Is Contrastive Learning?
-# SBERT
-# Creating an Embedding Model
-# Generating Contrastive Examples
-# Train Model
-# In-Depth Evaluation
-# Loss Functions
-# Fine-Tuning an Embedding Model
-# Supervised
-# Augmented SBERT
-# Unsupervised Learning
-# Transformer-Based Sequential Denoising Auto-Encoder
-# Using TSDAE for Domain Adaptation
-# Summary
+## Embedding Models
+
+Embedding models are used to process the textual inputs into numerical representations (embeddings) for further processing. One major technique to training, find-tune, and guide embedding models is the *contrastive learning*. Its idea is that the best way to learn and model similarity/dissimilarity between documents is by feeding a model examples of similar and dissimilar paris, so the model can learn from on to keep similar docs closer in vector space while dissimilar ones further apart. Two things are needed in order to perform contrastive learning: 
+
+1. The data that constitues similar/dissimilar paris 
+2. How the model defines and optimizes similarity 

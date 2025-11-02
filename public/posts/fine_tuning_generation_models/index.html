@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>Fine-Tuning Generation Models - Random Steps</title><meta name="author" content="Qianqian">
-<meta name="description" content=""><meta name="keywords" content='hands-on large language models'>
-  <meta itemprop="name" content="Fine-Tuning Generation Models">
-  <meta itemprop="datePublished" content="2025-09-04T03:27:17-07:00">
-  <meta itemprop="dateModified" content="2025-09-04T03:27:17-07:00">
-  <meta itemprop="wordCount" content="31">
-  <meta itemprop="keywords" content="Hands-on Large Language Models"><meta property="og:url" content="http://localhost:1313/posts/fine_tuning_generation_models/">
+    <title>12 - Fine-Tuning Generation Models - Random Steps</title><meta name="author" content="Qianqian">
+<meta name="description" content=""><meta name="keywords" content='LLM'>
+  <meta itemprop="name" content="12 - Fine-Tuning Generation Models">
+  <meta itemprop="datePublished" content="2025-10-09T03:27:17-07:00">
+  <meta itemprop="dateModified" content="2025-10-09T03:27:17-07:00">
+  <meta itemprop="wordCount" content="246">
+  <meta itemprop="keywords" content="LLM"><meta property="og:url" content="https://qianqianshan.github.io/posts/fine_tuning_generation_models/">
   <meta property="og:site_name" content="Random Steps">
-  <meta property="og:title" content="Fine-Tuning Generation Models">
+  <meta property="og:title" content="12 - Fine-Tuning Generation Models">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-09-04T03:27:17-07:00">
-    <meta property="article:modified_time" content="2025-09-04T03:27:17-07:00">
-    <meta property="article:tag" content="Hands-on Large Language Models">
+    <meta property="article:published_time" content="2025-10-09T03:27:17-07:00">
+    <meta property="article:modified_time" content="2025-10-09T03:27:17-07:00">
+    <meta property="article:tag" content="LLM">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fine-Tuning Generation Models">
+  <meta name="twitter:title" content="12 - Fine-Tuning Generation Models">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/fine_tuning_generation_models/" title="Fine-Tuning Generation Models - Random Steps" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/fine_tuning_representation_models_for_classification/" title="Fine-Tuning Representation Models for Classification" /><link rel="next" type="text/html" href="http://localhost:1313/posts/creating_text_embedding_models/" title="Creating Text Embedding Models" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://qianqianshan.github.io/posts/fine_tuning_generation_models/" title="12 - Fine-Tuning Generation Models - Random Steps" /><link rel="prev" type="text/html" href="https://qianqianshan.github.io/posts/fine_tuning_representation_models_for_classification/" title="11 - Fine-Tuning Representation Models for Classification" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Fine-Tuning Generation Models",
+    "headline": "12 - Fine-Tuning Generation Models",
     "inLanguage": "en-us",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http:\/\/localhost:1313\/posts\/fine_tuning_generation_models\/"
-    },"genre": "posts","keywords": "hands-on large language models","wordcount":  31 ,
-    "url": "http:\/\/localhost:1313\/posts\/fine_tuning_generation_models\/","datePublished": "2025-09-04T03:27:17-07:00","dateModified": "2025-09-04T03:27:17-07:00","publisher": {
+      "@id": "https:\/\/qianqianshan.github.io\/posts\/fine_tuning_generation_models\/"
+    },"genre": "posts","keywords": "LLM","wordcount":  246 ,
+    "url": "https:\/\/qianqianshan.github.io\/posts\/fine_tuning_generation_models\/","datePublished": "2025-10-09T03:27:17-07:00","dateModified": "2025-10-09T03:27:17-07:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -77,71 +77,78 @@
 </header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Fine-Tuning Generation Models</span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>12 - Fine-Tuning Generation Models</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Qianqian</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/llm/" class="post-category" title="Category - LLM"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> LLM</a></span></div><div class="post-meta-line"><span title="published on 2025-09-04 03:27:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-09-04">2025-09-04</time></span>&nbsp;<span title="31 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
-    </div><div class="content" id="content"><h2 class="heading-element" id="the-three-llm-training-steps-pretraining-supervised-fine-tuning-and-preference-tuning"><span>The Three LLM Training Steps: Pretraining, Supervised Fine-Tuning, and Preference Tuning</span>
+      Qianqian</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/hands-on-large-language-models/" class="post-category" title="Category - Hands-on Large Language Models"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Hands-on Large Language Models</a></span></div><div class="post-meta-line"><span title="published on 2025-10-09 03:27:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-10-09">2025-10-09</time></span>&nbsp;<span title="246 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 300 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-three-llm-training-steps-pretraining-supervised-fine-tuning-and-preference-tuning">The Three LLM Training Steps: Pretraining, Supervised Fine-Tuning, and Preference Tuning</a>
+      <ul>
+        <li><a href="#parameter-efficient-fine-tuning-peft">Parameter-Efficient Fine-Tuning (PEFT)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>There are two most common methods for fine-tuning text generation models: <em>supervised fine-tuning (SFT)</em> and <em>preference tuning</em>.</p>
+<h2 class="heading-element" id="the-three-llm-training-steps-pretraining-supervised-fine-tuning-and-preference-tuning"><span>The Three LLM Training Steps: Pretraining, Supervised Fine-Tuning, and Preference Tuning</span>
   <a href="#the-three-llm-training-steps-pretraining-supervised-fine-tuning-and-preference-tuning" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="supervised-fine-tuning-sft"><span>Supervised Fine-Tuning (SFT)</span>
-  <a href="#supervised-fine-tuning-sft" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="full-fine-tuning"><span>Full Fine-Tuning</span>
-  <a href="#full-fine-tuning" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="parameter-efficient-fine-tuning-peft"><span>Parameter-Efficient Fine-Tuning (PEFT)</span>
+</h2><ol>
+<li>
+<p>Pretraining: Pretain on one or more massive text datasets, and the goal is to predict the next token to accurately learn linguistic and semantic representations in the text. It is a self-supervised method, and output a base model or foundation model.</p>
+</li>
+<li>
+<p>Supervised fine-tuning (fine-tuning 1): Adapt the base model to follow instructions. The goal is still to predict the next token but now also based on the <strong>user input</strong>. It is often used to go from a base generative model to an instruction (or chat) generation mdoel.</p>
+</li>
+<li>
+<p>Preference tuning (fine-tuning 2): Improves the quality of the model and makes it more aligned with the expected behavior of AI safety or human preferences.</p>
+</li>
+</ol>
+<h3 class="heading-element" id="parameter-efficient-fine-tuning-peft"><span>Parameter-Efficient Fine-Tuning (PEFT)</span>
   <a href="#parameter-efficient-fine-tuning-peft" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 class="heading-element" id="instruction-tuning-with-qlora"><span>Instruction Tuning with QLoRA</span>
-  <a href="#instruction-tuning-with-qlora" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="templating-instruction-data"><span>Templating Instruction Data</span>
-  <a href="#templating-instruction-data" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="model-quantization"><span>Model Quantization</span>
-  <a href="#model-quantization" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="lora-configuration"><span>LoRA Configuration</span>
-  <a href="#lora-configuration" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 class="heading-element" id="summary"><span>Summary</span>
-  <a href="#summary" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2></div><div class="post-footer" id="post-footer">
+</h3><p>During fine-tuning, updating ALL parameters of a model has a large potential of increasing its performance but very costly and slow to train, and requires significant storage, so we propose parameter-efficient fine-tuning (PEFT) to focus on fine-tuning pre-trained models at higher computational efficiency.</p>
+<ol>
+<li>
+<p>Adapters: A core component of many PEFT-based techniques, they add a small number of weights in certain places in the network that can be <em>efficiently</em> fine-tuned while leaving the majority of the model weights frozen.</p>
+</li>
+<li>
+<p>Low-Rank Adaption (LoRA): A technique that only requires updating a small set of parameters by creating a small subset of the base model to fine-tune.</p>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="Updated on 2025-09-04 03:27:17">Updated on 2025-09-04&nbsp;</span>
+        <span title="Updated on 2025-10-09 03:27:17">Updated on 2025-10-09&nbsp;</span>
       </div></div><div class="post-info-line">
-        <div class="post-info-md"><span><a href="vscode://file//Users/qianqianshan/workspace/MindOrchard/content/posts/12_fine_tuning_generation_models.md" title="Open in editor"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">Open in editor</a></span></div>
+        <div class="post-info-md"></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="http://localhost:1313/posts/fine_tuning_generation_models/" data-title="Fine-Tuning Generation Models" data-hashtags="hands-on large language models"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/fine_tuning_generation_models/" data-hashtag="hands-on large language models"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/fine_tuning_generation_models/" data-title="Fine-Tuning Generation Models"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://qianqianshan.github.io/posts/fine_tuning_generation_models/" data-title="12 - Fine-Tuning Generation Models" data-hashtags="LLM"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://qianqianshan.github.io/posts/fine_tuning_generation_models/" data-hashtag="LLM"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://qianqianshan.github.io/posts/fine_tuning_generation_models/" data-title="12 - Fine-Tuning Generation Models"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hands-on-large-language-models/" class="post-tag" title="Tags - Hands-on Large Language Models">Hands-on Large Language Models</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/llm/" class="post-tag" title="Tags - LLM">LLM</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/fine_tuning_representation_models_for_classification/" class="post-nav-item" rel="prev" title="Fine-Tuning Representation Models for Classification"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Fine-Tuning Representation Models for Classification</a><a href="/posts/creating_text_embedding_models/" class="post-nav-item" rel="next" title="Creating Text Embedding Models">Creating Text Embedding Models<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/fine_tuning_representation_models_for_classification/" class="post-nav-item" rel="prev" title="11 - Fine-Tuning Representation Models for Classification"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>11 - Fine-Tuning Representation Models for Classification</a></div>
 </div>
 </article>
 
-  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250805041424-57ccd470"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
@@ -150,5 +157,5 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">This website works best with JavaScript enabled.</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.4.0-alpha-20250805041424-57ccd470"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.4.0-alpha-20250805041424-57ccd470"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>

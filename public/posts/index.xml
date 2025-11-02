@@ -6,14 +6,38 @@
     <description>Random Steps</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Oct 2025 03:27:17 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Oct 2025 03:27:17 -0700</lastBuildDate>
     <atom:link href="https://qianqianshan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12 - Fine-Tuning Generation Models</title>
+      <link>https://qianqianshan.github.io/posts/fine_tuning_generation_models/</link>
+      <pubDate>Thu, 09 Oct 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/fine_tuning_generation_models/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>12 - Fine-Tuning Generation Models</description>
+    </item>
+    <item>
+      <title>11 - Fine-Tuning Representation Models for Classification</title>
+      <link>https://qianqianshan.github.io/posts/fine_tuning_representation_models_for_classification/</link>
+      <pubDate>Mon, 06 Oct 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/fine_tuning_representation_models_for_classification/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>11 - Fine-Tuning Representation Models for Classification</description>
+    </item>
+    <item>
+      <title>10 - Creating Text Embedding Models</title>
+      <link>https://qianqianshan.github.io/posts/creating_text_embedding_models/</link>
+      <pubDate>Sun, 05 Oct 2025 03:27:17 -0700</pubDate>
+      <guid>https://qianqianshan.github.io/posts/creating_text_embedding_models/</guid>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
+      <description>10 - Creating Text Embedding Models</description>
+    </item>
     <item>
       <title>9 - Multimodal Large Language Models</title>
       <link>https://qianqianshan.github.io/posts/multimodal_large_language_models/</link>
       <pubDate>Thu, 02 Oct 2025 03:27:17 -0700</pubDate>
       <guid>https://qianqianshan.github.io/posts/multimodal_large_language_models/</guid>
-      <category domain="https://qianqianshan.github.io/categories/llm/">LLM</category>
+      <category domain="https://qianqianshan.github.io/categories/hands-on-large-language-models/">Hands-on Large Language Models</category>
       <description>9 - Multimodal Large Language Models</description>
     </item>
     <item>

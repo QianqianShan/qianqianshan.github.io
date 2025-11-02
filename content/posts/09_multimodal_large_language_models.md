@@ -15,9 +15,9 @@ license:
 comment: false
 weight: 0
 tags:
-  - hands-on large language models
+  - LLM 
 categories:
-  - LLM
+  - hands-on large language models
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
@@ -41,14 +41,21 @@ repost:
 
 <!--more-->
 
-# Transformers for Vision
-# Multimodal Embedding Models
-# CLIP: Connecting Text and Images
-# How Can CLIP Generate Multimodal Embeddings?
-# OpenCLIP
-# Making Text Generation Models Multimodal
-# BLIP-2: Bridging the Modality Gap
-# Preprocessing Multimodal Inputs
-# Use Case 1: Image Captioning
-# Use Case 2: Multimodal Chat-Based Prompting
-# Summary
+We explore how images are converted to numerical representations via an adaption of the original transformer technique, and show how LLMs can be extended to include vision tasks.
+
+## Transformers for Vision
+
+Vision Transformer (ViT) is used to transform the unstructured data such as an image into representations that can be used for various tasks (e.g., classification on if an image has a cat in it). It works as follows: 
+
+1. Convert an image into patches of images (e.g., convert a 512 by 512 pixels image into 16 by 16 patches)
+2. Linearly embed the patches to create numerical representations (i.e., embeddings) that can be used as the input of the transformer model 
+
+<figure>
+  <img src="/images/hands-on-LLM/09-05.png" alt="ViT" width="50%" />
+  <figcaption>Fig.Main algorithm of ViTs.</figcaption>
+</figure>
+
+## Multimodal Embedding Models
+
+Contrastive language-image pre-training (CLIP) is a multimodal embedding model that connects text and images. It first encode both the image and text (the caption of the image) with imasge and text encoders, respectively, then train to optimize for similarity between the embeddings (i.e., maximize similarity for similar image/caption pairs and minimize for dissimilar pairs). 
+
